@@ -20,19 +20,18 @@ const membershipFeatures = {
       {
         title: "1) Full Relationship Readiness Self-Audit: Get crystal-clear on your patterns, blind spots, limiting beliefs and needs through:",
         features: [
-          "Your Needs Assessment: Get clear on what you truly need in a relationship — not just what you're attracted to.",
-          "Attachment Style Assessment: Understand how your attachment style influences the way you connect, respond, and bond in relationships (based on attachment theory by psychologists John Bowlby and Mary Ainsworth)",
-          "Dating Tendencies Assessment: Identify unconscious dating patterns that may be holding you back (based on relationship scientist Logan Ury's work)"
+          "**Your Needs Assessment:** Get clear on what you truly need in a relationship — not just what you're attracted to.",
+          "**Attachment Style Assessment:** Understand how your attachment style influences the way you connect, respond, and bond in relationships (based on attachment theory by psychologists John Bowlby and Mary Ainsworth)",
+          "**Dating Tendencies Assessment:** Identify unconscious dating patterns that may be holding you back (based on relationship scientist Logan Ury's work)"
         ]
       },
       {
         title: "2) Personalized Guidance to Date Intentionally and Confidently",
         features: [
-          "Direct Access to Our Matchmaking Team (via WhatsApp & Email): A discreet communication channel to dating experts who know you and your dating journey.",
-          "Pre-Date and Pre-Dating Advice in your Inbox— Exactly When You Need It: Digestible emails to prepare you before the first date and second date with the most common pitfalls and winning moves from hundreds of client experiences.",
-          "Reflection rituals after each date.",
-          "Guided prompts to learn about your needs throughout your dating journey.",
-          "Bi-weekly science-based relationship science insights in your inbox: Bite-sized, science-backed tips to keep your dating mindset sharp. Curated from our matchmaking experience and backed by scientific journals."
+          "**Direct Access to Our Matchmaking Team (via WhatsApp & Email):** A discreet communication channel to dating experts who know you and your dating journey.",
+          "**Pre-Date and Pre-Dating Advice in your Inbox— Exactly When You Need It:** Digestible emails to prepare you before the first date and second date with the most common pitfalls and winning moves from hundreds of client experiences.",
+          "**Reflection rituals after each date:** Guided prompts to learn about your needs throughout your dating journey.",
+          "**Bi-weekly science-based relationship science insights in your inbox:** Bite-sized, science-backed tips to keep your dating mindset sharp. Curated from our matchmaking experience and backed by scientific journals."
         ]
       }
     ]
@@ -84,12 +83,28 @@ export default function Membership() {
                     {subsection.title}
                   </h5>
                   <div className="space-y-3 ml-4">
-                    {subsection.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-start">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                        <span className="text-gray-700 body-text leading-relaxed">{feature}</span>
-                      </div>
-                    ))}
+                    {subsection.features.map((feature, featureIndex) => {
+                      // Split on the first colon to separate bold part from description
+                      const colonIndex = feature.indexOf(':');
+                      if (colonIndex > 0 && feature.startsWith('**')) {
+                        const boldPart = feature.substring(2, colonIndex - 2); // Remove ** from start and end before colon
+                        const regularPart = feature.substring(colonIndex);
+                        return (
+                          <div key={featureIndex} className="flex items-start">
+                            <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                            <span className="text-gray-700 body-text leading-relaxed">
+                              <strong>{boldPart}</strong>{regularPart}
+                            </span>
+                          </div>
+                        );
+                      }
+                      return (
+                        <div key={featureIndex} className="flex items-start">
+                          <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                          <span className="text-gray-700 body-text leading-relaxed">{feature}</span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               ))}
