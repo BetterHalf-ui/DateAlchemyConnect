@@ -1,0 +1,84 @@
+const membershipFeatures = {
+  premiumMatchmaking: {
+    title: "1. Premium Matchmaking, Curated for Intentional Dating",
+    description: "We begin by organising quality dates with intentional and compatible singles who match your standards, removing the dating app fatigue and confusion from the equation.",
+    features: [
+      "Curated introductions with pre-screened and carefully interviewed active, intentional singles who are ready for a meaningful relationship.",
+      "In-depth compatibility assessment using your personal requirements, your lifestyle, and goals, but also what you truly need for lasting partnership and how you can meet someone's needs (The Date Alchemy Needs Compatibility Score™ ).",
+      "Human-centered matching - Apps algorithms are designed to keep you online. We use human intuition, not just filters. Our matches are handpicked with care and you meet them in-person.",
+      "Attachment-aware matching: we use the latest science in attachment style to avoid toxic mismatches before they start.",
+      "Vetted by you based on in-depth profiles. You remain in full control.",
+      "Full scheduling concierge: We book, confirm, and prep the date — so you just show up as your best self.",
+      "Follow-up after the date handled for you — no ghosting, no awkward follow-ups",
+      "Bonus: Invitations to private events (Singles Socials)- intimate brunches or dinners with hand-picked guests based on lifestyle, age, and shared values designed for meaningful connection, not crowd-chasing"
+    ]
+  },
+  innerWork: {
+    title: "2. Inner Work and Guidance",
+    description: "We don't just help you meet the right person.  Our process addresses the inner patterns that shape your relationships, often without you realizing it.",
+    features: [
+      "Full Relationship Readiness Self-Audit: Get crystal-clear on your patterns, blind spots, limiting beliefs and needs through: Your Needs Assessment : Get clear on what you truly need in a relationship — not just what you're attracted to.",
+      "Attachment Style Assessment  : Understand how your attachment style influences the way you connect, respond, and bond in relationships (based on attachment theory by psychologists John Bowlby and Mary Ainsworth)",
+      "Dating Tendencies Assessment : Identify unconscious dating patterns that may be holding you back (based on relationship scientist Logan Ury's work)",
+      "Personalized Guidance to Date Intentionally and Confidently",
+      "Direct Access to Our Matchmaking Team (via WhatsApp & Email): A discreet communication channel to dating experts who know you and your dating journey.",
+      "Pre-Date and Pre-Dating Advice in your Inbox— Exactly When You Need It: Digestible emails to prepare you before the first date and second date with the most common pitfalls and winning moves from hundreds of client experiences.",
+      "Reflection rituals after each date.",
+      "Guided prompts to learn about your needs throughout your dating journey.",
+      "Bi-weekly science-based relationship science insights in your inbox: Bite-sized, science-backed tips to keep your dating mindset sharp. Curated from our matchmaking experience and backed by scientific journals."
+    ]
+  }
+};
+
+export default function Membership() {
+  return (
+    <section className="py-32 bg-gradient-to-br from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl font-bold mb-6 subtitle text-gray-900">The Date Alchemy Membership</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto body-text">
+            Everything you need for a transformative dating experience — from premium matchmaking to personal growth guidance
+          </p>
+        </div>
+        
+        <div className="space-y-16">
+          <div className="bg-white rounded-3xl p-12 premium-shadow hover-lift">
+            <h3 className="text-3xl font-bold mb-6 text-primary subtitle">
+              {membershipFeatures.premiumMatchmaking.title}
+            </h3>
+            <p className="text-lg text-gray-700 mb-8 body-text leading-relaxed">
+              {membershipFeatures.premiumMatchmaking.description}
+            </p>
+            <h4 className="text-xl font-semibold mb-6 text-gray-900 subtitle">Included in Your Membership:</h4>
+            <div className="grid md:grid-cols-2 gap-6">
+              {membershipFeatures.premiumMatchmaking.features.map((feature, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                  <span className="text-gray-700 body-text leading-relaxed">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-3xl p-12 premium-shadow hover-lift">
+            <h3 className="text-3xl font-bold mb-6 text-primary subtitle">
+              {membershipFeatures.innerWork.title}
+            </h3>
+            <p className="text-lg text-gray-700 mb-8 body-text leading-relaxed">
+              {membershipFeatures.innerWork.description}
+            </p>
+            <h4 className="text-xl font-semibold mb-6 text-gray-900 subtitle">Included in Your Membership:</h4>
+            <div className="grid md:grid-cols-2 gap-6">
+              {membershipFeatures.innerWork.features.map((feature, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                  <span className="text-gray-700 body-text leading-relaxed">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
