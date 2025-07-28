@@ -65,9 +65,9 @@ export default function Home() {
       <Approach />
 
       {/* Ready for Real Connection CTA */}
-      <section className="py-32 bg-gradient-to-br from-primary/5 to-primary/10 text-center">
+      <section className="py-32 bg-black text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-5xl font-bold mb-12 subtitle text-gray-900">Ready for real connection?</h2>
+          <h2 className="text-5xl font-bold mb-12 subtitle">Ready for real connection?</h2>
           <a 
             href={EXTERNAL_LINKS.applicationForm} 
             target="_blank" 
@@ -77,7 +77,7 @@ export default function Home() {
               Apply Now
             </Button>
           </a>
-          <p className="text-gray-600 text-base body-text">
+          <p className="text-gray-300 text-base body-text">
             Not ready to invest in a membership?{" "}
             <Link href="/network">
               <a className="text-primary hover:underline">
@@ -136,7 +136,7 @@ export default function Home() {
             </div>
             <div className="lg:col-span-2">
               <div className="sticky top-24 space-y-6">
-                {/* Visual collage of diverse couples and dating scenes */}
+                {/* Enhanced visual collage of diverse couples and dating scenes */}
                 <div className="relative">
                   <img 
                     src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
@@ -155,6 +155,23 @@ export default function Home() {
                     src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
                     alt="Professional couple walking together in modern city setting" 
                     className="rounded-xl shadow-lg h-40 object-cover hover-lift transform -rotate-1"
+                  />
+                </div>
+                <div className="grid grid-cols-3 gap-3">
+                  <img 
+                    src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200" 
+                    alt="Modern professionals in elegant urban setting" 
+                    className="rounded-lg shadow-lg h-24 object-cover hover-lift"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200" 
+                    alt="Professional couple having consultation" 
+                    className="rounded-lg shadow-lg h-24 object-cover hover-lift"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200" 
+                    alt="Elegant couple at upscale venue" 
+                    className="rounded-lg shadow-lg h-24 object-cover hover-lift"
                   />
                 </div>
                 <div className="text-center pt-4">

@@ -43,10 +43,10 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-32 bg-gradient-to-br from-gray-100 to-gray-50">
+    <section className="py-32 bg-black text-white">
       <div className="max-w-4xl mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold mb-6 subtitle text-gray-900">The Smarter Way to Date — Straight to Your Inbox</h2>
-        <p className="text-xl text-gray-700 mb-12 body-text">Join 1,000+ Smart Singles Getting Bi-Weekly Dating Tips</p>
+        <h2 className="text-4xl font-bold mb-6 subtitle">The Smarter Way to Date — Straight to Your Inbox</h2>
+        <p className="text-xl text-gray-300 mb-12 body-text">Join 1,000+ Smart Singles Getting Bi-Weekly Dating Tips</p>
         <form onSubmit={handleSubmit} className="max-w-md mx-auto flex">
           <Input
             type="email"

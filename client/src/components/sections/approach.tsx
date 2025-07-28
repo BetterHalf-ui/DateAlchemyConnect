@@ -56,13 +56,6 @@ export default function Approach() {
             <h2 className="text-5xl font-bold mb-8 text-gray-900 subtitle">
               The Date Alchemy Approach
             </h2>
-            <div className="max-w-4xl mx-auto mb-12">
-              <img 
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=300" 
-                alt="Elegant couple having meaningful conversation at upscale venue" 
-                className="rounded-2xl shadow-lg w-full h-48 object-cover hover-lift"
-              />
-            </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {approaches.map((approach, index) => {
@@ -77,30 +70,6 @@ export default function Approach() {
                 </div>
               );
             })}
-          </div>
-          
-          {/* Additional visual elements */}
-          <div className="mt-20 grid md:grid-cols-2 gap-8">
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                alt="Professional couple having consultation with relationship expert" 
-                className="rounded-2xl shadow-lg w-full h-64 object-cover hover-lift"
-              />
-              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                <p className="text-sm font-semibold text-gray-900">Personal Consultation</p>
-              </div>
-            </div>
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                alt="Diverse group of professionals at exclusive networking event" 
-                className="rounded-2xl shadow-lg w-full h-64 object-cover hover-lift"
-              />
-              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                <p className="text-sm font-semibold text-gray-900">Exclusive Events</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
