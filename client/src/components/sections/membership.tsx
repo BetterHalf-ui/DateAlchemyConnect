@@ -3,14 +3,14 @@ const membershipFeatures = {
     title: "1. Premium Matchmaking, Curated for Intentional Dating",
     description: "We begin by organising quality dates with intentional and compatible singles who match your standards, removing the dating app fatigue and confusion from the equation.",
     features: [
-      "Curated introductions with pre-screened and carefully interviewed active, intentional singles who are ready for a meaningful relationship.",
-      "In-depth compatibility assessment using your personal requirements, your lifestyle, and goals, but also what you truly need for lasting partnership and how you can meet someone's needs (The Date Alchemy Needs Compatibility Score™ ).",
-      "Human-centered matching - Apps algorithms are designed to keep you online. We use human intuition, not just filters. Our matches are handpicked with care and you meet them in-person.",
-      "Attachment-aware matching: we use the latest science in attachment style to avoid toxic mismatches before they start.",
-      "Vetted by you based on in-depth profiles. You remain in full control.",
-      "Full scheduling concierge: We book, confirm, and prep the date — so you just show up as your best self.",
-      "Follow-up after the date handled for you — no ghosting, no awkward follow-ups",
-      "Bonus: Invitations to private events (Singles Socials)- intimate brunches or dinners with hand-picked guests based on lifestyle, age, and shared values designed for meaningful connection, not crowd-chasing"
+      "**Curated introductions** with pre-screened and carefully interviewed active, intentional singles who are ready for a meaningful relationship.",
+      "**In-depth compatibility assessment** using your personal requirements, your lifestyle, and goals, but also what you truly need for lasting partnership and how you can meet someone's needs (The Date Alchemy Needs Compatibility Score™ ).",
+      "**Human-centered matching** - Apps algorithms are designed to keep you online. We use human intuition, not just filters. Our matches are handpicked with care and you meet them in-person.",
+      "**Attachment-aware matching:** we use the latest science in attachment style to avoid toxic mismatches before they start.",
+      "**Vetted by you** based on in-depth profiles. You remain in full control.",
+      "**Full scheduling concierge:** We book, confirm, and prep the date — so you just show up as your best self.",
+      "**Follow-up after the date** handled for you — no ghosting, no awkward follow-ups",
+      "**Bonus: Invitations to private events** (Singles Socials)- intimate brunches or dinners with hand-picked guests based on lifestyle, age, and shared values designed for meaningful connection, not crowd-chasing"
     ]
   },
   innerWork: {
@@ -59,12 +59,30 @@ export default function Membership() {
             </p>
             <h4 className="text-xl font-semibold mb-6 text-gray-900 subtitle">Included in Your Membership:</h4>
             <div className="grid md:grid-cols-2 gap-6">
-              {membershipFeatures.premiumMatchmaking.features.map((feature, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                  <span className="text-gray-700 body-text leading-relaxed">{feature}</span>
-                </div>
-              ))}
+              {membershipFeatures.premiumMatchmaking.features.map((feature, index) => {
+                // Handle bold formatting for premium matchmaking features
+                const colonIndex = feature.indexOf(':');
+                const starIndex = feature.indexOf('**', 2); // Find closing **
+                
+                if (feature.startsWith('**') && starIndex > 0) {
+                  const boldPart = feature.substring(2, starIndex);
+                  const regularPart = feature.substring(starIndex + 2);
+                  return (
+                    <div key={index} className="flex items-start">
+                      <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                      <span className="text-gray-700 body-text leading-relaxed">
+                        <strong>{boldPart}</strong>{regularPart}
+                      </span>
+                    </div>
+                  );
+                }
+                return (
+                  <div key={index} className="flex items-start">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                    <span className="text-gray-700 body-text leading-relaxed">{feature}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
           

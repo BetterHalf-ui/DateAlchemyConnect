@@ -136,20 +136,26 @@ export default function Home() {
             </div>
             <div className="lg:col-span-2">
               <div className="sticky top-24 space-y-6">
-                {/* Creative layout for team photos */}
+                {/* Visual collage of diverse couples and dating scenes */}
                 <div className="relative">
-                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 h-64 flex items-center justify-center hover-lift">
-                    <span className="text-gray-500 subtitle text-lg">Team Photo 1</span>
-                  </div>
+                  <img 
+                    src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                    alt="Multicultural couple sharing a romantic dinner at modern restaurant" 
+                    className="rounded-2xl shadow-lg w-full h-64 object-cover hover-lift"
+                  />
                   <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full"></div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-gradient-to-br from-gray-100 to-gray-50 rounded-xl h-40 flex items-center justify-center hover-lift transform rotate-1">
-                    <span className="text-gray-500 subtitle">Team Photo 2</span>
-                  </div>
-                  <div className="bg-gradient-to-br from-gray-100 to-gray-50 rounded-xl h-40 flex items-center justify-center hover-lift transform -rotate-1">
-                    <span className="text-gray-500 subtitle">Team Photo 3</span>
-                  </div>
+                  <img 
+                    src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
+                    alt="Young couple laughing together at trendy urban cafe" 
+                    className="rounded-xl shadow-lg h-40 object-cover hover-lift transform rotate-1"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
+                    alt="Professional couple walking together in modern city setting" 
+                    className="rounded-xl shadow-lg h-40 object-cover hover-lift transform -rotate-1"
+                  />
                 </div>
                 <div className="text-center pt-4">
                   <p className="text-sm text-gray-500 italic body-text">
@@ -168,15 +174,14 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Diverse professionals networking" 
+                src="https://images.unsplash.com/photo-1556909114-4f5e0d2e55e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                alt="Diverse young professionals enjoying conversation at an elegant coffee shop" 
                 className="rounded-xl shadow-lg w-full hover-lift"
               />
             </div>
             <div className="text-left">
               <div className="relative inline-block mb-6">
                 <div className="text-8xl font-bold text-primary mb-2">{displayCount}</div>
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-green-500 rounded-full animate-ping"></div>
               </div>
               <h3 className="text-4xl font-bold mb-6 subtitle">Active Members</h3>
               <p className="text-lg text-gray-700 mb-6 body-text">
