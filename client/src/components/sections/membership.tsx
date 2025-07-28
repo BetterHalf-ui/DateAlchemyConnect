@@ -16,16 +16,25 @@ const membershipFeatures = {
   innerWork: {
     title: "2. Inner Work and Guidance",
     description: "We don't just help you meet the right person.  Our process addresses the inner patterns that shape your relationships, often without you realizing it.",
-    features: [
-      "Full Relationship Readiness Self-Audit: Get crystal-clear on your patterns, blind spots, limiting beliefs and needs through: Your Needs Assessment : Get clear on what you truly need in a relationship — not just what you're attracted to.",
-      "Attachment Style Assessment  : Understand how your attachment style influences the way you connect, respond, and bond in relationships (based on attachment theory by psychologists John Bowlby and Mary Ainsworth)",
-      "Dating Tendencies Assessment : Identify unconscious dating patterns that may be holding you back (based on relationship scientist Logan Ury's work)",
-      "Personalized Guidance to Date Intentionally and Confidently",
-      "Direct Access to Our Matchmaking Team (via WhatsApp & Email): A discreet communication channel to dating experts who know you and your dating journey.",
-      "Pre-Date and Pre-Dating Advice in your Inbox— Exactly When You Need It: Digestible emails to prepare you before the first date and second date with the most common pitfalls and winning moves from hundreds of client experiences.",
-      "Reflection rituals after each date.",
-      "Guided prompts to learn about your needs throughout your dating journey.",
-      "Bi-weekly science-based relationship science insights in your inbox: Bite-sized, science-backed tips to keep your dating mindset sharp. Curated from our matchmaking experience and backed by scientific journals."
+    subsections: [
+      {
+        title: "1) Full Relationship Readiness Self-Audit: Get crystal-clear on your patterns, blind spots, limiting beliefs and needs through:",
+        features: [
+          "Your Needs Assessment: Get clear on what you truly need in a relationship — not just what you're attracted to.",
+          "Attachment Style Assessment: Understand how your attachment style influences the way you connect, respond, and bond in relationships (based on attachment theory by psychologists John Bowlby and Mary Ainsworth)",
+          "Dating Tendencies Assessment: Identify unconscious dating patterns that may be holding you back (based on relationship scientist Logan Ury's work)"
+        ]
+      },
+      {
+        title: "2) Personalized Guidance to Date Intentionally and Confidently",
+        features: [
+          "Direct Access to Our Matchmaking Team (via WhatsApp & Email): A discreet communication channel to dating experts who know you and your dating journey.",
+          "Pre-Date and Pre-Dating Advice in your Inbox— Exactly When You Need It: Digestible emails to prepare you before the first date and second date with the most common pitfalls and winning moves from hundreds of client experiences.",
+          "Reflection rituals after each date.",
+          "Guided prompts to learn about your needs throughout your dating journey.",
+          "Bi-weekly science-based relationship science insights in your inbox: Bite-sized, science-backed tips to keep your dating mindset sharp. Curated from our matchmaking experience and backed by scientific journals."
+        ]
+      }
     ]
   }
 };
@@ -68,11 +77,20 @@ export default function Membership() {
               {membershipFeatures.innerWork.description}
             </p>
             <h4 className="text-xl font-semibold mb-6 text-gray-900 subtitle">Included in Your Membership:</h4>
-            <div className="grid md:grid-cols-2 gap-6">
-              {membershipFeatures.innerWork.features.map((feature, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                  <span className="text-gray-700 body-text leading-relaxed">{feature}</span>
+            <div className="space-y-8">
+              {membershipFeatures.innerWork.subsections.map((subsection, sectionIndex) => (
+                <div key={sectionIndex} className="space-y-4">
+                  <h5 className="text-lg font-semibold text-gray-900 subtitle mb-4">
+                    {subsection.title}
+                  </h5>
+                  <div className="space-y-3 ml-4">
+                    {subsection.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-start">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                        <span className="text-gray-700 body-text leading-relaxed">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>

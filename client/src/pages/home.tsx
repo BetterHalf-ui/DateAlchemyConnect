@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -34,7 +35,26 @@ export default function Home() {
   });
 
   const latestPosts = blogPosts?.slice(0, 3) || [];
-  const activeMembersCount = activeMembersSetting?.value || "222";
+  const targetCount = parseInt(activeMembersSetting?.value || "222");
+  const [displayCount, setDisplayCount] = useState(1);
+
+  useEffect(() => {
+    const duration = 2000; // 2 seconds
+    const steps = targetCount - 1;
+    const stepDuration = duration / steps;
+    
+    let currentCount = 1;
+    const interval = setInterval(() => {
+      currentCount += 1;
+      setDisplayCount(currentCount);
+      
+      if (currentCount >= targetCount) {
+        clearInterval(interval);
+      }
+    }, stepDuration);
+
+    return () => clearInterval(interval);
+  }, [targetCount]);
 
   return (
     <div className="min-h-screen">
@@ -155,7 +175,7 @@ export default function Home() {
             </div>
             <div className="text-left">
               <div className="relative inline-block mb-6">
-                <div className="text-8xl font-bold text-primary mb-2 animate-pulse">{activeMembersCount}</div>
+                <div className="text-8xl font-bold text-primary mb-2">{displayCount}</div>
                 <div className="absolute -top-2 -right-2 w-4 h-4 bg-green-500 rounded-full animate-ping"></div>
               </div>
               <h3 className="text-4xl font-bold mb-6 subtitle">Active Members</h3>
