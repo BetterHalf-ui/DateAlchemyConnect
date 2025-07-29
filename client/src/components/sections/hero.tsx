@@ -3,30 +3,40 @@ import { Button } from "@/components/ui/button";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 
 export default function Hero() {
-  const [textVisible, setTextVisible] = useState(false);
+  const [animationTriggered, setAnimationTriggered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      // Show text after slight scroll (30px)
-      if (scrollY > 30) {
-        setTextVisible(true);
-      } else {
-        setTextVisible(false);
+      // Trigger animation after slight scroll (20px)
+      if (scrollY > 20) {
+        setAnimationTriggered(true);
       }
     };
 
-    // Add scroll listener
+    const handleMouseMove = () => {
+      // Trigger animation on first mouse movement
+      if (!animationTriggered) {
+        setAnimationTriggered(true);
+      }
+    };
+
+    // Add event listeners
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  }, [animationTriggered]);
+
+  // Split text into words for staggered animation
+  const titleWords = "A Healthier Dating Experience For Global Professionals".split(" ");
 
   return (
     <section 
-      className="relative h-screen flex items-center justify-center"
+      className="relative h-screen flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://frolic.mu/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-05-at-7.07.25-PM.jpeg')`,
         backgroundAttachment: 'fixed',
@@ -36,12 +46,31 @@ export default function Hero() {
       }}
     >
       <div className="text-center text-white px-4 max-w-6xl">
-        <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight subtitle transition-all duration-1000 ${
-          textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
-          A Healthier Dating Experience For Global Professionals
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight subtitle">
+          {titleWords.map((word, index) => (
+            <span
+              key={index}
+              className={`inline-block mr-4 transition-all duration-700 ease-out ${
+                animationTriggered 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-16'
+              }`}
+              style={{
+                transitionDelay: animationTriggered ? `${index * 0.1}s` : '0s'
+              }}
+            >
+              {word}
+            </span>
+          ))}
         </h1>
-        <div className="flex justify-center">
+        <div className={`flex justify-center transition-all duration-700 ease-out ${
+          animationTriggered 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-12'
+        }`}
+        style={{
+          transitionDelay: animationTriggered ? `${titleWords.length * 0.1 + 0.2}s` : '0s'
+        }}>
           <a 
             href={EXTERNAL_LINKS.applicationForm} 
             target="_blank" 
