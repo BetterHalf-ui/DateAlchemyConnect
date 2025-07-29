@@ -252,25 +252,27 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {latestPosts.map((post) => (
-              <article key={post.id} className="bg-gray-50 rounded-xl overflow-hidden hover-lift">
-                {post.imageUrl && (
-                  <img 
-                    src={post.imageUrl} 
-                    alt={post.title}
-                    className="w-full h-48 object-cover"
-                  />
-                )}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{post.title}</h3>
-                  <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-primary font-medium">{post.category}</span>
-                    <span className="text-sm text-gray-500">
-                      {new Date(post.createdAt).toLocaleDateString()}
-                    </span>
+              <Link key={post.id} href={`/blog/${post.id}`}>
+                <article className="bg-gray-50 rounded-xl overflow-hidden hover-lift cursor-pointer transition-transform hover:scale-105">
+                  {post.imageUrl && (
+                    <img 
+                      src={post.imageUrl} 
+                      alt={post.title}
+                      className="w-full h-48 object-cover"
+                    />
+                  )}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-3">{post.title}</h3>
+                    <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-primary font-medium">{post.category}</span>
+                      <span className="text-sm text-gray-500">
+                        {new Date(post.createdAt).toLocaleDateString()}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </Link>
             ))}
           </div>
         </div>

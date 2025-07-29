@@ -102,35 +102,37 @@ export default function Blog() {
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => (
-                <article key={post.id} className="bg-gray-50 rounded-xl overflow-hidden hover-lift">
-                  {post.imageUrl && (
-                    <img 
-                      src={post.imageUrl} 
-                      alt={post.title}
-                      className="w-full h-48 object-cover"
-                    />
-                  )}
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Badge variant="secondary">{post.category}</Badge>
-                      <span className="text-sm text-gray-500">
-                        {new Date(post.createdAt).toLocaleDateString()}
-                      </span>
+                <Link key={post.id} href={`/blog/${post.id}`}>
+                  <article className="bg-gray-50 rounded-xl overflow-hidden hover-lift cursor-pointer transition-transform hover:scale-105">
+                    {post.imageUrl && (
+                      <img 
+                        src={post.imageUrl} 
+                        alt={post.title}
+                        className="w-full h-48 object-cover"
+                      />
+                    )}
+                    <div className="p-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Badge variant="secondary">{post.category}</Badge>
+                        <span className="text-sm text-gray-500">
+                          {new Date(post.createdAt).toLocaleDateString()}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold mb-3">{post.title}</h3>
+                      <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                      <div className="flex flex-wrap gap-1 mb-4">
+                        {post.tags.map((tag) => (
+                          <Badge key={tag} variant="outline" className="text-xs">
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
+                      <Button variant="ghost" className="text-primary hover:text-primary/80 p-0">
+                        Read More →
+                      </Button>
                     </div>
-                    <h3 className="text-xl font-bold mb-3">{post.title}</h3>
-                    <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                    <div className="flex flex-wrap gap-1 mb-4">
-                      {post.tags.map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-xs">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                    <Button variant="ghost" className="text-primary hover:text-primary/80 p-0">
-                      Read More →
-                    </Button>
-                  </div>
-                </article>
+                  </article>
+                </Link>
               ))}
             </div>
           )}
