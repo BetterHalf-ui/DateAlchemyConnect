@@ -188,11 +188,12 @@ export default function Home() {
       {/* How We Help Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 subtitle text-gray-900">Finding a compatible partner in Mauritius is difficult.</h2>
-          <p className="text-lg text-gray-700 mb-12 body-text max-w-4xl mx-auto leading-relaxed">
-            We understand how frustrating modern dating can be. With busy lives, small social circles, and the swipe fatigue of dating apps, it's tough to find something real. Endless texting that leads nowhere, ghosting, fake profiles, shallow conversations, mixed signals, and unwanted attention are just some of the problems many face. Not to mention, the feeling of being unsafe or misunderstood.
+          <p className="text-lg text-gray-700 mb-8 body-text max-w-4xl mx-auto leading-relaxed">
+            Finding a real connection in Mauritius isn't easy — especially when you are a busy professional and hold yourself to high standards.
           </p>
-          <h3 className="text-3xl font-bold mb-16 subtitle text-gray-900">We are here to help.</h3>
+          <p className="text-lg text-gray-700 mb-16 body-text max-w-4xl mx-auto leading-relaxed">
+            At The Date Alchemy, we believe real connections rarely happen by chance. We invite you to put yourself out there, intentionally. And we'll handle the rest — discreetly, with care, and without the confusion. So you can focus on living fully, while love finds its way to you.
+          </p>
           
           {/* Four Feature Points */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mt-16">
