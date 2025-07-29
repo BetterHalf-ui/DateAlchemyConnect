@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import Hero from "@/components/sections/hero";
-import Approach from "@/components/sections/approach";
 import Testimonials from "@/components/sections/testimonials";
 import Membership from "@/components/sections/membership";
 import Pricing from "@/components/sections/pricing";
@@ -61,36 +60,6 @@ export default function Home() {
       <Header />
       
       <Hero />
-      
-      <Approach />
-
-      {/* Ready for Real Connection CTA */}
-      <section className="py-32 bg-black text-white text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-5xl font-bold mb-12 subtitle">Ready for real connection?</h2>
-          <a 
-            href={EXTERNAL_LINKS.applicationForm} 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl font-semibold mb-8 rounded-full hover-lift">
-              Apply Now
-            </Button>
-          </a>
-          <p className="text-gray-300 text-base body-text">
-            Not ready to invest in a membership?{" "}
-            <Link href="/network">
-              <a className="text-primary hover:underline">
-                Join our network for free to see if you are a match with one of our exceptional clients.
-              </a>
-            </Link>
-            <br />
-            <Link href="/network">
-              <a className="text-primary hover:underline">Create your complimentary profile.</a>
-            </Link>
-          </p>
-        </div>
-      </section>
 
       {/* Our Story Section */}
       <section className="py-32 bg-white">
