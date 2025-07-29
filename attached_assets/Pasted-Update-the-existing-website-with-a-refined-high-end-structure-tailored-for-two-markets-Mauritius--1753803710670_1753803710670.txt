@@ -1,0 +1,137 @@
+Update the existing website with a refined, high-end structure tailored for two markets (Mauritius & Singapore), following UX and creative direction focused on elegance, discretion, and a transformative dating experience. Use visual and UX references from https://www.fourseasons.com/ and the attached creative brief.
+ 
+STYLE & BRANDING GUIDELINES:
+- Background: Black for the first 3 sections, then alternate White / Earthy tones, and end with Black footer
+- Typography: Serif (semi-bold) for titles, clean sans-serif for body text
+- Mood: Sophisticated, calm, warm, trust-building — no clichés or stock imagery
+- Font, layout, and transitions should reflect high-end hospitality
+- Use subtle scroll-triggered animations and fade-ins where appropriate
+ 
+========
+1. HOMEPAGE HERO BANNER
+========
+- Replace text with: "A Healthy Dating Experience For Global Professionals"
+- This text should be invisible on load and fade in on scroll (only slight scroll needed)
+- Keep two CTA buttons at bottom:
+    - Sign Up
+    - Create a Complimentary Profile
+ 
+========
+2. NAVIGATION BAR
+========
+- Sticky navigation bar with translucent black background and white text
+- Left: Menu items → "The Alchemy", "The Alchemists", "Membership & Pricing"
+- Right: CTA → "Sign Up Now"
+- Nav items must scroll smoothly to relevant sections of the homepage
+ 
+========
+3. SECTION FLOW AND STRUCTURE
+========
+ 
+a. Hero Banner (as above)
+ 
+b. INTRODUCTION
+- Remove image
+- Full-width text only:
+"Finding a real connection in Mauritius isn't easy — especially when you are a busy professional and hold yourself to high standards. 
+At The Date Alchemy, we believe real connections rarely happen by chance. We invite you to put yourself out there, intentionally. And we’ll handle the rest — discreetly, with care, and without the confusion. So you can focus on living fully, while love finds its way to you."
+- Add 4 favicon-style icons with these captions:
+    1. Handpicked introductions with singles who match your standards
+    2. Compatibility based on your needs, not just interests
+    3. Curated real-life experiences, not swiping
+    4. A human-led process backed by relationship science
+ 
+c. READY FOR REAL CONNECTION section — keep as is, with CTA
+ 
+d. THE DATE ALCHEMY EXPERIENCE (section ID = #alchemy)
+- Title: "The Date Alchemy Experience"
+- Subtitle: "Everything you need for a transformative dating experience — from premium matchmaking to personal growth guidance."
+- Above carousel, add:
+"We begin by organising quality dates with intentional and compatible singles who match your standards, removing the dating app fatigue and confusion from the equation."
+- Create carousel (inspired by Four Seasons design) with the following cards:
+    - Curated introductions with pre-screened singles
+    - Compatibility assessment based on lifestyle and values
+    - Human-centered matching — handpicked by experts
+    - Attachment-aware matchmaking to avoid mismatches
+    - Full access to vetted profiles — client remains in control
+    - Scheduling concierge — we handle all logistics
+    - Post-date feedback and guidance
+    - Private Singles Socials — curated brunches/dinners
+ 
+e. READY FOR REAL CONNECTION (repeat section + CTA)
+ 
+f. SELF-DISCOVERY & COACHING CAROUSEL
+- Subtitle: "We don’t just help you meet the right person. Our process addresses the inner patterns that shape your relationships, often without you realizing it."
+- Carousel Cards:
+    - Your Needs Assessment
+    - Attachment Style Assessment
+    - Dating Tendencies Assessment
+    - Direct Access to Our Matchmaking Team
+    - Pre-Date and Pre-Dating Advice via Email
+    - Reflection Rituals after Each Date
+    - Bi-weekly Science-Based Insights
+ 
+g. TRUST US IT REALLY WORKS
+- Keep existing stats
+- Add CTA button: "Sign Up"
+ 
+h. WHAT OUR MEMBERS SAY
+- Testimonials layout (carousel or grid)
+ 
+i. START YOUR JOURNEY SECTION
+- Make interactive if possible
+- Add CTA: "Sign Up"
+ 
+j. MEMBERSHIP + GUARANTEES SECTION (merged)
+- Title: "Membership & Our Commitments"
+- Show pricing and guarantees together (e.g., 2-column or tab layout)
+ 
+k. TURNING OUR STORY INTO YOURS (ID = #alchemists)
+- Break content into 3 paragraphs
+- Each paragraph has one image, alternating left/right (image + text)
+- Nav button “The Alchemists” scrolls here
+- Add CTA: "Sign Up"
+ 
+l. SPREAD THE LOVE SECTION
+- Subtle animation or visual interest is OK
+ 
+m. LATEST INSIGHTS SECTION
+- Each card = clickable to open full post
+- Post page layout: Hero image → Full content → Sticky nav at top
+- "View All Posts" → blog landing page (grid of cards)
+- Blog cards must each link to unique article pages
+ 
+n. FAQ SECTION
+- Title: "Frequently Asked Questions"
+- Place this section **just before the Footer**
+- Layout: Clean accordion or collapsible format (expandable Q&A)
+- Background: Match the last white or earthy tone used (not black)
+- Include placeholder questions and answers like:
+    1. What happens after I sign up?
+    2. Can I choose who I am matched with?
+    3. Do you serve clients who live abroad?
+    4. How do you ensure privacy and discretion?
+    5. What if I don’t find someone I connect with?
+ 
+- Include a question submission prompt at the bottom:
+    "Have more questions? Reach out to us directly."
+    → Link this to the contact page or email CTA
+ 
+o. FOOTER
+- Black background
+- Always include CTA: "Sign Up"
+ 
+========
+NOTES FOR DEVELOPMENT
+========
+- Use clear section IDs for scrolling and CTA targeting
+- Use placeholder images/icons where necessary and label them
+- Ensure mobile responsiveness and sticky nav behavior
+- Add subtle transitions (fade-ins, scroll effects) for modern UX
+- Feel free to break content into components for reuse
+ 
+========
+REFERENCE
+========
+- Use Four Seasons site for inspiration on carousel, transparency, and visual flow: https://www.fourseasons.com
+- Design strategy and tone should align with attached Creative Director advice (luxury, calm, trusted)
