@@ -8,21 +8,19 @@ export default function Hero() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      // Show text after slight scroll (50px)
-      if (scrollY > 50) {
+      // Show text after slight scroll (30px)
+      if (scrollY > 30) {
         setTextVisible(true);
+      } else {
+        setTextVisible(false);
       }
     };
 
     // Add scroll listener
     window.addEventListener('scroll', handleScroll);
-    
-    // Also show text after 500ms delay for better UX
-    const timer = setTimeout(() => setTextVisible(true), 500);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      clearTimeout(timer);
     };
   }, []);
 
