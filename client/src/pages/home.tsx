@@ -185,27 +185,62 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Active Members Section */}
+      {/* How We Help Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Diverse young professionals enjoying conversation at an elegant coffee shop" 
-                className="rounded-xl shadow-lg w-full hover-lift"
-              />
-            </div>
-            <div className="text-left">
-              <div className="relative inline-block mb-6">
-                <div className="text-8xl font-bold text-primary mb-2">{displayCount}</div>
+          <h2 className="text-4xl font-bold mb-6 subtitle text-gray-900">Finding a compatible partner in Mauritius is difficult.</h2>
+          <p className="text-lg text-gray-700 mb-12 body-text max-w-4xl mx-auto leading-relaxed">
+            We understand how frustrating modern dating can be. With busy lives, small social circles, and the swipe fatigue of dating apps, it's tough to find something real. Endless texting that leads nowhere, ghosting, fake profiles, shallow conversations, mixed signals, and unwanted attention are just some of the problems many face. Not to mention, the feeling of being unsafe or misunderstood.
+          </p>
+          <h3 className="text-3xl font-bold mb-16 subtitle text-gray-900">We are here to help.</h3>
+          
+          {/* Four Feature Points */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mt-16">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                </svg>
               </div>
-              <h3 className="text-4xl font-bold mb-6 subtitle">Active Members</h3>
-              <p className="text-lg text-gray-700 mb-6 body-text">
-                Our members are the most ambitious, fun and dynamic people you know! They are also self-aware professionals who simply want more than what the apps can offer.
+              <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">Curated Introductions</h4>
+              <p className="text-gray-700 body-text leading-relaxed">
+                We introduce you to singles who meet your standards and share your vibe, are carefully interviewed and equally serious about finding a lifetime partner in Mauritius.
               </p>
-              <p className="text-xl font-semibold text-gray-900 body-text">
-                Our matchmakers review EVERY application.
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">Your Privacy is Our Priority</h4>
+              <p className="text-gray-700 body-text leading-relaxed">
+                We protect your privacy like it's our own—your information is always safe, confidential, and never shared without your consent. Every introduction is handled with the utmost care and respect for your privacy.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">Sans pressure</h4>
+              <p className="text-gray-700 body-text leading-relaxed">
+                No pressure from parents and friends to deal with. Meet your match for a coffee date, exchange numbers if you like, or date for months, or meet someone else who's a better fit. Every introduction is your choice.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">Thoughtful, Human Support</h4>
+              <p className="text-gray-700 body-text leading-relaxed">
+                We offer a full-circle dating experience — from pre-date self-assessments to date planning and post-date follow-ups. You get personalized, science-backed guidance at every step. No more ghosting, no confusion — just real support, with a human touch. Because your love life deserves more than algorithms.
               </p>
             </div>
           </div>
