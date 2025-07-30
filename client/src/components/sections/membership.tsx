@@ -87,31 +87,21 @@ export default function Membership() {
               </div>
             </div>
             
-            <div className="space-y-6">
+            <div className="h-full">
               <img 
                 src="/attached_assets/Screenshot 2025-07-30 at 17.02.42_1753881255839.png" 
                 alt="Happy couple enjoying intimate moment together" 
-                className="rounded-2xl shadow-lg w-full h-48 object-cover hover-lift"
-              />
-              <img 
-                src="/attached_assets/Screenshot 2025-07-30 at 17.02.42_1753881255839.png" 
-                alt="Romantic connection between couple" 
-                className="rounded-2xl shadow-lg w-full h-48 object-cover hover-lift"
+                className="rounded-2xl shadow-lg w-full h-full object-cover hover-lift"
               />
             </div>
           </div>
           
           <div className="grid lg:grid-cols-3 gap-12 items-start">
-            <div className="space-y-6">
+            <div className="h-full">
               <img 
                 src="/attached_assets/74c7b6d9-723b-48f4-8ad3-88de4e6dabe9_1753881262177.jpeg" 
                 alt="Professional woman reflecting confidently" 
-                className="rounded-2xl shadow-lg w-full h-48 object-cover hover-lift"
-              />
-              <img 
-                src="/attached_assets/74c7b6d9-723b-48f4-8ad3-88de4e6dabe9_1753881262177.jpeg" 
-                alt="Happy couple celebrating connection" 
-                className="rounded-2xl shadow-lg w-full h-48 object-cover hover-lift"
+                className="rounded-2xl shadow-lg w-full h-full object-cover hover-lift"
               />
             </div>
             
