@@ -309,6 +309,8 @@ export default function Home() {
         </div>
       </section>
 
+      <Pricing />
+
       {/* Full Screen Image with Scroll-Triggered Text - Mauritius Expat */}
       <section ref={mauritiusTestimonialRef} className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
@@ -334,9 +336,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <Pricing />
-      <Journey />
 
       {/* Nominate Section */}
       <section className="py-20 bg-gray-50 text-center">
