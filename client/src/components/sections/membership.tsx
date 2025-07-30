@@ -1,3 +1,5 @@
+import { useState, useEffect, useRef } from 'react';
+
 const membershipFeatures = {
   premiumMatchmaking: {
     title: "1. Premium Matchmaking, Curated for Intentional Dating",
@@ -39,6 +41,29 @@ const membershipFeatures = {
 };
 
 export default function Membership() {
+  const [visibleFeatures, setVisibleFeatures] = useState<Set<string>>(new Set());
+  const featureRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+
+  useEffect(() => {
+    const handleScroll = () => {
+      Object.entries(featureRefs.current).forEach(([key, element]) => {
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const isVisible = rect.top < window.innerHeight - 100 && rect.bottom > 0;
+          
+          if (isVisible && !visibleFeatures.has(key)) {
+            setVisibleFeatures(prev => new Set(Array.from(prev).concat(key)));
+          }
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial visibility
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [visibleFeatures]);
+
   return (
     <section className="py-32 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4">
@@ -64,12 +89,23 @@ export default function Membership() {
                   // Handle bold formatting for premium matchmaking features
                   const colonIndex = feature.indexOf(':');
                   const starIndex = feature.indexOf('**', 2); // Find closing **
+                  const featureKey = `premium-${index}`;
+                  const isVisible = visibleFeatures.has(featureKey);
                   
                   if (feature.startsWith('**') && starIndex > 0) {
                     const boldPart = feature.substring(2, starIndex);
                     const regularPart = feature.substring(starIndex + 2);
                     return (
-                      <div key={index} className="flex items-start">
+                      <div 
+                        key={index} 
+                        ref={el => featureRefs.current[featureKey] = el}
+                        className={`flex items-start transition-all duration-700 ${
+                          isVisible 
+                            ? 'opacity-100 translate-y-0' 
+                            : 'opacity-0 translate-y-4'
+                        }`}
+                        style={{ transitionDelay: `${index * 150}ms` }}
+                      >
                         <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
                         <span className="text-gray-700 body-text leading-relaxed">
                           <strong>{boldPart}</strong>{regularPart}
@@ -78,7 +114,16 @@ export default function Membership() {
                     );
                   }
                   return (
-                    <div key={index} className="flex items-start">
+                    <div 
+                      key={index} 
+                      ref={el => featureRefs.current[featureKey] = el}
+                      className={`flex items-start transition-all duration-700 ${
+                        isVisible 
+                          ? 'opacity-100 translate-y-0' 
+                          : 'opacity-0 translate-y-4'
+                      }`}
+                      style={{ transitionDelay: `${index * 150}ms` }}
+                    >
                       <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
                       <span className="text-gray-700 body-text leading-relaxed">{feature}</span>
                     </div>
@@ -123,11 +168,23 @@ export default function Membership() {
                       {subsection.features.map((feature, featureIndex) => {
                         // Split on the first colon to separate bold part from description
                         const colonIndex = feature.indexOf(':');
+                        const featureKey = `inner-${sectionIndex}-${featureIndex}`;
+                        const isVisible = visibleFeatures.has(featureKey);
+                        
                         if (colonIndex > 0 && feature.startsWith('**')) {
                           const boldPart = feature.substring(2, colonIndex - 2); // Remove ** from start and end before colon
                           const regularPart = feature.substring(colonIndex);
                           return (
-                            <div key={featureIndex} className="flex items-start">
+                            <div 
+                              key={featureIndex} 
+                              ref={el => featureRefs.current[featureKey] = el}
+                              className={`flex items-start transition-all duration-700 ${
+                                isVisible 
+                                  ? 'opacity-100 translate-y-0' 
+                                  : 'opacity-0 translate-y-4'
+                              }`}
+                              style={{ transitionDelay: `${(sectionIndex * 4 + featureIndex) * 150}ms` }}
+                            >
                               <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
                               <span className="text-gray-700 body-text leading-relaxed">
                                 <strong>{boldPart}</strong>{regularPart}
@@ -136,7 +193,16 @@ export default function Membership() {
                           );
                         }
                         return (
-                          <div key={featureIndex} className="flex items-start">
+                          <div 
+                            key={featureIndex} 
+                            ref={el => featureRefs.current[featureKey] = el}
+                            className={`flex items-start transition-all duration-700 ${
+                              isVisible 
+                                ? 'opacity-100 translate-y-0' 
+                                : 'opacity-0 translate-y-4'
+                            }`}
+                            style={{ transitionDelay: `${(sectionIndex * 4 + featureIndex) * 150}ms` }}
+                          >
                             <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
                             <span className="text-gray-700 body-text leading-relaxed">{feature}</span>
                           </div>
