@@ -45,12 +45,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/network">
-                  <a className="hover:text-primary transition-colors">Join Network</a>
+                  <span className="hover:text-primary transition-colors cursor-pointer">Join Network</span>
                 </Link>
               </li>
               <li>
                 <Link href="/blog">
-                  <a className="hover:text-primary transition-colors">Blog</a>
+                  <span className="hover:text-primary transition-colors cursor-pointer">Blog</span>
                 </Link>
               </li>
             </ul>

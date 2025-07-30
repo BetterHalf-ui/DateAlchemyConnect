@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -36,6 +36,8 @@ export default function Home() {
   const latestPosts = blogPosts?.slice(0, 3) || [];
   const targetCount = parseInt(activeMembersSetting?.value || "222");
   const [displayCount, setDisplayCount] = useState(1);
+  const [testimonialVisible, setTestimonialVisible] = useState(false);
+  const testimonialRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const duration = 2000; // 2 seconds
@@ -54,6 +56,20 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, [targetCount]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (testimonialRef.current) {
+        const rect = testimonialRef.current.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        setTestimonialVisible(isVisible);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -129,6 +145,33 @@ export default function Home() {
       </section>
 
       <Testimonials />
+
+      {/* Full-Screen Image with Testimonial */}
+      <section ref={testimonialRef} className="relative h-screen overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+            alt="Elegant couple at upscale venue"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        
+        {/* Testimonial that appears on scroll */}
+        <div className={`absolute bottom-0 left-0 right-0 p-12 text-white transition-all duration-1000 ${
+          testimonialVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <div className="max-w-6xl mx-auto">
+            <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold leading-relaxed subtitle mb-8">
+              "Discreet, professional, and incredibly effective. The Date Alchemy understood exactly what I was looking for, curating introductions that led to a truly profound and lasting relationship."
+            </blockquote>
+            <cite className="text-xl md:text-2xl lg:text-3xl font-medium opacity-90 not-italic">
+              — Entrepreneur, Tech Industry
+            </cite>
+          </div>
+        </div>
+      </section>
+
       <Membership />
 
       {/* Your Date Alchemists Section */}
