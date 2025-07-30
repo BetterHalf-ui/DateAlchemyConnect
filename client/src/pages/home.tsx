@@ -37,6 +37,7 @@ export default function Home() {
   const targetCount = parseInt(activeMembersSetting?.value || "222");
   const [displayCount, setDisplayCount] = useState(1);
   const [testimonialVisible, setTestimonialVisible] = useState(false);
+  const [testimonialTextVisible, setTestimonialTextVisible] = useState(false);
   const testimonialRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -63,6 +64,16 @@ export default function Home() {
         const rect = testimonialRef.current.getBoundingClientRect();
         const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
         setTestimonialVisible(isVisible);
+        
+        // Show text with additional scroll - when section is 30% visible
+        const scrollProgress = (window.innerHeight - rect.top) / window.innerHeight;
+        if (scrollProgress > 0.3) {
+          setTimeout(() => {
+            setTestimonialTextVisible(true);
+          }, 800); // Delay the text appearance
+        } else {
+          setTestimonialTextVisible(false);
+        }
       }
     };
 
@@ -157,12 +168,12 @@ export default function Home() {
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         </div>
         
-        {/* Testimonial that appears on scroll */}
+        {/* Testimonial that appears on additional scroll */}
         <div className={`absolute bottom-0 left-0 right-0 p-12 text-white transition-all duration-1000 ${
-          testimonialVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          testimonialTextVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          <div className="max-w-6xl mx-auto">
-            <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold leading-relaxed subtitle mb-8">
+          <div className="max-w-7xl mx-auto">
+            <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight subtitle mb-8">
               "Discreet, professional, and incredibly effective. The Date Alchemy understood exactly what I was looking for, curating introductions that led to a truly profound and lasting relationship."
             </blockquote>
             <cite className="text-xl md:text-2xl lg:text-3xl font-medium opacity-90 not-italic">
