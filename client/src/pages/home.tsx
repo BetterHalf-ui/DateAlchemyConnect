@@ -150,7 +150,7 @@ export default function Home() {
       <section ref={testimonialRef} className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+            src="/attached_assets/fc9db359-157d-465f-afaf-1398700efe3b_1753876598985.jpeg"
             alt="Elegant couple at upscale venue"
             className="w-full h-full object-cover"
           />
