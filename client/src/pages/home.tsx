@@ -185,6 +185,27 @@ export default function Home() {
 
       <Membership />
 
+      {/* Testimonial Section - Singapore */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden relative">
+        <div className="absolute inset-0 opacity-10">
+          <img 
+            src="/attached_assets/d8c51dd7-2842-47ea-baa6-7180ac506cb3_1753881725745.jpeg" 
+            alt="Professional environment background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="relative z-10 px-4">
+          <div className="max-w-7xl mx-auto">
+            <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight subtitle mb-8">
+              "The Date Alchemy isn't just matchmaking; it's a masterclass in connection. Their expertise created a path to love I didn't know existed, perfectly suited for my global lifestyle."
+            </blockquote>
+            <cite className="text-xl md:text-2xl lg:text-3xl font-medium opacity-90 not-italic">
+              — International Consultant, Singapore
+            </cite>
+          </div>
+        </div>
+      </section>
+
       {/* Your Date Alchemists Section */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4">
