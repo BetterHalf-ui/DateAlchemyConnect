@@ -73,6 +73,8 @@ export default function Home() {
             At The Date Alchemy, we believe real connections rarely happen by chance. We invite you to put yourself out there, intentionally. And we'll handle the rest — discreetly, with care, and without the confusion. So you can focus on living fully, while love finds its way to you.
           </p>
           
+          <h2 className="text-4xl font-bold mb-12 subtitle text-gray-900">What To Expect As A Member</h2>
+          
           {/* Four Feature Points */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mt-16">
             <div className="text-center">

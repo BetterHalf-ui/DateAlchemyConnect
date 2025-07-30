@@ -6,6 +6,7 @@ import { COMPANY_INFO, EXTERNAL_LINKS } from "@/lib/constants";
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,9 @@ export default function Header() {
         setIsVisible(true);
       }
       
+      // Check if background should be white (scrolled)
+      setIsScrolled(currentScrollY > 50);
+      
       setLastScrollY(currentScrollY);
     };
 
@@ -26,13 +30,15 @@ export default function Header() {
   }, [lastScrollY]);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 bg-transparent transition-transform duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
-    }`}>
+    } ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/">
-            <div className="font-bold text-xl text-white hover:text-primary transition-colors cursor-pointer subtitle">
+            <div className={`font-bold text-2xl hover:text-primary transition-colors cursor-pointer subtitle ${
+              isScrolled ? 'text-primary' : 'text-white'
+            }`}>
               {COMPANY_INFO.name}
             </div>
           </Link>
