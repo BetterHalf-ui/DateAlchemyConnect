@@ -9,6 +9,11 @@ app.use(express.urlencoded({ extended: false }));
 // Serve attached assets
 app.use('/attached_assets', express.static('attached_assets'));
 
+// Serve specific static HTML files
+app.get('/how-it-works.html', (req, res) => {
+  res.sendFile('how-it-works.html', { root: 'client' });
+});
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;

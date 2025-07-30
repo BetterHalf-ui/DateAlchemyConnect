@@ -1,0 +1,49 @@
+Create a new HTML file named how-it-works.html in this project.
+
+Page Structure & Styling:
+
+Design how-it-works.html to visually mimic the layout of https://tawkify.com/how-it-works.
+
+Use Tailwind CSS for all styling, consistent with the existing project's aesthetic (color palette, typography).
+
+Include a hero section with a prominent title and a short descriptive text.
+
+Structure the main content into four distinct, numbered steps, each with a bold title and a descriptive paragraph.
+
+Add a clear Call-to-Action button at the bottom of the steps section.
+
+Ensure the page is fully responsive.
+
+Content Integration:
+
+Replace all instances of 'Tawkify' with 'The Date Alchemy'.
+
+Hero Title: "How The Date Alchemy Works"
+
+Hero Description: "Our personalized approach to matchmaking is designed to bring you meaningful connections, efficiently and discreetly."
+
+Step 1: Apply for Membership
+"You'll begin by completing our initial application: a questionnaire that helps us understand your background, values, and what you’re truly seeking in a partner. Within one business day, we’ll review your submission to let you know if we have a potential match within our member base and share an in-depth assessment to better understand your needs in a relationship, attachment style, and dating tendencies."
+
+Step 2: Private Consultation
+"Next, you’ll meet with your personal matchmaker in a one-on-one video consultation. This conversation is designed to gain a more in-depth understanding of who you are and what you are looking for. Following this, we craft a profile summary — which you’ll review and approve — to be shared selectively only with potential matches who meet your criteria."
+
+Step 3: Curated Introduction
+"Once a mutually aligned connection is identified, we share both profiles for review. If there’s mutual interest, we invite you to activate your annual membership so we can proceed with arranging your first date. We handle all the coordination with care and discretion, ensuring you meet someone genuinely aligned with your aspirations — in the right place, at the right time."
+
+Step 4: Refinement & Follow-up
+"After the introduction, the path is yours — whether it’s a second date, exchanging contact details, or choosing to explore a new introduction. We always seek your feedback after each date to fine-tune our matching approach and ensure your experience evolves meaningfully."
+
+CTA Button Text: "Begin Your Journey" (linking to the contact page/section).
+
+Navigation Integration (in index.html):
+
+Add a new link to how-it-works.html in the main navigation bar of the existing index.html file. The link text should be "How It Works".
+
+Technical Notes:
+
+Use standard HTML elements and Tailwind classes.
+
+No JavaScript is required for this new page, as it's primarily static content.
+
+No images are to be used; rely on text, colors, and layout for visual appeal."

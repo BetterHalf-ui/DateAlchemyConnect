@@ -42,15 +42,42 @@ export default function Header() {
               {COMPANY_INFO.name}
             </div>
           </Link>
-          <a 
-            href={EXTERNAL_LINKS.applicationForm} 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 font-medium">
-              Apply Now
-            </Button>
-          </a>
+          
+          <div className="flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-6">
+              <Link href="/">
+                <span className={`hover:text-primary transition-colors cursor-pointer body-text ${
+                  isScrolled ? 'text-gray-700' : 'text-white'
+                }`}>
+                  Home
+                </span>
+              </Link>
+              <a 
+                href="how-it-works.html"
+                className={`hover:text-primary transition-colors body-text ${
+                  isScrolled ? 'text-gray-700' : 'text-white'
+                }`}
+              >
+                How It Works
+              </a>
+              <Link href="/blog">
+                <span className={`hover:text-primary transition-colors cursor-pointer body-text ${
+                  isScrolled ? 'text-gray-700' : 'text-white'
+                }`}>
+                  Blog
+                </span>
+              </Link>
+            </div>
+            <a 
+              href={EXTERNAL_LINKS.applicationForm} 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 font-medium">
+                Apply Now
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
