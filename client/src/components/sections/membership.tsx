@@ -89,13 +89,13 @@ export default function Membership() {
             
             <div className="space-y-6">
               <img 
-                src="https://images.unsplash.com/photo-1559734840-f2f99ac4d94d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-                alt="Diverse professionals at exclusive networking event" 
+                src="/attached_assets/Screenshot 2025-07-30 at 17.02.42_1753881255839.png" 
+                alt="Happy couple enjoying intimate moment together" 
                 className="rounded-2xl shadow-lg w-full h-48 object-cover hover-lift"
               />
               <img 
-                src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-                alt="Elegant restaurant setting for curated dates" 
+                src="/attached_assets/Screenshot 2025-07-30 at 17.02.42_1753881255839.png" 
+                alt="Romantic connection between couple" 
                 className="rounded-2xl shadow-lg w-full h-48 object-cover hover-lift"
               />
             </div>
@@ -104,12 +104,12 @@ export default function Membership() {
           <div className="grid lg:grid-cols-3 gap-12 items-start">
             <div className="space-y-6">
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
+                src="/attached_assets/74c7b6d9-723b-48f4-8ad3-88de4e6dabe9_1753881262177.jpeg" 
                 alt="Professional woman reflecting confidently" 
                 className="rounded-2xl shadow-lg w-full h-48 object-cover hover-lift"
               />
               <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
+                src="/attached_assets/74c7b6d9-723b-48f4-8ad3-88de4e6dabe9_1753881262177.jpeg" 
                 alt="Happy couple celebrating connection" 
                 className="rounded-2xl shadow-lg w-full h-48 object-cover hover-lift"
               />
