@@ -39,8 +39,10 @@ export default function Home() {
   const [testimonialVisible, setTestimonialVisible] = useState(false);
   const [testimonialTextVisible, setTestimonialTextVisible] = useState(false);
   const [singaporeTestimonialTextVisible, setSingaporeTestimonialTextVisible] = useState(false);
+  const [mauritiusTestimonialTextVisible, setMauritiusTestimonialTextVisible] = useState(false);
   const testimonialRef = useRef<HTMLElement>(null);
   const singaporeTestimonialRef = useRef<HTMLElement>(null);
+  const mauritiusTestimonialRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const duration = 2000; // 2 seconds
@@ -89,6 +91,20 @@ export default function Home() {
           }, 800); // Delay the text appearance
         } else {
           setSingaporeTestimonialTextVisible(false);
+        }
+      }
+
+      if (mauritiusTestimonialRef.current) {
+        const rect = mauritiusTestimonialRef.current.getBoundingClientRect();
+        
+        // Show text with additional scroll - when section is 30% visible
+        const scrollProgress = (window.innerHeight - rect.top) / window.innerHeight;
+        if (scrollProgress > 0.3) {
+          setTimeout(() => {
+            setMauritiusTestimonialTextVisible(true);
+          }, 800); // Delay the text appearance
+        } else {
+          setMauritiusTestimonialTextVisible(false);
         }
       }
     };
@@ -270,11 +286,6 @@ export default function Home() {
                 alt="The Date Alchemy founders" 
                 className="rounded-2xl shadow-lg w-full h-104 object-cover hover-lift"
               />
-              <div className="text-center pt-4">
-                <p className="text-sm text-gray-500 italic body-text">
-                  Pratik Malia and Celine Delacharlerie
-                </p>
-              </div>
             </div>
           </div>
 
@@ -286,11 +297,6 @@ export default function Home() {
                 alt="The Date Alchemy team members" 
                 className="rounded-2xl shadow-lg w-full h-104 object-cover hover-lift"
               />
-              <div className="text-center pt-4">
-                <p className="text-sm text-gray-500 italic body-text">
-                  Sagarika Sarkar and Baptiste Johoud
-                </p>
-              </div>
             </div>
             <div>
               <div className="prose prose-lg max-w-none">
@@ -299,6 +305,32 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full Screen Image with Scroll-Triggered Text - Mauritius Expat */}
+      <section ref={mauritiusTestimonialRef} className="relative h-screen overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="/attached_assets/Couple_1753898817433.png"
+            alt="Elegant couple in intimate moment"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        
+        {/* Testimonial that appears on scroll at bottom */}
+        <div className={`absolute bottom-0 left-0 right-0 p-12 text-white transition-all duration-1000 ${
+          mauritiusTestimonialTextVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <div className="max-w-7xl mx-auto">
+            <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight subtitle mb-8">
+              "I was seeking a partner who understood my world, and The Date Alchemy delivered beyond expectation."
+            </blockquote>
+            <cite className="text-xl md:text-2xl lg:text-3xl font-medium opacity-90 not-italic">
+              — Expat Professional, Mauritius
+            </cite>
           </div>
         </div>
       </section>
