@@ -151,7 +151,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <img 
             src="/attached_assets/fc9db359-157d-465f-afaf-1398700efe3b_1753876598985.jpeg"
-            alt="Elegant couple at upscale venue"
+            alt="Professional couple at elegant venue"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
