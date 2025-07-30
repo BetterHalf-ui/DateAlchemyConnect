@@ -185,20 +185,18 @@ export default function Home() {
 
       <Membership />
 
-      {/* Full Screen Image Section - Singapore */}
-      <section className="relative h-screen overflow-hidden">
+      {/* Full Screen Image with Superimposed Text - Singapore */}
+      <section className="relative h-screen overflow-hidden flex items-center justify-center">
         <img 
           src="/attached_assets/d8c51dd7-2842-47ea-baa6-7180ac506cb3_1753881725745.jpeg" 
           alt="Professional international consultant in Singapore" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-transparent to-black/20"></div>
-      </section>
-
-      {/* Testimonial Text Section - Singapore */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
-        <div className="px-4">
-          <div className="max-w-7xl mx-auto">
+        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/40"></div>
+        
+        {/* Superimposed Testimonial Text */}
+        <div className="absolute inset-0 flex items-center justify-center px-4">
+          <div className="max-w-7xl mx-auto text-center text-white">
             <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight subtitle mb-8">
               "The Date Alchemy isn't just matchmaking; it's a masterclass in connection. Their expertise created a path to love I didn't know existed, perfectly suited for my global lifestyle."
             </blockquote>
