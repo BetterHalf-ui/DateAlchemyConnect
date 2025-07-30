@@ -38,7 +38,9 @@ export default function Home() {
   const [displayCount, setDisplayCount] = useState(1);
   const [testimonialVisible, setTestimonialVisible] = useState(false);
   const [testimonialTextVisible, setTestimonialTextVisible] = useState(false);
+  const [singaporeTestimonialTextVisible, setSingaporeTestimonialTextVisible] = useState(false);
   const testimonialRef = useRef<HTMLElement>(null);
+  const singaporeTestimonialRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const duration = 2000; // 2 seconds
@@ -73,6 +75,20 @@ export default function Home() {
           }, 800); // Delay the text appearance
         } else {
           setTestimonialTextVisible(false);
+        }
+      }
+
+      if (singaporeTestimonialRef.current) {
+        const rect = singaporeTestimonialRef.current.getBoundingClientRect();
+        
+        // Show text with additional scroll - when section is 30% visible
+        const scrollProgress = (window.innerHeight - rect.top) / window.innerHeight;
+        if (scrollProgress > 0.3) {
+          setTimeout(() => {
+            setSingaporeTestimonialTextVisible(true);
+          }, 800); // Delay the text appearance
+        } else {
+          setSingaporeTestimonialTextVisible(false);
         }
       }
     };
@@ -185,18 +201,22 @@ export default function Home() {
 
       <Membership />
 
-      {/* Full Screen Image with Superimposed Text - Singapore */}
-      <section className="relative h-screen overflow-hidden flex items-center justify-center">
-        <img 
-          src="/attached_assets/d8c51dd7-2842-47ea-baa6-7180ac506cb3_1753881725745.jpeg" 
-          alt="Professional international consultant in Singapore" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/40"></div>
+      {/* Full Screen Image with Scroll-Triggered Text - Singapore */}
+      <section ref={singaporeTestimonialRef} className="relative h-screen overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="/attached_assets/d8c51dd7-2842-47ea-baa6-7180ac506cb3_1753881725745.jpeg"
+            alt="Professional international consultant in Singapore"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
         
-        {/* Superimposed Testimonial Text */}
-        <div className="absolute inset-0 flex items-center justify-center px-4">
-          <div className="max-w-7xl mx-auto text-center text-white">
+        {/* Testimonial that appears on scroll at bottom */}
+        <div className={`absolute bottom-0 left-0 right-0 p-12 text-white transition-all duration-1000 ${
+          singaporeTestimonialTextVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <div className="max-w-7xl mx-auto">
             <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight subtitle mb-8">
               "The Date Alchemy isn't just matchmaking; it's a masterclass in connection. Their expertise created a path to love I didn't know existed, perfectly suited for my global lifestyle."
             </blockquote>
