@@ -27,9 +27,9 @@ export default function StatsSection() {
   }, []);
 
   return (
-    <section className="bg-black py-32">
+    <section className="section-white py-32">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-5xl md:text-6xl serif-title mb-16 text-white">
+        <h2 className="text-5xl md:text-6xl serif-title mb-16 text-gray-900">
           Trust Us, It Really Works
         </h2>
         
@@ -45,11 +45,11 @@ export default function StatsSection() {
             <div className="relative inline-block mb-6">
               <div className="text-8xl serif-title font-bold text-primary mb-2">{displayCount}</div>
             </div>
-            <h3 className="text-4xl serif-title font-bold mb-6 text-white">Active Members</h3>
-            <p className="text-lg sans-body text-gray-300 mb-6 leading-relaxed">
+            <h3 className="text-4xl serif-title font-bold mb-6">Active Members</h3>
+            <p className="text-lg sans-body text-gray-700 mb-6 leading-relaxed">
               Our members are the most ambitious, fun and dynamic people you know! They are also self-aware professionals who simply want more than what the apps can offer.
             </p>
-            <p className="text-xl serif-title font-semibold text-white">
+            <p className="text-xl serif-title font-semibold text-gray-900">
               Our matchmakers review EVERY application.
             </p>
           </div>
