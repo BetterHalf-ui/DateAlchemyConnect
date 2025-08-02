@@ -137,14 +137,7 @@ export default function Blog() {
             </div>
           )}
 
-          {/* Admin Link */}
-          <div className="text-center mt-12">
-            <Link href="/admin/blog">
-              <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white">
-                Manage Blog Posts
-              </Button>
-            </Link>
-          </div>
+
         </div>
       </section>
 
