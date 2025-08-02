@@ -11,7 +11,7 @@ const trustStats = [
 
 const guarantees = [
   {
-    title: "Guaranteed First Quality Date",
+    title: "First Quality Date Guaranteed Before Payment",
     description: "Your initial consultation and matchmaking search are completely free. We'll only ask for payment once you say yes to a match and we've planned the first date."
   },
   {
@@ -21,6 +21,10 @@ const guarantees = [
   {
     title: "Flexible Membership",
     description: "Life happens. If you need to take a break for any reason, we'll pause your membership—no lost time, no penalties."
+  },
+  {
+    title: "No Hidden Fees",
+    description: "Transparent pricing. No hidden costs, ever."
   }
 ];
 

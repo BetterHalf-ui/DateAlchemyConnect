@@ -32,7 +32,7 @@ export default function Hero() {
   }, [animationTriggered]);
 
   // Split text into words for staggered animation
-  const titleWords = "A Healthier Dating Experience For Global Professionals".split(" ");
+  const titleWords = "Redefining the Dating Experience for Global Professionals in Mauritius".split(" ");
 
   return (
     <section 

@@ -126,10 +126,14 @@ export default function Home() {
       <section className="py-32 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p className="text-lg text-gray-700 mb-8 body-text max-w-4xl mx-auto leading-relaxed">
-            Finding a real connection in Mauritius isn't easy — especially when you are a busy professional and hold yourself to high standards.
+            Finding a real connection in Mauritius isn't easy—especially when you're a <strong>busy professional</strong> with <strong>high standards</strong>.
+          </p>
+          <p className="text-lg text-gray-700 mb-8 body-text max-w-4xl mx-auto leading-relaxed">
+            <strong>Dating apps promise endless options but often deliver disappointment</strong>: ghosting, mixed signals, and emotional detachment. They're designed to keep you swiping, not to help you connect. Most people aren't serious, and it takes a toll—over 80% of users report feeling emotionally drained or burnt out by online dating (Singles Report).
           </p>
           <p className="text-lg text-gray-700 mb-16 body-text max-w-4xl mx-auto leading-relaxed">
-            At The Date Alchemy, we believe real connections rarely happen by chance. We invite you to put yourself out there, intentionally. And we'll handle the rest — discreetly, with care, and without the confusion. So you can focus on living fully, while love finds its way to you.
+            <strong>At The Date Alchemy, we know real connection is too important to leave to chance.</strong><br/>
+            That's why we invite you to put yourself out there—intentionally, but discreetly and with the respect you deserve. We take care of the search, so you can focus on living your best life while love finds its way to you.
           </p>
           
           <h2 className="text-4xl font-bold mb-12 subtitle text-gray-900">What To Expect As A Member</h2>
@@ -180,7 +184,7 @@ export default function Home() {
               </div>
               <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">Thoughtful, Human Support</h4>
               <p className="text-gray-700 body-text leading-relaxed">
-                We're with you every step of the way—offering thoughtful guidance, logistical support, and post-date follow-ups. No ghosting, no guesswork— just genuine support and real answers from people who truly care.
+                We're with you every step of the way—offering thoughtful guidance, logistical support, and post-date follow-ups. No ghosting, no guesswork— just respect and genuine support from people who truly care.
               </p>
             </div>
           </div>
@@ -346,14 +350,14 @@ export default function Home() {
               />
               <div className="text-center pt-4">
                 <p className="text-sm text-gray-500 italic body-text">
-                  Pratik Malia, Celine Delacharlerie, Sagarika Sarkar
+                  Pratik Malia, Celine Delacharlerie, Sagarika Sarkar - Co-founders
                 </p>
               </div>
             </div>
             <div>
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-gray-700 leading-relaxed body-text">
-                  We left our corporate careers in Singapore and moved to Mauritius to do something that felt more personal, more impactful. We know from experience: there's nothing quite like the joy and growth that come from finding someone who really gets you. Each of us has been fortunate to experience that kind of connection — and it truly changed everything. That's why we created The Date Alchemy: to help others experience the same.
+                  Each of us have been lucky to find a real connection — and <strong>it changed everything.</strong>
                 </p>
               </div>
             </div>
@@ -364,7 +368,11 @@ export default function Home() {
             <div>
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-gray-700 leading-relaxed body-text">
-                  But getting there wasn't easy. We've been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people. We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion. We understand what it feels like. And we knew there had to be a better way.
+                  <strong>But getting there wasn't easy.</strong> We've been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people.<br/><br/>
+                  
+                  We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion.<br/><br/>
+                  
+                  We understand what it feels like. And <strong>we knew there had to be a better way.</strong>
                 </p>
               </div>
             </div>
@@ -389,7 +397,15 @@ export default function Home() {
             <div>
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-gray-700 leading-relaxed body-text">
-                  That's why we created The Date Alchemy— the dating service we wish we'd had. A thoughtful, human and empowering experience designed for real, meaningful connections. We can't promise love, but we can promise effort, professionalism, integrity, a genuine investment in your journey, and a proven process that's led to lasting relationships. Whether a date turns into a lifelong relationship or brings new clarity, we believe every step forward matters. We've witnessed - in our own lives and through our clients — the magic that unfolds when two truly compatible people connect. And we want more people to experience that kind of transformation. So if you're ready to stop leaving love to chance, we'd love to walk this journey with you thoughtfully, personally and discretely. Your better half may be closer than you think.
+                  That's why we created The Date Alchemy— <strong>the dating service we wish we'd had.</strong><br/><br/>
+                  
+                  A thoughtful, human and empowering experience designed for real, meaningful connections. We can't promise love, but we can promise effort, professionalism, integrity, a genuine investment in your journey, and <strong>a proven process that's led to lasting relationships</strong>.<br/><br/>
+                  
+                  Whether a date turns into a lifelong relationship or brings new clarity, we believe every step forward matters. We've witnessed - in our own lives and through our clients — the magic that unfolds when two truly compatible people connect.<br/><br/>
+                  
+                  <strong>And we want more people to experience that kind of transformation.</strong><br/><br/>
+                  
+                  So if you're ready to stop leaving love to chance, we'd love to walk this journey with you thoughtfully, personally and discretely. Your better half may be closer than you think.
                 </p>
               </div>
             </div>
