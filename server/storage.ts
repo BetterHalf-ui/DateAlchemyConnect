@@ -39,12 +39,12 @@ export class MemStorage implements IStorage {
     // Create sample blog posts
     const samplePosts: InsertBlogPost[] = [
       {
-        title: "5 Signs You're Ready for Intentional Dating",
-        content: "Discover the key indicators that show you're prepared for a more meaningful approach to finding love. In this comprehensive guide, we explore the psychological and emotional markers that suggest you're ready to move beyond casual dating...",
-        excerpt: "Discover the key indicators that show you're prepared for a more meaningful approach to finding love...",
-        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        title: "Chasing vs. Pursuing: Why good dates sometimes fizzle out",
+        content: "One of the most common reasons we see promising connections fade is because someone mistakes healthy pursuit for desperate chasing. After a good date, both people might hesitate to follow up, afraid of coming on too strong or looking too eager. But often, that hesitation comes from insecurity, the fear of being rejected or appearing vulnerable. The irony? People who are secure in themselves don't see expressing interest as risky — they see it as honest and mature. When both sides hold back, what could have been a meaningful connection quietly fizzles into silence.\n\nPursuing means showing genuine interest: replying in a timely way, suggesting to meet again, being warm and curious. Chasing, on the other hand, is when effort feels one-sided or driven by anxiety. The key difference? If you're sending a message because you want to, not because you need a reply to feel okay, it's pursuing. We encourage you to follow up with confidence when the date went well. A short message like \"I had a great time — would love to see you again\" goes a long way in keeping the spark alive.\n\nTexting is often misinterpreted, especially in early dating. So don't overthink it. Be clear, be kind, and don't let a potential match slip away just because of a communication gap.",
+        excerpt: "One of the most common reasons we see promising connections fade is because someone mistakes healthy pursuit for desperate chasing...",
+        imageUrl: "/attached_assets/MRcyldZioQlMWAEtfToUIypRhEWz6L1LpKFudi8A_1754162893537.png",
         category: "Dating Tips",
-        tags: ["intentional dating", "relationship readiness", "self-awareness"],
+        tags: ["communication", "dating advice", "confidence"],
         published: true,
       },
       {
