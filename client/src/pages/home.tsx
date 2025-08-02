@@ -327,7 +327,7 @@ export default function Home() {
         }`}>
           <div className="max-w-7xl mx-auto">
             <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight subtitle mb-8">
-              "The Date Alchemy helps promote healthy relationship on a safe and confidential level. Embarking on this journey has helped me to listen more to the other, and to understand myself better, thus enabling me to become a better version of myself."
+              "The Date Alchemy promotes healthy relationships in a safe and confidential setting. Embarking on this journey has helped me listen more deeply to others and understand myself better—allowing me to grow into a better version of myself."
             </blockquote>
             <cite className="text-xl md:text-2xl lg:text-3xl font-medium opacity-90 not-italic">
               — Scientist, 37
@@ -431,10 +431,10 @@ export default function Home() {
         }`}>
           <div className="max-w-7xl mx-auto">
             <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight subtitle mb-8">
-              "I was seeking a partner who understood my world, and The Date Alchemy delivered beyond expectation."
+              "I would wholeheartedly recommend The Date Alchemy to single professionals who may not have the time—or inclination—to navigate traditional matchmaking methods or dating apps."
             </blockquote>
             <cite className="text-xl md:text-2xl lg:text-3xl font-medium opacity-90 not-italic">
-              — Expat Professional, Mauritius
+              — IT Professional, 32
             </cite>
           </div>
         </div>

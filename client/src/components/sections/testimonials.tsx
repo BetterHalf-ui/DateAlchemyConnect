@@ -14,11 +14,7 @@ const testimonials = [
     text: "The communication with the team is open, consistent, and collaborative, be it on Whatsapp and newsletters shared by mail. Feedback is encouraged after each date, which helps foster a supportive environment.",
     author: "Scientist, 37"
   },
-  {
-    rating: "★★★★★",
-    text: "I would wholeheartedly recommend The Date Alchemy to single professionals who may not have the time—or inclination—to navigate traditional matchmaking methods or dating apps.",
-    author: "IT Professional, 32"
-  }
+
 ];
 
 export default function Testimonials() {
@@ -26,7 +22,7 @@ export default function Testimonials() {
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-16">What Our Members Say</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-gray-50 p-8 rounded-xl hover-lift">
               <div className="text-primary mb-4 text-xl">{testimonial.rating}</div>
