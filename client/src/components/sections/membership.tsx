@@ -172,7 +172,7 @@ export default function Membership() {
                         const isVisible = visibleFeatures.has(featureKey);
                         
                         if (colonIndex > 0 && feature.startsWith('**')) {
-                          const boldPart = feature.substring(2, colonIndex - 2); // Remove ** from start and end before colon
+                          const boldPart = feature.substring(2, colonIndex).replace(/\*\*$/, ''); // Remove ** from start and any ** before colon
                           const regularPart = feature.substring(colonIndex);
                           return (
                             <div 
