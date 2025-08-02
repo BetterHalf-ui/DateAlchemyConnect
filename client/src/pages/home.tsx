@@ -358,13 +358,18 @@ export default function Home() {
 
           {/* Story Content - Two Column Layout */}
           <div className="max-w-6xl mx-auto">
-            {/* Compact Story Layout */}
-            <div className="grid md:grid-cols-3 gap-8 items-center">
+            {/* Opening Quote */}
+            <div className="text-center mb-12">
+              <div className="text-8xl text-primary font-serif leading-none">"</div>
+            </div>
+
+            {/* Two Column Story Layout */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
               <div>
                 <img 
                   src="/attached_assets/Screenshot 2025-07-30 at 21.59.07_1753898366997.png" 
                   alt="The Date Alchemy founders" 
-                  className="rounded-2xl shadow-lg w-full h-64 object-cover hover-lift"
+                  className="rounded-2xl shadow-lg w-full h-80 object-cover hover-lift"
                 />
               </div>
               <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm">
@@ -378,18 +383,10 @@ export default function Home() {
                   We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion. We understand what it feels like. And <strong>we knew there had to be a better way.</strong>
                 </p>
               </div>
-              <div>
-                <img 
-                  src="/attached_assets/WhatsApp Image 2025-07-30 at 21.30.22_1753897630892.jpeg" 
-                  alt="The Date Alchemy team members" 
-                  className="rounded-2xl shadow-lg w-full h-64 object-cover hover-lift"
-                />
-              </div>
             </div>
 
-            {/* Solution Text - Centered */}
-            <div className="mt-12 max-w-4xl mx-auto text-center">
-              <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm md:order-1">
                 <p className="text-lg text-gray-700 leading-relaxed body-text">
                   That's why we created The Date Alchemy— <strong>the dating service we wish we'd had.</strong>
                 </p>
@@ -397,13 +394,18 @@ export default function Home() {
                   A thoughtful, human and empowering experience designed for real, meaningful connections. We can't promise love, but we can promise effort, professionalism, integrity, a genuine investment in your journey, and <strong>a proven process that's led to lasting relationships</strong>.
                 </p>
               </div>
+              <div className="md:order-2">
+                <img 
+                  src="/attached_assets/WhatsApp Image 2025-07-30 at 21.30.22_1753897630892.jpeg" 
+                  alt="The Date Alchemy team members" 
+                  className="rounded-2xl shadow-lg w-full h-80 object-cover hover-lift"
+                />
+              </div>
             </div>
 
-            {/* Closing Message */}
-            <div className="mt-8 text-center px-8 py-8 bg-gradient-to-r from-gray-50 to-white rounded-2xl border border-gray-200">
-              <p className="text-lg text-gray-700 leading-relaxed body-text">
-                So if you're ready to stop leaving love to chance, we'd love to walk this journey with you thoughtfully, personally and discretely. Your better half may be closer than you think.
-              </p>
+            {/* Closing Quote */}
+            <div className="text-center mt-12">
+              <div className="text-8xl text-primary font-serif leading-none rotate-180">"</div>
             </div>
           </div>
         </div>
