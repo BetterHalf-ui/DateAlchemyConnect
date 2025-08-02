@@ -167,7 +167,9 @@ export default function Home() {
             <div className="text-center">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.5a.5.5 0 01.5.5v1a1.5 1.5 0 003 0v-1a.5.5 0 01.5-.5H16m-6 4h4m-6 0a9 9 0 119 9 9 9 0 01-9-9z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 11h5.5a3.5 3.5 0 010 7H5a1 1 0 01-1-1V12a1 1 0 011-1zM5 11V7a2 2 0 012-2h8a2 2 0 012 2v4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 11h1a3 3 0 010 6h-1" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 8v1M9 8v1" />
                 </svg>
               </div>
               <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">Sans pressure</h4>
