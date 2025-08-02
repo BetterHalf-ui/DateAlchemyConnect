@@ -64,7 +64,7 @@ export default function Header() {
                 <span className={`hover:text-primary transition-colors cursor-pointer body-text ${
                   isScrolled ? 'text-gray-700' : 'text-white'
                 }`}>
-                  Blog
+                  Insights
                 </span>
               </Link>
             </div>

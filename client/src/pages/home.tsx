@@ -180,7 +180,7 @@ export default function Home() {
               </div>
               <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">Thoughtful, Human Support</h4>
               <p className="text-gray-700 body-text leading-relaxed">
-                We offer a full-circle dating experience — from pre-date self-assessments to date planning and post-date follow-ups. You get personalized, science-backed guidance at every step. No more ghosting, no confusion — just real support, with a human touch. Because your love life deserves more than algorithms.
+                We're with you every step of the way—offering thoughtful guidance, logistical support, and post-date follow-ups. No ghosting, no guesswork— just genuine support and real answers from people who truly care.
               </p>
             </div>
           </div>
