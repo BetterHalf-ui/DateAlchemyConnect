@@ -3,28 +3,28 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "How does The Date Alchemy differ from dating apps?",
-    answer: "Unlike dating apps, we provide a fully curated, human-centered experience. Our matchmakers personally interview every member, use science-based compatibility assessments, and provide ongoing support throughout your dating journey. No endless swiping, no ghosting, no confusion."
+    question: "How much do you charge for this service?",
+    answer: "For our efforts, we charge you a one time fee of Rs 8000, VAT included, when we have found you your first match."
   },
   {
-    question: "What is your screening process?",
-    answer: "Every applicant undergoes a thorough screening process including application review, video consultation, and compatibility assessments. We verify professional status and ensure all members are serious about finding meaningful relationships."
+    question: "How many people can I meet during my membership?",
+    answer: "While you may take 5 dates as a high level benchmark, we don't commit to introducing our clients to a specific number of matches. Our focus is on quality over quantity. We believe it's more valuable for you to meet a few exceptional matches than to be inundated with unsuitable ones. The number of dates you go on depends on various factors, including your own eligibility, the flexibility of your search criteria, and the feedback we receive about you."
   },
   {
-    question: "How many introductions can I expect?",
-    answer: "We guarantee at least 4 high-quality introductions within 12 months. However, many members receive more based on their flexibility and the matches available in our network. Quality over quantity is always our priority."
+    question: "How do I make the payment?",
+    answer: "Presently we only accept payment via Juice/Bank Transfer for both clients within and outside mauritius."
   },
   {
-    question: "Is my privacy protected?",
-    answer: "Absolutely. Your information is never shared without explicit consent. We maintain the highest standards of confidentiality and discretion throughout the entire process. Your privacy is our priority."
+    question: "Can I apply for my sibling, child, or best friend?",
+    answer: "If you genuinely care about someone close to you, please share their details, and we'll reach out to them promptly. However, the individual will need to complete the questionnaires and interviews independently, without being accompanied by friends or family. We require personal inclination, 100% honesty, and commitment for our matchmaking process to be effective."
   },
   {
-    question: "What happens if I don't find a match?",
-    answer: "We guarantee at least 4 high-quality introductions within 12 months. If we can't deliver on this promise, we'll extend your membership at no extra cost. We're committed to your success."
+    question: "How much do the dates know about each other beforehand?",
+    answer: "Confidentiality and discretion are fundamental to our service. We do not share last names, photographs, or specific institutional affiliations (such as academic or employment) before the date. Instead, we provide both sides with each others first name, age, location, and a brief description of why we believe you are a good match."
   },
   {
-    question: "Can I pause or cancel my membership?",
-    answer: "Yes, life happens and we understand. You can pause your membership at any time without penalties. If you need to cancel, we'll work with you to find the best solution based on your circumstances."
+    question: "What if my match is based in another country? How do you set us up?",
+    answer: "We understand that flying across the world for someone you've never met isn't practical. We suggest international matches when we believe there's a strong potential for success, and we facilitate virtual introductions. Typically, this may involve someone intending to move to Mauritius or a Mauritian expat living abroad. A series of video calls can help determine if there's a connection and if it's worth considering a physical meeting."
   }
 ];
 

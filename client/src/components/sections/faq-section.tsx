@@ -3,24 +3,24 @@ import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
-    question: "What happens after I sign up?",
-    answer: "After you sign up, you'll receive a comprehensive questionnaire to help us understand your background, values, and what you're seeking in a partner. Within one business day, we'll review your submission and let you know if we have potential matches in our member base. We'll then schedule a private consultation to craft your profile and begin the matching process."
+    question: "Do you cater to applicants who are divorced or single parents?",
+    answer: "Absolutely! We welcome individuals who are divorced or single parents, as long as the separation is legally documented and amicable. If you're ready to begin the next chapter of your life, we're here to assist you. We're upfront about your past with potential matches, so it's not a topic that needs to be discussed during your date."
   },
   {
-    question: "Can I choose who I am matched with?",
-    answer: "Yes, you remain in complete control. We share potential matches with you for review, and introductions only happen with mutual interest from both parties. You can always say no to any introduction, and we'll continue working to find someone who's the right fit for you."
+    question: "Do you cater to LGBTQ community?",
+    answer: "Yes, we absolutely do. We have no restrictions of any form. However, the number of dates will depend on factors like the feasibility of finding you a compatible partner and the size of the potential partner base."
   },
   {
-    question: "Do you serve clients who live abroad?",
-    answer: "Yes, we work with global professionals who are based in or frequently travel to Mauritius and Singapore. Our network spans across both locations, making it ideal for international professionals seeking meaningful connections in either market."
+    question: "How long is my membership valid?",
+    answer: "A membership is valid for a period of one year or until you find your partner with The Date Alchemy; whichever comes first. It cannot be transferred."
   },
   {
-    question: "How do you ensure privacy and discretion?",
-    answer: "Privacy is our top priority. Your information is always kept confidential and never shared without your explicit consent. Every introduction is handled with the utmost care and respect for your privacy. We maintain strict confidentiality protocols and only share profiles with pre-approved potential matches."
+    question: "Can you guarantee success?",
+    answer: "Given the nature of dating business, it is virtually impossible to guarantee success. As such, we maintain a \"no refunds\" policy. However, your satisfaction as a client and your recommendation of our service to others is our primary goal, so be rest assured that we will do our best to find you your better half."
   },
   {
-    question: "What if I don't find someone I connect with?",
-    answer: "We're committed to your success. Our process includes continuous feedback and refinement to improve matches over time. We also provide coaching and support throughout your journey. If you're not finding the connections you're looking for, we'll work together to adjust our approach and explore what might be missing."
+    question: "What is the company behind The Date Alchemy?",
+    answer: "The Date Alchemy is a service offered by the registered Mauritian entity Frolic Ltd (C23201149), also owner of the lifestyle platform Frolic.mu."
   }
 ];
 

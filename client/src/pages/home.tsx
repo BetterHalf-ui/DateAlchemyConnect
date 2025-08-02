@@ -396,7 +396,7 @@ export default function Home() {
                   That's why we created The Date Alchemy— <strong>the dating service we wish we'd had.</strong>
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
-                  A thoughtful, human and empowering experience designed for real, meaningful connections. We can't promise love, but we can promise effort, professionalism, integrity, a genuine investment in your journey, and <strong>a proven process that's led to lasting relationships</strong>.
+                  A respectful and empowering experience designed for real, meaningful connections. We can't promise love, but we can promise effort, professionalism, integrity, a genuine investment in your journey, and <strong>a proven process that's led to lasting relationships</strong>.
                 </p>
               </div>
               <div className="md:order-2">
