@@ -2,25 +2,25 @@ import { useState, useEffect, useRef } from 'react';
 
 const membershipFeatures = {
   premiumMatchmaking: {
-    title: "1. Premium Matchmaking, Curated for Intentional Dating",
-    description: "We begin by organising quality dates with intentional and compatible singles who match your standards, removing the dating app fatigue and confusion from the equation.",
+    title: "1. Premium Matchmaking",
+    description: "",
     features: [
-      "**Curated introductions** with pre-screened and carefully interviewed active, intentional singles who are ready for a meaningful relationship.",
-      "**In-depth compatibility assessment** using your personal requirements, your lifestyle, and goals, but also what you truly need for lasting partnership and how you can meet someone's needs (The Date Alchemy Needs Compatibility Score™ ).",
-      "**Human-centered matching** - Apps algorithms are designed to keep you online. We use human intuition, not just filters. Our matches are handpicked with care and you meet them in-person.",
-      "**Attachment-aware matching:** we use the latest science in attachment style to avoid toxic mismatches before they start.",
+      "**Curated introductions** with pre-screened and carefully interviewed singles who match your standards and are ready for a meaningful relationship.",
+      "**In-depth compatibility assessment** based on your personal requirements, your lifestyle, and life goals, but also what you truly need in a relationship (The Date Alchemy Needs Compatibility Score™ ).",
+      "**Human-centered matching** - Apps algorithms are designed to keep you online and set you up for failure. We use human intuition, not just filters. Our matches are handpicked with care and you meet them in-person.",
+      "**Attachment-aware matching:** we use the science-backed Attachment Theory to avoid toxic mismatches before they start.",
       "**Vetted by you** based on in-depth profiles. You remain in full control.",
       "**Full scheduling concierge:** We book, confirm, and prep the date — so you just show up as your best self.",
       "**Follow-up after the date** handled for you — no ghosting, no awkward follow-ups",
-      "**Bonus: Invitations to private events** (Singles Socials)- intimate brunches or dinners with hand-picked guests based on lifestyle, age, and shared values designed for meaningful connection, not crowd-chasing"
+      "**Bonus: Invitations to private events** (Singles Socials)- intimate brunches or dinners with hand-picked guests designed for meaningful connections"
     ]
   },
   innerWork: {
     title: "2. Inner Work and Guidance",
-    description: "We don't just help you meet the right person.  Our process addresses the inner patterns that shape your relationships, often without you realizing it.",
+    description: "We set you up for successful dates and healthier relationships",
     subsections: [
       {
-        title: "1) Full Relationship Readiness Self-Audit: Get crystal-clear on your patterns, blind spots, limiting beliefs and needs through:",
+        title: "1) Full Relationship Readiness Self-Audit:",
         features: [
           "**Your Needs Assessment:** Get clear on what you truly need in a relationship — not just what you're attracted to.",
           "**Attachment Style Assessment:** Understand how your attachment style influences the way you connect, respond, and bond in relationships (based on attachment theory by psychologists John Bowlby and Mary Ainsworth)",
@@ -30,10 +30,10 @@ const membershipFeatures = {
       {
         title: "2) Personalized Guidance to Date Intentionally and Confidently",
         features: [
-          "**Direct Access to Our Matchmaking Team (via WhatsApp & Email):** A discreet communication channel to dating experts who know you and your dating journey.",
-          "**Pre-Date and Pre-Dating Advice in your Inbox— Exactly When You Need It:** Digestible emails to prepare you before the first date and second date with the most common pitfalls and winning moves from hundreds of client experiences.",
-          "**Reflection rituals after each date:** Guided prompts to learn about your needs throughout your dating journey.",
-          "**Bi-weekly science-based relationship science insights in your inbox:** Bite-sized, science-backed tips to keep your dating mindset sharp. Curated from our matchmaking experience and backed by scientific journals."
+          "**Direct Access to Our Matchmaking Team (via Whatsapp & Email):** A discreet communication channel to dating experts who know you and your dating journey.",
+          "**Pre-Date and Pre-Dating Advice in your Inbox— Exactly When You Need It :** Digestible emails to prepare you before the first date and second date with the most common pitfalls and winning moves from hundreds of client experiences.",
+          "**Reflection rituals after each date:** Learn about your needs throughout your dating journey.",
+          "**Bi-weekly science-based dating insights in your inbox:** Tips based on our matchmaking experience and backed by scientific journals."
         ]
       }
     ]
@@ -70,7 +70,7 @@ export default function Membership() {
         <div className="text-center mb-20">
           <h2 className="text-5xl font-bold mb-6 subtitle text-gray-900">The Date Alchemy Membership</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto body-text">
-            Everything you need for a transformative dating experience — from premium matchmaking to personal growth guidance
+            Everything you need for a healthier dating experience
           </p>
         </div>
         

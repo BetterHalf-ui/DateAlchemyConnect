@@ -190,15 +190,21 @@ export default function Home() {
       {/* Call to Action - Before Testimonials */}
       <section className="py-20 bg-black text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <Link href="/network">
+          <a 
+            href="https://betterhalf.fillout.com/t/9ywPABvKHdus" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl font-semibold mb-6">
               Apply Now
             </Button>
-          </Link>
+          </a>
           <div className="text-sm text-gray-300 leading-relaxed max-w-2xl mx-auto">
             <p className="mb-2">Not ready to invest in a membership?</p>
-            <p className="mb-2">Join the Betterhalf candidate circle to receive opportunities for matches with our exceptional clients.</p>
-            <p>Create your complimentary profile.</p>
+            <Link href="/network" className="hover:text-white">
+              <p className="mb-2">Join our network for free to see if you are a match with one of our exceptional clients.</p>
+              <p>Create your complimentary profile.</p>
+            </Link>
           </div>
         </div>
       </section>
@@ -280,15 +286,21 @@ export default function Home() {
       {/* Call to Action - After Membership */}
       <section className="py-20 bg-black text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <Link href="/network">
+          <a 
+            href="https://betterhalf.fillout.com/t/9ywPABvKHdus" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl font-semibold mb-6">
               Apply Now
             </Button>
-          </Link>
+          </a>
           <div className="text-sm text-gray-300 leading-relaxed max-w-2xl mx-auto">
             <p className="mb-2">Not ready to invest in a membership?</p>
-            <p className="mb-2">Join the Betterhalf candidate circle to receive opportunities for matches with our exceptional clients.</p>
-            <p>Create your complimentary profile.</p>
+            <Link href="/network" className="hover:text-white">
+              <p className="mb-2">Join our network for free to see if you are a match with one of our exceptional clients.</p>
+              <p>Create your complimentary profile.</p>
+            </Link>
           </div>
         </div>
       </section>
