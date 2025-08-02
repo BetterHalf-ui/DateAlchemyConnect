@@ -203,48 +203,51 @@ export default function Home() {
         </div>
       </section>
 
-      <Testimonials />
-
       {/* Member Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <div className="mb-12">
-            <div className="text-6xl font-bold text-primary mb-4">{displayCount}</div>
-            <h3 className="text-2xl font-bold mb-6">active members</h3>
-            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Our members are the most ambitious, fun, and dynamic people you know!
-            </p>
-            <p className="text-lg font-semibold text-gray-900">
-              Our matchmakers review EVERY application
-            </p>
-          </div>
-          
-          {/* Member Photos */}
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="relative">
-              <img 
-                src="/attached_assets/74c7b6d9-723b-48f4-8ad3-88de4e6dabe9_1753881262177.jpeg"
-                alt="Professional member"
-                className="w-full h-80 object-cover rounded-2xl shadow-lg hover-lift"
-              />
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Stats and Text */}
+            <div className="text-center lg:text-left">
+              <div className="text-5xl font-bold text-primary mb-3">{displayCount}</div>
+              <h3 className="text-xl font-bold mb-4">active members</h3>
+              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                Our members are the most ambitious, fun, and dynamic people you know!
+              </p>
+              <p className="text-base font-semibold text-gray-900">
+                Our matchmakers review EVERY application
+              </p>
             </div>
-            <div className="relative">
-              <img 
-                src="/attached_assets/WhatsApp Image 2025-07-30 at 21.15.40_1753896375443.jpeg"
-                alt="Dynamic member"
-                className="w-full h-80 object-cover rounded-2xl shadow-lg hover-lift"
-              />
-            </div>
-            <div className="relative">
-              <img 
-                src="/attached_assets/team (1)_1753896165937.png"
-                alt="Ambitious member"
-                className="w-full h-80 object-cover rounded-2xl shadow-lg hover-lift"
-              />
+            
+            {/* Right: Member Photos */}
+            <div className="grid grid-cols-3 gap-4">
+              <div className="relative">
+                <img 
+                  src="/attached_assets/74c7b6d9-723b-48f4-8ad3-88de4e6dabe9_1753881262177.jpeg"
+                  alt="Professional member"
+                  className="w-full h-32 object-cover rounded-xl shadow-md hover-lift"
+                />
+              </div>
+              <div className="relative">
+                <img 
+                  src="/attached_assets/WhatsApp Image 2025-07-30 at 21.15.40_1753896375443.jpeg"
+                  alt="Dynamic member"
+                  className="w-full h-32 object-cover rounded-xl shadow-md hover-lift"
+                />
+              </div>
+              <div className="relative">
+                <img 
+                  src="/attached_assets/team (1)_1753896165937.png"
+                  alt="Ambitious member"
+                  className="w-full h-32 object-cover rounded-xl shadow-md hover-lift"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <Testimonials />
 
       {/* Full-Screen Image with Testimonial */}
       <section ref={testimonialRef} className="relative h-screen overflow-hidden">
