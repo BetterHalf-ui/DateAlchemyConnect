@@ -22,18 +22,18 @@ const membershipFeatures = {
       {
         title: "1) Full Relationship Readiness Self-Audit:",
         features: [
-          "**Your Needs Assessment:** Get clear on what you truly need in a relationship — not just what you're attracted to.",
-          "**Attachment Style Assessment:** Understand how your attachment style influences the way you connect, respond, and bond in relationships (based on attachment theory by psychologists John Bowlby and Mary Ainsworth)",
-          "**Dating Tendencies Assessment:** Identify unconscious dating patterns that may be holding you back (based on relationship scientist Logan Ury's work)"
+          "Your Needs Assessment: Get clear on what you truly need in a relationship — not just what you're attracted to.",
+          "Attachment Style Assessment: Understand how your attachment style influences the way you connect, respond, and bond in relationships (based on attachment theory by psychologists John Bowlby and Mary Ainsworth)",
+          "Dating Tendencies Assessment: Identify unconscious dating patterns that may be holding you back (based on relationship scientist Logan Ury's work)"
         ]
       },
       {
         title: "2) Personalized Guidance to Date Intentionally and Confidently",
         features: [
-          "**Direct Access to Our Matchmaking Team (via Whatsapp & Email):** A discreet communication channel to dating experts who know you and your dating journey.",
-          "**Pre-Date and Pre-Dating Advice in your Inbox— Exactly When You Need It:** Digestible emails to prepare you before the first date and second date with the most common pitfalls and winning moves from hundreds of client experiences.",
-          "**Reflection rituals after each date:** Learn about your needs throughout your dating journey.",
-          "**Bi-weekly science-based dating insights in your inbox:** Tips based on our matchmaking experience and backed by scientific journals."
+          "Direct Access to Our Matchmaking Team (via Whatsapp & Email): A discreet communication channel to dating experts who know you and your dating journey.",
+          "Pre-Date and Pre-Dating Advice in your Inbox— Exactly When You Need It: Digestible emails to prepare you before the first date and second date with the most common pitfalls and winning moves from hundreds of client experiences.",
+          "Reflection rituals after each date: Learn about your needs throughout your dating journey.",
+          "Bi-weekly science-based dating insights in your inbox: Tips based on our matchmaking experience and backed by scientific journals."
         ]
       }
     ]
@@ -171,8 +171,8 @@ export default function Membership() {
                         const featureKey = `inner-${sectionIndex}-${featureIndex}`;
                         const isVisible = visibleFeatures.has(featureKey);
                         
-                        if (colonIndex > 0 && feature.startsWith('**')) {
-                          const boldPart = feature.substring(2, colonIndex).replace(/\*\*$/, ''); // Remove ** from start and any ** before colon
+                        if (colonIndex > 0) {
+                          const boldPart = feature.substring(0, colonIndex);
                           const regularPart = feature.substring(colonIndex);
                           return (
                             <div 
