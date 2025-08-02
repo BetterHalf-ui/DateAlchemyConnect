@@ -203,7 +203,7 @@ export default function Home() {
             <p className="mb-2">Not ready to invest in a membership?</p>
             <Link href="/network" className="hover:text-white">
               <p className="mb-2">Join our network for free to see if you are a match with one of our exceptional clients.</p>
-              <p>Create your complimentary profile.</p>
+              <p className="underline">Create your complimentary profile.</p>
             </Link>
           </div>
         </div>
@@ -299,7 +299,7 @@ export default function Home() {
             <p className="mb-2">Not ready to invest in a membership?</p>
             <Link href="/network" className="hover:text-white">
               <p className="mb-2">Join our network for free to see if you are a match with one of our exceptional clients.</p>
-              <p>Create your complimentary profile.</p>
+              <p className="underline">Create your complimentary profile.</p>
             </Link>
           </div>
         </div>
