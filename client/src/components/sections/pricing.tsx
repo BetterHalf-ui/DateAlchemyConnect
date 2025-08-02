@@ -6,7 +6,7 @@ const trustStats = [
   { percentage: "99%", description: "of setups result in real, face-to-face dates" },
   { percentage: "88%", description: "of dates are reported as good experiences" },
   { percentage: "32%", description: "lead to a second date" },
-  { percentage: "22%", description: "of our paid members are going strong" }
+  { percentage: "22%", description: "of our paid members are going strong with their better half" }
 ];
 
 const guarantees = [
