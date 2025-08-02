@@ -62,6 +62,14 @@ export class MemStorage implements IStorage {
         tags: ["conflict resolution", "relationship dynamics", "communication"],
         published: true,
       },
+      {
+        title: "New cool cafés in Mauritius for your next first date",
+        content: "As matchmakers, we've noticed that for most singles, a cozy coffee place is the preferred choice for a first date—and it makes a lot of sense. Cafés offer a relaxed, neutral setting with just the right mix of intimacy and safety. They're low-pressure, affordable, and flexible—you can keep it short if there's no spark or linger longer if the conversation flows.\n\nSitting at an angle rather than face-to-face also helps the interaction feel more natural (and less like an interview) and tends to reduce the pressure even further.\n\nIn Mauritius, many new cool cafes are popping up - 2025 has seen a wave of trendy openings all across the island. If you're looking for a new spot for your next date, check Frolic's list of Cool New Cafes in Mauritius!\n\nRead it here → https://frolic.mu/cool-new-cafes-in-mauritius-july-2025-edition/",
+        excerpt: "As matchmakers, we've noticed that for most singles, a cozy coffee place is the preferred choice for a first date...",
+        imageUrl: "/attached_assets/YDpA99H6eiIdIdfiqpQd16Lf4RdbcBlIiT3RoFZg_1754163653837.jpg",
+        tags: ["first dates", "mauritius", "dating venues", "café recommendations"],
+        published: true,
+      },
     ];
 
     for (const post of samplePosts) {
