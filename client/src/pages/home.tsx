@@ -367,9 +367,10 @@ export default function Home() {
                   className="rounded-2xl shadow-lg w-full h-80 object-cover hover-lift"
                 />
               </div>
-              <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm">
+              <div className="bg-white p-8 rounded-2xl shadow-sm relative">
+                <div className="absolute -top-4 -left-4 text-6xl text-primary opacity-60 font-serif">"</div>
                 <p className="text-lg text-gray-700 leading-relaxed body-text">
-                  Three years ago, we left our corporate careers in Singapore and moved to Mauritius to do something that felt more personal, more impactful. Finding a life partner we truly connect with has been such a life changing experience for us, that we wanted more people to experience that kind of love.
+                  Three years ago, we left our corporate careers in Singapore and moved to Mauritius to do something that felt more personal, more impactful. <strong>Finding a life partner we truly connect with has been such a life changing experience for us, that we wanted more people to experience that kind of love.</strong>
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
                   <strong>But getting there wasn't easy.</strong> We've been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people.
@@ -383,14 +384,14 @@ export default function Home() {
                 <div className="absolute top-4 left-6 text-4xl text-primary opacity-40 font-serif">"</div>
                 <div className="absolute bottom-4 right-6 text-4xl text-primary opacity-40 font-serif rotate-180">"</div>
                 <p className="text-xl text-gray-800 leading-relaxed font-medium text-center px-8 py-4 body-text">
-                  We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion. And <strong className="text-primary">we knew there had to be a better way.</strong>
+                  We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion. <br/><strong className="text-primary">And we knew there had to be a better way.</strong>
                 </p>
               </div>
             </div>
 
             {/* Second Two Column Layout */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm md:order-1">
+              <div className="bg-white p-8 rounded-2xl shadow-sm md:order-1">
                 <p className="text-lg text-gray-700 leading-relaxed body-text">
                   That's why we created The Date Alchemy— <strong>the dating service we wish we'd had.</strong>
                 </p>
