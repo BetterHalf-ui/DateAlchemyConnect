@@ -277,10 +277,10 @@ export default function Home() {
         }`}>
           <div className="max-w-7xl mx-auto">
             <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight subtitle mb-8">
-              "Discreet, professional, and incredibly effective. The Date Alchemy understood exactly what I was looking for, curating introductions that led to a truly profound and lasting relationship."
+              "Thank you for a match that goes far beyond just an algorithm. You helped bring two hearts onto the same wavelength."
             </blockquote>
             <cite className="text-xl md:text-2xl lg:text-3xl font-medium opacity-90 not-italic">
-              — Entrepreneur, Tech Industry
+              — COO, Tech Industry, 52
             </cite>
           </div>
         </div>
@@ -327,10 +327,10 @@ export default function Home() {
         }`}>
           <div className="max-w-7xl mx-auto">
             <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight subtitle mb-8">
-              "The Date Alchemy isn't just matchmaking; it's a masterclass in connection. Their expertise created a path to love I didn't know existed, perfectly suited for my global lifestyle."
+              "The Date Alchemy helps promote healthy relationship on a safe and confidential level. Embarking on this journey has helped me to listen more to the other, and to understand myself better, thus enabling me to become a better version of myself."
             </blockquote>
             <cite className="text-xl md:text-2xl lg:text-3xl font-medium opacity-90 not-italic">
-              — International Consultant, Singapore
+              — Scientist, 37
             </cite>
           </div>
         </div>
