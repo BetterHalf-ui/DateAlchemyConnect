@@ -356,17 +356,23 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Story Content - Single Column, More Focused */}
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <p className="text-xl text-gray-700 leading-relaxed body-text">
-              We left our corporate careers in Singapore and moved to Mauritius to do something that felt more personal, more impactful.
-            </p>
+          {/* Story Content - Quote-style Layout */}
+          <div className="max-w-6xl mx-auto">
+            {/* Opening Quote */}
+            <div className="text-center mb-16 px-8 py-12 bg-gradient-to-r from-gray-50 to-white rounded-3xl border-l-4 border-primary">
+              <svg className="w-12 h-12 text-primary mx-auto mb-6 opacity-60" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+              </svg>
+              <p className="text-2xl text-gray-700 leading-relaxed body-text italic font-light">
+                We left our corporate careers in Singapore and moved to Mauritius to do something that felt more personal, more impactful.
+              </p>
+              <p className="text-2xl text-gray-700 leading-relaxed body-text italic font-light mt-4">
+                Each of us have been lucky to find a real connection — and <strong>it changed everything.</strong>
+              </p>
+            </div>
             
-            <p className="text-xl text-gray-700 leading-relaxed body-text">
-              Each of us have been lucky to find a real connection — and <strong>it changed everything.</strong>
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-12 items-center my-16">
+            {/* Two Column Personal Story */}
+            <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
               <div>
                 <img 
                   src="/attached_assets/Screenshot 2025-07-30 at 21.59.07_1753898366997.png" 
@@ -374,7 +380,7 @@ export default function Home() {
                   className="rounded-2xl shadow-lg w-full h-80 object-cover hover-lift"
                 />
               </div>
-              <div className="text-left">
+              <div className="bg-gray-50 p-8 rounded-2xl">
                 <p className="text-lg text-gray-700 leading-relaxed body-text">
                   <strong>But getting there wasn't easy.</strong> We've been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people.
                 </p>
@@ -384,8 +390,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="text-left md:order-1">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="bg-gray-50 p-8 rounded-2xl md:order-1">
                 <p className="text-lg text-gray-700 leading-relaxed body-text">
                   That's why we created The Date Alchemy— <strong>the dating service we wish we'd had.</strong>
                 </p>
@@ -405,8 +411,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-12 p-8 bg-gray-50 rounded-2xl">
-              <p className="text-lg text-gray-700 leading-relaxed body-text italic">
+            {/* Closing Message */}
+            <div className="mt-16 text-center px-8 py-12 bg-primary bg-opacity-5 rounded-3xl border border-primary border-opacity-20">
+              <p className="text-xl text-gray-700 leading-relaxed body-text italic">
                 So if you're ready to stop leaving love to chance, we'd love to walk this journey with you thoughtfully, personally and discretely. Your better half may be closer than you think.
               </p>
             </div>
