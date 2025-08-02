@@ -367,32 +367,40 @@ export default function Home() {
                   className="rounded-2xl shadow-lg w-full h-80 object-cover hover-lift"
                 />
               </div>
-              <div className="bg-gray-50 p-8 rounded-2xl">
-                <p className="text-lg text-gray-700 leading-relaxed body-text">
-                  We left our corporate careers in Singapore and moved to Mauritius to do something that felt more personal, more impactful.
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
-                  Each of us have been lucky to find a real connection — and <strong>it changed everything.</strong>
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
-                  <strong>But getting there wasn't easy.</strong> We've been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people.
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
-                  We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion. We understand what it feels like. And <strong>we knew there had to be a better way.</strong>
-                </p>
+              <div className="bg-white border border-gray-200 p-10 rounded-2xl shadow-sm">
+                <div className="relative">
+                  <svg className="absolute -top-2 -left-2 w-8 h-8 text-primary opacity-20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                  </svg>
+                  <p className="text-lg text-gray-700 leading-relaxed body-text pl-6">
+                    Three years ago, we left our corporate careers in Singapore and moved to Mauritius to do something that felt more personal, more impactful. Finding a life partner we truly connect with has been such a life changing experience for us, that we wanted more people to experience that kind of love.
+                  </p>
+                  <p className="text-lg text-gray-700 leading-relaxed body-text mt-6 pl-6">
+                    Each of us have been lucky to find a real connection — and <strong>it changed everything.</strong>
+                  </p>
+                  <p className="text-lg text-gray-700 leading-relaxed body-text mt-6 pl-6">
+                    <strong>But getting there wasn't easy.</strong> We've been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people.
+                  </p>
+                  <p className="text-lg text-gray-700 leading-relaxed body-text mt-6 pl-6">
+                    We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion.
+                  </p>
+                  
+                  <blockquote className="mt-8 border-l-4 border-primary bg-gray-50 p-6 italic">
+                    <p className="text-lg text-gray-800 leading-relaxed body-text">
+                      "We understand what it feels like. And <strong>we knew there had to be a better way.</strong>"
+                    </p>
+                  </blockquote>
+                </div>
               </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div className="bg-gray-50 p-8 rounded-2xl md:order-1">
+              <div className="bg-white border border-gray-200 p-10 rounded-2xl shadow-sm md:order-1">
                 <p className="text-lg text-gray-700 leading-relaxed body-text">
                   That's why we created The Date Alchemy— <strong>the dating service we wish we'd had.</strong>
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
+                <p className="text-lg text-gray-700 leading-relaxed body-text mt-6">
                   A thoughtful, human and empowering experience designed for real, meaningful connections. We can't promise love, but we can promise effort, professionalism, integrity, a genuine investment in your journey, and <strong>a proven process that's led to lasting relationships</strong>.
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
-                  <strong>And we want more people to experience that kind of transformation.</strong>
                 </p>
               </div>
               <div className="md:order-2">
@@ -405,8 +413,8 @@ export default function Home() {
             </div>
 
             {/* Closing Message */}
-            <div className="mt-16 text-center px-8 py-12 bg-primary bg-opacity-5 rounded-3xl border border-primary border-opacity-20">
-              <p className="text-xl text-gray-700 leading-relaxed body-text italic">
+            <div className="mt-16 text-center px-10 py-12 bg-gradient-to-r from-gray-50 to-white rounded-2xl border border-gray-200">
+              <p className="text-xl text-gray-700 leading-relaxed body-text">
                 So if you're ready to stop leaving love to chance, we'd love to walk this journey with you thoughtfully, personally and discretely. Your better half may be closer than you think.
               </p>
             </div>
