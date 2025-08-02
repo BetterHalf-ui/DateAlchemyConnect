@@ -336,74 +336,82 @@ export default function Home() {
       </section>
 
       {/* Your Date Alchemists Section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-5xl font-bold text-center mb-20 subtitle">Your Date Alchemists</h2>
+      <section className="py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='m0 40l40-40v40z'/%3E%3C/g%3E%3C/svg%3E")`
+          }}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 relative">
+          <h2 className="text-5xl font-bold text-center mb-20 subtitle text-white">Your Date Alchemists</h2>
           
-          {/* Main Team Photo - Centered and Larger */}
-          <div className="text-center mb-16">
-            <div className="inline-block">
-              <img 
-                src="/attached_assets/team (1)_1753896165937.png" 
-                alt="The Date Alchemy team" 
-                className="rounded-3xl shadow-2xl w-full max-w-2xl mx-auto hover-lift"
-              />
-              <div className="text-center pt-6">
-                <p className="text-lg text-gray-600 font-medium body-text">
+          {/* Large Quote Block */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Large Quote Marks */}
+            <div className="absolute -top-8 -left-8 text-8xl text-primary opacity-30 font-serif">"</div>
+            <div className="absolute -bottom-16 -right-8 text-8xl text-primary opacity-30 font-serif rotate-180">"</div>
+            
+            {/* Main Quote Content */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 rounded-3xl p-12 md:p-16 text-center relative">
+              
+              {/* Team Photo - Integrated into quote */}
+              <div className="mb-12">
+                <img 
+                  src="/attached_assets/team (1)_1753896165937.png" 
+                  alt="The Date Alchemy team" 
+                  className="rounded-2xl shadow-2xl w-full max-w-lg mx-auto hover-lift"
+                />
+                <p className="text-lg text-gray-300 font-medium mt-4 body-text">
                   Pratik Malia, Celine Delacharlerie, Sagarika Sarkar - Co-founders
                 </p>
               </div>
-            </div>
-          </div>
 
-          {/* Story Content - Two Column Layout */}
-          <div className="max-w-6xl mx-auto">
-            {/* Compact Story Layout */}
-            <div className="grid md:grid-cols-3 gap-8 items-center">
-              <div>
-                <img 
-                  src="/attached_assets/Screenshot 2025-07-30 at 21.59.07_1753898366997.png" 
-                  alt="The Date Alchemy founders" 
-                  className="rounded-2xl shadow-lg w-full h-64 object-cover hover-lift"
-                />
-              </div>
-              <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm">
-                <p className="text-lg text-gray-700 leading-relaxed body-text">
+              {/* Quote Text */}
+              <div className="space-y-8 text-lg md:text-xl leading-relaxed body-text">
+                <p className="text-gray-100">
                   Three years ago, we left our corporate careers in Singapore and moved to Mauritius to do something that felt more personal, more impactful. Finding a life partner we truly connect with has been such a life changing experience for us, that we wanted more people to experience that kind of love.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
-                  <strong>But getting there wasn't easy.</strong> We've been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people.
+                
+                <p className="text-gray-100">
+                  <strong className="text-white">But getting there wasn't easy.</strong> We've been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
-                  We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion. We understand what it feels like. And <strong>we knew there had to be a better way.</strong>
+                
+                <p className="text-gray-100">
+                  We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion. We understand what it feels like. And <strong className="text-white">we knew there had to be a better way.</strong>
+                </p>
+                
+                {/* Supporting Images */}
+                <div className="grid md:grid-cols-2 gap-8 my-12">
+                  <img 
+                    src="/attached_assets/Screenshot 2025-07-30 at 21.59.07_1753898366997.png" 
+                    alt="The Date Alchemy founders" 
+                    className="rounded-xl shadow-lg w-full h-48 object-cover hover-lift opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                  <img 
+                    src="/attached_assets/WhatsApp Image 2025-07-30 at 21.30.22_1753897630892.jpeg" 
+                    alt="The Date Alchemy team members" 
+                    className="rounded-xl shadow-lg w-full h-48 object-cover hover-lift opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                
+                <div className="border-t border-white border-opacity-20 pt-8">
+                  <p className="text-gray-100 text-xl">
+                    That's why we created The Date Alchemy— <strong className="text-white">the dating service we wish we'd had.</strong>
+                  </p>
+                  <p className="text-gray-100 mt-6">
+                    A thoughtful, human and empowering experience designed for real, meaningful connections. We can't promise love, but we can promise effort, professionalism, integrity, a genuine investment in your journey, and <strong className="text-white">a proven process that's led to lasting relationships</strong>.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Signature/Closing */}
+              <div className="mt-12 pt-8 border-t border-white border-opacity-20">
+                <p className="text-gray-200 italic text-lg">
+                  So if you're ready to stop leaving love to chance, we'd love to walk this journey with you thoughtfully, personally and discretely. Your better half may be closer than you think.
                 </p>
               </div>
-              <div>
-                <img 
-                  src="/attached_assets/WhatsApp Image 2025-07-30 at 21.30.22_1753897630892.jpeg" 
-                  alt="The Date Alchemy team members" 
-                  className="rounded-2xl shadow-lg w-full h-64 object-cover hover-lift"
-                />
-              </div>
-            </div>
-
-            {/* Solution Text - Centered */}
-            <div className="mt-12 max-w-4xl mx-auto text-center">
-              <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm">
-                <p className="text-lg text-gray-700 leading-relaxed body-text">
-                  That's why we created The Date Alchemy— <strong>the dating service we wish we'd had.</strong>
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
-                  A thoughtful, human and empowering experience designed for real, meaningful connections. We can't promise love, but we can promise effort, professionalism, integrity, a genuine investment in your journey, and <strong>a proven process that's led to lasting relationships</strong>.
-                </p>
-              </div>
-            </div>
-
-            {/* Closing Message */}
-            <div className="mt-8 text-center px-8 py-8 bg-gradient-to-r from-gray-50 to-white rounded-2xl border border-gray-200">
-              <p className="text-lg text-gray-700 leading-relaxed body-text">
-                So if you're ready to stop leaving love to chance, we'd love to walk this journey with you thoughtfully, personally and discretely. Your better half may be closer than you think.
-              </p>
             </div>
           </div>
         </div>
