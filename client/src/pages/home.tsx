@@ -187,6 +187,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Call to Action - Before Testimonials */}
+      <section className="py-20 bg-black text-white text-center">
+        <div className="max-w-4xl mx-auto px-4">
+          <Link href="/network">
+            <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl font-semibold mb-6">
+              Apply Now
+            </Button>
+          </Link>
+          <div className="text-sm text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="mb-2">Not ready to invest in a membership?</p>
+            <p className="mb-2">Join the Betterhalf candidate circle to receive opportunities for matches with our exceptional clients.</p>
+            <p>Create your complimentary profile.</p>
+          </div>
+        </div>
+      </section>
+
       <Testimonials />
 
       {/* Full-Screen Image with Testimonial */}
@@ -216,6 +232,22 @@ export default function Home() {
       </section>
 
       <Membership />
+
+      {/* Call to Action - After Membership */}
+      <section className="py-20 bg-black text-white text-center">
+        <div className="max-w-4xl mx-auto px-4">
+          <Link href="/network">
+            <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl font-semibold mb-6">
+              Apply Now
+            </Button>
+          </Link>
+          <div className="text-sm text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="mb-2">Not ready to invest in a membership?</p>
+            <p className="mb-2">Join the Betterhalf candidate circle to receive opportunities for matches with our exceptional clients.</p>
+            <p>Create your complimentary profile.</p>
+          </div>
+        </div>
+      </section>
 
       {/* Full Screen Image with Scroll-Triggered Text - Singapore */}
       <section ref={singaporeTestimonialRef} className="relative h-screen overflow-hidden">
