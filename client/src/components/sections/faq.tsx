@@ -25,6 +25,26 @@ const faqs = [
   {
     question: "What if my match is based in another country? How do you set us up?",
     answer: "We understand that flying across the world for someone you've never met isn't practical. We suggest international matches when we believe there's a strong potential for success, and we facilitate virtual introductions. Typically, this may involve someone intending to move to Mauritius or a Mauritian expat living abroad. A series of video calls can help determine if there's a connection and if it's worth considering a physical meeting."
+  },
+  {
+    question: "Do you cater to applicants who are divorced or single parents?",
+    answer: "Absolutely! We welcome individuals who are divorced or single parents, as long as the separation is legally documented and amicable. If you're ready to begin the next chapter of your life, we're here to assist you. We're upfront about your past with potential matches, so it's not a topic that needs to be discussed during your date."
+  },
+  {
+    question: "Do you cater to LGBTQ community?",
+    answer: "Yes, we absolutely do. We have no restrictions of any form. However, the number of dates will depend on factors like the feasibility of finding you a compatible partner and the size of the potential partner base."
+  },
+  {
+    question: "How long is my membership valid?",
+    answer: "A membership is valid for a period of one year or until you find your partner with The Date Alchemy; whichever comes first. It cannot be transferred."
+  },
+  {
+    question: "Can you guarantee success?",
+    answer: "Given the nature of dating business, it is virtually impossible to guarantee success. As such, we maintain a \"no refunds\" policy. However, your satisfaction as a client and your recommendation of our service to others is our primary goal, so be rest assured that we will do our best to find you your better half."
+  },
+  {
+    question: "What is the company behind The Date Alchemy?",
+    answer: "The Date Alchemy is a service offered by the registered Mauritian entity Frolic Ltd (C23201149), also owner of the lifestyle platform Frolic.mu."
   }
 ];
 
