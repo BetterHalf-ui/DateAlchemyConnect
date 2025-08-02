@@ -338,76 +338,77 @@ export default function Home() {
       {/* Your Date Alchemists Section */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-5xl font-bold text-center mb-16 subtitle">Your Date Alchemists</h2>
+          <h2 className="text-5xl font-bold text-center mb-20 subtitle">Your Date Alchemists</h2>
           
-          {/* Paragraph 1 - Image Left, Text Right */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-            <div>
+          {/* Main Team Photo - Centered and Larger */}
+          <div className="text-center mb-16">
+            <div className="inline-block">
               <img 
                 src="/attached_assets/team (1)_1753896165937.png" 
                 alt="The Date Alchemy team" 
-                className="rounded-2xl shadow-lg w-full h-104 object-cover hover-lift"
+                className="rounded-3xl shadow-2xl w-full max-w-2xl mx-auto hover-lift"
               />
-              <div className="text-center pt-4">
-                <p className="text-sm text-gray-500 italic body-text">
+              <div className="text-center pt-6">
+                <p className="text-lg text-gray-600 font-medium body-text">
                   Pratik Malia, Celine Delacharlerie, Sagarika Sarkar - Co-founders
                 </p>
               </div>
             </div>
-            <div>
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg text-gray-700 leading-relaxed body-text">
-                  Each of us have been lucky to find a real connection — and <strong>it changed everything.</strong>
-                </p>
-              </div>
-            </div>
           </div>
 
-          {/* Paragraph 2 - Text Left, Image Right */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-            <div>
-              <div className="prose prose-lg max-w-none">
+          {/* Story Content - Single Column, More Focused */}
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <p className="text-xl text-gray-700 leading-relaxed body-text">
+              We left our corporate careers in Singapore and moved to Mauritius to do something that felt more personal, more impactful.
+            </p>
+            
+            <p className="text-xl text-gray-700 leading-relaxed body-text">
+              Each of us have been lucky to find a real connection — and <strong>it changed everything.</strong>
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-center my-16">
+              <div>
+                <img 
+                  src="/attached_assets/Screenshot 2025-07-30 at 21.59.07_1753898366997.png" 
+                  alt="The Date Alchemy founders" 
+                  className="rounded-2xl shadow-lg w-full h-80 object-cover hover-lift"
+                />
+              </div>
+              <div className="text-left">
                 <p className="text-lg text-gray-700 leading-relaxed body-text">
-                  <strong>But getting there wasn't easy.</strong> We've been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people.<br/><br/>
-                  
-                  We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion.<br/><br/>
-                  
-                  We understand what it feels like. And <strong>we knew there had to be a better way.</strong>
+                  <strong>But getting there wasn't easy.</strong> We've been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
+                  We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion. We understand what it feels like. And <strong>we knew there had to be a better way.</strong>
                 </p>
               </div>
             </div>
-            <div>
-              <img 
-                src="/attached_assets/Screenshot 2025-07-30 at 21.59.07_1753898366997.png" 
-                alt="The Date Alchemy founders" 
-                className="rounded-2xl shadow-lg w-full h-104 object-cover hover-lift"
-              />
-            </div>
-          </div>
 
-          {/* Paragraph 3 - Image Left, Text Right */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <img 
-                src="/attached_assets/WhatsApp Image 2025-07-30 at 21.30.22_1753897630892.jpeg" 
-                alt="The Date Alchemy team members" 
-                className="rounded-2xl shadow-lg w-full h-104 object-cover hover-lift"
-              />
-            </div>
-            <div>
-              <div className="prose prose-lg max-w-none">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="text-left md:order-1">
                 <p className="text-lg text-gray-700 leading-relaxed body-text">
-                  That's why we created The Date Alchemy— <strong>the dating service we wish we'd had.</strong><br/><br/>
-                  
-                  A thoughtful, human and empowering experience designed for real, meaningful connections. We can't promise love, but we can promise effort, professionalism, integrity, a genuine investment in your journey, and <strong>a proven process that's led to lasting relationships</strong>.<br/><br/>
-                  
-                  Whether a date turns into a lifelong relationship or brings new clarity, we believe every step forward matters. We've witnessed - in our own lives and through our clients — the magic that unfolds when two truly compatible people connect.<br/><br/>
-                  
-                  <strong>And we want more people to experience that kind of transformation.</strong><br/><br/>
-                  
-                  So if you're ready to stop leaving love to chance, we'd love to walk this journey with you thoughtfully, personally and discretely. Your better half may be closer than you think.
+                  That's why we created The Date Alchemy— <strong>the dating service we wish we'd had.</strong>
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
+                  A thoughtful, human and empowering experience designed for real, meaningful connections. We can't promise love, but we can promise effort, professionalism, integrity, a genuine investment in your journey, and <strong>a proven process that's led to lasting relationships</strong>.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
+                  <strong>And we want more people to experience that kind of transformation.</strong>
                 </p>
               </div>
+              <div className="md:order-2">
+                <img 
+                  src="/attached_assets/WhatsApp Image 2025-07-30 at 21.30.22_1753897630892.jpeg" 
+                  alt="The Date Alchemy team members" 
+                  className="rounded-2xl shadow-lg w-full h-80 object-cover hover-lift"
+                />
+              </div>
+            </div>
+
+            <div className="mt-12 p-8 bg-gray-50 rounded-2xl">
+              <p className="text-lg text-gray-700 leading-relaxed body-text italic">
+                So if you're ready to stop leaving love to chance, we'd love to walk this journey with you thoughtfully, personally and discretely. Your better half may be closer than you think.
+              </p>
             </div>
           </div>
         </div>
