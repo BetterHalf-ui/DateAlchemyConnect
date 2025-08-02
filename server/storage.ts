@@ -48,12 +48,12 @@ export class MemStorage implements IStorage {
         published: true,
       },
       {
-        title: "The Science Behind Lasting Relationships",
-        content: "Explore the research-backed principles that help couples build strong, enduring connections. From attachment theory to communication patterns, we dive deep into what science tells us about successful partnerships...",
-        excerpt: "Explore the research-backed principles that help couples build strong, enduring connections...",
-        imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        title: "How to spot a cheater?",
+        content: "The recent Coldplay concert scandal — where two high-ranking executives were caught mid-affair on the big screen — went viral for a reason: it hit a nerve. Cheating is one of the biggest dealbreakers in relationships, especially for women, and moments like these reinforce the fear that even \"normal,\" high-functioning people can betray trust. But what makes someone more likely to cheat and can you spot the signs early?\n\nA study by the Reichman University in Israël found that people with more relationship power — due to looks, status, or emotional control — are more likely to notice alternative partners and feel less committed. Another study from the University of Innsbruck, Innsbruck, Austria linked moral disengagement (the ability to justify harmful behavior) with a greater likelihood of infidelity.\n\nMany of our clients are searching for that elusive spark, but it's worth asking: who else feels it around this person? Effortless charm can be magnetic, but also widespread. If someone sparks chemistry with you instantly, chances are they spark it just as easily with others. The absence of that instant thrill isn't necessarily a red flag — in fact, it can be a good thing in this specific context.\n\nResearch also highlights that infidelity is not necessarily about the character of someone and is also rarely just about the act of sex itself. It's about disconnection. Couples need to stay vigilant against the quiet drift of resentment and routine. What matters most is continuing the conversations about our emotional needs, our desires, and how we're evolving as individuals. When those dialogues fade, so does the connection. And in that emotional distance, some people make the painful mistake of seeking attention in the most damaging way possible.",
+        excerpt: "The recent Coldplay concert scandal went viral for a reason: it hit a nerve about trust and betrayal in relationships...",
+        imageUrl: "/attached_assets/deITrAHgKgmgweITEsWuVWtBa8CMBWKhm5pIL4BN_1754163032993.jpg",
         category: "Relationship Science",
-        tags: ["relationship science", "attachment theory", "psychology"],
+        tags: ["infidelity", "relationship red flags", "trust"],
         published: true,
       },
       {
