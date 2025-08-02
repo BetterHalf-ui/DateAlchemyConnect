@@ -236,21 +236,21 @@ export default function Home() {
                 <img 
                   src="/attached_assets/christin-noelle-i1Q838KZPt4-unsplash_1754161962245.jpg"
                   alt="Professional member"
-                  className="w-full h-32 object-cover rounded-xl shadow-md hover-lift"
+                  className="w-full h-32 object-cover object-top rounded-xl shadow-md hover-lift"
                 />
               </div>
               <div className="relative">
                 <img 
                   src="/attached_assets/candice-picard-VDihQhOiOkI-unsplash_1754161962252.jpg"
                   alt="Dynamic member"
-                  className="w-full h-32 object-cover rounded-xl shadow-md hover-lift"
+                  className="w-full h-32 object-cover object-top rounded-xl shadow-md hover-lift"
                 />
               </div>
               <div className="relative">
                 <img 
                   src="/attached_assets/noman-khan-3-iPJTAp1i0-unsplash_1754161962252.jpg"
                   alt="Ambitious member"
-                  className="w-full h-32 object-cover rounded-xl shadow-md hover-lift"
+                  className="w-full h-32 object-cover object-top rounded-xl shadow-md hover-lift"
                 />
               </div>
             </div>
