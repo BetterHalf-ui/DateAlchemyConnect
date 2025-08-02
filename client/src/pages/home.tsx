@@ -358,13 +358,8 @@ export default function Home() {
 
           {/* Story Content - Two Column Layout */}
           <div className="max-w-6xl mx-auto">
-            {/* Opening Quote */}
-            <div className="text-center mb-12">
-              <div className="text-8xl text-primary font-serif leading-none">"</div>
-            </div>
-
-            {/* Two Column Story Layout */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+            {/* First Two Column Story Layout */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <img 
                   src="/attached_assets/Screenshot 2025-07-30 at 21.59.07_1753898366997.png" 
@@ -379,12 +374,20 @@ export default function Home() {
                 <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
                   <strong>But getting there wasn't easy.</strong> We've been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed body-text mt-4">
-                  We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion. We understand what it feels like. And <strong>we knew there had to be a better way.</strong>
+              </div>
+            </div>
+
+            {/* Elegant Quote Section */}
+            <div className="max-w-4xl mx-auto mb-16">
+              <div className="relative bg-gray-50 border-l-4 border-primary p-8 rounded-r-xl">
+                <div className="absolute -left-2 top-4 w-4 h-4 bg-primary rounded-full"></div>
+                <p className="text-xl text-gray-800 leading-relaxed italic body-text">
+                  "We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion. And <strong>we knew there had to be a better way.</strong>"
                 </p>
               </div>
             </div>
 
+            {/* Second Two Column Layout */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm md:order-1">
                 <p className="text-lg text-gray-700 leading-relaxed body-text">
@@ -401,11 +404,6 @@ export default function Home() {
                   className="rounded-2xl shadow-lg w-full h-80 object-cover hover-lift"
                 />
               </div>
-            </div>
-
-            {/* Closing Quote */}
-            <div className="text-center mt-12">
-              <div className="text-8xl text-primary font-serif leading-none rotate-180">"</div>
             </div>
           </div>
         </div>
