@@ -377,12 +377,13 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Elegant Quote Section */}
+            {/* Elegant Quote Section - Option 1: Glass Card with Gradient */}
             <div className="max-w-4xl mx-auto mb-16">
-              <div className="relative bg-gray-50 border-l-4 border-primary p-8 rounded-r-xl">
-                <div className="absolute -left-2 top-4 w-4 h-4 bg-primary rounded-full"></div>
-                <p className="text-xl text-gray-800 leading-relaxed italic body-text">
-                  "We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion. And <strong>we knew there had to be a better way.</strong>"
+              <div className="relative bg-gradient-to-br from-white to-gray-50 backdrop-blur-sm border border-gray-200 p-10 rounded-3xl shadow-lg">
+                <div className="absolute top-4 left-6 text-4xl text-primary opacity-40 font-serif">"</div>
+                <div className="absolute bottom-4 right-6 text-4xl text-primary opacity-40 font-serif rotate-180">"</div>
+                <p className="text-xl text-gray-800 leading-relaxed font-medium text-center px-8 py-4 body-text">
+                  We've wasted emotional energy on people who weren't serious. We've faced the ghosting, the anxiety, the self-doubt and confusion. And <strong className="text-primary">we knew there had to be a better way.</strong>
                 </p>
               </div>
             </div>
