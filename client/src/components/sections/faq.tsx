@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     question: "How many people can I meet during my membership?",
-    answer: "While you may take 5 dates as a high level benchmark, we don't commit to introducing our clients to a specific number of matches. Our focus is on quality over quantity. We believe it's more valuable for you to meet a few exceptional matches than to be inundated with unsuitable ones. The number of dates you go on depends on various factors, including your own eligibility, the flexibility of your search criteria, and the feedback we receive about you."
+    answer: "While you may take 5 dates as a high level benchmark, we don't commit to introducing our clients to a specific number of matches. Our focus is on quality over quantity. We believe it's more valuable for you to meet a few exceptional matches than to be inundated with unsuitable ones. The number of dates you go on depends on various factors, including your own eligibility, the flexibility of your search criteria, and the feedback we receive about you. Our goal is to ensure each introduction has genuine potential."
   },
   {
     question: "How do I make the payment?",
