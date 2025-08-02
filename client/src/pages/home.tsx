@@ -234,21 +234,21 @@ export default function Home() {
             <div className="grid grid-cols-3 gap-4">
               <div className="relative">
                 <img 
-                  src="/attached_assets/74c7b6d9-723b-48f4-8ad3-88de4e6dabe9_1753881262177.jpeg"
+                  src="/attached_assets/christin-noelle-i1Q838KZPt4-unsplash_1754161962245.jpg"
                   alt="Professional member"
                   className="w-full h-32 object-cover rounded-xl shadow-md hover-lift"
                 />
               </div>
               <div className="relative">
                 <img 
-                  src="/attached_assets/WhatsApp Image 2025-07-30 at 21.15.40_1753896375443.jpeg"
+                  src="/attached_assets/candice-picard-VDihQhOiOkI-unsplash_1754161962252.jpg"
                   alt="Dynamic member"
                   className="w-full h-32 object-cover rounded-xl shadow-md hover-lift"
                 />
               </div>
               <div className="relative">
                 <img 
-                  src="/attached_assets/team (1)_1753896165937.png"
+                  src="/attached_assets/noman-khan-3-iPJTAp1i0-unsplash_1754161962252.jpg"
                   alt="Ambitious member"
                   className="w-full h-32 object-cover rounded-xl shadow-md hover-lift"
                 />
