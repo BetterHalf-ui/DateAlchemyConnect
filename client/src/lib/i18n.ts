@@ -80,7 +80,6 @@ export const translations = {
     
     'home.blog.title': 'Dating Insights & Tips',
     'home.blog.subtitle': 'Expert advice for intentional dating',
-    'home.blog.viewAll': 'View All Articles',
     
     'home.newsletter.title': 'Stay Connected',
     'home.newsletter.subtitle': 'Get dating insights and relationship tips delivered to your inbox.',
@@ -172,6 +171,7 @@ export const translations = {
     
     // Blog section
     'home.blog.latestTitle': 'Latest Insights',
+    'home.blog.viewAll': 'View All Posts',
     
     // Language switcher
     'language.english': 'English',
@@ -237,7 +237,6 @@ export const translations = {
     
     'home.blog.title': 'Conseils et Astuces de Rencontres',
     'home.blog.subtitle': 'Conseils d\'experts pour des rencontres intentionnelles',
-    'home.blog.viewAll': 'Voir Tous les Articles',
     
     'home.newsletter.title': 'Restez Connecté',
     'home.newsletter.subtitle': 'Recevez des conseils de rencontres et des astuces relationnelles dans votre boîte de réception.',
@@ -329,6 +328,7 @@ export const translations = {
     
     // Blog section (French)
     'home.blog.latestTitle': 'Derniers Conseils',
+    'home.blog.viewAll': 'Voir Tous les Articles',
     
     // Language switcher
     'language.english': 'English',
