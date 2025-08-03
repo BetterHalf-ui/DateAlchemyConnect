@@ -223,7 +223,7 @@ export default function Home() {
               <div className="text-5xl font-bold text-primary mb-3">{displayCount}</div>
               <h3 className="text-xl font-bold mb-4">active members</h3>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                Our members are the most ambitious, fun, and dynamic people you know!
+                Our members are the most ambitious, fun, and dynamic people you know, from Mauritius and from abroad!
               </p>
               <p className="text-base font-semibold text-gray-900">
                 Our matchmakers review EVERY application

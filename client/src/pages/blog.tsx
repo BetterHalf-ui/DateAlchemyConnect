@@ -84,7 +84,7 @@ export default function Blog() {
                 <Button
                   key={category}
                   variant={selectedCategory === category ? "default" : "outline"}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => setSelectedCategory(category || "")}
                   className={selectedCategory === category ? "bg-primary text-white" : ""}
                 >
                   {category}
@@ -137,6 +137,26 @@ export default function Blog() {
             </div>
           )}
 
+          {/* Newsletter CTA */}
+          <div className="py-32 bg-black text-white">
+            <div className="max-w-4xl mx-auto px-4 text-center">
+              <h2 className="text-4xl font-bold mb-6 subtitle">The Smarter Way to Date — Straight to Your Inbox</h2>
+              <p className="text-xl text-gray-300 mb-12 body-text">Join 1,000+ Smart Singles Getting Bi-Weekly Dating Tips</p>
+              <form className="max-w-md mx-auto flex">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 rounded-r-none focus:ring-primary text-gray-900 h-14 text-lg px-4 border border-gray-300"
+                />
+                <button 
+                  type="submit"
+                  className="bg-primary hover:bg-primary/90 px-8 rounded-l-none h-14 text-lg font-semibold text-white border border-primary"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
 
         </div>
       </section>

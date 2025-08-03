@@ -70,6 +70,15 @@ export class MemStorage implements IStorage {
         tags: ["first dates", "mauritius", "dating venues", "café recommendations"],
         published: true,
       },
+      {
+        title: "The 36 questions that can spark a real connection: try it on your next date!",
+        content: "Looking for a meaningful activity for a second or third date? Forget trying to impress—focus instead on connecting. In fact, one of the best ways to bond is by being curious about your date, not by showing off. A <a href=\"https://journals.sagepub.com/doi/10.1177/0146167297234003\" target=\"_blank\" class=\"text-primary hover:text-primary/80 font-semibold underline\">fascinating 1997 study</a> by psychologist Arthur Aron and his team explored whether intimacy between two strangers could be fast-tracked. The result? A set of 36 questions designed to gradually build trust, openness, and emotional closeness.\n\nThe questions start light—like \"Would you like to be famous?\"—and become more personal as you go, with questions like \"What's your most treasured memory?\" or \"When did you last cry in front of someone?\" They've since been used in numerous psychology studies to deepen connection not just between potential couples, but between friends, coworkers, and even strangers from different backgrounds. While the goal isn't necessarily to fall in love, many people have reported a noticeable shift in how close they feel after doing the full exercise. If you're ready for a deeper kind of date, try it out: <a href=\"https://amorebeautifulquestion.com/wp-content/uploads/2018/06/Arthur-Arons-36-questions.pdf\" target=\"_blank\" class=\"text-primary hover:text-primary/80 font-semibold underline\">Read the full list of 36 questions here.</a>\n\nIt's a fun way to go beyond small talk and really see each other—not just in terms of compatibility, but humanity. One tip? Save this for a second or third date when you've already built some trust and are ready to be a little more vulnerable. You might be surprised by how powerful asking (and answering) the right questions can be.",
+        excerpt: "Looking for a meaningful activity for a second or third date? Discover the 36 questions that psychology research shows can spark real connection and intimacy.",
+        category: "Dating Tips",
+        imageUrl: null,
+        tags: ["psychology", "dating questions", "connection", "intimacy", "relationships"],
+        published: true,
+      },
     ];
 
     for (const post of samplePosts) {
