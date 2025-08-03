@@ -10,7 +10,7 @@ export default function Header() {
   const [location] = useLocation();
   
   // Check if we're on a page that needs a white background header by default
-  const needsWhiteHeader = location.startsWith('/blog') || location.startsWith('/admin');
+  const needsWhiteHeader = location.startsWith('/blog') || location.startsWith('/admin') || location.startsWith('/network');
 
   useEffect(() => {
     const handleScroll = () => {
