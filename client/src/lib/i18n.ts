@@ -147,6 +147,32 @@ export const translations = {
     'home.stats.memberDesc': 'Our members are the most ambitious, fun, and dynamic people you know, from Mauritius and from abroad!',
     'home.stats.reviewNote': 'Our matchmakers review EVERY application',
     
+    // Testimonials - Additional ones for image sections
+    'home.testimonials.main': 'Thank you for a match that goes far beyond just an algorithm. You helped bring two hearts onto the same wavelength.',
+    'home.testimonials.mainAuthor': '— COO, Tech Industry, 52',
+    'home.testimonials.professional': 'The Date Alchemy promotes healthy relationships in a safe and confidential setting. Embarking on this journey has helped me listen more deeply to others and understand myself better—allowing me to grow into a better version of myself.',
+    'home.testimonials.professionalAuthor': '— Scientist, 37',
+    'home.testimonials.expert': 'I would wholeheartedly recommend The Date Alchemy to single professionals who may not have the time—or inclination—to navigate traditional matchmaking methods or dating apps.',
+    'home.testimonials.expertAuthor': '— IT Professional, 32',
+    
+    // Team section
+    'home.team.title': 'Your Date Alchemists',
+    'home.team.founders': 'Pratik Malia, Celine Delacharlerie, Sagarika Sarkar - Co-founders',
+    'home.team.story1': 'Three years ago, we left our corporate careers in Singapore and moved to Mauritius to do something that felt more personal, more impactful. Finding a life partner we truly connect with has been such a life changing experience for us, that we wanted more people to experience that kind of love.',
+    'home.team.story2': 'But getting there wasn\'t easy. We\'ve been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people.',
+    'home.team.quote': 'We\'ve wasted emotional energy on people who weren\'t serious. We\'ve faced the ghosting, the anxiety, the self-doubt and confusion. And we knew there had to be a better way.',
+    'home.team.story3': 'That\'s why we created The Date Alchemy— the dating service we wish we\'d had.',
+    'home.team.story4': 'A respectful and empowering experience designed for real, meaningful connections. We can\'t promise love, but we can promise effort, professionalism, integrity, a genuine investment in your journey, and a proven process that\'s led to lasting relationships.',
+    
+    // Nominate section
+    'home.nominate.title': 'Spread the Love',
+    'home.nominate.subtitle': 'Nominate a single you know',
+    'home.nominate.description': 'They can thank you once we find them the one!',
+    'home.nominate.cta': 'Nominate Someone',
+    
+    // Blog section
+    'home.blog.latestTitle': 'Latest Insights',
+    
     // Language switcher
     'language.english': 'English',
     'language.french': 'Français',
@@ -277,6 +303,32 @@ export const translations = {
     'home.stats.activeMembers': 'membres actifs',
     'home.stats.memberDesc': 'Nos membres sont les personnes les plus ambitieuses, amusantes et dynamiques que vous connaissez, de Maurice et de l\'étranger !',
     'home.stats.reviewNote': 'Nos entremetteurs examinent CHAQUE candidature',
+    
+    // Testimonials - Additional ones for image sections (French)
+    'home.testimonials.main': 'Merci pour une correspondance qui va bien au-delà d\'un simple algorithme. Vous avez aidé à mettre deux cœurs sur la même longueur d\'onde.',
+    'home.testimonials.mainAuthor': '— COO, Industrie Tech, 52',
+    'home.testimonials.professional': 'The Date Alchemy favorise des relations saines dans un cadre sûr et confidentiel. Me lancer dans ce voyage m\'a aidé à écouter plus profondément les autres et à mieux me comprendre—me permettant de devenir une meilleure version de moi-même.',
+    'home.testimonials.professionalAuthor': '— Scientifique, 37',
+    'home.testimonials.expert': 'Je recommanderais sans réserve The Date Alchemy aux professionnels célibataires qui n\'ont peut-être pas le temps—ou l\'envie—de naviguer dans les méthodes traditionnelles d\'entremettage ou les applications de rencontres.',
+    'home.testimonials.expertAuthor': '— Professionnel IT, 32',
+    
+    // Team section (French)
+    'home.team.title': 'Vos Alchimistes de Rencontres',
+    'home.team.founders': 'Pratik Malia, Celine Delacharlerie, Sagarika Sarkar - Co-fondateurs',
+    'home.team.story1': 'Il y a trois ans, nous avons quitté nos carrières d\'entreprise à Singapour et avons déménagé à Maurice pour faire quelque chose de plus personnel, plus impactant. Trouver un partenaire de vie avec qui nous nous connectons vraiment a été une expérience si bouleversante pour nous, que nous voulions que plus de gens vivent ce genre d\'amour.',
+    'home.team.story2': 'Mais y arriver n\'était pas facile. Nous avons vécu la frustration nous-mêmes — assister à d\'innombrables événements qui ne menaient nulle part, passer des heures à glisser sur des applications de rencontres pour finir désabusés, nous retrouver dans des relations avec des personnes émotionnellement indisponibles ou toxiques.',
+    'home.team.quote': 'Nous avons gaspillé de l\'énergie émotionnelle sur des gens qui n\'étaient pas sérieux. Nous avons fait face aux fantômes, à l\'anxiété, au doute de soi et à la confusion. Et nous savions qu\'il devait y avoir une meilleure façon.',
+    'home.team.story3': 'C\'est pourquoi nous avons créé The Date Alchemy— le service de rencontres que nous aurions voulu avoir.',
+    'home.team.story4': 'Une expérience respectueuse et autonomisante conçue pour de vraies connexions significatives. Nous ne pouvons pas promettre l\'amour, mais nous pouvons promettre l\'effort, le professionnalisme, l\'intégrité, un investissement authentique dans votre parcours, et un processus éprouvé qui a mené à des relations durables.',
+    
+    // Nominate section (French)
+    'home.nominate.title': 'Répandre l\'Amour',
+    'home.nominate.subtitle': 'Nominez un célibataire que vous connaissez',
+    'home.nominate.description': 'Ils pourront vous remercier une fois qu\'on leur aura trouvé la bonne personne !',
+    'home.nominate.cta': 'Nominer Quelqu\'un',
+    
+    // Blog section (French)
+    'home.blog.latestTitle': 'Derniers Conseils',
     
     // Language switcher
     'language.english': 'English',
