@@ -6,10 +6,14 @@ import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 import type { BlogPost } from "@shared/schema";
 
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog-posts"],
@@ -26,6 +30,56 @@ export default function Blog() {
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesSearch;
   }) || [];
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email || !email.includes('@')) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Successfully subscribed!",
+          description: "You'll receive our bi-weekly dating tips straight to your inbox.",
+        });
+        setEmail("");
+      } else {
+        toast({
+          title: "Subscription failed",
+          description: result.message || "Please try again or contact us directly.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error('Subscription error:', error);
+      toast({
+        title: "Subscription failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   if (isLoading) {
     return (
@@ -116,19 +170,27 @@ export default function Blog() {
             <div className="max-w-4xl mx-auto px-4 text-center">
               <h2 className="text-4xl font-bold mb-6 subtitle">The Smarter Way to Date — Straight to Your Inbox</h2>
               <p className="text-xl text-gray-300 mb-12 body-text">Join 1,000+ Smart Singles Getting Bi-Weekly Dating Tips</p>
-              <form className="max-w-md mx-auto flex">
-                <input
+              <form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
+                <Input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 rounded-r-none focus:ring-primary text-gray-900 h-14 text-lg px-4 border border-gray-300"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex-1 sm:rounded-r-none focus:ring-primary text-gray-900 h-14 text-lg"
+                  disabled={isSubmitting}
+                  required
                 />
-                <button 
+                <Button 
                   type="submit"
-                  className="bg-primary hover:bg-primary/90 px-8 rounded-l-none h-14 text-lg font-semibold text-white border border-primary"
+                  disabled={isSubmitting}
+                  className="bg-primary hover:bg-primary/90 px-8 sm:rounded-l-none h-14 text-lg font-semibold whitespace-nowrap"
                 >
-                  Subscribe
-                </button>
+                  {isSubmitting ? "Subscribing..." : "Subscribe"}
+                </Button>
               </form>
+              <div className="text-sm text-gray-400 mt-4">
+                By subscribing, you agree to receive our newsletter. You can unsubscribe at any time.
+              </div>
             </div>
           </div>
 
