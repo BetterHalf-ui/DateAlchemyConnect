@@ -1,40 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
-
-declare global {
-  interface Window {
-    ml_account: any;
-    ml_webform_2964238: any;
-  }
-}
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-
-  useEffect(() => {
-    // Load MailerLite JavaScript
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://static.mailerlite.com/js/universal.js';
-    document.head.appendChild(script);
-
-    script.onload = () => {
-      if (window.ml_account) {
-        window.ml_account('webforms', '976785', 'a1b4f3', 'load');
-      }
-    };
-
-    return () => {
-      // Cleanup
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
-      }
-    };
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,35 +23,28 @@ export default function Newsletter() {
     setIsSubmitting(true);
 
     try {
-      // Use MailerLite's JavaScript API if available
-      if (window.ml_account) {
-        window.ml_account('webforms', '976785', 'a1b4f3', 'subscribe', { email: email });
-        
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
         toast({
           title: "Successfully subscribed!",
           description: "You'll receive our bi-weekly dating tips straight to your inbox.",
         });
         setEmail("");
       } else {
-        // Fallback to direct form submission
-        const formData = new URLSearchParams();
-        formData.append('fields[email]', email);
-        formData.append('ml-submit', '1');
-
-        const response = await fetch('https://assets.mailerlite.com/jsonp/976785/forms/161724071625623326/subscribe', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: formData,
-          mode: 'no-cors'
-        });
-
         toast({
-          title: "Successfully subscribed!",
-          description: "You'll receive our bi-weekly dating tips straight to your inbox.",
+          title: "Subscription failed",
+          description: result.message || "Please try again or contact us directly.",
+          variant: "destructive",
         });
-        setEmail("");
       }
     } catch (error) {
       console.error('Subscription error:', error);
