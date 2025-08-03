@@ -79,6 +79,15 @@ export class MemStorage implements IStorage {
         tags: ["psychology", "dating questions", "connection", "intimacy", "relationships"],
         published: true,
       },
+      {
+        title: "The Materialists exposes the tendency and cost of treating potential partners like commodities",
+        content: "Celine Song's new film The Materialists <a href=\"https://cinema.mu/movies/materialists/\" target=\"_blank\" class=\"text-primary hover:text-primary/80 font-semibold underline\">hits screens in Mauritius tomorrow (2nd of July)</a>, and our team is very excited about it! The movie is described as a sharp and stylish look at modern dating through the eyes of Lucy (Dakota Johnson), a professional NYC matchmaker navigating the dizzying intersection of love and money.\n\nThe director of the movie, who was nominated for an Academy Award for her previous film, previously worked as a matchmaker in Manhattan and draws directly from that experience. In her matchmaking days, clients would obsessively quantify potential partners by metrics like BMI, income, and height—highlighting how modern dating has become a \"marketplace\" driven by commodification.\n\nThrough her intelligent script, the film argues that love isn't something you can algorithmically engineer—it demands acceptance, risk, and emotional bravery. We can't agree more...\n\nThe movie reminds us that while practical compatibility matters, it's ultimately the intangible qualities—trust, commitment, empathy—that form the foundation of lasting love. It's a timely invitation to reassess how we value ourselves and our partners—not by height or salary, but by how we truly feel when we're together.",
+        excerpt: "Celine Song's new film The Materialists offers a sharp look at modern dating, exposing how we've turned love into a marketplace driven by commodification.",
+        category: "Relationship Insights",
+        imageUrl: "/attached_assets/blfMatrVNwr5eJM4yhpN8ZacjpZ7cDy97gCW2n7u_1754224420473.jpg",
+        tags: ["film review", "modern dating", "commodification", "love", "relationships"],
+        published: true,
+      },
     ];
 
     for (const post of samplePosts) {
