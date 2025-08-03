@@ -67,11 +67,7 @@ export default function Footer() {
                   <span className="hover:text-primary transition-colors cursor-pointer">{t('footer.privacyPolicy')}</span>
                 </Link>
               </li>
-              <li>
-                <Link href="/terms-of-use">
-                  <span className="hover:text-primary transition-colors cursor-pointer">{t('footer.termsOfUse')}</span>
-                </Link>
-              </li>
+
             </ul>
           </div>
           

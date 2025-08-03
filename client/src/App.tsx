@@ -9,7 +9,7 @@ import Network from "@/pages/network";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
 import PrivacyPolicy from "@/pages/privacy-policy";
-import TermsOfUse from "@/pages/terms-of-use";
+
 import BlogAdmin from "@/components/admin/blog-admin";
 import NotFound from "@/pages/not-found";
 
@@ -21,7 +21,6 @@ function Router() {
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:id" component={BlogPost} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
-      <Route path="/terms-of-use" component={TermsOfUse} />
       <Route path="/admin/blog" component={BlogAdmin} />
       <Route component={NotFound} />
     </Switch>
