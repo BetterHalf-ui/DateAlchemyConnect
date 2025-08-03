@@ -104,8 +104,7 @@ export default function PrivacyPolicy() {
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="text-gray-700 mb-2"><strong>The Date Alchemy</strong></p>
               <p className="text-gray-700 mb-2">Email: Betterhalf@frolic.mu</p>
-              <p className="text-gray-700 mb-2">Phone: +230 5459 1975</p>
-              <p className="text-gray-700">Address: Mauritius</p>
+              <p className="text-gray-700">Phone: +230 5459 1975</p>
             </div>
           </div>
         </div>
