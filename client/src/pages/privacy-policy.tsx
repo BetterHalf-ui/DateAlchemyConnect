@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
             
             <p className="text-gray-700 mb-4">This may include:</p>
             <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li>Contact information (name, email, phone number, address)</li>
+              <li>Contact information (name, email, phone number)</li>
               <li>Demographic information (age, gender, occupation, education)</li>
               <li>Personal preferences and relationship goals</li>
               <li>Photos and profile information</li>
