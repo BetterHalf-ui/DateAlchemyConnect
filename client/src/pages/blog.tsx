@@ -10,7 +10,6 @@ import type { BlogPost } from "@shared/schema";
 
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
 
   const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog-posts"],
@@ -21,16 +20,11 @@ export default function Blog() {
     },
   });
 
-  const categories = blogPosts 
-    ? Array.from(new Set(blogPosts.map(post => post.category)))
-    : [];
-
   const filteredPosts = blogPosts?.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = !selectedCategory || post.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+    return matchesSearch;
   }) || [];
 
   if (isLoading) {
@@ -64,40 +58,21 @@ export default function Blog() {
             </p>
           </div>
 
-          {/* Search and Filter */}
-          <div className="flex flex-col md:flex-row gap-4 mb-12">
+          {/* Search */}
+          <div className="flex justify-center mb-12">
             <Input
               placeholder="Search articles..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1"
+              className="max-w-md"
             />
-            <div className="flex gap-2 flex-wrap">
-              <Button
-                variant={selectedCategory === "" ? "default" : "outline"}
-                onClick={() => setSelectedCategory("")}
-                className={selectedCategory === "" ? "bg-primary text-white" : ""}
-              >
-                All Categories
-              </Button>
-              {categories.map((category) => (
-                <Button
-                  key={category}
-                  variant={selectedCategory === category ? "default" : "outline"}
-                  onClick={() => setSelectedCategory(category || "")}
-                  className={selectedCategory === category ? "bg-primary text-white" : ""}
-                >
-                  {category}
-                </Button>
-              ))}
-            </div>
           </div>
 
           {/* Blog Posts Grid */}
           {filteredPosts.length === 0 ? (
             <div className="text-center py-20">
               <h3 className="text-2xl font-bold mb-4">No articles found</h3>
-              <p className="text-gray-600">Try adjusting your search terms or selected category.</p>
+              <p className="text-gray-600">Try adjusting your search terms.</p>
             </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -113,7 +88,6 @@ export default function Blog() {
                     )}
                     <div className="p-6">
                       <div className="flex items-center gap-2 mb-3">
-                        <Badge variant="secondary">{post.category}</Badge>
                         <span className="text-sm text-gray-500">
                           {new Date(post.createdAt).toLocaleDateString()}
                         </span>
