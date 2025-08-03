@@ -90,8 +90,30 @@ export class MemStorage implements IStorage {
       },
     ];
 
-    for (const post of samplePosts) {
-      await this.createBlogPost(post);
+    // Create posts with specific dates (weekly intervals, latest on July 24, 2025)
+    const postDates = [
+      new Date('2025-06-05'), // "Chasing vs. Pursuing" - 7 weeks before
+      new Date('2025-06-12'), // "How to spot a cheater?" - 6 weeks before  
+      new Date('2025-06-19'), // "Is fighting a red flag?" - 5 weeks before
+      new Date('2025-06-26'), // "New cool cafés" - 4 weeks before
+      new Date('2025-07-03'), // "36 questions" - 3 weeks before
+      new Date('2025-07-24'), // "The Materialists" - latest
+    ];
+
+    for (let i = 0; i < samplePosts.length; i++) {
+      const post = samplePosts[i];
+      const id = randomUUID();
+      const publishDate = postDates[i];
+      const blogPost: BlogPost = {
+        ...post,
+        id,
+        createdAt: publishDate,
+        updatedAt: publishDate,
+        published: post.published ?? false,
+        imageUrl: post.imageUrl ?? null,
+        tags: post.tags ?? [],
+      };
+      this.blogPosts.set(id, blogPost);
     }
   }
 
