@@ -59,7 +59,17 @@ export default function PrivacyPolicy() {
               We only share your profile information with pre-screened, compatible members. We only share your profile picture and WhatsApp number after obtaining your explicit consent for each introduction. We never share full names or other contact details.
             </p>
 
-
+            <h3 className="text-xl font-semibold mt-6 mb-3">Service Providers</h3>
+            <p className="text-gray-700 mb-4">
+              We use trusted third-party service providers to help us deliver our services:
+            </p>
+            <ul className="list-disc pl-6 mb-4 text-gray-700">
+              <li><strong>Fillout:</strong> We use Fillout to collect your membership application information through secure forms.</li>
+              <li><strong>Airtable:</strong> We store and manage your profile information in Airtable's secure database platform.</li>
+            </ul>
+            <p className="text-gray-700 mb-6">
+              These providers are bound by strict confidentiality agreements and are only permitted to use your information to provide services to us. They cannot use your information for their own purposes.
+            </p>
 
             <h3 className="text-xl font-semibold mt-6 mb-3">Legal Requirements</h3>
             <p className="text-gray-700 mb-6">
