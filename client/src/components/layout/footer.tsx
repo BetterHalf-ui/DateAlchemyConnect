@@ -1,8 +1,11 @@
 import { Link } from "wouter";
 import { Facebook, Instagram } from "lucide-react";
 import { COMPANY_INFO, CONTACT_INFO, EXTERNAL_LINKS } from "@/lib/constants";
+import { useI18n } from "@/lib/i18n";
 
 export default function Footer() {
+  const { t } = useI18n();
+  
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-6xl mx-auto px-4">
@@ -10,7 +13,7 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-xl mb-4">{COMPANY_INFO.name}</h3>
             <p className="text-gray-400 mb-4">
-              Built for real connection with exceptional professionals in Mauritius.
+              {t('footer.tagline')}
             </p>
             <div className="flex space-x-4">
               <a 
@@ -31,7 +34,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a 
@@ -40,40 +43,40 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  Apply Now
+                  {t('nav.applyNow')}
                 </a>
               </li>
               <li>
                 <Link href="/network">
-                  <span className="hover:text-primary transition-colors cursor-pointer">Join Network</span>
+                  <span className="hover:text-primary transition-colors cursor-pointer">{t('nav.network')}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/blog">
-                  <span className="hover:text-primary transition-colors cursor-pointer">Blog</span>
+                  <span className="hover:text-primary transition-colors cursor-pointer">{t('nav.insights')}</span>
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
+            <h4 className="font-semibold mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Privacy Policy
-                </a>
+                <Link href="/privacy-policy">
+                  <span className="hover:text-primary transition-colors cursor-pointer">{t('footer.privacyPolicy')}</span>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Terms of Use
-                </a>
+                <Link href="/terms-of-use">
+                  <span className="hover:text-primary transition-colors cursor-pointer">{t('footer.termsOfUse')}</span>
+                </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
+            <h4 className="font-semibold mb-4">{t('footer.contact')}</h4>
             <div className="text-gray-400 space-y-2">
               <p>{CONTACT_INFO.phone}</p>
               <p>{CONTACT_INFO.email}</p>

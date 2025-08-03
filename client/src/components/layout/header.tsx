@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { COMPANY_INFO, EXTERNAL_LINKS } from "@/lib/constants";
+import LanguageSwitcher from "@/components/i18n/language-switcher";
+import { useI18n } from "@/lib/i18n";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const [location] = useLocation();
+  const { t } = useI18n();
   
   // Check if we're on a page that needs a white background header by default
   const needsWhiteHeader = location.startsWith('/blog') || location.startsWith('/admin') || location.startsWith('/network');
@@ -53,7 +56,7 @@ export default function Header() {
                 <span className={`hover:text-primary transition-colors cursor-pointer body-text ${
                   isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
                 }`}>
-                  Home
+                  {t('nav.home')}
                 </span>
               </Link>
               <a 
@@ -62,15 +65,16 @@ export default function Header() {
                   isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
                 }`}
               >
-                How It Works
+                {t('nav.howItWorks')}
               </a>
               <Link href="/blog">
                 <span className={`hover:text-primary transition-colors cursor-pointer body-text ${
                   isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
                 }`}>
-                  Insights
+                  {t('nav.insights')}
                 </span>
               </Link>
+              <LanguageSwitcher />
             </div>
             <a 
               href={EXTERNAL_LINKS.applicationForm} 
@@ -78,7 +82,7 @@ export default function Header() {
               rel="noopener noreferrer"
             >
               <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 font-medium">
-                Apply Now
+                {t('nav.applyNow')}
               </Button>
             </a>
           </div>
