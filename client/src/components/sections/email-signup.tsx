@@ -118,7 +118,7 @@ export default function EmailSignup() {
             border-width: 0px !important;
             font-family: 'Open Sans', Arial, Helvetica, sans-serif;
             font-size: 18px !important;
-            height: auto;
+            height: 56px !important;
             line-height: 21px !important;
             margin-bottom: 0;
             margin-top: 0;
@@ -163,7 +163,7 @@ export default function EmailSignup() {
             font-size: 18px !important;
             font-weight: 700;
             line-height: 21px !important;
-            height: auto;
+            height: 56px !important;
             margin: 0 !important;
             padding: 10px 10px !important;
             width: 100% !important;
@@ -246,14 +246,6 @@ export default function EmailSignup() {
                     </div>
 
                     <input type="hidden" name="ml-submit" value="1" />
-                    
-                    <div className="ml-mobileButton-horizontal">
-                      <button type="submit" className="primary">Subscribe</button>
-                      <button disabled style={{ display: 'none' }} type="button" className="loading">
-                        <div className="ml-form-embedSubmitLoad"></div>
-                        <span className="sr-only">Loading...</span>
-                      </button>
-                    </div>
                     <input type="hidden" name="anticsrf" value="true" />
                   </form>
                 </div>
