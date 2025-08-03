@@ -10,7 +10,7 @@ import Membership from "@/components/sections/membership";
 import Pricing from "@/components/sections/pricing";
 import Journey from "@/components/sections/journey";
 import FAQ from "@/components/sections/faq";
-import EmailSignup from "@/components/sections/email-signup";
+import Newsletter from "@/components/sections/newsletter";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 import { useI18n } from "@/lib/i18n";
 import type { BlogPost, Setting } from "@shared/schema";
@@ -493,7 +493,7 @@ export default function Home() {
       </section>
 
       <FAQ />
-      <EmailSignup />
+      <Newsletter />
       <Footer />
     </div>
   );
