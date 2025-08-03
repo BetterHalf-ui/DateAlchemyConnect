@@ -26,7 +26,6 @@ export default function PrivacyPolicy() {
               <li>Complete our membership application</li>
               <li>Participate in video consultations</li>
               <li>Communicate with our matchmakers</li>
-              <li>Use our website or services</li>
             </ul>
             
             <p className="text-gray-700 mb-4">This may include:</p>
@@ -35,8 +34,6 @@ export default function PrivacyPolicy() {
               <li>Demographic information (age, gender, occupation, education)</li>
               <li>Personal preferences and relationship goals</li>
               <li>Photos and profile information</li>
-              <li>Background verification information</li>
-              <li>Financial information for payment processing</li>
             </ul>
 
             <h3 className="text-xl font-semibold mt-6 mb-3">Automatically Collected Information</h3>
@@ -51,7 +48,6 @@ export default function PrivacyPolicy() {
               <li>Verify your identity and conduct background checks</li>
               <li>Facilitate introductions between compatible members</li>
               <li>Communicate about your matches and service updates</li>
-              <li>Process payments and manage your account</li>
               <li>Improve our services and develop new features</li>
               <li>Comply with legal obligations</li>
             </ul>
@@ -60,19 +56,10 @@ export default function PrivacyPolicy() {
             
             <h3 className="text-xl font-semibold mt-6 mb-3">With Other Members</h3>
             <p className="text-gray-700 mb-4">
-              We only share your profile information with pre-screened, compatible members after obtaining your explicit consent for each introduction.
+              We only share your profile information with pre-screened, compatible members. We only share your profile picture and WhatsApp number after obtaining your explicit consent for each introduction. We never share full names or other contact details.
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3">Service Providers</h3>
-            <p className="text-gray-700 mb-4">
-              We may share information with trusted third-party service providers who assist us in:
-            </p>
-            <ul className="list-disc pl-6 mb-4 text-gray-700">
-              <li>Background verification services</li>
-              <li>Payment processing</li>
-              <li>Website hosting and maintenance</li>
-              <li>Communication services</li>
-            </ul>
+
 
             <h3 className="text-xl font-semibold mt-6 mb-3">Legal Requirements</h3>
             <p className="text-gray-700 mb-6">
@@ -90,7 +77,7 @@ export default function PrivacyPolicy() {
             </p>
 
             <h2 className="text-2xl font-bold mt-8 mb-4">Your Rights</h2>
-            <p className="text-gray-700 mb-4">Depending on your location, you may have the right to:</p>
+            <p className="text-gray-700 mb-4">You have the right to:</p>
             <ul className="list-disc pl-6 mb-6 text-gray-700">
               <li>Access your personal information</li>
               <li>Correct inaccurate information</li>
@@ -116,8 +103,8 @@ export default function PrivacyPolicy() {
             </p>
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="text-gray-700 mb-2"><strong>The Date Alchemy</strong></p>
-              <p className="text-gray-700 mb-2">Email: privacy@thedatealchemy.com</p>
-              <p className="text-gray-700 mb-2">Phone: +230 5123 4567</p>
+              <p className="text-gray-700 mb-2">Email: Betterhalf@frolic.mu</p>
+              <p className="text-gray-700 mb-2">Phone: +230 5459 1975</p>
               <p className="text-gray-700">Address: Mauritius</p>
             </div>
           </div>
