@@ -3,7 +3,11 @@ import { Button } from "@/components/ui/button";
 import { ChevronDownIcon, GlobeIcon } from "lucide-react";
 import { useI18n, type Language } from '@/lib/i18n';
 
-export default function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  className?: string;
+}
+
+export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   const { language, setLanguage, t } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +27,7 @@ export default function LanguageSwitcher() {
         variant="ghost"
         size="sm"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 text-gray-700 hover:text-primary"
+        className={`flex items-center space-x-2 hover:text-primary ${className || 'text-gray-700'}`}
       >
         <GlobeIcon className="w-4 h-4" />
         <span className="text-sm">

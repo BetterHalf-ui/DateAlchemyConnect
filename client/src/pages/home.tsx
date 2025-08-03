@@ -12,9 +12,11 @@ import Journey from "@/components/sections/journey";
 import FAQ from "@/components/sections/faq";
 import Newsletter from "@/components/sections/newsletter";
 import { EXTERNAL_LINKS } from "@/lib/constants";
+import { useI18n } from "@/lib/i18n";
 import type { BlogPost, Setting } from "@shared/schema";
 
 export default function Home() {
+  const { t } = useI18n();
   const { data: blogPosts } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog-posts"],
     queryFn: async () => {
@@ -126,17 +128,16 @@ export default function Home() {
       <section className="py-32 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p className="text-lg text-gray-700 mb-8 body-text max-w-4xl mx-auto leading-relaxed">
-            Finding a real connection in Mauritius isn't easy—especially when you're a <strong>busy professional</strong> with <strong>high standards</strong>.
+            {t('home.intro.p1')}
           </p>
           <p className="text-lg text-gray-700 mb-8 body-text max-w-4xl mx-auto leading-relaxed">
-            <strong>Dating apps promise endless options but often deliver disappointment</strong>: ghosting, mixed signals, and emotional detachment. They're designed to keep you swiping, not to help you connect. Most people aren't serious, and it takes a toll—over 80% of users report feeling emotionally drained or burnt out by online dating (Singles Report).
+            {t('home.intro.p2')}
           </p>
           <p className="text-lg text-gray-700 mb-16 body-text max-w-4xl mx-auto leading-relaxed">
-            <strong>At The Date Alchemy, we know real connection is too important to leave to chance.</strong><br/>
-            That's why we invite you to put yourself out there—intentionally, but discreetly and with the respect you deserve. We take care of the search, so you can focus on living your best life while love finds its way to you.
+            {t('home.intro.p3')}
           </p>
           
-          <h2 className="text-4xl font-bold mb-12 subtitle text-gray-900">What To Expect As A Member</h2>
+          <h2 className="text-4xl font-bold mb-12 subtitle text-gray-900">{t('home.expectations.title')}</h2>
           
           {/* Four Feature Points */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mt-16">
@@ -146,9 +147,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">Curated Introductions</h4>
+              <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">{t('home.expectations.curated.title')}</h4>
               <p className="text-gray-700 body-text leading-relaxed">
-                We introduce you to singles who meet your standards and share your vibe, are carefully interviewed and equally serious about finding a lifetime partner in Mauritius.
+                {t('home.expectations.curated.desc')}
               </p>
             </div>
             
@@ -158,9 +159,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">Your Privacy is Our Priority</h4>
+              <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">{t('home.expectations.privacy.title')}</h4>
               <p className="text-gray-700 body-text leading-relaxed">
-                We protect your privacy like it's our own—your information is always safe, confidential, and never shared without your consent. Every introduction is handled with the utmost care and respect for your privacy.
+                {t('home.expectations.privacy.desc')}
               </p>
             </div>
             
@@ -171,9 +172,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 6V4M12 6V4M16 6V4" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">Sans pressure</h4>
+              <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">{t('home.expectations.noPressure.title')}</h4>
               <p className="text-gray-700 body-text leading-relaxed">
-                No pressure from parents and friends to deal with. Meet your match for a coffee date, exchange numbers if you like, or date for months, or meet someone else who's a better fit. Every introduction is your choice.
+                {t('home.expectations.noPressure.desc')}
               </p>
             </div>
             
@@ -183,9 +184,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">Thoughtful, Human Support</h4>
+              <h4 className="text-xl font-bold mb-4 subtitle text-gray-900">{t('home.expectations.support.title')}</h4>
               <p className="text-gray-700 body-text leading-relaxed">
-                We're with you every step of the way—offering thoughtful guidance, logistical support, and post-date follow-ups. No ghosting, no guesswork— just respect and genuine support from people who truly care.
+                {t('home.expectations.support.desc')}
               </p>
             </div>
           </div>
@@ -221,12 +222,12 @@ export default function Home() {
             {/* Left: Stats and Text */}
             <div className="text-center lg:text-left">
               <div className="text-5xl font-bold text-primary mb-3">{displayCount}</div>
-              <h3 className="text-xl font-bold mb-4">active members</h3>
+              <h3 className="text-xl font-bold mb-4">{t('home.stats.activeMembers')}</h3>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                Our members are the most ambitious, fun, and dynamic people you know, from Mauritius and from abroad!
+                {t('home.stats.memberDesc')}
               </p>
               <p className="text-base font-semibold text-gray-900">
-                Our matchmakers review EVERY application
+                {t('home.stats.reviewNote')}
               </p>
             </div>
             

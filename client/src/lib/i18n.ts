@@ -123,6 +123,30 @@ export const translations = {
     'blog.readTime': 'min read',
     'blog.publishedOn': 'Published on',
     
+    // Home page detailed content
+    'home.intro.p1': 'Finding a real connection in Mauritius isn\'t easy—especially when you\'re a busy professional with high standards.',
+    'home.intro.p2': 'Dating apps promise endless options but often deliver disappointment: ghosting, mixed signals, and emotional detachment. They\'re designed to keep you swiping, not to help you connect. Most people aren\'t serious, and it takes a toll—over 80% of users report feeling emotionally drained or burnt out by online dating (Singles Report).',
+    'home.intro.p3': 'At The Date Alchemy, we know real connection is too important to leave to chance. That\'s why we invite you to put yourself out there—intentionally, but discreetly and with the respect you deserve. We take care of the search, so you can focus on living your best life while love finds its way to you.',
+    
+    'home.expectations.title': 'What To Expect As A Member',
+    'home.expectations.curated.title': 'Curated Introductions',
+    'home.expectations.curated.desc': 'We introduce you to singles who meet your standards and share your vibe, are carefully interviewed and equally serious about finding a lifetime partner in Mauritius.',
+    'home.expectations.privacy.title': 'Your Privacy is Our Priority',
+    'home.expectations.privacy.desc': 'We protect your privacy like it\'s our own—your information is always safe, confidential, and never shared without your consent. Every introduction is handled with the utmost care and respect for your privacy.',
+    'home.expectations.noPressure.title': 'Sans pressure',
+    'home.expectations.noPressure.desc': 'No pressure from parents and friends to deal with. Meet your match for a coffee date, exchange numbers if you like, or date for months, or meet someone else who\'s a better fit. Every introduction is your choice.',
+    'home.expectations.support.title': 'Thoughtful, Human Support',
+    'home.expectations.support.desc': 'We\'re with you every step of the way—offering thoughtful guidance, logistical support, and post-date follow-ups. No ghosting, no guesswork— just respect and genuine support from people who truly care.',
+    
+    'home.cta.applyNow': 'Apply Now',
+    'home.cta.notReady': 'Not ready to invest in a membership?',
+    'home.cta.joinNetwork': 'Join our network for free to see if you are a match with one of our exceptional clients.',
+    'home.cta.createProfile': 'Create your complimentary profile.',
+    
+    'home.stats.activeMembers': 'active members',
+    'home.stats.memberDesc': 'Our members are the most ambitious, fun, and dynamic people you know, from Mauritius and from abroad!',
+    'home.stats.reviewNote': 'Our matchmakers review EVERY application',
+    
     // Language switcher
     'language.english': 'English',
     'language.french': 'Français',
@@ -229,6 +253,30 @@ export const translations = {
     'blog.search.placeholder': 'Rechercher des articles...',
     'blog.readTime': 'min de lecture',
     'blog.publishedOn': 'Publié le',
+    
+    // Home page detailed content (French)
+    'home.intro.p1': 'Trouver une vraie connexion à Maurice n\'est pas facile—surtout quand vous êtes un professionnel occupé avec des standards élevés.',
+    'home.intro.p2': 'Les applications de rencontres promettent des options infinies mais offrent souvent de la déception : fantômes, signaux mixtes et détachement émotionnel. Elles sont conçues pour vous faire glisser, pas pour vous aider à vous connecter. La plupart des gens ne sont pas sérieux, et cela fait des dégâts—plus de 80% des utilisateurs signalent se sentir émotionnellement épuisés ou brûlés par les rencontres en ligne (Rapport Singles).',
+    'home.intro.p3': 'Chez The Date Alchemy, nous savons que la vraie connexion est trop importante pour être laissée au hasard. C\'est pourquoi nous vous invitons à vous exposer—intentionnellement, mais discrètement et avec le respect que vous méritez. Nous nous occupons de la recherche, afin que vous puissiez vous concentrer sur vivre votre meilleure vie pendant que l\'amour trouve son chemin vers vous.',
+    
+    'home.expectations.title': 'À Quoi S\'Attendre En Tant Que Membre',
+    'home.expectations.curated.title': 'Introductions Sélectionnées',
+    'home.expectations.curated.desc': 'Nous vous présentons des célibataires qui répondent à vos standards et partagent votre vibe, sont soigneusement interviewés et également sérieux à propos de trouver un partenaire à vie à Maurice.',
+    'home.expectations.privacy.title': 'Votre Confidentialité Est Notre Priorité',
+    'home.expectations.privacy.desc': 'Nous protégeons votre confidentialité comme si c\'était la nôtre—vos informations sont toujours sûres, confidentielles, et jamais partagées sans votre consentement. Chaque introduction est gérée avec le plus grand soin et respect pour votre confidentialité.',
+    'home.expectations.noPressure.title': 'Sans pression',
+    'home.expectations.noPressure.desc': 'Aucune pression des parents et amis à gérer. Rencontrez votre match pour un café, échangez vos numéros si vous voulez, ou sortez pendant des mois, ou rencontrez quelqu\'un d\'autre qui vous convient mieux. Chaque introduction est votre choix.',
+    'home.expectations.support.title': 'Support Humain Attentionné',
+    'home.expectations.support.desc': 'Nous sommes avec vous à chaque étape—offrant des conseils attentionnés, un support logistique, et des suivis post-rendez-vous. Pas de fantômes, pas de devinettes—juste du respect et un support authentique de personnes qui se soucient vraiment.',
+    
+    'home.cta.applyNow': 'Postuler Maintenant',
+    'home.cta.notReady': 'Pas prêt à investir dans un abonnement ?',
+    'home.cta.joinNetwork': 'Rejoignez notre réseau gratuitement pour voir si vous correspondez avec l\'un de nos clients exceptionnels.',
+    'home.cta.createProfile': 'Créez votre profil gratuit.',
+    
+    'home.stats.activeMembers': 'membres actifs',
+    'home.stats.memberDesc': 'Nos membres sont les personnes les plus ambitieuses, amusantes et dynamiques que vous connaissez, de Maurice et de l\'étranger !',
+    'home.stats.reviewNote': 'Nos entremetteurs examinent CHAQUE candidature',
     
     // Language switcher
     'language.english': 'English',

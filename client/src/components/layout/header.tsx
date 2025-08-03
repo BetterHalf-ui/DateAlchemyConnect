@@ -74,7 +74,7 @@ export default function Header() {
                   {t('nav.insights')}
                 </span>
               </Link>
-              <LanguageSwitcher />
+              <LanguageSwitcher className={isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'} />
             </div>
             <a 
               href={EXTERNAL_LINKS.applicationForm} 
