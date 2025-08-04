@@ -19,8 +19,25 @@
     </style>
 </head>
 <body class="bg-white text-gray-900 body-text">
+    <!-- Rebrand Banner -->
+    <div id="rebrandBanner" class="bg-primary text-white py-2 px-4 relative fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex-1 text-center">
+                <span class="text-sm md:text-base">
+                    We've rebranded from Betterhalf to The Date Alchemy! 
+                    <a href="/rebrand-announcement" class="underline hover:no-underline">Learn more</a>
+                </span>
+            </div>
+            <button onclick="dismissBanner()" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-200 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
     <!-- Navigation Header -->
-    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md">
+    <nav class="fixed left-0 right-0 z-40 transition-all duration-300 bg-white shadow-md" style="top: 40px;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <a href="/">
@@ -51,7 +68,7 @@
     </nav>
 
     <!-- Hero Section with Image and Text -->
-    <section class="bg-white py-20 pt-32">
+    <section class="bg-white py-20" style="padding-top: 120px;">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <!-- Text Content -->
@@ -428,5 +445,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function dismissBanner() {
+            const banner = document.getElementById('rebrandBanner');
+            if (banner) {
+                banner.style.display = 'none';
+                // Store in localStorage so it stays dismissed
+                localStorage.setItem('rebrandBannerDismissed', 'true');
+                
+                // Adjust navigation position
+                const nav = document.querySelector('nav');
+                if (nav) {
+                    nav.style.top = '0px';
+                }
+                
+                // Adjust content padding
+                const heroSection = document.querySelector('section');
+                if (heroSection) {
+                    heroSection.style.paddingTop = '80px';
+                }
+            }
+        }
+
+        // Check if banner was previously dismissed
+        window.addEventListener('DOMContentLoaded', function() {
+            const isDismissed = localStorage.getItem('rebrandBannerDismissed');
+            if (isDismissed === 'true') {
+                dismissBanner();
+            }
+        });
+    </script>
 </body>
 </html>
