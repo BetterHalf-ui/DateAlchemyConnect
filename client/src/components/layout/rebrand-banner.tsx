@@ -8,7 +8,7 @@ export default function RebrandBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-primary text-white py-2 px-4 relative">
+    <div className="bg-primary text-white py-2 px-4 relative fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex-1 text-center">
           <span className="text-sm md:text-base">

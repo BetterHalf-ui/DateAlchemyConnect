@@ -11,7 +11,7 @@ export default function Network() {
       <RebrandBanner />
       <Header />
       
-      <section className="py-20 bg-white min-h-screen pt-32">
+      <section className="py-20 bg-white min-h-screen" style={{ paddingTop: '120px' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
             {/* Text Content */}

@@ -87,7 +87,7 @@ export default function Blog() {
       <div className="min-h-screen">
         <RebrandBanner />
         <Header />
-        <div className="pt-32 pb-20">
+        <div className="pb-20" style={{ paddingTop: '120px' }}>
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8">
               {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -106,7 +106,7 @@ export default function Blog() {
       <RebrandBanner />
       <Header />
       
-      <section className="py-20 bg-white pt-32">
+      <section className="py-20 bg-white" style={{ paddingTop: '120px' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h1 className="text-5xl font-bold mb-6">Dating Insights & Tips</h1>

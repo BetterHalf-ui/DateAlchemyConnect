@@ -38,6 +38,7 @@ export default function Hero() {
     <section 
       className="relative h-screen flex items-center justify-center overflow-hidden"
       style={{
+        paddingTop: '96px', // Account for banner (40px) + header (56px)
         backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://frolic.mu/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-05-at-7.07.25-PM.jpeg')`,
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',

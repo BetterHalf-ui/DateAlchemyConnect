@@ -1,5 +1,6 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import RebrandBanner from "@/components/layout/rebrand-banner";
 import { Button } from "@/components/ui/button";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 import { CheckCircle } from "lucide-react";
@@ -7,9 +8,10 @@ import { CheckCircle } from "lucide-react";
 export default function RebrandAnnouncement() {
   return (
     <div className="min-h-screen bg-white">
+      <RebrandBanner />
       <Header />
       
-      <main className="pt-24 pb-16">
+      <main className="pb-16" style={{ paddingTop: '120px' }}>
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">

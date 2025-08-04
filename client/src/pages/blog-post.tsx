@@ -26,7 +26,7 @@ export default function BlogPostPage() {
       <div className="min-h-screen">
         <RebrandBanner />
         <Header />
-        <div className="pt-32 pb-20">
+        <div className="pb-20" style={{ paddingTop: '120px' }}>
           <div className="max-w-4xl mx-auto px-4">
             <div className="bg-gray-200 rounded-xl h-64 skeleton mb-8"></div>
             <div className="space-y-4">
@@ -46,7 +46,7 @@ export default function BlogPostPage() {
       <div className="min-h-screen">
         <RebrandBanner />
         <Header />
-        <div className="pt-32 pb-20">
+        <div className="pb-20" style={{ paddingTop: '120px' }}>
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h1 className="text-4xl font-bold mb-4">Article Not Found</h1>
             <p className="text-gray-600 mb-8">The article you're looking for doesn't exist or has been removed.</p>
@@ -69,7 +69,7 @@ export default function BlogPostPage() {
       <Header />
       
       {/* Hero Section with Image */}
-      <section className="pt-32 pb-8">
+      <section className="pb-8" style={{ paddingTop: '120px' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-6">
             <Link href="/blog">
