@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import RebrandBanner from "@/components/layout/rebrand-banner";
 import Hero from "@/components/sections/hero";
 import Testimonials from "@/components/sections/testimonials";
 import Membership from "@/components/sections/membership";
@@ -118,6 +119,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <RebrandBanner />
       <Header />
       
       <Hero />

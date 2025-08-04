@@ -1,9 +1,11 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import RebrandBanner from "@/components/layout/rebrand-banner";
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen">
+      <RebrandBanner />
       <Header />
       
       <section className="py-20 bg-white pt-32">

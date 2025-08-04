@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import RebrandBanner from "@/components/layout/rebrand-banner";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import type { BlogPost } from "@shared/schema";
@@ -84,6 +85,7 @@ export default function Blog() {
   if (isLoading) {
     return (
       <div className="min-h-screen">
+        <RebrandBanner />
         <Header />
         <div className="pt-32 pb-20">
           <div className="max-w-6xl mx-auto px-4">
@@ -101,6 +103,7 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen">
+      <RebrandBanner />
       <Header />
       
       <section className="py-20 bg-white pt-32">

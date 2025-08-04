@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import RebrandBanner from "@/components/layout/rebrand-banner";
 import { ArrowLeft, Calendar, Tag } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
 
@@ -23,6 +24,7 @@ export default function BlogPostPage() {
   if (isLoading) {
     return (
       <div className="min-h-screen">
+        <RebrandBanner />
         <Header />
         <div className="pt-32 pb-20">
           <div className="max-w-4xl mx-auto px-4">
@@ -42,6 +44,7 @@ export default function BlogPostPage() {
   if (error || !post) {
     return (
       <div className="min-h-screen">
+        <RebrandBanner />
         <Header />
         <div className="pt-32 pb-20">
           <div className="max-w-4xl mx-auto px-4 text-center">
@@ -62,6 +65,7 @@ export default function BlogPostPage() {
 
   return (
     <div className="min-h-screen">
+      <RebrandBanner />
       <Header />
       
       {/* Hero Section with Image */}

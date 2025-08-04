@@ -2,11 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import RebrandBanner from "@/components/layout/rebrand-banner";
 import PictureCoupleImg from "@assets/PictureCouple_1754227660398.jpeg";
 
 export default function Network() {
   return (
     <div className="min-h-screen">
+      <RebrandBanner />
       <Header />
       
       <section className="py-20 bg-white min-h-screen pt-32">
