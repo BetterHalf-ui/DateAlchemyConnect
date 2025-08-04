@@ -34,7 +34,7 @@ export default function RebrandAnnouncement() {
               
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">1. A name that reflects our future.</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">1. A name that reflects the value we offer.</h3>
                   <p className="text-lg text-gray-700 mb-4">
                     We're working with global professionals in Mauritius and abroad—people who value meaningful, high-quality, human-centered matchmaking.
                   </p>
