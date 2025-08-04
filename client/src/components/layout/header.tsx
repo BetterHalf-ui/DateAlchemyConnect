@@ -9,6 +9,7 @@ export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
   const { t } = useI18n();
   
@@ -51,6 +52,7 @@ export default function Header() {
           </Link>
           
           <div className="flex items-center space-x-8">
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               <Link href="/">
                 <span className={`hover:text-primary transition-colors cursor-pointer body-text ${
@@ -76,10 +78,31 @@ export default function Header() {
               </Link>
               <LanguageSwitcher className={isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'} />
             </div>
+
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <div className="space-y-1">
+                <div className={`w-6 h-0.5 transition-all duration-300 ${
+                  isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''
+                } ${isScrolled || needsWhiteHeader ? 'bg-gray-700' : 'bg-white'}`}></div>
+                <div className={`w-6 h-0.5 transition-all duration-300 ${
+                  isMobileMenuOpen ? 'opacity-0' : ''
+                } ${isScrolled || needsWhiteHeader ? 'bg-gray-700' : 'bg-white'}`}></div>
+                <div className={`w-6 h-0.5 transition-all duration-300 ${
+                  isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
+                } ${isScrolled || needsWhiteHeader ? 'bg-gray-700' : 'bg-white'}`}></div>
+              </div>
+            </button>
+
             <a 
               href={EXTERNAL_LINKS.applicationForm} 
               target="_blank" 
               rel="noopener noreferrer"
+              className="hidden md:block"
             >
               <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 font-medium">
                 {t('nav.applyNow')}
@@ -88,6 +111,53 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div className={`md:hidden ${isScrolled || needsWhiteHeader ? 'bg-white' : 'bg-black/95'} border-t ${
+          isScrolled || needsWhiteHeader ? 'border-gray-200' : 'border-white/20'
+        }`}>
+          <div className="px-4 py-6 space-y-4">
+            <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+              <div className={`block py-2 text-lg hover:text-primary transition-colors ${
+                isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
+              }`}>
+                {t('nav.home')}
+              </div>
+            </Link>
+            <a 
+              href="how-it-works.html"
+              className={`block py-2 text-lg hover:text-primary transition-colors ${
+                isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
+              }`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t('nav.howItWorks')}
+            </a>
+            <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)}>
+              <div className={`block py-2 text-lg hover:text-primary transition-colors ${
+                isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
+              }`}>
+                {t('nav.insights')}
+              </div>
+            </Link>
+            <div className="py-2">
+              <LanguageSwitcher className={isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'} />
+            </div>
+            <a 
+              href={EXTERNAL_LINKS.applicationForm} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block pt-4"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 font-medium w-full">
+                {t('nav.applyNow')}
+              </Button>
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
