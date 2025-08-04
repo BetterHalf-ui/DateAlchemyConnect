@@ -143,7 +143,7 @@ export const translations = {
     'home.cta.createProfile': 'Create your complimentary profile.',
     
     'home.stats.activeMembers': 'active members',
-    'home.stats.memberDesc': 'Our members are the most ambitious, fun, and dynamic people you know, from Mauritius and from abroad!',
+    'home.stats.memberDesc': 'Our members are ambitious, fun, and dynamic—locals and expats alike, from all age groups.',
     'home.stats.reviewNote': 'Our matchmakers review EVERY application',
     
     // Testimonials - Additional ones for image sections
@@ -300,7 +300,7 @@ export const translations = {
     'home.cta.createProfile': 'Créez votre profil gratuit.',
     
     'home.stats.activeMembers': 'membres actifs',
-    'home.stats.memberDesc': 'Nos membres sont les personnes les plus ambitieuses, amusantes et dynamiques que vous connaissez, de Maurice et de l\'étranger !',
+    'home.stats.memberDesc': 'Nos membres sont ambitieux, amusants et dynamiques—locaux et expatriés de tous âges.',
     'home.stats.reviewNote': 'Nos entremetteurs examinent CHAQUE candidature',
     
     // Testimonials - Additional ones for image sections (French)

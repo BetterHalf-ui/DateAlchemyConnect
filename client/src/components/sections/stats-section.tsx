@@ -47,7 +47,7 @@ export default function StatsSection() {
             </div>
             <h3 className="text-4xl serif-title font-bold mb-6">Active Members</h3>
             <p className="text-lg sans-body text-gray-700 mb-6 leading-relaxed">
-              Our members are the most ambitious, fun, and dynamic people you know, from Mauritius and from abroad! They are also self-aware professionals who simply want more than what the apps can offer.
+              Our members are ambitious, fun, and dynamic—locals and expats alike, from all age groups. They are also self-aware professionals who simply want more than what the apps can offer.
             </p>
             <p className="text-xl serif-title font-semibold text-gray-900">
               Our matchmakers review EVERY application.
