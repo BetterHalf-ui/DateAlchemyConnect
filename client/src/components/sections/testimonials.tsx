@@ -1,7 +1,7 @@
 const testimonials = [
   {
     rating: "★★★★★",
-    text: "In one of the introductions arranged by The Date Alchemy, I found love. The team has always been there providing discreet support and expertly advising without ever becoming too intrusive. Thank you, The Date Alchemy, for your professionalism and, above all, thank you for being there.",
+    text: "Thanks to The Date Alchemy, I found love. The team has always been there providing discreet support and expertly advising without ever becoming too intrusive. Thank you for your professionalism and, above all, thank you for being there.",
     author: "Veterinarian, 30"
   },
   {
