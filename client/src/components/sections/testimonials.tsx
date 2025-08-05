@@ -26,7 +26,10 @@ export default function Testimonials() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16">What Our Members Say</h2>
+        <h2 className="text-4xl font-bold text-center mb-4">What Our Members Say</h2>
+        <p className="text-center text-gray-600 mb-16 italic">
+          All testimonials are from real clients — feel free to ask us for a connection if you'd like to verify their experience.
+        </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-gray-50 p-8 rounded-xl hover-lift">
