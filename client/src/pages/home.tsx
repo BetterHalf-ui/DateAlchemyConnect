@@ -239,21 +239,21 @@ export default function Home() {
                 <img 
                   src="/attached_assets/WhatsApp Image 2025-08-04 at 5.00.00 PM_1754475186009.jpeg"
                   alt="Professional member"
-                  className="w-full h-32 object-cover object-top rounded-xl shadow-md hover-lift"
+                  className="w-full h-40 object-cover object-center rounded-xl shadow-md hover-lift"
                 />
               </div>
               <div className="relative">
                 <img 
                   src="/attached_assets/WhatsApp Image 2025-08-04 at 5.01.22 PM_1754475186025.jpeg"
                   alt="Dynamic member"
-                  className="w-full h-32 object-cover object-top rounded-xl shadow-md hover-lift"
+                  className="w-full h-40 object-cover object-center rounded-xl shadow-md hover-lift"
                 />
               </div>
               <div className="relative">
                 <img 
                   src="/attached_assets/WhatsApp Image 2025-08-06 at 2.09.58 PM_1754475186025.jpeg"
                   alt="Ambitious member"
-                  className="w-full h-32 object-cover object-top rounded-xl shadow-md hover-lift"
+                  className="w-full h-40 object-cover object-center rounded-xl shadow-md hover-lift"
                 />
               </div>
             </div>
