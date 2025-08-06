@@ -417,6 +417,181 @@ export default function Home() {
 
       <Pricing />
 
+      {/* Research Sources Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6 text-gray-900">Research Shows: Dating Apps Are Failing Us</h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+              Leading institutions and research organizations have documented the harmful effects of dating apps. 
+              At The Date Alchemy, we offer a healthier, more human approach to finding love.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {/* Guardian Quote */}
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <img 
+                  src="/attached_assets/theguardian-logo_1754473496843.png" 
+                  alt="The Guardian" 
+                  className="h-8 object-contain"
+                />
+                <div className="flex-1">
+                  <blockquote className="text-lg text-gray-800 italic mb-2">
+                    "Dating apps are soul destroying"
+                  </blockquote>
+                  <a 
+                    href="https://www.theguardian.com/lifeandstyle/2023/oct/28/its-quite-soul-destroying-how-we-fell-out-of-love-with-dating-apps"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline text-sm"
+                  >
+                    Read the full article →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* New York Times Quote */}
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <img 
+                  src="/attached_assets/thenewyorktimes-logo_1754473496842.png" 
+                  alt="The New York Times" 
+                  className="h-8 object-contain"
+                />
+                <div className="flex-1">
+                  <blockquote className="text-lg text-gray-800 italic mb-2">
+                    "Years of swiping and searching have left dating app and site users with a bad case of burnout"
+                  </blockquote>
+                  <a 
+                    href="https://www.nytimes.com/2022/08/31/well/mind/burnout-online-dating-apps.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline text-sm"
+                  >
+                    Read the full article →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Pew Research Quote */}
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <img 
+                  src="/attached_assets/pewresearchcenter-logo_1754473496842.png" 
+                  alt="Pew Research Center" 
+                  className="h-8 object-contain"
+                />
+                <div className="flex-1">
+                  <blockquote className="text-lg text-gray-800 italic mb-2">
+                    "57% of female online daters receive unwanted sexually explicit texts or images"
+                  </blockquote>
+                  <a 
+                    href="https://www.pewresearch.org/internet/2020/02/06/the-virtues-and-downsides-of-online-dating/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline text-sm"
+                  >
+                    Read the full research →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Singles Reports Quote */}
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <img 
+                  src="/attached_assets/singles-report-logo_1754473496841.webp" 
+                  alt="Singles Reports" 
+                  className="h-8 object-contain"
+                />
+                <div className="flex-1">
+                  <blockquote className="text-lg text-gray-800 italic mb-2">
+                    "80% experienced emotional burnout or fatigue with online dating"
+                  </blockquote>
+                  <a 
+                    href="https://singlesreports.com/reports/emotional-fatigue-or-burnout-in-online-dating/#methodology"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline text-sm"
+                  >
+                    Read the full report →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Stanford University Quote */}
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <img 
+                  src="/attached_assets/stanforduniversity-logo_1754473496840.png" 
+                  alt="Stanford University" 
+                  className="h-8 object-contain"
+                />
+                <div className="flex-1">
+                  <blockquote className="text-lg text-gray-800 italic mb-2">
+                    "Two thirds of users on Tinder are already in a relationship"
+                  </blockquote>
+                  <a 
+                    href="https://www.ft.com/content/a21f61f6-174f-4bf1-abe7-c71e4c05d839"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline text-sm"
+                  >
+                    Read the full study →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Flinders University Quote */}
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <img 
+                  src="/attached_assets/flindersuniversity-logo_1754473496830.png" 
+                  alt="Flinders University" 
+                  className="h-8 object-contain"
+                />
+                <div className="flex-1">
+                  <blockquote className="text-lg text-gray-800 italic mb-2">
+                    "Using dating apps may be linked to poorer body image, mental health and wellbeing"
+                  </blockquote>
+                  <a 
+                    href="https://theconversation.com/dating-apps-could-have-negative-effects-on-body-image-and-mental-health-our-research-shows-247336"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline text-sm"
+                  >
+                    Read the full research →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-12 p-8 bg-primary rounded-xl text-white">
+            <h3 className="text-2xl font-bold mb-4">Ready for a Healthier Dating Experience?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              Skip the apps. Skip the burnout. Find genuine connection through our proven, human-centered approach.
+            </p>
+            <a 
+              href={EXTERNAL_LINKS.applicationForm}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Apply for Membership
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Full Screen Image with Scroll-Triggered Text - Mauritius Expat */}
       <section ref={mauritiusTestimonialRef} className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
