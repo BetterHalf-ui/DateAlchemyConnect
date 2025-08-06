@@ -32,7 +32,7 @@ const membershipFeatures = {
         features: [
           "Direct Access to Our Matchmaking Team (via Whatsapp & Email): A discreet communication channel to dating experts who know you and your dating journey.",
           "Pre-Date and Pre-Dating Advice in your Inbox— Exactly When You Need It: Digestible emails to prepare you before the first date and second date with the most common pitfalls and winning moves from hundreds of client experiences.",
-          "Reflection rituals after each date: Learn about your needs throughout your dating journey.",
+          "Reflection rituals after each date: Dating is also a journey of self-discovery—an opportunity to uncover what truly matters to you along the way.",
           "Bi-weekly science-based dating insights in your inbox: Tips based on our matchmaking experience and backed by scientific journals."
         ]
       }
