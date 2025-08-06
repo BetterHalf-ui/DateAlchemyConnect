@@ -428,149 +428,125 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
             {/* Guardian Quote */}
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                <img 
-                  src="/attached_assets/theguardian-logo_1754473496843.png" 
-                  alt="The Guardian" 
-                  className="h-8 object-contain"
-                />
-                <div className="flex-1">
-                  <blockquote className="text-lg text-gray-800 italic mb-2">
-                    "Dating apps are soul destroying"
-                  </blockquote>
-                  <a 
-                    href="https://www.theguardian.com/lifeandstyle/2023/oct/28/its-quite-soul-destroying-how-we-fell-out-of-love-with-dating-apps"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline text-sm"
-                  >
-                    Read the full article →
-                  </a>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
+              <img 
+                src="/attached_assets/theguardian-logo_1754473496843.png" 
+                alt="The Guardian" 
+                className="h-6 object-contain mx-auto mb-3"
+              />
+              <blockquote className="text-sm text-gray-800 italic mb-3">
+                "Dating apps are soul destroying"
+              </blockquote>
+              <a 
+                href="https://www.theguardian.com/lifeandstyle/2023/oct/28/its-quite-soul-destroying-how-we-fell-out-of-love-with-dating-apps"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline text-xs"
+              >
+                Read article →
+              </a>
             </div>
 
             {/* New York Times Quote */}
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                <img 
-                  src="/attached_assets/thenewyorktimes-logo_1754473496842.png" 
-                  alt="The New York Times" 
-                  className="h-8 object-contain"
-                />
-                <div className="flex-1">
-                  <blockquote className="text-lg text-gray-800 italic mb-2">
-                    "Years of swiping and searching have left dating app and site users with a bad case of burnout"
-                  </blockquote>
-                  <a 
-                    href="https://www.nytimes.com/2022/08/31/well/mind/burnout-online-dating-apps.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline text-sm"
-                  >
-                    Read the full article →
-                  </a>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
+              <img 
+                src="/attached_assets/thenewyorktimes-logo_1754473496842.png" 
+                alt="The New York Times" 
+                className="h-6 object-contain mx-auto mb-3"
+              />
+              <blockquote className="text-sm text-gray-800 italic mb-3">
+                "Years of swiping and searching have left dating app users with burnout"
+              </blockquote>
+              <a 
+                href="https://www.nytimes.com/2022/08/31/well/mind/burnout-online-dating-apps.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline text-xs"
+              >
+                Read article →
+              </a>
             </div>
 
             {/* Pew Research Quote */}
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                <img 
-                  src="/attached_assets/pewresearchcenter-logo_1754473496842.png" 
-                  alt="Pew Research Center" 
-                  className="h-8 object-contain"
-                />
-                <div className="flex-1">
-                  <blockquote className="text-lg text-gray-800 italic mb-2">
-                    "57% of female online daters receive unwanted sexually explicit texts or images"
-                  </blockquote>
-                  <a 
-                    href="https://www.pewresearch.org/internet/2020/02/06/the-virtues-and-downsides-of-online-dating/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline text-sm"
-                  >
-                    Read the full research →
-                  </a>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
+              <img 
+                src="/attached_assets/pewresearchcenter-logo_1754473496842.png" 
+                alt="Pew Research Center" 
+                className="h-6 object-contain mx-auto mb-3"
+              />
+              <blockquote className="text-sm text-gray-800 italic mb-3">
+                "57% of female online daters receive unwanted explicit content"
+              </blockquote>
+              <a 
+                href="https://www.pewresearch.org/internet/2020/02/06/the-virtues-and-downsides-of-online-dating/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline text-xs"
+              >
+                Read research →
+              </a>
             </div>
 
             {/* Singles Reports Quote */}
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                <img 
-                  src="/attached_assets/singles-report-logo_1754473496841.webp" 
-                  alt="Singles Reports" 
-                  className="h-8 object-contain"
-                />
-                <div className="flex-1">
-                  <blockquote className="text-lg text-gray-800 italic mb-2">
-                    "80% experienced emotional burnout or fatigue with online dating"
-                  </blockquote>
-                  <a 
-                    href="https://singlesreports.com/reports/emotional-fatigue-or-burnout-in-online-dating/#methodology"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline text-sm"
-                  >
-                    Read the full report →
-                  </a>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
+              <img 
+                src="/attached_assets/singles-report-logo_1754473496841.webp" 
+                alt="Singles Reports" 
+                className="h-6 object-contain mx-auto mb-3"
+              />
+              <blockquote className="text-sm text-gray-800 italic mb-3">
+                "80% experienced emotional burnout with online dating"
+              </blockquote>
+              <a 
+                href="https://singlesreports.com/reports/emotional-fatigue-or-burnout-in-online-dating/#methodology"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline text-xs"
+              >
+                Read report →
+              </a>
             </div>
 
             {/* Stanford University Quote */}
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                <img 
-                  src="/attached_assets/stanforduniversity-logo_1754473496840.png" 
-                  alt="Stanford University" 
-                  className="h-8 object-contain"
-                />
-                <div className="flex-1">
-                  <blockquote className="text-lg text-gray-800 italic mb-2">
-                    "Two thirds of users on Tinder are already in a relationship"
-                  </blockquote>
-                  <a 
-                    href="https://www.ft.com/content/a21f61f6-174f-4bf1-abe7-c71e4c05d839"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline text-sm"
-                  >
-                    Read the full study →
-                  </a>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
+              <img 
+                src="/attached_assets/stanforduniversity-logo_1754473496840.png" 
+                alt="Stanford University" 
+                className="h-6 object-contain mx-auto mb-3"
+              />
+              <blockquote className="text-sm text-gray-800 italic mb-3">
+                "Two thirds of Tinder users are already in a relationship"
+              </blockquote>
+              <a 
+                href="https://www.ft.com/content/a21f61f6-174f-4bf1-abe7-c71e4c05d839"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline text-xs"
+              >
+                Read study →
+              </a>
             </div>
 
             {/* Flinders University Quote */}
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                <img 
-                  src="/attached_assets/flindersuniversity-logo_1754473496830.png" 
-                  alt="Flinders University" 
-                  className="h-8 object-contain"
-                />
-                <div className="flex-1">
-                  <blockquote className="text-lg text-gray-800 italic mb-2">
-                    "Using dating apps may be linked to poorer body image, mental health and wellbeing"
-                  </blockquote>
-                  <a 
-                    href="https://theconversation.com/dating-apps-could-have-negative-effects-on-body-image-and-mental-health-our-research-shows-247336"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline text-sm"
-                  >
-                    Read the full research →
-                  </a>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
+              <img 
+                src="/attached_assets/flindersuniversity-logo_1754473496830.png" 
+                alt="Flinders University" 
+                className="h-6 object-contain mx-auto mb-3"
+              />
+              <blockquote className="text-sm text-gray-800 italic mb-3">
+                "Dating apps linked to poorer mental health and wellbeing"
+              </blockquote>
+              <a 
+                href="https://theconversation.com/dating-apps-could-have-negative-effects-on-body-image-and-mental-health-our-research-shows-247336"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline text-xs"
+              >
+                Read research →
+              </a>
             </div>
           </div>
 
