@@ -368,7 +368,7 @@ export default function Home() {
                 <img 
                   src="/attached_assets/Screenshot 2025-07-30 at 21.59.07_1753898366997.png" 
                   alt="The Date Alchemy founders" 
-                  className="rounded-2xl shadow-lg w-full h-80 object-cover hover-lift"
+                  className="rounded-2xl shadow-lg w-full aspect-square object-cover hover-lift"
                 />
               </div>
               <div className="bg-white p-8 rounded-2xl shadow-sm relative">
@@ -407,7 +407,7 @@ export default function Home() {
                 <img 
                   src="/attached_assets/WhatsApp Image 2025-07-30 at 21.30.22_1753897630892.jpeg" 
                   alt="The Date Alchemy team members" 
-                  className="rounded-2xl shadow-lg w-full h-80 object-cover hover-lift"
+                  className="rounded-2xl shadow-lg w-full aspect-square object-cover hover-lift"
                 />
               </div>
             </div>
