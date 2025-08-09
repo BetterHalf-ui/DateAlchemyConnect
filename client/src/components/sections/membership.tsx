@@ -91,6 +91,17 @@ export default function Membership() {
                   const animationKey = `premium-${index}`;
                   const isVisible = visibleFeatures.has(animationKey);
                   
+                  // Parse bold formatting
+                  const renderFeatureText = (text: string) => {
+                    const parts = text.split('**');
+                    return parts.map((part, i) => {
+                      if (i % 2 === 1) {
+                        return <strong key={i}>{part}</strong>;
+                      }
+                      return part;
+                    });
+                  };
+                  
                   return (
                     <div 
                       key={index} 
@@ -103,7 +114,9 @@ export default function Membership() {
                       style={{ transitionDelay: `${index * 150}ms` }}
                     >
                       <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                      <span className="text-gray-700 body-text leading-relaxed">{feature}</span>
+                      <span className="text-gray-700 body-text leading-relaxed">
+                        {renderFeatureText(feature)}
+                      </span>
                     </div>
                   );
                 })}
