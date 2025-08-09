@@ -17,19 +17,25 @@ export default function HowItWorks() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Text Content */}
             <div className="order-2 lg:order-1">
-              <h1 className="text-5xl font-bold mb-6 subtitle text-gray-900">How The Date Alchemy Works</h1>
-              <p className="text-xl text-gray-700 mb-8 body-text leading-relaxed">
-                A personalized 4-step process designed to bring you meaningful connections efficiently and discreetly in Mauritius.
-              </p>
-              <a 
-                href={EXTERNAL_LINKS.applicationForm} 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold">
-                  Apply for Membership
-                </Button>
-              </a>
+              <h1 className="text-5xl md:text-6xl font-bold mb-8 subtitle text-gray-900">
+                Real Connections Start Here
+              </h1>
+              
+              {/* Call to Action Section */}
+              <div className="bg-gray-50 p-8 rounded-lg">
+                <h3 className="text-2xl font-bold mb-4 subtitle text-gray-900">Ready to Find Your Match?</h3>
+                <p className="text-lg text-gray-700 leading-relaxed body-text mb-6">
+                  Take the first step towards meaningful connection with our proven matchmaking process.
+                </p>
+                <a 
+                  href={EXTERNAL_LINKS.applicationForm} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-block bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 body-text"
+                >
+                  Start Your Application
+                </a>
+              </div>
             </div>
             
             {/* Image */}
@@ -47,7 +53,12 @@ export default function HowItWorks() {
       {/* How It Works Process - Desktop Version */}
       <section className="py-20 bg-gray-50 hidden lg:block">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 subtitle text-gray-900">Our Process</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 subtitle text-gray-900">
+            Your Membership Journey
+          </h2>
+          <p className="text-xl text-gray-600 text-center mb-20 body-text">
+            A Proven Process for Real Connection
+          </p>
           
           <div className="relative">
             {/* Timeline line */}
@@ -129,7 +140,12 @@ export default function HowItWorks() {
       {/* How It Works Process - Mobile Version */}
       <section className="py-20 bg-gray-50 lg:hidden">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 subtitle text-gray-900">Our Process</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 subtitle text-gray-900">
+            Your Membership Journey
+          </h2>
+          <p className="text-xl text-gray-600 text-center mb-20 body-text">
+            A Proven Process for Real Connection
+          </p>
           
           <div className="space-y-8">
             {/* Step 01 Mobile */}
