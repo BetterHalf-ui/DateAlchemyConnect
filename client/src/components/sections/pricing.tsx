@@ -15,7 +15,7 @@ const guarantees = [
     description: "Your initial consultation and matchmaking search are completely free. We'll only ask for payment once you say yes to a match and we've planned the first date."
   },
   {
-    title: "4 High-Quality Introductions",
+    title: "At least 4 High-Quality Introductions",
     description: "We guarantee at least 4 high-quality introductions within 12 months — or we'll extend your membership at no extra cost. The 12-month period pauses when you start dating someone seriously."
   },
   {
