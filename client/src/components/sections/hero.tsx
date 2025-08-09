@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { EXTERNAL_LINKS } from "@/lib/constants";
+import { useI18n } from "@/lib/i18n";
 
 export default function Hero() {
+  const { t } = useI18n();
   const [animationTriggered, setAnimationTriggered] = useState(false);
 
   useEffect(() => {
@@ -32,7 +34,7 @@ export default function Hero() {
   }, [animationTriggered]);
 
   // Split text into words for staggered animation
-  const titleWords = "Redefining the Dating Experience for Global Professionals in Mauritius".split(" ");
+  const titleWords = t('home.hero.title').split(" ");
 
   return (
     <section 
@@ -78,7 +80,7 @@ export default function Hero() {
             rel="noopener noreferrer"
           >
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg hover-lift">
-              Apply Now
+              {t('home.hero.cta')}
             </Button>
           </a>
         </div>

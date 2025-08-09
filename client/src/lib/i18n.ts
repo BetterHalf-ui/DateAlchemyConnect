@@ -185,6 +185,7 @@ export const translations = {
     'nav.insights': 'Conseils',
     'nav.applyNow': 'Devenir membre',
     'nav.network': 'Rejoindre le Réseau',
+    'team.yourAlchemists': 'Vos Alchimistes',
     
     // Common
     'common.learnMore': 'En Savoir Plus',
