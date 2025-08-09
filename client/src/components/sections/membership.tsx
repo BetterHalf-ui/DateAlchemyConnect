@@ -1,18 +1,19 @@
 import { useState, useEffect, useRef } from 'react';
+import { useI18n } from '@/lib/i18n';
 
 const membershipFeatures = {
   premiumMatchmaking: {
-    title: "1. Premium Matchmaking",
-    description: "",
-    features: [
-      "**Curated introductions** with pre-screened and carefully interviewed singles who match your standards and are ready for a meaningful relationship.",
-      "**In-depth compatibility assessment** based on your personal requirements, your lifestyle, and life goals, but also what you truly need in a relationship (The Date Alchemy Needs Compatibility Score™ ).",
-      "**Human-centered matching** - Apps algorithms are designed to keep you online and set you up for failure. We use human intuition, not just filters. Our matches are handpicked with care and you meet them in-person.",
-      "**Attachment-aware matching:** we use the science-backed Attachment Theory to avoid toxic mismatches before they start.",
-      "**Vetted by you** based on in-depth profiles. You remain in full control.",
-      "**Full scheduling concierge:** We book, confirm, and prep the date — so you just show up as your best self.",
-      "**Follow-up after the date** handled for you — no ghosting, no awkward follow-ups",
-      "**Bonus: Invitations to private events** (Singles Socials)- intimate brunches or dinners with hand-picked guests designed for meaningful connections"
+    titleKey: "home.membership.premiumTitle",
+    descriptionKey: "home.membership.premiumSubtitle",
+    featureKeys: [
+      "home.membership.feature1",
+      "home.membership.feature2", 
+      "home.membership.feature3",
+      "home.membership.feature4",
+      "home.membership.feature5",
+      "home.membership.feature6",
+      "home.membership.feature7",
+      "home.membership.bonus"
     ]
   },
   innerWork: {
@@ -41,6 +42,7 @@ const membershipFeatures = {
 };
 
 export default function Membership() {
+  const { t } = useI18n();
   const [visibleFeatures, setVisibleFeatures] = useState<Set<string>>(new Set());
   const featureRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
@@ -68,9 +70,9 @@ export default function Membership() {
     <section className="py-32 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold mb-6 subtitle text-gray-900">The Date Alchemy Membership</h2>
+          <h2 className="text-5xl font-bold mb-6 subtitle text-gray-900">{t('home.membership.title')}</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto body-text">
-            Everything you need for a healthier dating experience
+            {t('home.membership.subtitle')}
           </p>
         </div>
         
@@ -78,45 +80,21 @@ export default function Membership() {
           <div className="grid lg:grid-cols-3 gap-12 items-start">
             <div className="lg:col-span-2 bg-white rounded-3xl p-12 premium-shadow hover-lift">
               <h3 className="text-3xl font-bold mb-6 text-primary subtitle">
-                {membershipFeatures.premiumMatchmaking.title}
+                {t(membershipFeatures.premiumMatchmaking.titleKey)}
               </h3>
               <p className="text-lg text-gray-700 mb-8 body-text leading-relaxed">
-                {membershipFeatures.premiumMatchmaking.description}
+                {t(membershipFeatures.premiumMatchmaking.descriptionKey)}
               </p>
-              <h4 className="text-xl font-semibold mb-6 text-gray-900 subtitle">Included in Your Membership:</h4>
               <div className="grid md:grid-cols-2 gap-6">
-                {membershipFeatures.premiumMatchmaking.features.map((feature, index) => {
-                  // Handle bold formatting for premium matchmaking features
-                  const colonIndex = feature.indexOf(':');
-                  const starIndex = feature.indexOf('**', 2); // Find closing **
-                  const featureKey = `premium-${index}`;
-                  const isVisible = visibleFeatures.has(featureKey);
+                {membershipFeatures.premiumMatchmaking.featureKeys.map((featureKey, index) => {
+                  const feature = t(featureKey);
+                  const animationKey = `premium-${index}`;
+                  const isVisible = visibleFeatures.has(animationKey);
                   
-                  if (feature.startsWith('**') && starIndex > 0) {
-                    const boldPart = feature.substring(2, starIndex);
-                    const regularPart = feature.substring(starIndex + 2);
-                    return (
-                      <div 
-                        key={index} 
-                        ref={el => featureRefs.current[featureKey] = el}
-                        className={`flex items-start transition-all duration-700 ${
-                          isVisible 
-                            ? 'opacity-100 translate-y-0' 
-                            : 'opacity-0 translate-y-4'
-                        }`}
-                        style={{ transitionDelay: `${index * 150}ms` }}
-                      >
-                        <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                        <span className="text-gray-700 body-text leading-relaxed">
-                          <strong>{boldPart}</strong>{regularPart}
-                        </span>
-                      </div>
-                    );
-                  }
                   return (
                     <div 
                       key={index} 
-                      ref={el => featureRefs.current[featureKey] = el}
+                      ref={el => featureRefs.current[animationKey] = el}
                       className={`flex items-start transition-all duration-700 ${
                         isVisible 
                           ? 'opacity-100 translate-y-0' 
