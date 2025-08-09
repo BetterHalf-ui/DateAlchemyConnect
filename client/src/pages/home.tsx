@@ -422,7 +422,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 subtitle text-gray-900">How It Works</h2>
-            <p className="text-xl text-gray-600 body-text">A simple 4-step process to find your perfect match</p>
+            <p className="text-xl text-gray-600 body-text">A proven process to find your match</p>
           </div>
           
           {/* 4 Steps in Columns */}
@@ -456,7 +456,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Curated Introduction</h3>
               <p className="text-gray-600 body-text leading-relaxed">
-                We share aligned profiles for review and coordinate your first date.
+                We share a profile for your review, and if there is mutual interest, you make the payment and we coordinate your first date.
               </p>
             </div>
             
