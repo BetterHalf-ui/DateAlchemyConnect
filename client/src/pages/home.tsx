@@ -434,7 +434,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Apply for Membership</h3>
               <p className="text-gray-600 body-text leading-relaxed">
-                Complete our questionnaire to help us understand your background and what you're seeking.
+                Complete our questionnaire to help us understand who you are and your preferences.
               </p>
             </div>
             
@@ -445,7 +445,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Private Consultation</h3>
               <p className="text-gray-600 body-text leading-relaxed">
-                Meet with your personal matchmaker to craft your personalized profile.
+                Meet with your personal matchmaker in a one-on-one video call to better understand who you are and craft your personalized profile.
               </p>
             </div>
             
