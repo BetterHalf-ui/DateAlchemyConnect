@@ -193,8 +193,125 @@ export default function HowItWorks() {
         </div>
       </section>
 
+      {/* Comparison Table */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 subtitle text-gray-900">
+            The Date Alchemy vs. Dating Apps
+          </h2>
+          <p className="text-xl text-gray-600 text-center mb-16 body-text">
+            See why intentional matching delivers better results
+          </p>
+          
+          {/* Comparison Table */}
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                {/* Header */}
+                <thead>
+                  <tr className="bg-gray-50">
+                    <th className="text-left py-6 px-8 font-bold text-lg text-gray-900 body-text"></th>
+                    <th className="text-center py-6 px-8 font-bold text-lg text-primary subtitle">The Date Alchemy</th>
+                    <th className="text-center py-6 px-8 font-bold text-lg text-gray-900 subtitle">Dating Apps</th>
+                  </tr>
+                </thead>
+                
+                {/* Body */}
+                <tbody className="divide-y divide-gray-100">
+                  {/* Time Cost */}
+                  <tr className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-6 px-8 font-semibold text-gray-900 body-text">Time Cost</td>
+                    <td className="py-6 px-8 text-center">
+                      <div className="inline-flex items-center justify-center bg-green-50 text-green-700 px-4 py-2 rounded-full font-medium body-text">
+                        40 Min (form + consultation)
+                      </div>
+                    </td>
+                    <td className="py-6 px-8 text-center">
+                      <div className="inline-flex items-center justify-center bg-red-50 text-red-700 px-4 py-2 rounded-full font-medium body-text">
+                        40+ Hours swiping/month
+                      </div>
+                    </td>
+                  </tr>
+                  
+                  {/* Users Mindset */}
+                  <tr className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-6 px-8 font-semibold text-gray-900 body-text">Users Mindset</td>
+                    <td className="py-6 px-8 text-center">
+                      <div className="inline-flex items-center justify-center bg-green-50 text-green-700 px-4 py-2 rounded-full font-medium body-text">
+                        Relationship Ready
+                      </div>
+                    </td>
+                    <td className="py-6 px-8 text-center">
+                      <div className="inline-flex items-center justify-center bg-red-50 text-red-700 px-4 py-2 rounded-full font-medium body-text">
+                        Fickle - Nearly 50% want "something casual"
+                      </div>
+                    </td>
+                  </tr>
+                  
+                  {/* Member Safety */}
+                  <tr className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-6 px-8 font-semibold text-gray-900 body-text">Member Safety</td>
+                    <td className="py-6 px-8 text-center">
+                      <div className="inline-flex items-center justify-center bg-green-50 text-green-700 px-4 py-2 rounded-full font-medium body-text">
+                        100% - Video screenings & ID verification
+                      </div>
+                    </td>
+                    <td className="py-6 px-8 text-center">
+                      <div className="bg-red-50 text-red-700 px-4 py-3 rounded-lg font-medium body-text">
+                        <div className="font-semibold mb-1">0% - Anyone with a smartphone can join</div>
+                        <div className="text-xs leading-relaxed">
+                          56% of women receive unsolicited explicit content<br />
+                          11% receive threats of physical harm<br />
+                          52% encounter scammers
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                  {/* Confidential Profile */}
+                  <tr className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-6 px-8 font-semibold text-gray-900 body-text">Confidential Profile</td>
+                    <td className="py-6 px-8 text-center">
+                      <div className="inline-flex items-center justify-center bg-green-50 text-green-700 px-4 py-2 rounded-full font-medium body-text">
+                        Yes
+                      </div>
+                    </td>
+                    <td className="py-6 px-8 text-center">
+                      <div className="inline-flex items-center justify-center bg-red-50 text-red-700 px-4 py-2 rounded-full font-medium body-text">
+                        No
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            {/* Footnote */}
+            <div className="bg-gray-50 px-8 py-4 border-t border-gray-100">
+              <p className="text-sm text-gray-600 body-text italic">
+                *Dating app success rate in the US based on PEW Research Center, 2023.
+              </p>
+            </div>
+          </div>
+          
+          {/* Call to Action after table */}
+          <div className="text-center mt-16">
+            <h3 className="text-2xl font-bold mb-4 subtitle text-gray-900">Ready to Experience the Difference?</h3>
+            <a 
+              href={EXTERNAL_LINKS.applicationForm} 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl font-semibold">
+                Begin Your Journey
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
-      <section className="py-20 bg-white text-center">
+      <section className="py-20 bg-gray-50 text-center">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-4xl font-bold mb-8 subtitle text-gray-900">Ready to Begin?</h2>
           <p className="text-xl text-gray-700 mb-8 body-text">
