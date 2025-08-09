@@ -49,11 +49,21 @@ export const translations = {
     'home.help.discreet.title': 'Complete Discretion',
     'home.help.discreet.desc': 'Your privacy is paramount. We coordinate introductions with complete confidentiality.',
     
-    'home.testimonials.title': 'Success Stories',
-    'home.testimonials.singapore': 'Thanks to The Date Alchemy, I met my partner who complements my lifestyle perfectly. Their understanding of cultural nuances made all the difference.',
-    'home.testimonials.singapore.author': 'Management Consultant, Singapore',
-    'home.testimonials.mauritius': 'The discretion and personalized approach helped me find someone who truly understands my values and ambitions.',
-    'home.testimonials.mauritius.author': 'Investment Banker, Mauritius',
+    // Testimonials section (English)
+    'home.testimonials.title': 'What Our Members Say',
+    'home.testimonials.subtitle': 'All testimonials are from real clients — feel free to ask us for a connection if you\'d like to verify their experience.',
+    
+    'home.testimonials.testimonial1': '"Thanks to The Date Alchemy, I found love. The team has always been there providing discreet support and expertly advising without ever becoming too intrusive. Thank you for your professionalism and, above all, thank you for being there."',
+    'home.testimonials.author1': '— Veterinarian, 30',
+    
+    'home.testimonials.testimonial2': '"The Date Alchemy is by far the best matchmaking agency in Mauritius. The team is very dedicated and committed to ensuring a smooth and seamless experience for members."',
+    'home.testimonials.author2': '— AI Consultant, 41',
+    
+    'home.testimonials.testimonial3': '"In addition to detailed profiles, The Date Alchemy also offer personality assessments, allowing users to gain deeper self-awareness and grow individually before meeting a potential partner."',
+    'home.testimonials.author3': '— IT Professional, 32',
+    
+    'home.testimonials.testimonial4': '"The communication with the team is open, consistent, and collaborative, be it on Whatsapp and newsletters shared by mail. Feedback is encouraged after each date, which helps foster a supportive environment."',
+    'home.testimonials.author4': '— Scientist, 37',
     
     'home.membership.title': 'Exclusive Membership',
     'home.membership.subtitle': 'Designed for professionals who value quality over quantity',
@@ -206,12 +216,6 @@ export const translations = {
     'home.help.personalized.desc': 'nous comprenons vos valeurs, votre style de vie et vos objectifs relationnels pour trouver des partenaires compatibles.',
     'home.help.discreet.title': 'discrétion complète',
     'home.help.discreet.desc': 'votre confidentialité est primordiale. nous coordonnons les présentations en toute confidentialité.',
-    
-    'home.testimonials.title': 'histoires de succès',
-    'home.testimonials.singapore': 'grâce à The Date Alchemy, j\'ai rencontré mon partenaire qui complète parfaitement mon style de vie. leur compréhension des nuances culturelles a fait toute la différence.',
-    'home.testimonials.singapore.author': 'consultant en gestion, Singapour',
-    'home.testimonials.mauritius': 'la discrétion et l\'approche personnalisée m\'ont aidé à trouver quelqu\'un qui comprend vraiment mes valeurs et mes ambitions.',
-    'home.testimonials.mauritius.author': 'banquier d\'investissement, Maurice',
     
     'home.membership.title': 'adhésion exclusive',
     'home.membership.subtitle': 'conçu pour les professionnels qui privilégient la qualité à la quantité',

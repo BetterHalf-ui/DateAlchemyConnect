@@ -208,10 +208,10 @@ export default function Home() {
             </Button>
           </a>
           <div className="text-sm text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            <p className="mb-2">Not ready to invest in a membership?</p>
+            <p className="mb-2">{t('home.cta.notReady')}</p>
             <Link href="/network" className="hover:text-white" onClick={() => window.scrollTo(0, 0)}>
-              <p className="mb-2">Join our network for free to see if you are a match with one of our exceptional clients.</p>
-              <p className="underline">Create your complimentary profile.</p>
+              <p className="mb-2">{t('home.cta.joinNetwork')}</p>
+              <p className="underline">{t('home.cta.createProfile')}</p>
             </Link>
           </div>
         </div>
