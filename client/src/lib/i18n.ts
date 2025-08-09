@@ -297,17 +297,32 @@ export const translations = {
     'home.expectations.support.desc': 'Nous vous guidons à chaque étape : conseils personnalisés, assistance logistique, suivi attentif après vos rendez-vous. Pas de silence radio, pas d\'incertitudes —uniquement un soutien authentique, porté par des professionnels qui se préoccupent réellement de votre expérience.',
     
     'home.cta.applyNow': 'Postuler Maintenant',
-    'home.cta.notReady': 'Pas prêt à investir dans un abonnement ?',
-    'home.cta.joinNetwork': 'Rejoignez notre réseau gratuitement pour voir si vous correspondez avec l\'un de nos clients exceptionnels.',
-    'home.cta.createProfile': 'Créez votre profil gratuit.',
+    'home.cta.notReady': 'Pas encore prêt(e) à investir dans une adhésion ?',
+    'home.cta.joinNetwork': 'Rejoignez gratuitement notre réseau pour découvrir si vous correspondez à l\'un(e) de nos clients exceptionnels.',
+    'home.cta.createProfile': 'Créez votre profil offert.',
     
     'home.stats.activeMembers': 'Membres actifs',
-    'home.stats.memberDesc': 'Nos membres sont ambitieux, amusants et dynamiques—locaux et expatriés de tous âges. Tous cherchent une relation sérieuse.',
-    'home.stats.reviewNote': 'Nos entremetteurs examinent CHAQUE candidature',
+    'home.stats.memberDesc': 'Nos membres sont ambitieux, pétillants et dynamiques — qu\'ils soient locaux ou expatriés, et de tous âges. Tous recherchent une relation sérieuse.',
+    'home.stats.reviewNote': 'Nous examinons CHAQUE candidature.',
     
-    // Testimonials - Additional ones for image sections (French)
-    'home.testimonials.main': 'Merci pour une correspondance qui va bien au-delà d\'un simple algorithme. Vous avez aidé à mettre deux cœurs sur la même longueur d\'onde.',
-    'home.testimonials.mainAuthor': '— COO, Industrie Tech, 52',
+    // Testimonials section (French)
+    'home.testimonials.title': 'Ce que disent nos membres',
+    'home.testimonials.subtitle': 'Tous les témoignages proviennent de vrais clients — n\'hésitez pas à nous demander à être mis en relation si vous souhaitez vérifier leur expérience.',
+    
+    'home.testimonials.testimonial1': '« Grâce à The Date Alchemy, j\'ai trouvé l\'amour. L\'équipe a toujours été là, offrant un soutien discret et des conseils avisés sans jamais être intrusive. Merci pour votre professionnalisme et, surtout, merci d\'avoir été présents. »',
+    'home.testimonials.author1': '— Vétérinaire, 30 ans',
+    
+    'home.testimonials.testimonial2': '« The Date Alchemy est de loin la meilleure agence de rencontres à Maurice. L\'équipe est très impliquée et dévouée pour offrir une expérience fluide et sans accroc à ses membres. »',
+    'home.testimonials.author2': '— Consultant en IA, 41 ans',
+    
+    'home.testimonials.testimonial3': '« En plus de profils détaillés, The Date Alchemy propose aussi des évaluations de personnalité, permettant à chacun de mieux se connaître et d\'évoluer personnellement avant même de rencontrer un partenaire potentiel. »',
+    'home.testimonials.author3': '— Informaticienne, 32 ans',
+    
+    'home.testimonials.testimonial4': '« La communication avec l\'équipe est ouverte, régulière et collaborative, que ce soit via WhatsApp ou à travers les newsletters envoyées par email. Un retour est encouragé après chaque rencontre, ce qui contribue à créer un environnement bienveillant. »',
+    'home.testimonials.author4': '— Scientifique, 37 ans',
+    
+    'home.testimonials.main': '« Merci pour une mise en relation qui dépasse largement un simple algorithme. Vous avez réussi à accorder deux cœurs sur la même fréquence. »',
+    'home.testimonials.mainAuthor': '— COO, Industrie Tech, 52 ans',
     'home.testimonials.professional': 'The Date Alchemy favorise des relations saines dans un cadre sûr et confidentiel. Me lancer dans ce voyage m\'a aidé à écouter plus profondément les autres et à mieux me comprendre—me permettant de devenir une meilleure version de moi-même.',
     'home.testimonials.professionalAuthor': '— Scientifique, 37',
     'home.testimonials.expert': 'Je recommanderais sans réserve The Date Alchemy aux professionnels célibataires qui n\'ont peut-être pas le temps—ou l\'envie—de naviguer dans les méthodes traditionnelles d\'entremettage ou les applications de rencontres.',
