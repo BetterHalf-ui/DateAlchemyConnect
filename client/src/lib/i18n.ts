@@ -236,8 +236,8 @@ export const translations = {
     'home.journey.step4.title': 'affinement et suivi',
     'home.journey.step4.desc': 'après chaque présentation, nous recueillons vos commentaires pour affiner continuellement notre approche et assurer des connexions significatives.',
     
-    'home.blog.title': 'Conseils et Astuces de Rencontres',
-    'home.blog.subtitle': 'Conseils d\'experts pour des rencontres intentionnelles',
+    'home.blog.title': 'conseils et astuces de rencontres',
+    'home.blog.subtitle': 'conseils d\'experts pour des rencontres intentionnelles',
     
     'home.newsletter.title': 'Restez Connecté',
     'home.newsletter.subtitle': 'Recevez des conseils de rencontres et des astuces relationnelles dans votre boîte de réception.',
