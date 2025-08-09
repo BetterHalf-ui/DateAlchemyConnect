@@ -467,7 +467,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Refinement & Follow-up</h3>
               <p className="text-gray-600 body-text leading-relaxed">
-                Thoughtful guidance and follow-ups throughout your membership journey.
+                If the match didn't feel right, we seek your feedback to fine-tune our matching approach and introduce you to a better match.
               </p>
             </div>
           </div>
