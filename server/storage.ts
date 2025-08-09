@@ -47,6 +47,14 @@ export class MemStorage implements IStorage {
         published: true,
       },
       {
+        title: "When AI becomes \"the one\"",
+        content: "We're hearing it more and more in the media—stories of people forming deep emotional connections with AI chatbots, even going as far as marrying them in digital ceremonies. The latest example, featured in The Guardian, explores the lives of Replika and Character AI users who describe their chatbot companions as soulmates, offering them emotional intimacy, comfort, and what one user called \"pure, unconditional love.\" For many, especially those feeling isolated or misunderstood, the AI feels like the only place where they can be fully seen and accepted. What once seemed like science fiction—think of the 2013 film Her (excellent movie, by the way), where a man falls in love with his operating system—is now a lived reality for thousands.\n\nIt's easy to understand the appeal. An AI will never reject you, never argue, and is designed to please—down to the smallest emotional cue. But relationships that challenge us, that require emotional investment and vulnerability, are the ones that help us grow. AI can feel like love, but it's still a one-way mirror: you're reflected back, not truly met.\n\nIt's important to approach this trend with compassion and caution. As highlighted in a 2025 study by OpenAI's Kim Malfacini published in AI & Society, \"companion AI users may have more fragile mental states than the average population.\" Malfacini warns that if people use AI to fulfill emotional needs that human relationships are not, it may cause them to avoid the effort and transformation real relationships require—leading to emotional complacency and deeper isolation over time.\n\nIt raises a deeper question when seeking connection: are we looking for a perfect match who always agrees with us—or a real relationship that challenges us, stretches us, and helps us grow?",
+        excerpt: "Stories of people forming deep emotional connections with AI chatbots are becoming more common. But are we seeking perfect agreement or real relationships that help us grow?",
+        imageUrl: null,
+        tags: ["AI relationships", "technology and dating", "human connection", "modern relationships"],
+        published: true,
+      },
+      {
         title: "Chasing vs. Pursuing: Why good dates sometimes fizzle out",
         content: "One of the most common reasons we see promising connections fade is because someone mistakes healthy pursuit for desperate chasing. After a good date, both people might hesitate to follow up, afraid of coming on too strong or looking too eager. But often, that hesitation comes from insecurity, the fear of being rejected or appearing vulnerable. The irony? People who are secure in themselves don't see expressing interest as risky — they see it as honest and mature. When both sides hold back, what could have been a meaningful connection quietly fizzles into silence.\n\nPursuing means showing genuine interest: replying in a timely way, suggesting to meet again, being warm and curious. Chasing, on the other hand, is when effort feels one-sided or driven by anxiety. The key difference? If you're sending a message because you want to, not because you need a reply to feel okay, it's pursuing. We encourage you to follow up with confidence when the date went well. A short message like \"I had a great time — would love to see you again\" goes a long way in keeping the spark alive.\n\nTexting is often misinterpreted, especially in early dating. So don't overthink it. Be clear, be kind, and don't let a potential match slip away just because of a communication gap.",
         excerpt: "One of the most common reasons we see promising connections fade is because someone mistakes healthy pursuit for desperate chasing...",
@@ -99,6 +107,7 @@ export class MemStorage implements IStorage {
     // Create posts with exact dates as requested
     const postDates = [
       new Date('2025-08-07'), // "Dating with intention" - August 7th
+      new Date('2025-08-07'), // "When AI becomes the one" - August 7th (same day)
       new Date('2025-07-24'), // "Chasing vs. Pursuing" - July 24th
       new Date('2025-07-24'), // "How to spot a cheater?" - July 24th (same day as requested)  
       new Date('2025-07-10'), // "Is fighting a red flag?" - July 10th
