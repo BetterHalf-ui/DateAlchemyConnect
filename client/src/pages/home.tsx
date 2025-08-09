@@ -474,7 +474,7 @@ export default function Home() {
           
           {/* Learn More Link */}
           <div className="text-center">
-            <Link href="/how-it-works">
+            <Link href="/how-it-works" onClick={() => window.scrollTo(0, 0)}>
               <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 text-lg font-medium">
                 Learn More About Our Process
               </Button>
