@@ -44,7 +44,7 @@ export default function Header() {
     style={{ top: '40px' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/">
+          <Link href="/" onClick={() => window.scrollTo(0, 0)}>
             <div className={`font-bold text-2xl hover:text-primary transition-colors cursor-pointer subtitle ${
               isScrolled || needsWhiteHeader ? 'text-primary' : 'text-white'
             }`}>
@@ -56,14 +56,14 @@ export default function Header() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
 
-              <Link href="/how-it-works">
+              <Link href="/how-it-works" onClick={() => window.scrollTo(0, 0)}>
                 <span className={`hover:text-primary transition-colors cursor-pointer body-text ${
                   isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
                 }`}>
                   {t('nav.howItWorks')}
                 </span>
               </Link>
-              <Link href="/blog">
+              <Link href="/blog" onClick={() => window.scrollTo(0, 0)}>
                 <span className={`hover:text-primary transition-colors cursor-pointer body-text ${
                   isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
                 }`}>
@@ -113,14 +113,14 @@ export default function Header() {
         }`}>
           <div className="px-4 py-6 space-y-4">
 
-            <Link href="/how-it-works" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link href="/how-it-works" onClick={() => { setIsMobileMenuOpen(false); window.scrollTo(0, 0); }}>
               <div className={`block py-2 text-lg hover:text-primary transition-colors ${
                 isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
               }`}>
                 {t('nav.howItWorks')}
               </div>
             </Link>
-            <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link href="/blog" onClick={() => { setIsMobileMenuOpen(false); window.scrollTo(0, 0); }}>
               <div className={`block py-2 text-lg hover:text-primary transition-colors ${
                 isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
               }`}>

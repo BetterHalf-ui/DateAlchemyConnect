@@ -95,7 +95,7 @@ export default function Network() {
             </a>
             <p className="text-gray-600">
               Ready to be proactive instead?{" "}
-              <Link href="/">
+              <Link href="/" onClick={() => window.scrollTo(0, 0)}>
                 <span className="text-primary hover:underline cursor-pointer">Learn more about membership</span>
               </Link>
             </p>
