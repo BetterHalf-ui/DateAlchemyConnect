@@ -88,13 +88,13 @@ export default function Pricing() {
           
           <p className="text-gray-500 text-base body-text">
             Not ready to invest in a membership?{" "}
-            <Link href="/network">
+            <Link href="/network" onClick={() => window.scrollTo(0, 0)}>
               <span className="text-primary hover:underline cursor-pointer">
                 Join our network for free to see if you are a match with one of our exceptional clients.
               </span>
             </Link>
             <br />
-            <Link href="/network">
+            <Link href="/network" onClick={() => window.scrollTo(0, 0)}>
               <span className="text-primary hover:underline cursor-pointer">Create your complimentary profile. </span>
             </Link>
           </p>

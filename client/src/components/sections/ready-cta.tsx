@@ -22,7 +22,7 @@ export default function ReadyCTA() {
           <p className="text-gray-300 sans-body mb-4">
             Not ready to invest in a membership?
           </p>
-          <Link href="/network">
+          <Link href="/network" onClick={() => window.scrollTo(0, 0)}>
             <Button variant="link" className="text-primary hover:text-primary/80 serif-title">
               Join our network for free to see if you are a match with one of our exceptional clients.
             </Button>

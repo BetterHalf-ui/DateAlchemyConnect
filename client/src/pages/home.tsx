@@ -305,7 +305,7 @@ export default function Home() {
           </a>
           <div className="text-sm text-gray-300 leading-relaxed max-w-2xl mx-auto">
             <p className="mb-2">{t('home.cta.notReady')}</p>
-            <Link href="/network" className="hover:text-white">
+            <Link href="/network" className="hover:text-white" onClick={() => window.scrollTo(0, 0)}>
               <p className="mb-2">{t('home.cta.joinNetwork')}</p>
               <p className="underline">{t('home.cta.createProfile')}</p>
             </Link>

@@ -47,7 +47,7 @@ export default function NewHero() {
               Sign Up
             </Button>
           </a>
-          <Link href="/network">
+          <Link href="/network" onClick={() => window.scrollTo(0, 0)}>
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg serif-title luxury-hover">
               Create a Complimentary Profile
             </Button>
