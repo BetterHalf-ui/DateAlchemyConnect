@@ -56,14 +56,13 @@ export default function Header() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
 
-              <a 
-                href="how-it-works.html"
-                className={`hover:text-primary transition-colors body-text ${
+              <Link href="/how-it-works">
+                <span className={`hover:text-primary transition-colors cursor-pointer body-text ${
                   isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
-                }`}
-              >
-                {t('nav.howItWorks')}
-              </a>
+                }`}>
+                  {t('nav.howItWorks')}
+                </span>
+              </Link>
               <Link href="/blog">
                 <span className={`hover:text-primary transition-colors cursor-pointer body-text ${
                   isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
@@ -114,15 +113,13 @@ export default function Header() {
         }`}>
           <div className="px-4 py-6 space-y-4">
 
-            <a 
-              href="how-it-works.html"
-              className={`block py-2 text-lg hover:text-primary transition-colors ${
+            <Link href="/how-it-works" onClick={() => setIsMobileMenuOpen(false)}>
+              <div className={`block py-2 text-lg hover:text-primary transition-colors ${
                 isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
-              }`}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t('nav.howItWorks')}
-            </a>
+              }`}>
+                {t('nav.howItWorks')}
+              </div>
+            </Link>
             <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)}>
               <div className={`block py-2 text-lg hover:text-primary transition-colors ${
                 isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'

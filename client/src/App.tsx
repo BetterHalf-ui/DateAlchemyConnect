@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import I18nProvider from "@/components/i18n/i18n-provider";
 import Home from "@/pages/home";
 import Network from "@/pages/network";
+import HowItWorks from "@/pages/how-it-works";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
 import PrivacyPolicy from "@/pages/privacy-policy";
@@ -19,6 +20,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/network" component={Network} />
+      <Route path="/how-it-works" component={HowItWorks} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:id" component={BlogPost} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
