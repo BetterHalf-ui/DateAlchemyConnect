@@ -131,7 +131,7 @@ export default function HowItWorks() {
                 <div className="bg-white p-8 rounded-xl shadow-lg">
                   <h3 className="text-2xl font-bold mb-4 subtitle text-gray-900">04. Refinement & Follow-up</h3>
                   <p className="text-gray-700 mb-4 body-text">
-                    After the introduction, the path is yours — whether it's a second date, exchanging contact details, or choosing to explore a new introduction.
+                    After the introduction, the path is yours — whether it's a second date or choosing to explore a new introduction.
                   </p>
                   <p className="text-gray-700 body-text">
                     We always seek your feedback after each date to fine-tune our matching approach and ensure your experience evolves meaningfully.
