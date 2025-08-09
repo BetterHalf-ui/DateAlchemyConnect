@@ -417,6 +417,72 @@ export default function Home() {
 
       <Pricing />
 
+      {/* How It Works - 4 Steps Overview */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 subtitle text-gray-900">How It Works</h2>
+            <p className="text-xl text-gray-600 body-text">A simple 4-step process to find your perfect match</p>
+          </div>
+          
+          {/* 4 Steps in Columns */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                01
+              </div>
+              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Application Process</h3>
+              <p className="text-gray-600 body-text leading-relaxed">
+                Complete our questionnaire to help us understand your background and what you're seeking.
+              </p>
+            </div>
+            
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                02
+              </div>
+              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Personal Interview</h3>
+              <p className="text-gray-600 body-text leading-relaxed">
+                Meet with your personal matchmaker to craft your personalized profile.
+              </p>
+            </div>
+            
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                03
+              </div>
+              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Curated Introduction</h3>
+              <p className="text-gray-600 body-text leading-relaxed">
+                We share aligned profiles for review and coordinate your first date.
+              </p>
+            </div>
+            
+            {/* Step 4 */}
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                04
+              </div>
+              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Ongoing Support</h3>
+              <p className="text-gray-600 body-text leading-relaxed">
+                Thoughtful guidance and follow-ups throughout your membership journey.
+              </p>
+            </div>
+          </div>
+          
+          {/* Learn More Link */}
+          <div className="text-center">
+            <Link href="/how-it-works">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 text-lg font-medium">
+                Learn More About Our Process
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Research Sources Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
