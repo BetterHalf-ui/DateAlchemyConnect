@@ -432,7 +432,7 @@ export default function Home() {
               <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 01
               </div>
-              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Application Process</h3>
+              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Apply for Membership</h3>
               <p className="text-gray-600 body-text leading-relaxed">
                 Complete our questionnaire to help us understand your background and what you're seeking.
               </p>
@@ -443,7 +443,7 @@ export default function Home() {
               <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 02
               </div>
-              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Personal Interview</h3>
+              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Private Consultation</h3>
               <p className="text-gray-600 body-text leading-relaxed">
                 Meet with your personal matchmaker to craft your personalized profile.
               </p>
@@ -465,7 +465,7 @@ export default function Home() {
               <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 04
               </div>
-              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Ongoing Support</h3>
+              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Refinement & Follow-up</h3>
               <p className="text-gray-600 body-text leading-relaxed">
                 Thoughtful guidance and follow-ups throughout your membership journey.
               </p>

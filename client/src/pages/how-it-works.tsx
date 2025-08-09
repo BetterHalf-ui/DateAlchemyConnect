@@ -68,12 +68,12 @@ export default function HowItWorks() {
             <div className="relative flex items-center mb-20">
               <div className="w-1/2 pr-8 text-right">
                 <div className="bg-white p-8 rounded-xl shadow-lg">
-                  <h3 className="text-2xl font-bold mb-4 subtitle text-gray-900">01. Application Process</h3>
+                  <h3 className="text-2xl font-bold mb-4 subtitle text-gray-900">01. Apply for Membership</h3>
                   <p className="text-gray-700 mb-4 body-text">
                     You'll begin by completing our initial application: a questionnaire that helps us understand your background, values, and what you're truly seeking in a partner.
                   </p>
                   <p className="text-gray-700 body-text">
-                    We value transparency, so we'll be upfront about what we can realistically offer based on your preferences and our current member base.
+                    Within one business day, we'll review your submission to let you know if we have a potential match within our member base and share an in-depth assessment to better understand your needs in a relationship, attachment style and dating tendencies.
                   </p>
                 </div>
               </div>
@@ -91,12 +91,12 @@ export default function HowItWorks() {
               </div>
               <div className="w-1/2 pl-8">
                 <div className="bg-white p-8 rounded-xl shadow-lg">
-                  <h3 className="text-2xl font-bold mb-4 subtitle text-gray-900">02. Personal Interview</h3>
+                  <h3 className="text-2xl font-bold mb-4 subtitle text-gray-900">02. Private Consultation</h3>
                   <p className="text-gray-700 mb-4 body-text">
-                    Next, you'll meet with your personal matchmaker in a one-on-one video consultation to craft your personalized profile.
+                    Next, you'll meet with your personal matchmaker in a one-on-one video consultation. This conversation is designed to have a more in-depth understanding of who you are and what you are looking for.
                   </p>
                   <p className="text-gray-700 body-text">
-                    We'll dive deeper into your relationship goals, discuss what hasn't worked in the past, and align on the type of person you're hoping to meet.
+                    Following this, we craft a profile summary — which you'll review and approve — to be shared selectively only with potential matches who meet your criteria.
                   </p>
                 </div>
               </div>
@@ -107,8 +107,11 @@ export default function HowItWorks() {
               <div className="w-1/2 pr-8 text-right">
                 <div className="bg-white p-8 rounded-xl shadow-lg">
                   <h3 className="text-2xl font-bold mb-4 subtitle text-gray-900">03. Curated Introduction</h3>
+                  <p className="text-gray-700 mb-4 body-text">
+                    Once a mutually aligned connection is identified, we share both profiles for review. If there's mutual interest, we invite you to activate your annual membership so we can proceed with arranging your first date.
+                  </p>
                   <p className="text-gray-700 body-text">
-                    When we identify a mutually aligned connection, we share both profiles for review. With mutual interest, <strong>we ask you for the payment of the membership</strong> and coordinate your first date with complete discretion and care.
+                    We handle all the coordination with care and discretion, ensuring you meet someone genuinely aligned with your aspirations — in the right place, at the right time.
                   </p>
                 </div>
               </div>
@@ -126,9 +129,12 @@ export default function HowItWorks() {
               </div>
               <div className="w-1/2 pl-8">
                 <div className="bg-white p-8 rounded-xl shadow-lg">
-                  <h3 className="text-2xl font-bold mb-4 subtitle text-gray-900">04. Ongoing Support</h3>
+                  <h3 className="text-2xl font-bold mb-4 subtitle text-gray-900">04. Refinement & Follow-up</h3>
+                  <p className="text-gray-700 mb-4 body-text">
+                    After the introduction, the path is yours — whether it's a second date, exchanging contact details, or choosing to explore a new introduction.
+                  </p>
                   <p className="text-gray-700 body-text">
-                    We provide thoughtful guidance and post-date follow-ups to help you navigate your new connection. Our support continues throughout your membership until you find your perfect match.
+                    We always seek your feedback after each date to fine-tune our matching approach and ensure your experience evolves meaningfully.
                   </p>
                 </div>
               </div>
