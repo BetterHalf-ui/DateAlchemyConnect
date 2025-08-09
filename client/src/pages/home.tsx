@@ -209,7 +209,7 @@ export default function Home() {
           </a>
           <div className="text-sm text-gray-300 leading-relaxed max-w-2xl mx-auto">
             <p className="mb-2">Not ready to invest in a membership?</p>
-            <Link href="/network" className="hover:text-white">
+            <Link href="/network" className="hover:text-white" onClick={() => window.scrollTo(0, 0)}>
               <p className="mb-2">Join our network for free to see if you are a match with one of our exceptional clients.</p>
               <p className="underline">Create your complimentary profile.</p>
             </Link>
@@ -600,9 +600,15 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-8">{t('home.nominate.title')}</h2>
           <h3 className="text-2xl mb-6">{t('home.nominate.subtitle')}</h3>
           <p className="text-lg text-gray-700 mb-8">{t('home.nominate.description')}</p>
-          <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold">
-            {t('home.nominate.cta')}
-          </Button>
+          <a 
+            href={EXTERNAL_LINKS.referralForm} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold">
+              {t('home.nominate.cta')}
+            </Button>
+          </a>
         </div>
       </section>
 

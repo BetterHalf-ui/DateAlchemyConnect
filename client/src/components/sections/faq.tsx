@@ -30,10 +30,7 @@ const faqs = [
     question: "Do you cater to applicants who are divorced or single parents?",
     answer: "Absolutely! We welcome individuals who are divorced or single parents, as long as the separation is legally documented and amicable. If you're ready to begin the next chapter of your life, we're here to assist you. We're upfront about your past with potential matches, so it's not a topic that needs to be discussed during your date."
   },
-  {
-    question: "Do you cater to LGBTQ community?",
-    answer: "Yes, we absolutely do. We have no restrictions of any form. However, the number of dates will depend on factors like the feasibility of finding you a compatible partner and the size of the potential partner base."
-  },
+
   {
     question: "How long is my membership valid?",
     answer: "A membership is valid for a period of one year or until you find your partner with The Date Alchemy; whichever comes first. It cannot be transferred."

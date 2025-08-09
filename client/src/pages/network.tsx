@@ -75,12 +75,12 @@ export default function Network() {
           <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-xl mb-12">
             <h3 className="font-bold mb-3">Please note:</h3>
             <p className="text-gray-700 mb-3">
-              We prioritize matches between clients. As a free member of the Date Alchemy Network, we're not searching on your behalf — and you may not hear from us for a while.
+              We prioritize matching our members first, so you might not hear from us right away. But we're so glad you're here — and this is a great first step.
             </p>
           </div>
           
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-6">Want to join the network?</h3>
+            <h3 className="text-2xl font-bold mb-6">Join the network now</h3>
             <p className="text-lg text-gray-700 mb-8">
               Fill in your profile below — and we'll be in touch if the right person comes along.
             </p>

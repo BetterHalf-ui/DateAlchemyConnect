@@ -27,6 +27,7 @@ export const translations = {
     'nav.insights': 'Insights',
     'nav.applyNow': 'Apply Now',
     'nav.network': 'Join the Network',
+    'team.yourAlchemists': 'Your Alchemists',
     
     // Common
     'common.learnMore': 'Learn More',
@@ -155,7 +156,7 @@ export const translations = {
     'home.testimonials.expertAuthor': '— IT Professional, 32',
     
     // Team section
-    'home.team.title': 'Your Date Alchemists',
+    'home.team.title': 'Your Alchemists',
     'home.team.founders': 'Pratik Malia, Celine Delacharlerie, Sagarika Sarkar - Co-founders',
     'home.team.story1': 'Three years ago, we left our corporate careers in Singapore and moved to Mauritius to do something that felt more personal, more impactful. Finding a life partner we truly connect with has been such a life changing experience for us, that we wanted more people to experience that kind of love.',
     'home.team.story2': 'But getting there wasn\'t easy. We\'ve been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people.',

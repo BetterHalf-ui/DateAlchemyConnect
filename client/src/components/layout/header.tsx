@@ -55,13 +55,7 @@ export default function Header() {
           <div className="flex items-center space-x-8">
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
-              <Link href="/">
-                <span className={`hover:text-primary transition-colors cursor-pointer body-text ${
-                  isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
-                }`}>
-                  {t('nav.home')}
-                </span>
-              </Link>
+
               <a 
                 href="how-it-works.html"
                 className={`hover:text-primary transition-colors body-text ${
@@ -119,13 +113,7 @@ export default function Header() {
           isScrolled || needsWhiteHeader ? 'border-gray-200' : 'border-white/20'
         }`}>
           <div className="px-4 py-6 space-y-4">
-            <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-              <div className={`block py-2 text-lg hover:text-primary transition-colors ${
-                isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
-              }`}>
-                {t('nav.home')}
-              </div>
-            </Link>
+
             <a 
               href="how-it-works.html"
               className={`block py-2 text-lg hover:text-primary transition-colors ${
