@@ -14,7 +14,7 @@ export default function Header() {
   const { t } = useI18n();
   
   // Check if we're on a page that needs a white background header by default
-  const needsWhiteHeader = location.startsWith('/blog') || location.startsWith('/admin') || location.startsWith('/network') || location.startsWith('/privacy-policy') || location.startsWith('/rebrand-announcement');
+  const needsWhiteHeader = location.startsWith('/blog') || location.startsWith('/admin') || location.startsWith('/network') || location.startsWith('/privacy-policy') || location.startsWith('/rebrand-announcement') || location.startsWith('/how-it-works');
 
   useEffect(() => {
     const handleScroll = () => {
