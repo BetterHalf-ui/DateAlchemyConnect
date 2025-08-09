@@ -17,24 +17,25 @@ const membershipFeatures = {
     ]
   },
   innerWork: {
-    title: "2. Inner Work and Guidance",
-    description: "We set you up for successful dates and healthier relationships",
+    titleKey: "home.membership.innerWorkTitle",
+    descriptionKey: "home.membership.innerWorkDescription",
+    subtitleKey: "home.membership.innerWorkSubtitle",
     subsections: [
       {
-        title: "1) Full Relationship Readiness Self-Audit:",
-        features: [
-          "Your Needs Assessment: Get clear on what you truly need in a relationship — not just what you're attracted to.",
-          "Attachment Style Assessment: Understand how your attachment style influences the way you connect, respond, and bond in relationships (based on attachment theory by psychologists John Bowlby and Mary Ainsworth)",
-          "Dating Tendencies Assessment: Identify unconscious dating patterns that may be holding you back (based on relationship scientist Logan Ury's work)"
+        titleKey: "home.membership.innerWork1Title",
+        featureKeys: [
+          "home.membership.innerWork1Feature1",
+          "home.membership.innerWork1Feature2",
+          "home.membership.innerWork1Feature3"
         ]
       },
       {
-        title: "2) Personalized Guidance to Date Intentionally and Confidently",
-        features: [
-          "Direct Access to Our Matchmaking Team (via Whatsapp & Email): A discreet communication channel to dating experts who know you and your dating journey.",
-          "Pre-Date and Pre-Dating Advice in your Inbox— Exactly When You Need It: Digestible emails to prepare you before the first date and second date with the most common pitfalls and winning moves from hundreds of client experiences.",
-          "Reflection rituals after each date: Dating is also a journey of self-discovery—an opportunity to uncover what truly matters to you along the way.",
-          "Bi-weekly science-based dating insights in your inbox: Tips based on our matchmaking experience and backed by scientific journals."
+        titleKey: "home.membership.innerWork2Title",
+        featureKeys: [
+          "home.membership.innerWork2Feature1",
+          "home.membership.innerWork2Feature2",
+          "home.membership.innerWork2Feature3",
+          "home.membership.innerWork2Feature4"
         ]
       }
     ]
@@ -143,50 +144,39 @@ export default function Membership() {
             
             <div className="lg:col-span-2 bg-white rounded-3xl p-12 premium-shadow hover-lift">
               <h3 className="text-3xl font-bold mb-6 text-primary subtitle">
-                {membershipFeatures.innerWork.title}
+                {t(membershipFeatures.innerWork.titleKey)}
               </h3>
               <p className="text-lg text-gray-700 mb-8 body-text leading-relaxed">
-                {membershipFeatures.innerWork.description}
+                {t(membershipFeatures.innerWork.descriptionKey)}
               </p>
-              <h4 className="text-xl font-semibold mb-6 text-gray-900 subtitle">Included in Your Membership:</h4>
+              <h4 className="text-xl font-semibold mb-6 text-gray-900 subtitle">{t(membershipFeatures.innerWork.subtitleKey)}</h4>
               <div className="space-y-8">
                 {membershipFeatures.innerWork.subsections.map((subsection, sectionIndex) => (
                   <div key={sectionIndex} className="space-y-4">
                     <h5 className="text-lg font-semibold text-gray-900 subtitle mb-4">
-                      {subsection.title}
+                      {t(subsection.titleKey)}
                     </h5>
                     <div className="space-y-3 ml-4">
-                      {subsection.features.map((feature, featureIndex) => {
-                        // Split on the first colon to separate bold part from description
-                        const colonIndex = feature.indexOf(':');
-                        const featureKey = `inner-${sectionIndex}-${featureIndex}`;
-                        const isVisible = visibleFeatures.has(featureKey);
+                      {subsection.featureKeys.map((featureKey, featureIndex) => {
+                        const feature = t(featureKey);
+                        const animationKey = `inner-${sectionIndex}-${featureIndex}`;
+                        const isVisible = visibleFeatures.has(animationKey);
                         
-                        if (colonIndex > 0) {
-                          const boldPart = feature.substring(0, colonIndex);
-                          const regularPart = feature.substring(colonIndex);
-                          return (
-                            <div 
-                              key={featureIndex} 
-                              ref={el => featureRefs.current[featureKey] = el}
-                              className={`flex items-start transition-all duration-700 ${
-                                isVisible 
-                                  ? 'opacity-100 translate-y-0' 
-                                  : 'opacity-0 translate-y-4'
-                              }`}
-                              style={{ transitionDelay: `${(sectionIndex * 4 + featureIndex) * 150}ms` }}
-                            >
-                              <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                              <span className="text-gray-700 body-text leading-relaxed">
-                                <strong>{boldPart}</strong>{regularPart}
-                              </span>
-                            </div>
-                          );
-                        }
+                        // Parse bold formatting
+                        const renderFeatureText = (text: string) => {
+                          const parts = text.split('**');
+                          return parts.map((part, i) => {
+                            if (i % 2 === 1) {
+                              return <strong key={i}>{part}</strong>;
+                            }
+                            return part;
+                          });
+                        };
+                        
                         return (
                           <div 
                             key={featureIndex} 
-                            ref={el => featureRefs.current[featureKey] = el}
+                            ref={el => featureRefs.current[animationKey] = el}
                             className={`flex items-start transition-all duration-700 ${
                               isVisible 
                                 ? 'opacity-100 translate-y-0' 
@@ -195,7 +185,9 @@ export default function Membership() {
                             style={{ transitionDelay: `${(sectionIndex * 4 + featureIndex) * 150}ms` }}
                           >
                             <div className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                            <span className="text-gray-700 body-text leading-relaxed">{feature}</span>
+                            <span className="text-gray-700 body-text leading-relaxed">
+                              {renderFeatureText(feature)}
+                            </span>
                           </div>
                         );
                       })}

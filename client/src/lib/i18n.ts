@@ -80,6 +80,21 @@ export const translations = {
     'home.membership.bonus': '**Bonus**: invitations to private events (Singles Socials) — intimate brunches or dinners with hand-picked guests to foster real connections.',
     'home.membership.cta': 'Apply for Membership',
     
+    'home.membership.innerWorkTitle': '2. Inner Work and Guidance',
+    'home.membership.innerWorkDescription': 'We set you up for successful dates and healthier relationships',
+    'home.membership.innerWorkSubtitle': 'Included in Your Membership:',
+    
+    'home.membership.innerWork1Title': '1) Full Relationship Readiness Self-Audit:',
+    'home.membership.innerWork1Feature1': '**Your Needs Assessment**: Get clear on what you truly need in a relationship — not just what you\'re attracted to.',
+    'home.membership.innerWork1Feature2': '**Attachment Style Assessment**: Understand how your attachment style influences the way you connect, respond, and bond in relationships (based on attachment theory by psychologists John Bowlby and Mary Ainsworth)',
+    'home.membership.innerWork1Feature3': '**Dating Tendencies Assessment**: Identify unconscious dating patterns that may be holding you back (based on relationship scientist Logan Ury\'s work)',
+    
+    'home.membership.innerWork2Title': '2) Personalized Guidance to Date Intentionally and Confidently',
+    'home.membership.innerWork2Feature1': '**Direct Access to Our Matchmaking Team** (via Whatsapp & Email): A discreet communication channel to dating experts who know you and your dating journey.',
+    'home.membership.innerWork2Feature2': '**Pre-Date and Pre-Dating Advice in your Inbox**— Exactly When You Need It: Digestible emails to prepare you before the first date and second date with the most common pitfalls and winning moves from hundreds of client experiences.',
+    'home.membership.innerWork2Feature3': '**Reflection rituals after each date**: Dating is also a journey of self-discovery—an opportunity to uncover what truly matters to you along the way.',
+    'home.membership.innerWork2Feature4': '**Bi-weekly science-based dating insights** in your inbox: Tips based on our matchmaking experience and backed by scientific journals.',
+    
     'home.pricing.title': 'Investment in Your Future',
     'home.pricing.price': 'Rs 8,000',
     'home.pricing.period': '/year',
@@ -238,6 +253,21 @@ export const translations = {
     'home.membership.feature7': '**Suivi après la rencontre** pris en charge pour vous — pas de ghosting, pas de relances maladroites.',
     'home.membership.bonus': '**Bonus** : invitations à des événements privés (Singles Socials) — brunchs ou dîners intimistes avec des invités triés sur le volet pour favoriser de vraies connexions.',
     'home.membership.cta': 'postuler pour l\'adhésion',
+    
+    'home.membership.innerWorkTitle': '2. Accompagnement et développement personnel',
+    'home.membership.innerWorkDescription': 'Nous vous préparons à vivre des rendez-vous réussis et des relations plus équilibrées.',
+    'home.membership.innerWorkSubtitle': 'Inclus dans votre adhésion :',
+    
+    'home.membership.innerWork1Title': '1) Auto-évaluation de préparation à la relation',
+    'home.membership.innerWork1Feature1': '**Évaluation de vos besoins** : clarifiez ce qui est réellement essentiel pour vous dans une relation — au-delà des simples attirances.',
+    'home.membership.innerWork1Feature2': '**Analyse de votre style d\'attachement** : comprenez comment votre manière de vous lier influence vos relations (basé sur la théorie de l\'attachement de John Bowlby et Mary Ainsworth).',
+    'home.membership.innerWork1Feature3': '**Évaluation de vos tendances de dating** : identifiez les schémas inconscients qui peuvent freiner votre épanouissement amoureux (inspiré des travaux de Logan Ury).',
+    
+    'home.membership.innerWork2Title': '2) Accompagnement personnalisé pour dater avec intention et confiance',
+    'home.membership.innerWork2Feature1': '**Accès direct à notre équipe** (via WhatsApp & email) : un canal discret vers des experts qui connaissent votre parcours.',
+    'home.membership.innerWork2Feature2': '**Conseils avant chaque rencontre** : emails courts et efficaces pour éviter les pièges les plus courants et maximiser vos chances de succès.',
+    'home.membership.innerWork2Feature3': '**Rituels de réflexion après chaque rendez-vous** : car chaque rencontre est aussi une occasion de mieux vous connaître.',
+    'home.membership.innerWork2Feature4': '**Les secrets de l\'alchimie deux fois par mois** dans votre boîte mail : conseils basés sur notre expérience de matchmaking et validés par la recherche scientifique.',
     
     'home.pricing.title': 'investissement dans votre avenir',
     'home.pricing.price': 'Rs 8,000',
