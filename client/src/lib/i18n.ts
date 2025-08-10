@@ -437,7 +437,7 @@ export const translations = {
     'home.howItWorks.learnMore': 'En savoir plus sur notre méthode',
     
     // Research section (French)
-    'home.research.title': 'Les recherches sont formelles : les applis de rencontres ne sont pas à la hauteur',
+    'home.research.title': 'Les recherches sont formelles : les applis de rencontres font des dégâts',
     'home.research.subtitle': 'Des institutions et organismes de recherche de premier plan ont documenté les effets délétères des applications de rencontres. Chez The Date Alchemy, nous proposons une approche plus saine et profondément humaine pour trouver l\'amour.',
     'home.research.guardianQuote': '« Les applications de rencontres détruisent l\'âme »',
     'home.research.nytQuote': '« Des années à swiper ont laissé les utilisateurs épuisés »',

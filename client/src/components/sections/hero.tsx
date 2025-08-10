@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { EXTERNAL_LINKS } from "@/lib/constants";
 import { useI18n } from "@/lib/i18n";
+import coupleImagePath from "@assets/PictureCouple_1754227660398.jpeg";
 
 export default function Hero() {
   const { t } = useI18n();
@@ -41,7 +42,7 @@ export default function Hero() {
       className="relative h-screen flex items-center justify-center overflow-hidden"
       style={{
         paddingTop: '96px', // Account for banner (40px) + header (56px)
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://frolic.mu/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-05-at-7.07.25-PM.jpeg')`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${coupleImagePath}')`,
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
