@@ -49,103 +49,186 @@ export const translations = {
     'home.help.discreet.title': 'Complete Discretion',
     'home.help.discreet.desc': 'Your privacy is paramount. We coordinate introductions with complete confidentiality.',
     
-    // Testimonials section
+    // Testimonials section (English)
     'home.testimonials.title': 'What Our Members Say',
     'home.testimonials.subtitle': 'All testimonials are from real clients — feel free to ask us for a connection if you\'d like to verify their experience.',
-    'home.testimonials.testimonial1': '"Thank you for an introduction that goes well beyond a simple algorithm. You succeeded in harmonizing two hearts on the same frequency."',
-    'home.testimonials.author1': '— Veterinarian, 30 years old',
-    'home.testimonials.testimonial2': '"The Date Alchemy is by far the best dating agency in Mauritius. The team is very involved and dedicated to providing a smooth and seamless experience to its members."',
-    'home.testimonials.author2': '— AI Consultant, 41 years old',
-    'home.testimonials.testimonial3': '"In addition to detailed profiles, The Date Alchemy also offers personality assessments, allowing everyone to know themselves better and evolve personally before even meeting a potential partner."',
-    'home.testimonials.author3': '— IT Professional, 32 years old',
-    'home.testimonials.testimonial4': '"Communication with the team is open, regular and collaborative, whether via WhatsApp or through newsletters sent by email. Feedback is encouraged after each meeting, which helps create a benevolent environment."',
-    'home.testimonials.author4': '— Scientist, 37 years old',
-    'home.testimonials.main': '"Thank you for an introduction that goes well beyond a simple algorithm. You succeeded in harmonizing two hearts on the same frequency."',
-    'home.testimonials.mainAuthor': '— COO, Tech Industry, 52 years old',
-    'home.testimonials.professional': 'The Date Alchemy fosters healthy relationships in a safe and confidential environment. Embarking on this journey helped me listen more deeply to others and understand myself better—allowing me to become a better version of myself.',
-    'home.testimonials.professionalAuthor': '— Scientist, 37',
-    'home.testimonials.expert': 'I recommend The Date Alchemy without hesitation to single professionals who don\'t have the time — or desire — to venture into traditional matchmaking methods or dating applications.',
-    'home.testimonials.expertAuthor': '— IT Professional, 32 years old',
     
-    // Team section
-    'home.team.title': 'Your Alchemists',
-    'home.team.founders': 'Pratik Malia, Celine Delacharlerie, Sagarika Sarkar - Co-founders',
-    'home.team.story1': 'Three years ago, we left our corporate careers in Singapore to settle in Mauritius, driven by the desire to create something more personal, more meaningful.\nFinding our life partner with whom we have a deep connection truly transformed our lives — to the point of wanting to offer this chance to others.',
-    'home.team.story2': 'But the journey wasn\'t easy. We\'ve experienced the frustration of dating apps ourselves, the disappointment of promising evenings that lead nowhere, hours lost swiping... and the emotional exhaustion of relationships with people unable to invest emotionally, or toxic ones.',
-    'home.team.quote': 'We invested our emotional energy in people who weren\'t ready to commit to a relationship. We faced ghosting, anxiety, self-doubt and confusion. And, deep down, we knew there had to be a better way to date.',
-    'home.team.story3': 'That\'s why we created The Date Alchemy — the dating service we would have dreamed of having.',
-    'home.team.story4': 'A respectful, rewarding experience designed to foster genuine deep connections. We don\'t promise love, but we promise our total commitment: professionalism, integrity, sincere involvement in your journey and a proven process that has led to lasting stories.',
+    'home.testimonials.testimonial1': '"Thanks to The Date Alchemy, I found love. The team has always been there providing discreet support and expertly advising without ever becoming too intrusive. Thank you for your professionalism and, above all, thank you for being there."',
+    'home.testimonials.author1': '— Veterinarian, 30',
     
-    // Nominate section
-    'home.nominate.title': 'Spread the Love',
-    'home.nominate.subtitle': 'Do you know a single person ready to meet the right person?',
-    'home.nominate.description': 'Nominate them — anonymously or not - they might thank you soon!',
-    'home.nominate.cta': 'Nominate Someone',
+    'home.testimonials.testimonial2': '"The Date Alchemy is by far the best matchmaking agency in Mauritius. The team is very dedicated and committed to ensuring a smooth and seamless experience for members."',
+    'home.testimonials.author2': '— AI Consultant, 41',
     
-    // Blog section
+    'home.testimonials.testimonial3': '"In addition to detailed profiles, The Date Alchemy also offer personality assessments, allowing users to gain deeper self-awareness and grow individually before meeting a potential partner."',
+    'home.testimonials.author3': '— IT Professional, 32',
+    
+    'home.testimonials.testimonial4': '"The communication with the team is open, consistent, and collaborative, be it on Whatsapp and newsletters shared by mail. Feedback is encouraged after each date, which helps foster a supportive environment."',
+    'home.testimonials.author4': '— Scientist, 37',
+    
+    'home.membership.title': 'The Date Alchemy Membership',
+    'home.membership.subtitle': 'Everything you need for a healthier dating experience.',
+    'home.membership.premiumTitle': '1. Premium Matchmaking',
+    'home.membership.premiumSubtitle': 'Included in your membership:',
+    
+    'home.membership.feature1': '**Targeted introductions** with carefully selected, met, and vetted singles who match your standards, all ready for an authentic relationship.',
+    'home.membership.feature2': '**In-depth compatibility assessment** based on your criteria, lifestyle, goals, but also your true relationship needs (The Date Alchemy Needs Compatibility Score™).',
+    'home.membership.feature3': '**Human-centered matching**: unlike algorithms designed to keep you online, we rely on intuition and human experience. Each match is carefully chosen, and you meet them in person.',
+    'home.membership.feature4': '**Attachment-style aware matching**: we use attachment theory science to avoid toxic incompatibilities from the start.',
+    'home.membership.feature5': '**Self-validation** from detailed profiles: you always maintain control.',
+    'home.membership.feature6': '**Full concierge service**: we book, confirm and prepare the date — you just need to show up looking your best.',
+    'home.membership.feature7': '**Post-date follow-up** handled for you — no ghosting, no awkward follow-ups.',
+    'home.membership.bonus': '**Bonus**: invitations to private events (Singles Socials) — intimate brunches or dinners with hand-picked guests to foster real connections.',
+    'home.membership.cta': 'Apply for Membership',
+    
+    'home.membership.innerWorkTitle': '2. Inner Work and Guidance',
+    'home.membership.innerWorkDescription': 'We set you up for successful dates and healthier relationships',
+    'home.membership.innerWorkSubtitle': 'Included in Your Membership:',
+    
+    'home.membership.innerWork1Title': '1) Full Relationship Readiness Self-Audit:',
+    'home.membership.innerWork1Feature1': '**Your Needs Assessment**: Get clear on what you truly need in a relationship — not just what you\'re attracted to.',
+    'home.membership.innerWork1Feature2': '**Attachment Style Assessment**: Understand how your attachment style influences the way you connect, respond, and bond in relationships (based on attachment theory by psychologists John Bowlby and Mary Ainsworth)',
+    'home.membership.innerWork1Feature3': '**Dating Tendencies Assessment**: Identify unconscious dating patterns that may be holding you back (based on relationship scientist Logan Ury\'s work)',
+    
+    'home.membership.innerWork2Title': '2) Personalized Guidance to Date Intentionally and Confidently',
+    'home.membership.innerWork2Feature1': '**Direct Access to Our Matchmaking Team** (via Whatsapp & Email): A discreet communication channel to dating experts who know you and your dating journey.',
+    'home.membership.innerWork2Feature2': '**Pre-Date and Pre-Dating Advice in your Inbox**— Exactly When You Need It: Digestible emails to prepare you before the first date and second date with the most common pitfalls and winning moves from hundreds of client experiences.',
+    'home.membership.innerWork2Feature3': '**Reflection rituals after each date**: Dating is also a journey of self-discovery—an opportunity to uncover what truly matters to you along the way.',
+    'home.membership.innerWork2Feature4': '**Bi-weekly science-based dating insights** in your inbox: Tips based on our matchmaking experience and backed by scientific journals.',
+    
+    'home.pricing.title': 'Investment in Your Future',
+    'home.pricing.price': 'Rs 8,000',
+    'home.pricing.period': '/year',
+    'home.pricing.description': 'A one-time annual investment for unlimited introductions and personalized matchmaking.',
+    'home.pricing.cta': 'Begin Your Journey',
+    
+    'home.journey.title': 'Start Your Journey',
+    'home.journey.step1.title': 'Apply for Membership',
+    'home.journey.step1.desc': 'You\'ll begin by completing our initial application: a questionnaire that helps us understand your background, values, and what you\'re truly seeking in a partner.',
+    'home.journey.step2.title': 'Private Consultation',
+    'home.journey.step2.desc': 'Next, you\'ll meet with your personal matchmaker in a one-on-one video consultation to craft your personalized profile.',
+    'home.journey.step3.title': 'Curated Introduction',
+    'home.journey.step3.desc': 'Once a mutually aligned connection is identified, we coordinate your first date with complete discretion and care.',
+    'home.journey.step4.title': 'Refinement & Follow-up',
+    'home.journey.step4.desc': 'After each introduction, we gather your feedback to continuously refine our approach and ensure meaningful connections.',
+    
     'home.blog.title': 'Dating Insights & Tips',
     'home.blog.subtitle': 'Expert advice for intentional dating',
-    'home.blog.latestTitle': 'Latest Insights',
-    'home.blog.viewAll': 'View All Posts',
     
-    // Newsletter section
     'home.newsletter.title': 'The Smarter Way to Date — Straight to Your Inbox',
     'home.newsletter.subtitle': 'Join 1,000+ Smart Singles Getting Bi-Weekly Dating Tips',
     'home.newsletter.placeholder': 'Enter your email',
     'home.newsletter.cta': 'Subscribe',
     'home.newsletter.disclaimer': 'By subscribing, you agree to receive our newsletter. You can unsubscribe at any time.',
     
-    // Introduction section
-    'home.intro.p1': 'We\'re Now The Date Alchemy. A New Name, The Same Promise. We\'ve rebranded from Betterhalf to The Date Alchemy, refining our approach to create better connections.',
-    'home.intro.p2': 'If finding the right person was easy, you wouldn\'t be reading this.',
-    'home.intro.p3': 'You\'re successful, ambitious, and know exactly what you want in most areas of your life. But when it comes to finding someone special, even the most accomplished people struggle. The apps drain your energy, random meetups rarely lead anywhere meaningful, and dating in a small place like Mauritius comes with its own challenges — limited options and the uncomfortable possibility of running into exes or being seen.',
+    // FAQ Section (English)
+    'faq.title': 'Frequently Asked Questions',
+    'faq.q1': 'How much do you charge for this service?',
+    'faq.a1': 'For our efforts, we charge you a one-time fee of Rs 8,000 (inclusive of VAT) only when we have found you your first match.',
+    'faq.q2': 'How many people can I expect to meet during my membership?',
+    'faq.a2': 'While 5 dates is a general guide, we do not guarantee a specific number of introductions. We prioritize quality over quantity and believe it is better to meet fewer exceptional people than to be overwhelmed with unsuitable profiles. The number of dates will depend on several factors, including your own suitability, flexibility in your search criteria, and the feedback we receive.',
+    'faq.q3': 'How do I make payment?',
+    'faq.a3': 'We currently only accept payments via Juice or bank transfer for both local and international clients.',
+    'faq.q4': 'Can I apply on behalf of a sibling, child, or close friend?',
+    'faq.a4': 'If you genuinely want to help someone close to you, you can provide us with their contact details. We will reach out to them promptly. However, that person must complete the questionnaire and attend the interview alone, without accompaniment from friends or family. Our process requires personal commitment, complete honesty, and genuine motivation to be effective.',
+    'faq.q5': 'What do the two people know about each other before the date?',
+    'faq.a5': 'Confidentiality and discretion are at the heart of our service. We do not share last names, photos, or specific affiliations (such as employer or university) before the meeting. However, each person receives the first name, age, location, and a brief description explaining why we think there is compatibility.',
+    'faq.q6': 'What happens if my match is in another country? How do you arrange the meeting?',
+    'faq.a6': 'We know it\'s not always practical to travel the world to meet someone you don\'t know. We only offer international introductions when we believe in strong potential. In such cases, we facilitate virtual video introductions. This typically involves someone considering relocating to Mauritius or a Mauritian expatriate living abroad.',
+    'faq.q7': 'Do you welcome divorced candidates or single parents?',
+    'faq.a7': 'Absolutely! We welcome divorced individuals or single parents, provided the separation is legally recognized and amicable. If you\'re ready to write a new chapter, we\'re here to support you. We inform potential partners of your background so this topic doesn\'t need to be addressed during the date.',
+    'faq.q8': 'How long is my membership valid?',
+    'faq.a8': 'Your membership is valid for one year or until you find your partner through The Date Alchemy, whichever comes first. It is non-transferable.',
+    'faq.q9': 'Can you guarantee success?',
+    'faq.a9': 'In the dating realm, it\'s impossible to guarantee a certain outcome. This is why we apply a no-refund policy. However, your satisfaction and recommendation remain our absolute priority, and rest assured that we will do everything in our power to help you find your other half.',
+    'faq.q10': 'What company is behind The Date Alchemy?',
+    'faq.a10': 'The Date Alchemy is a service offered by the Mauritian company Frolic Ltd (C23201149), which also owns the lifestyle platform Frolic.mu.',
     
-    // Membership section
-    'home.membership.title': 'The Date Alchemy Membership',
-    'home.membership.subtitle': 'Everything you need for a fulfilling dating experience',
-    'home.membership.premiumTitle': 'Premium Members',
-    'home.membership.premiumSubtitle': 'Exclusive access to curated introductions',
-    'home.membership.feature1': 'Personal matchmaker consultation',
-    'home.membership.feature2': 'Curated match introductions',
-    'home.membership.feature3': 'Date coordination & feedback',
-    'home.membership.feature4': 'Profile optimization',
-    'home.membership.feature5': 'Priority matching',
-    'home.membership.feature6': 'Ongoing relationship coaching',
-    'home.membership.feature7': 'Exclusive events access',
-    'home.membership.bonus': 'Bonus: Free profile creation for the network',
-    'home.membership.innerWorkTitle': 'Inner Work & Self-Discovery',
-    'home.membership.innerWorkDescription': 'Before we introduce you to others, we help you understand yourself better',
-    'home.membership.innerWorkSubtitle': 'Personal development components included with membership',
-    'home.membership.innerWork1Title': 'Self-Awareness Development',
-    'home.membership.innerWork1Feature1': 'Personality assessment and analysis',
-    'home.membership.innerWork1Feature2': 'Values clarification exercises',
-    'home.membership.innerWork1Feature3': 'Communication style evaluation',
-    'home.membership.innerWork2Title': 'Relationship Readiness',
-    'home.membership.innerWork2Feature1': 'Past relationship patterns analysis',
-    'home.membership.innerWork2Feature2': 'Attachment style understanding',
-    'home.membership.innerWork2Feature3': 'Goal setting for future relationships',
-    'home.membership.innerWork2Feature4': 'Confidence building strategies',
+    // Footer
+    'footer.tagline': 'Redefining the dating experience for global professionals in Mauritius.',
+    'footer.quickLinks': 'Quick Links',
+    'footer.legal': 'Legal',
+    'footer.contact': 'Contact',
+    'footer.privacyPolicy': 'Privacy Policy',
+    'footer.termsOfUse': 'Terms of Use',
     
-    // Expectations section
-    'home.expectations.title': 'What to Expect',
+    // Network page
+    'network.title': 'The Date Alchemy Network',
+    'network.subtitle': 'Where real relationships begin — when the timing (and person) is right.',
+    'network.description': 'Not quite ready to invest in our membership — but open to love if the right person comes along and ready to wait? You\'re in the right place.',
+    'network.benefits.title': 'Complimentary. Confidential. Carefully considered.',
+    'network.benefits.description': 'The Date Alchemy Network is for singles who are emotionally ready for a relationship — but not yet ready to join as a full client. It\'s free to join, and completely discreet.',
+    'network.benefits.analogy': 'Think of it as being on the sidelines — close enough to the action, but not quite on the field.',
+    'network.step1.title': 'Fill in your private profile',
+    'network.step1.desc': 'Tell us who you are, what matters to you, and what you\'re looking for.',
+    'network.step2.title': 'You\'re added to our curated singles pool',
+    'network.step2.desc': 'We regularly review this pool for our members.',
+    'network.step3.title': 'You\'ll hear from us if we spot a strong match',
+    'network.step3.desc': 'We\'ll only reach out if we believe there\'s real potential on both sides.',
+    'network.note.title': 'Please note:',
+    'network.note.description': 'We prioritize matches between clients. As a free member of the Date Alchemy Network, we\'re not searching on your behalf — and you may not hear from us for a while.',
+    'network.cta.title': 'Want to join the network?',
+    'network.cta.description': 'Fill in your profile below — and we\'ll be in touch if the right person comes along.',
+    'network.cta.button': 'Create Your Profile',
+    'network.cta.membership': 'Ready to be proactive instead?',
+    'network.cta.membershipLink': 'Learn more about membership',
+    
+    // Blog page
+    'blog.title': 'Dating Insights & Tips',
+    'blog.subtitle': 'Expert advice, scientific insights, and practical tips for intentional dating and meaningful relationships.',
+    'blog.search.placeholder': 'Search articles...',
+    'blog.readTime': 'min read',
+    'blog.publishedOn': 'Published on',
+    
+    // Home page detailed content
+    'home.intro.p1': 'Finding a genuine connection in Mauritius isn\'t easy—especially when you\'re a busy professional with high standards.',
+    'home.intro.p2': 'Dating apps promise endless options but often deliver disappointment: ghosting, mixed signals, and emotional detachment. They\'re designed to keep you swiping, not to help you connect. Most people aren\'t serious, and it takes a toll—over 80% of users report feeling emotionally drained or burnt out by online dating (Singles Report).',
+    'home.intro.p3': 'At The Date Alchemy, we believe real connection is too important to leave to algorithms or chance. That\'s why we invite you to put yourself out there—intentionally, but discreetly and with the respect you deserve. We take care of the search, so you can focus on living your best life while love finds its way to you.',
+    
+    'home.expectations.title': 'What To Expect As A Member',
     'home.expectations.curated.title': 'Curated Introductions',
-    'home.expectations.curated.desc': 'We don\'t overwhelm you with options. Each introduction is carefully selected based on compatibility.',
-    'home.expectations.privacy.title': 'Complete Privacy',
-    'home.expectations.privacy.desc': 'Your information remains confidential. We coordinate meetings without revealing sensitive details.',
-    'home.expectations.noPressure.title': 'No Pressure Environment',
-    'home.expectations.noPressure.desc': 'Take your time. We believe in quality connections over quick results.',
-    'home.expectations.support.title': 'Ongoing Support',
-    'home.expectations.support.desc': 'Regular check-ins and feedback sessions to refine your matches and improve results.',
+    'home.expectations.curated.desc': 'We introduce you to singles who meet your standards and share your vibe, are carefully interviewed and equally serious about finding a lifetime partner in Mauritius.',
+    'home.expectations.privacy.title': 'Your Privacy is Our Priority',
+    'home.expectations.privacy.desc': 'We protect your privacy like it\'s our own—your information is always safe, confidential, and never shared without your consent. Every introduction is handled with the utmost care and respect for your privacy.',
+    'home.expectations.noPressure.title': 'Sans pressure',
+    'home.expectations.noPressure.desc': 'No pressure from family to deal with. Meet your match for a coffee date, exchange numbers if you like, or date for months, or meet someone else who\'s a better fit. It\'s all on your terms.',
+    'home.expectations.support.title': 'Thoughtful, Human Support',
+    'home.expectations.support.desc': 'We\'re with you every step of the way—offering thoughtful guidance, logistical support, and post-date follow-ups. No ghosting, no guesswork— just respect and genuine support from people who truly care.',
     
-    // CTA section
+    'home.cta.applyNow': 'Apply Now',
     'home.cta.notReady': 'Not ready to invest in a membership?',
     'home.cta.joinNetwork': 'Join our network for free to see if you are a match with one of our exceptional clients.',
     'home.cta.createProfile': 'Create your complimentary profile.',
     
-    // Stats section
-    'home.stats.activeMembers': 'Active Members',
-    'home.stats.memberDesc': 'Global professionals ready for meaningful connections',
-    'home.stats.reviewNote': 'All profiles manually reviewed and verified',
+    'home.stats.activeMembers': 'Active members',
+    'home.stats.memberDesc': 'Our members are ambitious, fun, and dynamic—locals and expats alike, from all age groups. All looking for a committed relationship.',
+    'home.stats.reviewNote': 'Our matchmakers review EVERY application',
+    
+    // Testimonials - Additional ones for image sections
+    'home.testimonials.main': 'Thank you for a match that goes far beyond just an algorithm. You helped bring two hearts onto the same wavelength.',
+    'home.testimonials.mainAuthor': '— COO, Tech Industry, 52',
+    'home.testimonials.professional': 'The Date Alchemy promotes healthy relationships in a safe and confidential setting. Embarking on this journey has helped me listen more deeply to others and understand myself better—allowing me to grow into a better version of myself.',
+    'home.testimonials.professionalAuthor': '— Scientist, 37',
+    'home.testimonials.expert': 'I would wholeheartedly recommend The Date Alchemy to single professionals who may not have the time—or inclination—to navigate traditional matchmaking methods or dating apps.',
+    'home.testimonials.expertAuthor': '— IT Professional, 32',
+    
+    // Team section
+    'home.team.title': 'Your Alchemists',
+    'home.team.founders': 'Pratik Malia, Celine Delacharlerie, Sagarika Sarkar - Co-founders',
+    'home.team.story1': 'Three years ago, we left our corporate careers in Singapore and moved to Mauritius to do something that felt more personal, more impactful. Finding a life partner we truly connect with has been such a life changing experience for us, that we wanted more people to experience that kind of love.',
+    'home.team.story2': 'But getting there wasn\'t easy. We\'ve been through the frustration ourselves — showing up to countless events that led nowhere, spending hours swiping on dating apps only to feel disillusioned, getting caught in relationships with emotionally unavailable or toxic people.',
+    'home.team.quote': 'We\'ve wasted emotional energy on people who weren\'t serious. We\'ve faced the ghosting, the anxiety, the self-doubt and confusion. And we knew there had to be a better way.',
+    'home.team.story3': 'That\'s why we created The Date Alchemy— the dating service we wish we\'d had.',
+    'home.team.story4': 'A respectful and empowering experience designed for real, meaningful connections. We can\'t promise love, but we can promise effort, professionalism, integrity, a genuine investment in your journey, and a proven process that\'s led to lasting relationships.',
+    
+    // Nominate section
+    'home.nominate.title': 'Spread the Love',
+    'home.nominate.subtitle': 'Nominate a single you know',
+    'home.nominate.description': 'They can thank you once we find them the one!',
+    'home.nominate.cta': 'Nominate Someone',
+    
+    // Blog section
+    'home.blog.latestTitle': 'Latest Insights',
+    'home.blog.viewAll': 'View All Posts',
     
     // Trust section
     'home.trust.title': 'Trust Us - It Really Works',
@@ -206,168 +289,110 @@ export const translations = {
     'home.research.ctaSubtitle': 'Skip the apps. Skip the burnout. Find genuine connection through our proven, human-centered approach.',
     'home.research.ctaButton': 'Apply for Membership',
     
-    // FAQ Section
-    'faq.title': 'Frequently Asked Questions',
-    'faq.q1': 'How much do you charge for this service?',
-    'faq.a1': 'For our efforts, we charge you a one-time fee of Rs 8,000 (inclusive of VAT) only when we have found you your first match.',
-    'faq.q2': 'How many people can I expect to meet during my membership?',
-    'faq.a2': 'While 5 dates is a general guide, we do not guarantee a specific number of introductions. We prioritize quality over quantity and believe it is better to meet fewer exceptional people than to be overwhelmed with unsuitable profiles. The number of dates will depend on several factors, including your own suitability, flexibility in your search criteria, and the feedback we receive.',
-    'faq.q3': 'How do I make payment?',
-    'faq.a3': 'We currently only accept payments via Juice or bank transfer for both local and international clients.',
-    'faq.q4': 'Can I apply on behalf of a sibling, child, or close friend?',
-    'faq.a4': 'If you genuinely want to help someone close to you, you can provide us with their contact details. We will reach out to them promptly. However, that person must complete the questionnaire and attend the interview alone, without accompaniment from friends or family. Our process requires personal commitment, complete honesty, and genuine motivation to be effective.',
-    'faq.q5': 'What do the two people know about each other before the date?',
-    'faq.a5': 'Confidentiality and discretion are at the heart of our service. We do not share last names, photos, or specific affiliations (such as employer or university) before the meeting. However, each person receives the first name, age, location, and a brief description explaining why we think there is compatibility.',
-    'faq.q6': 'What happens if my match is in another country? How do you arrange the meeting?',
-    'faq.a6': 'We know it\'s not always practical to travel the world to meet someone you don\'t know. We only offer international introductions when we believe in strong potential. In such cases, we facilitate virtual video introductions. This typically involves someone considering relocating to Mauritius or a Mauritian expatriate living abroad.',
-    'faq.q7': 'Do you welcome divorced candidates or single parents?',
-    'faq.a7': 'Absolutely! We welcome divorced individuals or single parents, provided the separation is legally recognized and amicable. If you\'re ready to write a new chapter, we\'re here to support you. We inform potential partners of your background so this topic doesn\'t need to be addressed during the date.',
-    'faq.q8': 'How long is my membership valid?',
-    'faq.a8': 'Your membership is valid for one year or until you find your partner through The Date Alchemy, whichever comes first. It is non-transferable.',
-    'faq.q9': 'Can you guarantee success?',
-    'faq.a9': 'In the dating realm, it\'s impossible to guarantee a certain outcome. This is why we apply a no-refund policy. However, your satisfaction and recommendation remain our absolute priority, and rest assured that we will do everything in our power to help you find your other half.',
-    'faq.q10': 'What company is behind The Date Alchemy?',
-    'faq.a10': 'The Date Alchemy is a service offered by the Mauritian company Frolic Ltd (C23201149), which also owns the lifestyle platform Frolic.mu.',
-    
-    // Footer
-    'footer.tagline': 'Redefining the dating experience for global professionals in Mauritius.',
-    'footer.quickLinks': 'Quick Links',
-    'footer.legal': 'Legal',
-    'footer.contact': 'Contact',
-    'footer.privacyPolicy': 'Privacy Policy',
-    'footer.termsOfUse': 'Terms of Use',
-    
     // Language switcher
     'language.english': 'English',
     'language.french': 'Français',
   },
   
   fr: {
-    // Navigation (French)
+    // Navigation
     'nav.home': 'Accueil',
     'nav.howItWorks': 'Notre méthode',
     'nav.insights': 'Conseils',
-    'nav.applyNow': 'Postuler',
-    'nav.network': 'Rejoindre le réseau',
+    'nav.applyNow': 'Devenir membre',
+    'nav.network': 'Rejoindre le Réseau',
     'team.yourAlchemists': 'Vos Alchimistes',
     
-    // Common (French)
-    'common.learnMore': 'En savoir plus',
+    // Common
+    'common.learnMore': 'En Savoir Plus',
     'common.getStarted': 'Commencer',
-    'common.readMore': 'Lire la suite',
+    'common.readMore': 'Lire Plus',
     'common.loading': 'Chargement...',
     
-    // Home page (French)
-    'home.hero.title': 'Où les professionnels globaux trouvent l\'amour à Maurice',
-    'home.hero.subtitle': 'L\'expérience de dating réinventée pour les professionnels connectés au monde à Maurice.',
-    'home.hero.cta': 'Commencer votre parcours',
-    'home.hero.memberCount': 'Membres actifs',
+    // Home page
+    'home.hero.title': 'L\'expérience dating réinventée pour les professionnels connectés au monde, à Maurice',
+    'home.hero.subtitle': 'Service de mise en relation premium pour des relations intentionnelles. Discret, personnalisé et efficace.',
+    'home.hero.cta': 'Devenir membre',
+    'home.hero.memberCount': 'membres actifs',
     
-    'home.help.title': 'Comment nous aidons',
-    'home.help.curated.title': 'Réseau soigneusement sélectionné',
-    'home.help.curated.desc': 'Chaque membre est personnellement vérifié par des appels vidéo et une vérification des antécédents.',
-    'home.help.personalized.title': 'Matching personnalisé',
-    'home.help.personalized.desc': 'Nous comprenons vos valeurs, votre style de vie et vos objectifs relationnels pour trouver des matches compatibles.',
-    'home.help.discreet.title': 'Discrétion complète',
-    'home.help.discreet.desc': 'Votre vie privée est primordiale. Nous coordonnons les introductions avec une confidentialité complète.',
+    'home.help.title': 'comment nous aidons',
+    'home.help.curated.title': 'réseau sélectionné',
+    'home.help.curated.desc': 'chaque membre est personnellement vérifié par appels vidéo et vérification des antécédents.',
+    'home.help.personalized.title': 'mise en relation personnalisée',
+    'home.help.personalized.desc': 'nous comprenons vos valeurs, votre style de vie et vos objectifs relationnels pour trouver des partenaires compatibles.',
+    'home.help.discreet.title': 'discrétion complète',
+    'home.help.discreet.desc': 'votre confidentialité est primordiale. nous coordonnons les présentations en toute confidentialité.',
     
     // Testimonials section (French)
     'home.testimonials.title': 'Ce que disent nos membres',
     'home.testimonials.subtitle': 'Tous les témoignages proviennent de vrais clients — n\'hésitez pas à nous demander une mise en relation si vous souhaitez vérifier leur expérience.',
-    'home.testimonials.testimonial1': '« Merci pour une mise en relation qui dépasse largement un simple algorithme. Vous avez réussi à accorder deux cœurs sur la même fréquence. »',
+    
+    'home.testimonials.testimonial1': '« Grâce à The Date Alchemy, j\'ai trouvé l\'amour. L\'équipe a toujours été présente, apportant un soutien discret et des conseils experts sans jamais devenir trop intrusive. Merci pour votre professionnalisme et, surtout, merci d\'être là. »',
     'home.testimonials.author1': '— Vétérinaire, 30 ans',
-    'home.testimonials.testimonial2': '« The Date Alchemy est de loin la meilleure agence de rencontres à Maurice. L\'équipe est très impliquée et dévouée pour offrir une expérience fluide et sans accroc à ses membres. »',
+    
+    'home.testimonials.testimonial2': '« The Date Alchemy est de loin la meilleure agence de mise en relation à Maurice. L\'équipe est très dévouée et engagée pour assurer une expérience fluide et sans accroc aux membres. »',
     'home.testimonials.author2': '— Consultant en IA, 41 ans',
-    'home.testimonials.testimonial3': '« En plus de profils détaillés, The Date Alchemy propose aussi des évaluations de personnalité, permettant à chacun de mieux se connaître et d\'évoluer personnellement avant même de rencontrer un partenaire potentiel. »',
-    'home.testimonials.author3': '— Informaticienne, 32 ans',
-    'home.testimonials.testimonial4': '« La communication avec l\'équipe est ouverte, régulière et collaborative, que ce soit via WhatsApp ou à travers les newsletters envoyées par email. Un retour est encouragé après chaque rencontre, ce qui contribue à créer un environnement bienveillant. »',
+    
+    'home.testimonials.testimonial3': '« En plus de profils détaillés, The Date Alchemy propose aussi des évaluations de personnalité, permettant aux utilisateurs de développer une conscience de soi plus profonde et de grandir individuellement avant de rencontrer un partenaire potentiel. »',
+    'home.testimonials.author3': '— Professionelle IT, 32 ans',
+    
+    'home.testimonials.testimonial4': '« La communication avec l\'équipe est ouverte, cohérente et collaborative, que ce soit sur WhatsApp ou par les newsletters partagées par email. Les retours sont encouragés après chaque rendez-vous, ce qui aide à créer un environnement bienveillant. »',
     'home.testimonials.author4': '— Scientifique, 37 ans',
-    'home.testimonials.main': '« Merci pour une mise en relation qui dépasse largement un simple algorithme. Vous avez réussi à accorder deux cœurs sur la même fréquence. »',
-    'home.testimonials.mainAuthor': '— COO, Industrie Tech, 52 ans',
-    'home.testimonials.professional': 'The Date Alchemy favorise des relations saines dans un cadre sûr et confidentiel. Me lancer dans ce voyage m\'a aidé à écouter plus profondément les autres et à mieux me comprendre—me permettant de devenir une meilleure version de moi-même.',
-    'home.testimonials.professionalAuthor': '— Scientifique, 37',
-    'home.testimonials.expert': 'Je recommande sans hésitation The Date Alchemy aux professionnels célibataires qui n\'ont pas le temps — ou l\'envie — de s\'aventurer dans les méthodes traditionnelles de matchmaking ou les applications de rencontres.',
-    'home.testimonials.expertAuthor': '- Professionelle IT, 32 ans',
     
-    // Team section (French)
-    'home.team.title': 'Vos Alchimistes',
-    'home.team.founders': 'Pratik Malia, Celine Delacharlerie, Sagarika Sarkar - Co-fondateurs',
-    'home.team.story1': 'Il y a trois ans, nous avons quitté nos carrières en entreprise à Singapour pour poser nos valises à Maurice, animés par l\'envie de créer quelque chose de plus personnel, de plus porteur de sens.\nTrouver notre partenaire de vie avec qui nous avons une profonde connexion a véritablement transformé nos vies — au point de vouloir offrir cette chance à d\'autres.',
-    'home.team.story2': 'Mais le chemin n\'a pas été facile. Nous avons nous-mêmes connu la frustration des apps de rencontre, la déception des  soirées pleines de promesses qui ne mènent à rien, les heures perdues à swiper… et l\'épuisement émotionnel de relations avec des personnes incapables de s\'investir affectivement, ou toxiques.',
-    'home.team.quote': 'Nous avons investi notre énergie émotionnelle dans des personnes qui n\'étaient pas prêtes à s\'engager dans une relation. Nous avons affronté les silences radio, l\'anxiété, le doute de soi et la confusion. Et, au fond, nous savions qu\'il devait y avoir une meilleure façon de faire des rencontres.',
-    'home.team.story3': 'C\'est pourquoi nous avons créé The Date Alchemy — le service de rencontres que nous aurions rêvé d\'avoir.',
-    'home.team.story4': 'Une expérience respectueuse, valorisante et pensée pour favoriser de véritables connexions profondes. Nous ne promettons pas l\'amour, mais nous vous promettons notre engagement total : professionnalisme, intégrité, implication sincère dans votre parcours et un processus éprouvé qui a  mené à des histoires durables.',
+    'home.membership.title': 'L\'adhésion à The Date Alchemy',
+    'home.membership.subtitle': 'Tout ce dont vous avez besoin pour vivre une expérience de rencontres plus saine.',
+    'home.membership.premiumTitle': '1. Premium Matchmaking',
+    'home.membership.premiumSubtitle': 'Inclus dans votre adhésion :',
     
-    // Nominate section (French)
-    'home.nominate.title': 'Répandez l\'amour',
-    'home.nominate.subtitle': 'Connaissez-vous un célibataire prêt à rencontrer la bonne personne ?',
-    'home.nominate.description': 'Nominez-le/la — anonymement ou pas - ils pourraient bien vous remercier bientôt !',
-    'home.nominate.cta': 'Nominer quelqu\'un',
+    'home.membership.feature1': '**Présentations ciblées** avec des célibataires soigneusement sélectionnés, rencontrés et correspondant à vos standards, tous prêts pour une relation authentique.',
+    'home.membership.feature2': '**Évaluation approfondie de la compatibilité** selon vos critères, votre style de vie, vos objectifs, mais aussi vos véritables besoins en relation (The Date Alchemy Needs Compatibility Score™).',
+    'home.membership.feature3': '**Mise en relation centrée sur l\'humain** : contrairement aux algorithmes conçus pour vous garder en ligne, nous faisons appel à l\'intuition et à l\'expérience humaine. Chaque match est choisi avec soin, et vous le rencontrez en personne.',
+    'home.membership.feature4': '**Matching conscient des styles d\'attachement** : nous utilisons la science de la théorie de l\'attachement pour éviter les incompatibilités toxiques dès le départ.',
+    'home.membership.feature5': '**Validation par vous-même** à partir de profils détaillés : vous gardez toujours le contrôle.',
+    'home.membership.feature6': '**Service de conciergerie complet** : nous réservons, confirmons et préparons le rendez-vous — vous n\'avez plus qu\'à vous présenter sous votre meilleur jour.',
+    'home.membership.feature7': '**Suivi après la rencontre** pris en charge pour vous — pas de ghosting, pas de relances maladroites.',
+    'home.membership.bonus': '**Bonus** : invitations à des événements privés (Singles Socials) — brunchs ou dîners intimistes avec des invités triés sur le volet pour favoriser de vraies connexions.',
+    'home.membership.cta': 'postuler pour l\'adhésion',
     
-    // Blog section (French)
+    'home.membership.innerWorkTitle': '2. Accompagnement et développement personnel',
+    'home.membership.innerWorkDescription': 'Nous vous préparons à vivre des rendez-vous réussis et des relations plus équilibrées.',
+    'home.membership.innerWorkSubtitle': 'Inclus dans votre adhésion :',
+    
+    'home.membership.innerWork1Title': '1) Audit personnel de préparation à la relation',
+    'home.membership.innerWork1Feature1': '**Évaluation de vos besoins** : clarifiez ce qui est réellement essentiel pour vous dans une relation — au-delà des simples attirances.',
+    'home.membership.innerWork1Feature2': '**Analyse de votre style d\'attachement** : comprenez comment votre manière de vous lier influence vos relations (basé sur la théorie de l\'attachement de John Bowlby et Mary Ainsworth).',
+    'home.membership.innerWork1Feature3': '**Évaluation de vos tendances de dating** : identifiez les schémas inconscients qui peuvent freiner votre épanouissement amoureux (inspiré des travaux de Logan Ury).',
+    
+    'home.membership.innerWork2Title': '2) Accompagnement personnalisé pour dater avec intention et confiance',
+    'home.membership.innerWork2Feature1': '**Accès direct à notre équipe** (via WhatsApp & email) : un canal discret vers des experts qui connaissent votre parcours.',
+    'home.membership.innerWork2Feature2': '**Conseils avant chaque rencontre** : emails courts et efficaces pour éviter les pièges les plus courants et maximiser vos chances de succès.',
+    'home.membership.innerWork2Feature3': '**Rituels de réflexion après chaque rendez-vous** : car chaque rencontre est aussi une occasion de mieux vous connaître.',
+    'home.membership.innerWork2Feature4': '**Les secrets de l\'alchimie deux fois par mois** dans votre boîte mail : conseils basés sur notre expérience de matchmaking et validés par la recherche scientifique.',
+    
+    'home.pricing.title': 'investissement dans votre avenir',
+    'home.pricing.price': 'Rs 8,000',
+    'home.pricing.period': '/an',
+    'home.pricing.description': 'un investissement annuel unique pour des présentations illimitées et un service personnalisé.',
+    'home.pricing.cta': 'commencez votre parcours',
+    
+    'home.journey.title': 'Commencez votre parcours',
+    'home.journey.step1.title': 'Postulez pour l\'adhésion',
+    'home.journey.step1.desc': 'Vous commencerez par remplir notre candidature initiale : un questionnaire qui nous aide à comprendre votre background, vos valeurs et ce que vous recherchez vraiment chez un partenaire.',
+    'home.journey.step2.title': 'Consultation privée',
+    'home.journey.step2.desc': 'Ensuite, vous rencontrerez votre matchmaker personnel lors d\'une consultation vidéo individuelle pour créer votre profil personnalisé.',
+    'home.journey.step3.title': 'Présentation personnalisée',
+    'home.journey.step3.desc': 'Une fois qu\'une connexion mutuellement alignée est identifiée, nous coordonnons votre premier rendez-vous avec discrétion et soin complets.',
+    'home.journey.step4.title': 'Affinement et suivi',
+    'home.journey.step4.desc': 'Après chaque présentation, nous recueillons vos commentaires pour affiner continuellement notre approche et assurer des connexions significatives.',
+    
     'home.blog.title': 'conseils et astuces de rencontres',
     'home.blog.subtitle': 'conseils d\'experts pour des rencontres intentionnelles',
-    'home.blog.latestTitle': 'Derniers Conseils',
-    'home.blog.viewAll': 'Voir Tous les Articles',
     
-    // Newsletter section (French)
     'home.newsletter.title': 'Les secrets de l\'alchimie — directement dans votre boîte mail',
     'home.newsletter.subtitle': 'Rejoignez plus de 1 000 célibataires avisés qui reçoivent tous les 15 jours nos conseils exclusifs pour réussir leurs rencontres.',
     'home.newsletter.placeholder': 'Entrez votre adresse e-mail',
     'home.newsletter.cta': 'S\'abonner',
     'home.newsletter.disclaimer': 'En vous abonnant, vous acceptez de recevoir notre newsletter. Vous pouvez vous désabonner à tout moment.',
-    
-    // Introduction section (French)
-    'home.intro.p1': 'Nous sommes désormais The Date Alchemy. Un nouveau nom, la même promesse. Nous avons changé de nom, de Betterhalf à The Date Alchemy, en affinant notre approche pour créer de meilleures connexions.',
-    'home.intro.p2': 'Si trouver la bonne personne était facile, vous ne seriez pas en train de lire ceci.',
-    'home.intro.p3': 'Vous avez du succès, vous êtes ambitieux et vous savez exactement ce que vous voulez dans la plupart des domaines de votre vie. Mais quand il s\'agit de trouver quelqu\'un de spécial, même les personnes les plus accomplies peinent. Les applications épuisent votre énergie, les rencontres au hasard mènent rarement quelque part de significatif, et sortir dans un petit endroit comme Maurice vient avec ses propres défis — options limitées et la possibilité inconfortable de croiser des ex ou d\'être vu.',
-    
-    // Membership section (French)
-    'home.membership.title': 'L\'adhésion The Date Alchemy',
-    'home.membership.subtitle': 'Tout ce dont vous avez besoin pour vivre une expérience de rencontres épanouissante',
-    'home.membership.premiumTitle': 'Membres Premium',
-    'home.membership.premiumSubtitle': 'Accès exclusif aux présentations personnalisées',
-    'home.membership.feature1': 'Consultation personnelle avec votre matchmaker',
-    'home.membership.feature2': 'Présentations de matches personnalisées',
-    'home.membership.feature3': 'Coordination des rendez-vous et retours',
-    'home.membership.feature4': 'Optimisation de profil',
-    'home.membership.feature5': 'Matching prioritaire',
-    'home.membership.feature6': 'Coaching relationnel continu',
-    'home.membership.feature7': 'Accès aux événements exclusifs',
-    'home.membership.bonus': 'Bonus : Création de profil gratuite pour le réseau',
-    'home.membership.innerWorkTitle': 'Travail intérieur et découverte de soi',
-    'home.membership.innerWorkDescription': 'Avant de vous présenter à d\'autres, nous vous aidons à mieux vous comprendre',
-    'home.membership.innerWorkSubtitle': 'Composantes de développement personnel incluses avec l\'adhésion',
-    'home.membership.innerWork1Title': 'Développement de la conscience de soi',
-    'home.membership.innerWork1Feature1': 'Évaluation et analyse de la personnalité',
-    'home.membership.innerWork1Feature2': 'Exercices de clarification des valeurs',
-    'home.membership.innerWork1Feature3': 'Évaluation du style de communication',
-    'home.membership.innerWork2Title': 'Préparation relationnelle',
-    'home.membership.innerWork2Feature1': 'Analyse des schémas relationnels passés',
-    'home.membership.innerWork2Feature2': 'Compréhension du style d\'attachement',
-    'home.membership.innerWork2Feature3': 'Définition d\'objectifs pour les futures relations',
-    'home.membership.innerWork2Feature4': 'Stratégies de renforcement de la confiance',
-    
-    // Expectations section (French)
-    'home.expectations.title': 'À quoi s\'attendre',
-    'home.expectations.curated.title': 'Présentations personnalisées',
-    'home.expectations.curated.desc': 'Nous ne vous submergeons pas d\'options. Chaque présentation est soigneusement sélectionnée basée sur la compatibilité.',
-    'home.expectations.privacy.title': 'Confidentialité complète',
-    'home.expectations.privacy.desc': 'Vos informations restent confidentielles. Nous coordonnons les rencontres sans révéler de détails sensibles.',
-    'home.expectations.noPressure.title': 'Environnement sans pression',
-    'home.expectations.noPressure.desc': 'Prenez votre temps. Nous croyons aux connexions de qualité plutôt qu\'aux résultats rapides.',
-    'home.expectations.support.title': 'Soutien continu',
-    'home.expectations.support.desc': 'Points de contrôle réguliers et sessions de retour pour affiner vos matches et améliorer les résultats.',
-    
-    // CTA section (French)
-    'home.cta.notReady': 'Pas prêt à investir dans une adhésion ?',
-    'home.cta.joinNetwork': 'Rejoignez notre réseau gratuitement pour voir si vous correspondez à l\'un de nos clients exceptionnels.',
-    'home.cta.createProfile': 'Créez votre profil gratuit.',
-    
-    // Stats section (French)
-    'home.stats.activeMembers': 'Membres actifs',
-    'home.stats.memberDesc': 'Professionnels globaux prêts pour des connexions significatives',
-    'home.stats.reviewNote': 'Tous les profils sont manuellement vérifiés et validés',
     
     // Trust section (French)
     'home.trust.title': 'Faites-nous confiance — ça fonctionne vraiment.',
@@ -458,6 +483,85 @@ export const translations = {
     'footer.contact': 'Contact',
     'footer.privacyPolicy': 'Politique de Confidentialité',
     'footer.termsOfUse': 'Conditions d\'Utilisation',
+    
+    // Network page (French)
+    'network.title': 'Le réseau The Date Alchemy',
+    'network.subtitle': 'Où les vraies relations commencent — quand le timing (et la personne) est bon.',
+    'network.description': 'Pas encore prêt à investir dans notre adhésion — mais ouvert à l\'amour si la bonne personne arrive et prêt à attendre ? Vous êtes au bon endroit.',
+    'network.benefits.title': 'Gratuit. Confidentiel. Réfléchi.',
+    'network.benefits.description': 'Le réseau The Date Alchemy est pour les célibataires qui sont émotionnellement prêts pour une relation — mais pas encore prêts à rejoindre comme client complet. C\'est gratuit de rejoindre, et complètement discret.',
+    'network.benefits.analogy': 'Pensez-y comme être sur la touche — assez proche de l\'action, mais pas tout à fait sur le terrain.',
+    'network.step1.title': 'Remplissez votre profil privé',
+    'network.step1.desc': 'Dites-nous qui vous êtes, ce qui compte pour vous, et ce que vous recherchez.',
+    'network.step2.title': 'Vous êtes ajouté à notre pool de célibataires sélectionnés',
+    'network.step2.desc': 'Nous examinons régulièrement ce pool pour nos membres.',
+    'network.step3.title': 'Vous entendrez de nous si nous repérons un match solide',
+    'network.step3.desc': 'Nous ne vous contacterons que si nous croyons qu\'il y a un réel potentiel des deux côtés.',
+    'network.note.title': 'Veuillez noter :',
+    'network.note.description': 'Nous priorisons les matches entre clients. En tant que membre gratuit du réseau Date Alchemy, nous ne cherchons pas en votre nom — et vous pourriez ne pas entendre de nous pendant un moment.',
+    'network.cta.title': 'Vous voulez rejoindre le réseau ?',
+    'network.cta.description': 'Remplissez votre profil ci-dessous — et nous vous contacterons si la bonne personne arrive.',
+    'network.cta.button': 'Créez votre profil',
+    'network.cta.membership': 'Prêt à être proactif à la place ?',
+    'network.cta.membershipLink': 'En savoir plus sur l\'adhésion',
+    
+    // Blog page (French)
+    'blog.title': 'Conseils et astuces de rencontres',
+    'blog.subtitle': 'Conseils d\'experts, perspectives scientifiques et astuces pratiques pour des rencontres intentionnelles et des relations significatives.',
+    'blog.search.placeholder': 'Rechercher des articles...',
+    'blog.readTime': 'min de lecture',
+    'blog.publishedOn': 'Publié le',
+    
+    // Home page detailed content (French)
+    'home.intro.p1': 'Trouver une connexion authentique à Maurice n\'est pas facile — surtout quand vous êtes un professionnel occupé avec des standards élevés.',
+    'home.intro.p2': 'Les applications de rencontres promettent des options infinies mais livrent souvent de la déception : ghosting, signaux mélangés et détachement émotionnel. Elles sont conçues pour vous garder en train de swiper, pas pour vous aider à vous connecter. La plupart des gens ne sont pas sérieux, et cela fait des dégâts — plus de 80% des utilisateurs rapportent se sentir émotionnellement épuisés ou brûlés par les rencontres en ligne (Singles Report).',
+    'home.intro.p3': 'Chez The Date Alchemy, nous croyons que la vraie connexion est trop importante pour être laissée aux algorithmes ou au hasard. C\'est pourquoi nous vous invitons à vous mettre en avant — intentionnellement, mais discrètement et avec le respect que vous méritez. Nous nous occupons de la recherche, pour que vous puissiez vous concentrer à vivre votre meilleure vie pendant que l\'amour trouve son chemin vers vous.',
+    
+    'home.expectations.title': 'À quoi s\'attendre en tant que membre',
+    'home.expectations.curated.title': 'Présentations personnalisées',
+    'home.expectations.curated.desc': 'Nous vous présentons des célibataires qui correspondent à vos standards et partagent votre vibe, sont soigneusement interviewés et également sérieux à propos de trouver un partenaire de vie à Maurice.',
+    'home.expectations.privacy.title': 'Votre vie privée est notre priorité',
+    'home.expectations.privacy.desc': 'Nous protégeons votre vie privée comme si c\'était la nôtre — vos informations sont toujours sûres, confidentielles et jamais partagées sans votre consentement. Chaque présentation est traitée avec le plus grand soin et respect pour votre vie privée.',
+    'home.expectations.noPressure.title': 'Sans pression',
+    'home.expectations.noPressure.desc': 'Pas de pression familiale à gérer. Rencontrez votre match pour un café, échangez des numéros si vous le souhaitez, ou sortez ensemble pendant des mois, ou rencontrez quelqu\'un d\'autre qui convient mieux. Tout se fait selon vos termes.',
+    'home.expectations.support.title': 'Soutien attentionné et humain',
+    'home.expectations.support.desc': 'Nous sommes avec vous à chaque étape — offrant des conseils attentionnés, un soutien logistique et des suivis après les rendez-vous. Pas de ghosting, pas de devinettes — juste le respect et un soutien authentique de personnes qui se soucient vraiment.',
+    
+    'home.cta.applyNow': 'Postuler maintenant',
+    'home.cta.notReady': 'Pas prêt à investir dans une adhésion ?',
+    'home.cta.joinNetwork': 'Rejoignez notre réseau gratuitement pour voir si vous correspondez à l\'un de nos clients exceptionnels.',
+    'home.cta.createProfile': 'Créez votre profil gratuit.',
+    
+    'home.stats.activeMembers': 'Membres actifs',
+    'home.stats.memberDesc': 'Nos membres sont ambitieux, amusants et dynamiques — locaux et expatriés, de tous groupes d\'âge. Tous cherchent une relation engagée.',
+    'home.stats.reviewNote': 'Nos matchmakers examinent CHAQUE candidature',
+    
+    // Testimonials - Additional ones for image sections (French)
+    'home.testimonials.main': 'Merci pour un match qui va bien au-delà d\'un simple algorithme. Vous avez aidé à mettre deux cœurs sur la même longueur d\'onde.',
+    'home.testimonials.mainAuthor': '— COO, Industrie Tech, 52 ans',
+    'home.testimonials.professional': 'The Date Alchemy promeut des relations saines dans un cadre sûr et confidentiel. Entreprendre ce voyage m\'a aidé à écouter plus profondément les autres et à mieux me comprendre — me permettant de grandir en une meilleure version de moi-même.',
+    'home.testimonials.professionalAuthor': '— Scientifique, 37 ans',
+    'home.testimonials.expert': 'Je recommanderais de tout cœur The Date Alchemy aux professionnels célibataires qui pourraient ne pas avoir le temps — ou l\'inclination — de naviguer dans les méthodes traditionnelles de matchmaking ou les applications de rencontres.',
+    'home.testimonials.expertAuthor': '— Professionelle IT, 32 ans',
+    
+    // Team section (French)
+    'home.team.title': 'Vos Alchimistes',
+    'home.team.founders': 'Pratik Malia, Celine Delacharlerie, Sagarika Sarkar - Co-fondateurs',
+    'home.team.story1': 'Il y a trois ans, nous avons quitté nos carrières en entreprise à Singapour et avons déménagé à Maurice pour faire quelque chose qui semblait plus personnel, plus impactant. Trouver un partenaire de vie avec qui nous nous connectons vraiment a été une expérience si transformatrice pour nous, que nous voulions que plus de gens vivent ce genre d\'amour.',
+    'home.team.story2': 'Mais y arriver n\'a pas été facile. Nous avons vécu la frustration nous-mêmes — nous présenter à d\'innombrables événements qui ne menaient nulle part, passer des heures à swiper sur des applications de rencontres seulement pour nous sentir désabusés, nous retrouver dans des relations avec des personnes émotionnellement indisponibles ou toxiques.',
+    'home.team.quote': 'Nous avons gaspillé de l\'énergie émotionnelle sur des personnes qui n\'étaient pas sérieuses. Nous avons fait face au ghosting, à l\'anxiété, au doute de soi et à la confusion. Et nous savions qu\'il devait y avoir une meilleure façon.',
+    'home.team.story3': 'C\'est pourquoi nous avons créé The Date Alchemy — le service de rencontres que nous aurions aimé avoir.',
+    'home.team.story4': 'Une expérience respectueuse et enrichissante conçue pour de vraies connexions significatives. Nous ne pouvons pas promettre l\'amour, mais nous pouvons promettre l\'effort, le professionnalisme, l\'intégrité, un investissement authentique dans votre parcours, et un processus éprouvé qui a mené à des relations durables.',
+    
+    // Nominate section (French)
+    'home.nominate.title': 'Répandez l\'amour',
+    'home.nominate.subtitle': 'Connaissez-vous un célibataire prêt à rencontrer la bonne personne ?',
+    'home.nominate.description': 'Nominez-le/la — anonymement ou pas - ils pourraient bien vous remercier bientôt !',
+    'home.nominate.cta': 'Nominer quelqu\'un',
+    
+    // Blog section (French)
+    'home.blog.latestTitle': 'Derniers Conseils',
+    'home.blog.viewAll': 'Voir Tous les Articles',
     
     // Language switcher (French)
     'language.english': 'English',
