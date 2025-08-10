@@ -142,6 +142,8 @@ export const translations = {
     'faq.a9': 'In the dating realm, it\'s impossible to guarantee a certain outcome. This is why we apply a no-refund policy. However, your satisfaction and recommendation remain our absolute priority, and rest assured that we will do everything in our power to help you find your other half.',
     'faq.q10': 'What company is behind The Date Alchemy?',
     'faq.a10': 'The Date Alchemy is a service offered by the Mauritian company Frolic Ltd (C23201149), which also owns the lifestyle platform Frolic.mu.',
+    'faq.contact.text': 'Have more questions? Reach out to us directly.',
+    'faq.contact.cta': 'Contact Us →',
     
     // Footer
     'footer.tagline': 'Redefining the dating experience for global professionals in Mauritius.',
@@ -475,6 +477,8 @@ export const translations = {
     'faq.a9': 'Dans le domaine des rencontres, il est impossible de garantir un résultat certain. C\'est pourquoi nous appliquons une politique de non-remboursement. Cependant, votre satisfaction et votre recommandation restent notre priorité absolue, et soyez assuré·e que nous mettrons tout en œuvre pour vous aider à trouver votre moitié.',
     'faq.q10': 'Quelle est la société derrière The Date Alchemy ?',
     'faq.a10': 'The Date Alchemy est un service proposé par la société mauricienne Frolic Ltd (C23201149), également propriétaire de la plateforme lifestyle Frolic.mu.',
+    'faq.contact.text': 'Vous avez d\'autres questions ? Contactez-nous directement.',
+    'faq.contact.cta': 'Nous contacter →',
     
     // Footer (French)
     'footer.tagline': 'L\'expérience de dating réinventée pour les professionnels au mindset global à Maurice.',

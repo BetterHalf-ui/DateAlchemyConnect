@@ -89,13 +89,13 @@ export default function FAQSection() {
 
         <div className="text-center mt-12">
           <p className="text-lg sans-body text-gray-600 mb-4">
-            Have more questions? Reach out to us directly.
+            {t('faq.contact.text')}
           </p>
           <a 
             href="mailto:hello@thedatealchemy.com" 
             className="text-primary hover:text-primary/80 serif-title font-medium"
           >
-            Contact Us →
+            {t('faq.contact.cta')}
           </a>
         </div>
       </div>
