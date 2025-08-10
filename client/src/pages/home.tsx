@@ -421,8 +421,8 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 subtitle text-gray-900">How It Works</h2>
-            <p className="text-xl text-gray-600 body-text">A proven process to find your match</p>
+            <h2 className="text-4xl font-bold mb-4 subtitle text-gray-900">{t('home.howItWorks.title')}</h2>
+            <p className="text-xl text-gray-600 body-text">{t('home.howItWorks.subtitle')}</p>
           </div>
           
           {/* 4 Steps in Columns */}
@@ -432,9 +432,9 @@ export default function Home() {
               <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 01
               </div>
-              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Apply for Membership</h3>
+              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">{t('home.howItWorks.step1Title')}</h3>
               <p className="text-gray-600 body-text leading-relaxed">
-                Complete our questionnaire to help us understand who you are and your preferences.
+                {t('home.howItWorks.step1Description')}
               </p>
             </div>
             
@@ -443,9 +443,9 @@ export default function Home() {
               <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 02
               </div>
-              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Private Consultation</h3>
+              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">{t('home.howItWorks.step2Title')}</h3>
               <p className="text-gray-600 body-text leading-relaxed">
-                Meet with your personal matchmaker in a one-on-one video call to better understand who you are and craft your personalized profile.
+                {t('home.howItWorks.step2Description')}
               </p>
             </div>
             
@@ -454,9 +454,9 @@ export default function Home() {
               <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 03
               </div>
-              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Curated Introduction</h3>
+              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">{t('home.howItWorks.step3Title')}</h3>
               <p className="text-gray-600 body-text leading-relaxed">
-                We share a profile for your review, and if there is mutual interest, you make the payment and we coordinate your first date.
+                {t('home.howItWorks.step3Description')}
               </p>
             </div>
             
@@ -465,9 +465,9 @@ export default function Home() {
               <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 04
               </div>
-              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">Refinement & Follow-up</h3>
+              <h3 className="text-xl font-bold mb-3 subtitle text-gray-900">{t('home.howItWorks.step4Title')}</h3>
               <p className="text-gray-600 body-text leading-relaxed">
-                If the match didn't feel right, we seek your feedback to fine-tune our matching approach and introduce you to a better match.
+                {t('home.howItWorks.step4Description')}
               </p>
             </div>
           </div>
@@ -476,7 +476,7 @@ export default function Home() {
           <div className="text-center">
             <Link href="/how-it-works" onClick={() => window.scrollTo(0, 0)}>
               <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 text-lg font-medium">
-                Learn More About Our Process
+{t('home.howItWorks.learnMore')}
               </Button>
             </Link>
           </div>
@@ -487,10 +487,9 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6 text-gray-900">Research Shows: Dating Apps Are Failing Us</h2>
+            <h2 className="text-4xl font-bold mb-6 text-gray-900">{t('home.research.title')}</h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-              Leading institutions and research organizations have documented the harmful effects of dating apps. 
-              At The Date Alchemy, we offer a healthier, more human approach to finding love.
+              {t('home.research.subtitle')}
             </p>
           </div>
 
@@ -503,7 +502,7 @@ export default function Home() {
                 className="h-10 object-contain mx-auto mb-4"
               />
               <blockquote className="text-sm text-gray-800 italic mb-3">
-                "Dating apps are soul destroying"
+                {t('home.research.guardianQuote')}
               </blockquote>
               <a 
                 href="https://www.theguardian.com/lifeandstyle/2023/oct/28/its-quite-soul-destroying-how-we-fell-out-of-love-with-dating-apps"
@@ -511,7 +510,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-primary hover:underline text-xs"
               >
-                Read article →
+                {t('home.research.readArticle')}
               </a>
             </div>
 
@@ -523,7 +522,7 @@ export default function Home() {
                 className="h-10 object-contain mx-auto mb-4"
               />
               <blockquote className="text-sm text-gray-800 italic mb-3">
-                "Years of swiping and searching have left dating app users with burnout"
+                {t('home.research.nytQuote')}
               </blockquote>
               <a 
                 href="https://www.nytimes.com/2022/08/31/well/mind/burnout-online-dating-apps.html"
@@ -531,7 +530,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-primary hover:underline text-xs"
               >
-                Read article →
+                {t('home.research.readArticle')}
               </a>
             </div>
 
@@ -543,7 +542,7 @@ export default function Home() {
                 className="h-10 object-contain mx-auto mb-4"
               />
               <blockquote className="text-sm text-gray-800 italic mb-3">
-                "57% of female online daters receive unwanted explicit content"
+                {t('home.research.pewQuote')}
               </blockquote>
               <a 
                 href="https://www.pewresearch.org/internet/2020/02/06/the-virtues-and-downsides-of-online-dating/"
@@ -551,7 +550,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-primary hover:underline text-xs"
               >
-                Read research →
+                {t('home.research.readResearch')}
               </a>
             </div>
 
@@ -563,7 +562,7 @@ export default function Home() {
                 className="h-10 object-contain mx-auto mb-4"
               />
               <blockquote className="text-sm text-gray-800 italic mb-3">
-                "80% experienced emotional burnout with online dating"
+                {t('home.research.singlesQuote')}
               </blockquote>
               <a 
                 href="https://singlesreports.com/reports/emotional-fatigue-or-burnout-in-online-dating/#methodology"
@@ -571,7 +570,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-primary hover:underline text-xs"
               >
-                Read report →
+                {t('home.research.readReport')}
               </a>
             </div>
 
@@ -583,7 +582,7 @@ export default function Home() {
                 className="h-10 object-contain mx-auto mb-4"
               />
               <blockquote className="text-sm text-gray-800 italic mb-3">
-                "Two thirds of Tinder users are already in a relationship"
+                {t('home.research.stanfordQuote')}
               </blockquote>
               <a 
                 href="https://www.ft.com/content/a21f61f6-174f-4bf1-abe7-c71e4c05d839"
@@ -591,7 +590,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-primary hover:underline text-xs"
               >
-                Read study →
+                {t('home.research.readStudy')}
               </a>
             </div>
 
@@ -603,7 +602,7 @@ export default function Home() {
                 className="h-10 object-contain mx-auto mb-4"
               />
               <blockquote className="text-sm text-gray-800 italic mb-3">
-                "Dating apps linked to poorer mental health and wellbeing"
+                {t('home.research.flindersQuote')}
               </blockquote>
               <a 
                 href="https://theconversation.com/dating-apps-could-have-negative-effects-on-body-image-and-mental-health-our-research-shows-247336"
@@ -611,16 +610,16 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-primary hover:underline text-xs"
               >
-                Read research →
+                {t('home.research.readResearch')}
               </a>
             </div>
           </div>
 
           {/* Call to Action */}
           <div className="text-center mt-12 p-8 bg-primary rounded-xl text-white">
-            <h3 className="text-2xl font-bold mb-4">Ready for a Healthier Dating Experience?</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('home.research.ctaTitle')}</h3>
             <p className="text-lg mb-6 opacity-90">
-              Skip the apps. Skip the burnout. Find genuine connection through our proven, human-centered approach.
+              {t('home.research.ctaSubtitle')}
             </p>
             <a 
               href={EXTERNAL_LINKS.applicationForm}
@@ -628,7 +627,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-block bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
             >
-              Apply for Membership
+              {t('home.research.ctaButton')}
             </a>
           </div>
         </div>
