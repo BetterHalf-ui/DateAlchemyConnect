@@ -513,19 +513,19 @@ export const translations = {
     'blog.publishedOn': 'Publié le',
     
     // Home page detailed content (French)
-    'home.intro.p1': 'Trouver une connexion authentique à Maurice n\'est pas facile — surtout quand vous êtes un professionnel occupé avec des standards élevés.',
-    'home.intro.p2': 'Les applications de rencontres promettent des options infinies mais livrent souvent de la déception : ghosting, signaux mélangés et détachement émotionnel. Elles sont conçues pour vous garder en train de swiper, pas pour vous aider à vous connecter. La plupart des gens ne sont pas sérieux, et cela fait des dégâts — plus de 80% des utilisateurs rapportent se sentir émotionnellement épuisés ou brûlés par les rencontres en ligne (Singles Report).',
-    'home.intro.p3': 'Chez The Date Alchemy, nous croyons que la vraie connexion est trop importante pour être laissée aux algorithmes ou au hasard. C\'est pourquoi nous vous invitons à vous mettre en avant — intentionnellement, mais discrètement et avec le respect que vous méritez. Nous nous occupons de la recherche, pour que vous puissiez vous concentrer à vivre votre meilleure vie pendant que l\'amour trouve son chemin vers vous.',
+    'home.intro.p1': 'Nous sommes désormais The Date Alchemy. Un nouveau nom, la même promesse. Nous avons changé de nom, de Betterhalf à The Date Alchemy, en affinant notre approche pour créer de meilleures connexions.',
+    'home.intro.p2': 'Si trouver la bonne personne était facile, vous ne seriez pas en train de lire ceci.',
+    'home.intro.p3': 'Vous avez du succès, vous êtes ambitieux et vous savez exactement ce que vous voulez dans la plupart des domaines de votre vie. Mais quand il s\'agit de trouver quelqu\'un de spécial, même les personnes les plus accomplies peinent. Les applications épuisent votre énergie, les rencontres au hasard mènent rarement quelque part de significatif, et sortir dans un petit endroit comme Maurice vient avec ses propres défis — options limitées et la possibilité inconfortable de croiser des ex ou d\'être vu.',
     
-    'home.expectations.title': 'À quoi s\'attendre en tant que membre',
+    'home.expectations.title': 'À quoi s\'attendre',
     'home.expectations.curated.title': 'Présentations personnalisées',
-    'home.expectations.curated.desc': 'Nous vous présentons des célibataires qui correspondent à vos standards et partagent votre vibe, sont soigneusement interviewés et également sérieux à propos de trouver un partenaire de vie à Maurice.',
-    'home.expectations.privacy.title': 'Votre vie privée est notre priorité',
-    'home.expectations.privacy.desc': 'Nous protégeons votre vie privée comme si c\'était la nôtre — vos informations sont toujours sûres, confidentielles et jamais partagées sans votre consentement. Chaque présentation est traitée avec le plus grand soin et respect pour votre vie privée.',
-    'home.expectations.noPressure.title': 'Sans pression',
-    'home.expectations.noPressure.desc': 'Pas de pression familiale à gérer. Rencontrez votre match pour un café, échangez des numéros si vous le souhaitez, ou sortez ensemble pendant des mois, ou rencontrez quelqu\'un d\'autre qui convient mieux. Tout se fait selon vos termes.',
-    'home.expectations.support.title': 'Soutien attentionné et humain',
-    'home.expectations.support.desc': 'Nous sommes avec vous à chaque étape — offrant des conseils attentionnés, un soutien logistique et des suivis après les rendez-vous. Pas de ghosting, pas de devinettes — juste le respect et un soutien authentique de personnes qui se soucient vraiment.',
+    'home.expectations.curated.desc': 'Nous ne vous submergeons pas d\'options. Chaque présentation est soigneusement sélectionnée basée sur la compatibilité.',
+    'home.expectations.privacy.title': 'Confidentialité complète',
+    'home.expectations.privacy.desc': 'Vos informations restent confidentielles. Nous coordonnons les rencontres sans révéler de détails sensibles.',
+    'home.expectations.noPressure.title': 'Environnement sans pression',
+    'home.expectations.noPressure.desc': 'Prenez votre temps. Nous croyons aux connexions de qualité plutôt qu\'aux résultats rapides.',
+    'home.expectations.support.title': 'Soutien continu',
+    'home.expectations.support.desc': 'Points de contrôle réguliers et sessions de retour pour affiner vos matches et améliorer les résultats.',
     
     'home.cta.applyNow': 'Postuler maintenant',
     'home.cta.notReady': 'Pas prêt à investir dans une adhésion ?',
@@ -533,8 +533,8 @@ export const translations = {
     'home.cta.createProfile': 'Créez votre profil gratuit.',
     
     'home.stats.activeMembers': 'Membres actifs',
-    'home.stats.memberDesc': 'Nos membres sont ambitieux, amusants et dynamiques — locaux et expatriés, de tous groupes d\'âge. Tous cherchent une relation engagée.',
-    'home.stats.reviewNote': 'Nos matchmakers examinent CHAQUE candidature',
+    'home.stats.memberDesc': 'Professionnels globaux prêts pour des connexions significatives',
+    'home.stats.reviewNote': 'Tous les profils sont manuellement vérifiés et validés',
     
     // Testimonials - Additional ones for image sections (French)
     'home.testimonials.main': 'Merci pour un match qui va bien au-delà d\'un simple algorithme. Vous avez aidé à mettre deux cœurs sur la même longueur d\'onde.',
