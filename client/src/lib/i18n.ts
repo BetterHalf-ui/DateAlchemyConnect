@@ -95,6 +95,58 @@ export const translations = {
     'home.newsletter.cta': 'Subscribe',
     'home.newsletter.disclaimer': 'By subscribing, you agree to receive our newsletter. You can unsubscribe at any time.',
     
+    // Introduction section
+    'home.intro.p1': 'We\'re Now The Date Alchemy. A New Name, The Same Promise. We\'ve rebranded from Betterhalf to The Date Alchemy, refining our approach to create better connections.',
+    'home.intro.p2': 'If finding the right person was easy, you wouldn\'t be reading this.',
+    'home.intro.p3': 'You\'re successful, ambitious, and know exactly what you want in most areas of your life. But when it comes to finding someone special, even the most accomplished people struggle. The apps drain your energy, random meetups rarely lead anywhere meaningful, and dating in a small place like Mauritius comes with its own challenges — limited options and the uncomfortable possibility of running into exes or being seen.',
+    
+    // Membership section
+    'home.membership.title': 'The Date Alchemy Membership',
+    'home.membership.subtitle': 'Everything you need for a fulfilling dating experience',
+    'home.membership.premiumTitle': 'Premium Members',
+    'home.membership.premiumSubtitle': 'Exclusive access to curated introductions',
+    'home.membership.feature1': 'Personal matchmaker consultation',
+    'home.membership.feature2': 'Curated match introductions',
+    'home.membership.feature3': 'Date coordination & feedback',
+    'home.membership.feature4': 'Profile optimization',
+    'home.membership.feature5': 'Priority matching',
+    'home.membership.feature6': 'Ongoing relationship coaching',
+    'home.membership.feature7': 'Exclusive events access',
+    'home.membership.bonus': 'Bonus: Free profile creation for the network',
+    'home.membership.innerWorkTitle': 'Inner Work & Self-Discovery',
+    'home.membership.innerWorkDescription': 'Before we introduce you to others, we help you understand yourself better',
+    'home.membership.innerWorkSubtitle': 'Personal development components included with membership',
+    'home.membership.innerWork1Title': 'Self-Awareness Development',
+    'home.membership.innerWork1Feature1': 'Personality assessment and analysis',
+    'home.membership.innerWork1Feature2': 'Values clarification exercises',
+    'home.membership.innerWork1Feature3': 'Communication style evaluation',
+    'home.membership.innerWork2Title': 'Relationship Readiness',
+    'home.membership.innerWork2Feature1': 'Past relationship patterns analysis',
+    'home.membership.innerWork2Feature2': 'Attachment style understanding',
+    'home.membership.innerWork2Feature3': 'Goal setting for future relationships',
+    'home.membership.innerWork2Feature4': 'Confidence building strategies',
+    
+    // Expectations section
+    'home.expectations.title': 'What to Expect',
+    'home.expectations.curated.title': 'Curated Introductions',
+    'home.expectations.curated.desc': 'We don\'t overwhelm you with options. Each introduction is carefully selected based on compatibility.',
+    'home.expectations.privacy.title': 'Complete Privacy',
+    'home.expectations.privacy.desc': 'Your information remains confidential. We coordinate meetings without revealing sensitive details.',
+    'home.expectations.noPressure.title': 'No Pressure Environment',
+    'home.expectations.noPressure.desc': 'Take your time. We believe in quality connections over quick results.',
+    'home.expectations.support.title': 'Ongoing Support',
+    'home.expectations.support.desc': 'Regular check-ins and feedback sessions to refine your matches and improve results.',
+    
+    // CTA section
+    'home.cta.notReady': 'Not ready to invest in a membership?',
+    'home.cta.joinNetwork': 'Join our network for free to see if you are a match with one of our exceptional clients.',
+    'home.cta.createProfile': 'Create your complimentary profile.',
+    
+    // Stats section
+    'home.stats.activeMembers': 'Active Members',
+    'home.stats.memberDesc': 'Global professionals ready for meaningful connections',
+    'home.stats.reviewNote': 'All profiles manually reviewed and verified',
+    
     // Trust section
     'home.trust.title': 'Trust Us - It Really Works',
     'home.trust.stat1': 'of setups result in real, face-to-face dates',
@@ -264,6 +316,58 @@ export const translations = {
     'home.newsletter.placeholder': 'Entrez votre adresse e-mail',
     'home.newsletter.cta': 'S\'abonner',
     'home.newsletter.disclaimer': 'En vous abonnant, vous acceptez de recevoir notre newsletter. Vous pouvez vous désabonner à tout moment.',
+    
+    // Introduction section (French)
+    'home.intro.p1': 'Nous sommes désormais The Date Alchemy. Un nouveau nom, la même promesse. Nous avons changé de nom, de Betterhalf à The Date Alchemy, en affinant notre approche pour créer de meilleures connexions.',
+    'home.intro.p2': 'Si trouver la bonne personne était facile, vous ne seriez pas en train de lire ceci.',
+    'home.intro.p3': 'Vous avez du succès, vous êtes ambitieux et vous savez exactement ce que vous voulez dans la plupart des domaines de votre vie. Mais quand il s\'agit de trouver quelqu\'un de spécial, même les personnes les plus accomplies peinent. Les applications épuisent votre énergie, les rencontres au hasard mènent rarement quelque part de significatif, et sortir dans un petit endroit comme Maurice vient avec ses propres défis — options limitées et la possibilité inconfortable de croiser des ex ou d\'être vu.',
+    
+    // Membership section (French)
+    'home.membership.title': 'L\'adhésion The Date Alchemy',
+    'home.membership.subtitle': 'Tout ce dont vous avez besoin pour vivre une expérience de rencontres épanouissante',
+    'home.membership.premiumTitle': 'Membres Premium',
+    'home.membership.premiumSubtitle': 'Accès exclusif aux présentations personnalisées',
+    'home.membership.feature1': 'Consultation personnelle avec votre matchmaker',
+    'home.membership.feature2': 'Présentations de matches personnalisées',
+    'home.membership.feature3': 'Coordination des rendez-vous et retours',
+    'home.membership.feature4': 'Optimisation de profil',
+    'home.membership.feature5': 'Matching prioritaire',
+    'home.membership.feature6': 'Coaching relationnel continu',
+    'home.membership.feature7': 'Accès aux événements exclusifs',
+    'home.membership.bonus': 'Bonus : Création de profil gratuite pour le réseau',
+    'home.membership.innerWorkTitle': 'Travail intérieur et découverte de soi',
+    'home.membership.innerWorkDescription': 'Avant de vous présenter à d\'autres, nous vous aidons à mieux vous comprendre',
+    'home.membership.innerWorkSubtitle': 'Composantes de développement personnel incluses avec l\'adhésion',
+    'home.membership.innerWork1Title': 'Développement de la conscience de soi',
+    'home.membership.innerWork1Feature1': 'Évaluation et analyse de la personnalité',
+    'home.membership.innerWork1Feature2': 'Exercices de clarification des valeurs',
+    'home.membership.innerWork1Feature3': 'Évaluation du style de communication',
+    'home.membership.innerWork2Title': 'Préparation relationnelle',
+    'home.membership.innerWork2Feature1': 'Analyse des schémas relationnels passés',
+    'home.membership.innerWork2Feature2': 'Compréhension du style d\'attachement',
+    'home.membership.innerWork2Feature3': 'Définition d\'objectifs pour les futures relations',
+    'home.membership.innerWork2Feature4': 'Stratégies de renforcement de la confiance',
+    
+    // Expectations section (French)
+    'home.expectations.title': 'À quoi s\'attendre',
+    'home.expectations.curated.title': 'Présentations personnalisées',
+    'home.expectations.curated.desc': 'Nous ne vous submergeons pas d\'options. Chaque présentation est soigneusement sélectionnée basée sur la compatibilité.',
+    'home.expectations.privacy.title': 'Confidentialité complète',
+    'home.expectations.privacy.desc': 'Vos informations restent confidentielles. Nous coordonnons les rencontres sans révéler de détails sensibles.',
+    'home.expectations.noPressure.title': 'Environnement sans pression',
+    'home.expectations.noPressure.desc': 'Prenez votre temps. Nous croyons aux connexions de qualité plutôt qu\'aux résultats rapides.',
+    'home.expectations.support.title': 'Soutien continu',
+    'home.expectations.support.desc': 'Points de contrôle réguliers et sessions de retour pour affiner vos matches et améliorer les résultats.',
+    
+    // CTA section (French)
+    'home.cta.notReady': 'Pas prêt à investir dans une adhésion ?',
+    'home.cta.joinNetwork': 'Rejoignez notre réseau gratuitement pour voir si vous correspondez à l\'un de nos clients exceptionnels.',
+    'home.cta.createProfile': 'Créez votre profil gratuit.',
+    
+    // Stats section (French)
+    'home.stats.activeMembers': 'Membres actifs',
+    'home.stats.memberDesc': 'Professionnels globaux prêts pour des connexions significatives',
+    'home.stats.reviewNote': 'Tous les profils sont manuellement vérifiés et validés',
     
     // Trust section (French)
     'home.trust.title': 'Faites-nous confiance — ça fonctionne vraiment.',
