@@ -310,7 +310,7 @@ export const translations = {
     'common.loading': 'Chargement...',
     
     // Home page
-    'home.hero.title': 'L\'expérience dating réinventée pour les professionnels connectés au monde, à Maurice',
+    'home.hero.title': 'L\'expérience de dating réinventée pour les professionnels au mindset global à Maurice',
     'home.hero.subtitle': 'Service de mise en relation premium pour des relations intentionnelles. Discret, personnalisé et efficace.',
     'home.hero.cta': 'Devenir membre',
     'home.hero.memberCount': 'membres actifs',
@@ -339,7 +339,7 @@ export const translations = {
     'home.testimonials.testimonial4': '« La communication avec l\'équipe est ouverte, cohérente et collaborative, que ce soit sur WhatsApp ou par les newsletters partagées par email. Les retours sont encouragés après chaque rendez-vous, ce qui aide à créer un environnement bienveillant. »',
     'home.testimonials.author4': '— Scientifique, 37 ans',
     
-    'home.membership.title': 'L\'adhésion à The Date Alchemy',
+    'home.membership.title': 'L\'adhésion The Date Alchemy',
     'home.membership.subtitle': 'Tout ce dont vous avez besoin pour vivre une expérience de rencontres plus saine.',
     'home.membership.premiumTitle': '1. Premium Matchmaking',
     'home.membership.premiumSubtitle': 'Inclus dans votre adhésion :',
@@ -477,7 +477,7 @@ export const translations = {
     'faq.a10': 'The Date Alchemy est un service proposé par la société mauricienne Frolic Ltd (C23201149), également propriétaire de la plateforme lifestyle Frolic.mu.',
     
     // Footer (French)
-    'footer.tagline': 'L\'expérience de dating réinventée pour les professionnels connectés au monde à Maurice.',
+    'footer.tagline': 'L\'expérience de dating réinventée pour les professionnels au mindset global à Maurice.',
     'footer.quickLinks': 'Liens Rapides',
     'footer.legal': 'Légal',
     'footer.contact': 'Contact',
