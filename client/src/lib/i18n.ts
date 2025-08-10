@@ -479,64 +479,7 @@ export const translations = {
     'home.blog.latestTitle': 'Derniers Conseils',
     'home.blog.viewAll': 'Voir Tous les Articles',
     
-    // Trust section (French)
-    'home.trust.title': 'Faites-nous confiance — ça fonctionne vraiment.',
-    'home.trust.stat1': 'de nos mises en relation aboutissent à un vrai rendez-vous en face-à-face',
-    'home.trust.stat2': 'des rendez-vous sont jugés comme de bonnes expériences',
-    'home.trust.stat3': 'des rencontres donnent lieu à un second rendez-vous',
-    'home.trust.stat4': 'de nos membres payants vivent aujourd\'hui une belle histoire avec leur moitié',
-    
-    // Guarantees section (French)
-    'home.guarantees.title': 'Nos garanties',
-    'home.guarantees.guarantee1Title': 'Premier rendez-vous de qualité garanti avant paiement',
-    'home.guarantees.guarantee1Description': 'Votre consultation initiale et la recherche de votre première rencontre sont entièrement gratuites. Nous ne vous demanderons de payer que lorsque vous aurez accepté une mise en relation et que le premier rendez-vous aura été planifié.',
-    'home.guarantees.guarantee2Title': 'Au moins 4 introductions de qualité',
-    'home.guarantees.guarantee2Description': 'Nous vous garantissons au minimum 4 rencontres de qualité en 12 mois — sinon, nous prolongeons votre adhésion sans frais supplémentaires. La période de 12 mois se suspend dès que vous commencez une relation sérieuse.',
-    'home.guarantees.guarantee3Title': 'Adhésion flexible',
-    'home.guarantees.guarantee3Description': 'La vie est faite d\'imprévus. Si vous devez faire une pause, nous suspendons votre adhésion — aucun temps perdu ni pénalités.',
-    'home.guarantees.guarantee4Title': 'Pas de frais cachés',
-    'home.guarantees.guarantee4Description': 'Tarifs transparents. Aucun coût supplémentaire, jamais.',
-    
-    // Pricing section (French)
-    'home.pricing.membershipTitle': 'Tarif d\'adhésion :',
-    'home.pricing.membershipPeriod': 'Pour 1 an, TVA incluse',
-    'home.pricing.membershipCompare': '… soit moins qu\'une nuitée en staycation à Maurice',
-    'home.pricing.urgencyMessage': 'Aujourd\'hui, quelqu\'un d\'exceptionnel pourrait rejoindre nos membres. Et les célibataires les plus recherchés ne restent jamais célibataires longtemps. Êtes-vous prêt à être acteur de votre destin— ou à rester spectateur ?',
-    'home.pricing.priceIncrease': 'Les prix vont augmenter ! Devenez membre dès maintenant !',
-    'home.pricing.applyNow': 'Postuler Maintenant',
-    'home.pricing.notReady': 'Pas prêt à investir dans une adhésion ?',
-    'home.pricing.joinNetwork': 'Rejoignez notre réseau gratuitement pour voir si vous correspondez à l\'un de nos clients exceptionnels.',
-    'home.pricing.createProfile': 'Créez votre profil gratuit.',
-    
-    // How It Works section (French)
-    'home.howItWorks.title': 'Notre méthode',
-    'home.howItWorks.subtitle': 'Un processus éprouvé pour trouver votre match idéal',
-    'home.howItWorks.step1Title': '01. Faites une demande d\'adhésion',
-    'home.howItWorks.step1Description': 'Remplissez notre questionnaire pour nous aider à mieux comprendre qui vous êtes et vos préférences.',
-    'home.howItWorks.step2Title': '02. Consultation privée',
-    'home.howItWorks.step2Description': 'Rencontrez votre matchmaker personnel lors d\'un appel vidéo individuel afin d\'approfondir votre profil et personnaliser votre approche.',
-    'home.howItWorks.step3Title': '03. Présentation ciblée',
-    'home.howItWorks.step3Description': 'Nous vous partageons un profil aligné à vos préférences et, s\'il y a un intérêt mutuel, vous confirmez votre adhésion et nous organisons votre premier rendez-vous.',
-    'home.howItWorks.step4Title': '04. Ajustement & suivi',
-    'home.howItWorks.step4Description': 'Si la rencontre ne vous a pas convaincu, nous recueillons vos retours pour affiner notre sélection et vous présenter une personne qui correspond mieux à ce que vous cherchez.',
-    'home.howItWorks.learnMore': 'En savoir plus sur notre méthode',
-    
-    // Research section (French)
-    'home.research.title': 'Les recherches sont formelles : les applis de rencontres ne sont pas à la hauteur',
-    'home.research.subtitle': 'Des institutions et organismes de recherche de premier plan ont documenté les effets délétères des applications de rencontres. Chez The Date Alchemy, nous proposons une approche plus saine et profondément humaine pour trouver l\'amour.',
-    'home.research.guardianQuote': '« Les applications de rencontres détruisent l\'âme »',
-    'home.research.nytQuote': '« Des années à swiper ont laissé les utilisateurs épuisés »',
-    'home.research.pewQuote': '« 57 % des femmes rencontrant en ligne reçoivent du contenu explicite non sollicité »',
-    'home.research.singlesQuote': '« 80 % des utilisateurs déclarent un épuisement émotionnel lié aux rencontres en ligne »',
-    'home.research.stanfordQuote': '« Deux tiers des utilisateurs de Tinder sont déjà en couple »',
-    'home.research.flindersQuote': '« Les applis de rencontres liées à une moins bonne santé mentale et bien-être »',
-    'home.research.readArticle': '[Lire l\'article →]',
-    'home.research.readResearch': '[Lire l\'étude →]',
-    'home.research.readReport': '[Lire le rapport →]',
-    'home.research.readStudy': '[Lire l\'étude →]',
-    'home.research.ctaTitle': 'Prêt(e) pour une expérience de rencontres plus saine ?',
-    'home.research.ctaSubtitle': 'Oubliez les applis. Évitez l\'épuisement. Trouvez une connexion authentique grâce à notre approche humaine et éprouvée.',
-    'home.research.ctaButton': 'Postulez dès maintenant',
+
 
     // FAQ Section (French)
     'faq.title': 'Questions fréquentes',
