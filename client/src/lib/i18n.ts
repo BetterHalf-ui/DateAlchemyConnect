@@ -258,7 +258,7 @@ export const translations = {
     'home.membership.innerWorkDescription': 'Nous vous préparons à vivre des rendez-vous réussis et des relations plus équilibrées.',
     'home.membership.innerWorkSubtitle': 'Inclus dans votre adhésion :',
     
-    'home.membership.innerWork1Title': '1) Auto-évaluation de préparation à la relation',
+    'home.membership.innerWork1Title': '1) Audit personnel de préparation à la relation',
     'home.membership.innerWork1Feature1': '**Évaluation de vos besoins** : clarifiez ce qui est réellement essentiel pour vous dans une relation — au-delà des simples attirances.',
     'home.membership.innerWork1Feature2': '**Analyse de votre style d\'attachement** : comprenez comment votre manière de vous lier influence vos relations (basé sur la théorie de l\'attachement de John Bowlby et Mary Ainsworth).',
     'home.membership.innerWork1Feature3': '**Évaluation de vos tendances de dating** : identifiez les schémas inconscients qui peuvent freiner votre épanouissement amoureux (inspiré des travaux de Logan Ury).',
@@ -274,6 +274,35 @@ export const translations = {
     'home.pricing.period': '/an',
     'home.pricing.description': 'un investissement annuel unique pour des présentations illimitées et un service personnalisé.',
     'home.pricing.cta': 'commencez votre parcours',
+    
+    // Trust section (English)
+    'home.trust.title': 'Trust Us - It Really Works',
+    'home.trust.stat1': 'of setups result in real, face-to-face dates',
+    'home.trust.stat2': 'of dates are reported as good experiences',
+    'home.trust.stat3': 'lead to a second date',
+    'home.trust.stat4': 'of our paid members are going strong with their better half',
+    
+    // Guarantees section (English)
+    'home.guarantees.title': 'Our Guarantees',
+    'home.guarantees.guarantee1Title': 'First Quality Date Guaranteed Before Payment',
+    'home.guarantees.guarantee1Description': 'Your initial consultation and matchmaking search are completely free. We\'ll only ask for payment once you say yes to a match and we\'ve planned the first date.',
+    'home.guarantees.guarantee2Title': 'At least 4 High-Quality Introductions',
+    'home.guarantees.guarantee2Description': 'We guarantee at least 4 high-quality introductions within 12 months — or we\'ll extend your membership at no extra cost. The 12-month period pauses when you start dating someone seriously.',
+    'home.guarantees.guarantee3Title': 'Flexible Membership',
+    'home.guarantees.guarantee3Description': 'Life happens. If you need to take a break for any reason, we\'ll pause your membership—no lost time, no penalties.',
+    'home.guarantees.guarantee4Title': 'No Hidden Fees',
+    'home.guarantees.guarantee4Description': 'Transparent pricing. No hidden costs, ever.',
+    
+    // Pricing section (English)
+    'home.pricing.membershipTitle': 'Membership price:',
+    'home.pricing.membershipPeriod': 'For 1 year, VAT included',
+    'home.pricing.membershipCompare': '…  less than 1 night staycation in Mauritius',
+    'home.pricing.urgencyMessage': 'Someone really special could be joining today. And the most sought-after singles tend to not stay single for long. Are you in the pool — or on the sidelines?',
+    'home.pricing.priceIncrease': 'Prices are going up! So apply now!',
+    'home.pricing.applyNow': 'Apply Now',
+    'home.pricing.notReady': 'Not ready to invest in a membership?',
+    'home.pricing.joinNetwork': 'Join our network for free to see if you are a match with one of our exceptional clients.',
+    'home.pricing.createProfile': 'Create your complimentary profile.',
     
     'home.journey.title': 'commencez votre parcours',
     'home.journey.step1.title': 'postuler pour l\'adhésion',
@@ -377,13 +406,13 @@ export const translations = {
     'home.testimonials.expertAuthor': '— Professionnel IT, 32',
     
     // Team section (French)
-    'home.team.title': 'Vos Alchimistes de Rencontres',
+    'home.team.title': 'Vos Alchimistes',
     'home.team.founders': 'Pratik Malia, Celine Delacharlerie, Sagarika Sarkar - Co-fondateurs',
-    'home.team.story1': 'Il y a trois ans, nous avons quitté nos carrières d\'entreprise à Singapour et avons déménagé à Maurice pour faire quelque chose de plus personnel, plus impactant. Trouver un partenaire de vie avec qui nous nous connectons vraiment a été une expérience si bouleversante pour nous, que nous voulions que plus de gens vivent ce genre d\'amour.',
-    'home.team.story2': 'Mais y arriver n\'était pas facile. Nous avons vécu la frustration nous-mêmes — assister à d\'innombrables événements qui ne menaient nulle part, passer des heures à glisser sur des applications de rencontres pour finir désabusés, nous retrouver dans des relations avec des personnes émotionnellement indisponibles ou toxiques.',
-    'home.team.quote': 'Nous avons gaspillé de l\'énergie émotionnelle sur des gens qui n\'étaient pas sérieux. Nous avons fait face aux fantômes, à l\'anxiété, au doute de soi et à la confusion. Et nous savions qu\'il devait y avoir une meilleure façon.',
-    'home.team.story3': 'C\'est pourquoi nous avons créé The Date Alchemy— le service de rencontres que nous aurions voulu avoir.',
-    'home.team.story4': 'Une expérience respectueuse et autonomisante conçue pour de vraies connexions significatives. Nous ne pouvons pas promettre l\'amour, mais nous pouvons promettre l\'effort, le professionnalisme, l\'intégrité, un investissement authentique dans votre parcours, et un processus éprouvé qui a mené à des relations durables.',
+    'home.team.story1': 'Il y a trois ans, nous avons quitté nos carrières en entreprise à Singapour pour poser nos valises à Maurice, animés par l\'envie de créer quelque chose de plus personnel, de plus porteur de sens.\nTrouver notre partenaire de vie avec qui nous avons une profonde connexion a véritablement transformé nos vies — au point de vouloir offrir cette chance à d\'autres.',
+    'home.team.story2': 'Mais le chemin n\'a pas été facile. Nous avons nous-mêmes connu la frustration des apps de rencontre, la déception des  soirées pleines de promesses qui ne mènent à rien, les heures perdues à swiper… et l\'épuisement émotionnel de relations avec des personnes incapables de s\'investir affectivement, ou toxiques.',
+    'home.team.quote': 'Nous avons investi notre énergie émotionnelle dans des personnes qui n\'étaient pas prêtes à s\'engager dans une relation. Nous avons affronté les silences radio, l\'anxiété, le doute de soi et la confusion. Et, au fond, nous savions qu\'il devait y avoir une meilleure façon de faire des rencontres.',
+    'home.team.story3': 'C\'est pourquoi nous avons créé The Date Alchemy — le service de rencontres que nous aurions rêvé d\'avoir.',
+    'home.team.story4': 'Une expérience respectueuse, valorisante et pensée pour favoriser de véritables connexions profondes. Nous ne promettons pas l\'amour, mais nous vous promettons notre engagement total : professionnalisme, intégrité, implication sincère dans votre parcours et un processus éprouvé qui a  mené à des histoires durables.',
     
     // Nominate section (French)
     'home.nominate.title': 'Répandre l\'Amour',
@@ -395,6 +424,35 @@ export const translations = {
     'home.blog.latestTitle': 'Derniers Conseils',
     'home.blog.viewAll': 'Voir Tous les Articles',
     
+    // Trust section (French)
+    'home.trust.title': 'Faites-nous confiance — ça fonctionne vraiment.',
+    'home.trust.stat1': 'de nos mises en relation aboutissent à un vrai rendez-vous en face-à-face',
+    'home.trust.stat2': 'des rendez-vous sont jugés comme de bonnes expériences',
+    'home.trust.stat3': 'des rencontres donnent lieu à un second rendez-vous',
+    'home.trust.stat4': 'de nos membres payants vivent aujourd\'hui une belle histoire avec leur moitié',
+    
+    // Guarantees section (French)
+    'home.guarantees.title': 'Nos garanties',
+    'home.guarantees.guarantee1Title': 'Premier rendez-vous de qualité garanti avant paiement',
+    'home.guarantees.guarantee1Description': 'Votre consultation initiale et la recherche de votre première rencontre sont entièrement gratuites. Nous ne vous demanderons de payer que lorsque vous aurez accepté une mise en relation et que le premier rendez-vous aura été planifié.',
+    'home.guarantees.guarantee2Title': 'Au moins 4 introductions de qualité',
+    'home.guarantees.guarantee2Description': 'Nous vous garantissons au minimum 4 rencontres de qualité en 12 mois — sinon, nous prolongeons votre adhésion sans frais supplémentaires. La période de 12 mois se suspend dès que vous commencez une relation sérieuse.',
+    'home.guarantees.guarantee3Title': 'Adhésion flexible',
+    'home.guarantees.guarantee3Description': 'La vie est faite d\'imprévus. Si vous devez faire une pause, nous suspendons votre adhésion — aucun temps perdu ni pénalités.',
+    'home.guarantees.guarantee4Title': 'Pas de frais cachés',
+    'home.guarantees.guarantee4Description': 'Tarifs transparents. Aucun coût supplémentaire, jamais.',
+    
+    // Pricing section (French)
+    'home.pricing.membershipTitle': 'Tarif d\'adhésion :',
+    'home.pricing.membershipPeriod': 'Pour 1 an, TVA incluse',
+    'home.pricing.membershipCompare': '… soit moins qu\'une nuitée en staycation à Maurice',
+    'home.pricing.urgencyMessage': 'Aujourd\'hui, quelqu\'un d\'exceptionnel pourrait rejoindre nos membres. Et les célibataires les plus recherchés ne restent jamais célibataires longtemps. Êtes-vous prêt à être acteur de votre destin— ou à rester spectateur ?',
+    'home.pricing.priceIncrease': 'Les prix vont augmenter ! Devenez membre dès maintenant !',
+    'home.pricing.applyNow': 'Postuler Maintenant',
+    'home.pricing.notReady': 'Pas prêt à investir dans une adhésion ?',
+    'home.pricing.joinNetwork': 'Rejoignez notre réseau gratuitement pour voir si vous correspondez à l\'un de nos clients exceptionnels.',
+    'home.pricing.createProfile': 'Créez votre profil gratuit.',
+
     // Language switcher
     'language.english': 'English',
     'language.french': 'Français',
