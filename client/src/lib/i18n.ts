@@ -226,7 +226,7 @@ export const translations = {
     'common.loading': 'Chargement...',
     
     // Home page
-    'home.hero.title': 'L\'expérience dating réinventée pour les professionnels internationaux à Maurice',
+    'home.hero.title': 'L\'expérience dating réinventée pour les professionnels connectés au monde, à Maurice',
     'home.hero.subtitle': 'Service de mise en relation premium pour des relations intentionnelles. Discret, personnalisé et efficace.',
     'home.hero.cta': 'Devenir membre',
     'home.hero.memberCount': 'membres actifs',
