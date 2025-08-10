@@ -17,7 +17,7 @@ import { useI18n } from "@/lib/i18n";
 import type { BlogPost, Setting } from "@shared/schema";
 
 export default function Home() {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
   const { data: blogPosts } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog-posts"],
     queryFn: async () => {
@@ -716,7 +716,7 @@ export default function Home() {
         </div>
       </section>
 
-      <FAQ />
+      {language === 'en' && <FAQ />}
       <Newsletter />
       <Footer />
     </div>
