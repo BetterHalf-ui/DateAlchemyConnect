@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { useI18n } from "@/lib/i18n";
 
 export default function Newsletter() {
+  const { t } = useI18n();
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -61,13 +63,13 @@ export default function Newsletter() {
   return (
     <section className="py-32 bg-black text-white">
       <div className="max-w-4xl mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold mb-6 subtitle">The Smarter Way to Date — Straight to Your Inbox</h2>
-        <p className="text-xl text-gray-300 mb-12 body-text">Join 1,000+ Smart Singles Getting Bi-Weekly Dating Tips</p>
+        <h2 className="text-4xl font-bold mb-6 subtitle">{t('home.newsletter.title')}</h2>
+        <p className="text-xl text-gray-300 mb-12 body-text">{t('home.newsletter.subtitle')}</p>
         
         <form onSubmit={handleSubmit} className="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
           <Input
             type="email"
-            placeholder="Enter your email"
+            placeholder={t('home.newsletter.placeholder')}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="flex-1 sm:rounded-r-none focus:ring-primary text-gray-900 h-14 text-lg"
@@ -79,12 +81,12 @@ export default function Newsletter() {
             disabled={isSubmitting}
             className="bg-primary hover:bg-primary/90 px-8 sm:rounded-l-none h-14 text-lg font-semibold whitespace-nowrap"
           >
-            {isSubmitting ? "Subscribing..." : "Subscribe"}
+            {isSubmitting ? "Subscribing..." : t('home.newsletter.cta')}
           </Button>
         </form>
         
         <div className="text-sm text-gray-400 mt-4">
-          By subscribing, you agree to receive our newsletter. You can unsubscribe at any time.
+          {t('home.newsletter.disclaimer')}
         </div>
       </div>
     </section>
