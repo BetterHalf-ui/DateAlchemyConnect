@@ -315,13 +315,13 @@ export const translations = {
     'home.hero.cta': 'Devenir membre',
     'home.hero.memberCount': 'membres actifs',
     
-    'home.help.title': 'comment nous aidons',
-    'home.help.curated.title': 'réseau sélectionné',
-    'home.help.curated.desc': 'chaque membre est personnellement vérifié par appels vidéo et vérification des antécédents.',
-    'home.help.personalized.title': 'mise en relation personnalisée',
-    'home.help.personalized.desc': 'nous comprenons vos valeurs, votre style de vie et vos objectifs relationnels pour trouver des partenaires compatibles.',
-    'home.help.discreet.title': 'discrétion complète',
-    'home.help.discreet.desc': 'votre confidentialité est primordiale. nous coordonnons les présentations en toute confidentialité.',
+    'home.help.title': 'Comment nous aidons',
+    'home.help.curated.title': 'Réseau sélectionné',
+    'home.help.curated.desc': 'Chaque membre est personnellement vérifié par appels vidéo et vérification des antécédents.',
+    'home.help.personalized.title': 'Mise en relation personnalisée',
+    'home.help.personalized.desc': 'Nous comprenons vos valeurs, votre style de vie et vos objectifs relationnels pour trouver des partenaires compatibles.',
+    'home.help.discreet.title': 'Discrétion complète',
+    'home.help.discreet.desc': 'Votre confidentialité est primordiale. Nous coordonnons les présentations en toute confidentialité.',
     
     // Testimonials section (French)
     'home.testimonials.title': 'Ce que disent nos membres',
@@ -369,11 +369,11 @@ export const translations = {
     'home.membership.innerWork2Feature3': '**Rituels de réflexion après chaque rendez-vous** : car chaque rencontre est aussi une occasion de mieux vous connaître.',
     'home.membership.innerWork2Feature4': '**Les secrets de l\'alchimie deux fois par mois** dans votre boîte mail : conseils basés sur notre expérience de matchmaking et validés par la recherche scientifique.',
     
-    'home.pricing.title': 'investissement dans votre avenir',
+    'home.pricing.title': 'Investissement dans votre avenir',
     'home.pricing.price': 'Rs 8,000',
     'home.pricing.period': '/an',
-    'home.pricing.description': 'un investissement annuel unique pour des présentations illimitées et un service personnalisé.',
-    'home.pricing.cta': 'commencez votre parcours',
+    'home.pricing.description': 'Un investissement annuel unique pour des présentations illimitées et un service personnalisé.',
+    'home.pricing.cta': 'Commencez votre parcours',
     
     'home.journey.title': 'Commencez votre parcours',
     'home.journey.step1.title': 'Postulez pour l\'adhésion',
@@ -385,8 +385,8 @@ export const translations = {
     'home.journey.step4.title': 'Affinement et suivi',
     'home.journey.step4.desc': 'Après chaque présentation, nous recueillons vos commentaires pour affiner continuellement notre approche et assurer des connexions significatives.',
     
-    'home.blog.title': 'conseils et astuces de rencontres',
-    'home.blog.subtitle': 'conseils d\'experts pour des rencontres intentionnelles',
+    'home.blog.title': 'Conseils et astuces de rencontres',
+    'home.blog.subtitle': 'Conseils d\'experts pour des rencontres intentionnelles',
     
     'home.newsletter.title': 'Les secrets de l\'alchimie — directement dans votre boîte mail',
     'home.newsletter.subtitle': 'Rejoignez plus de 1 000 célibataires avisés qui reçoivent tous les 15 jours nos conseils exclusifs pour réussir leurs rencontres.',
@@ -555,8 +555,8 @@ export const translations = {
     
     // Nominate section (French)
     'home.nominate.title': 'Répandez l\'amour',
-    'home.nominate.subtitle': 'Connaissez-vous un célibataire prêt à rencontrer la bonne personne ?',
-    'home.nominate.description': 'Nominez-le/la — anonymement ou pas - ils pourraient bien vous remercier bientôt !',
+    'home.nominate.subtitle': 'Nominez un célibataire que vous connaissez',
+    'home.nominate.description': 'Il ou elle pourra vous remercier une fois qu\'on lui aura trouvé sa moitié !',
     'home.nominate.cta': 'Nominer quelqu\'un',
     
     // Blog section (French)
