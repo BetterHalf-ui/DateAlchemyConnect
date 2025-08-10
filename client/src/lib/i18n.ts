@@ -114,10 +114,34 @@ export const translations = {
     'home.blog.title': 'Dating Insights & Tips',
     'home.blog.subtitle': 'Expert advice for intentional dating',
     
-    'home.newsletter.title': 'Stay Connected',
-    'home.newsletter.subtitle': 'Get dating insights and relationship tips delivered to your inbox.',
+    'home.newsletter.title': 'The Smarter Way to Date — Straight to Your Inbox',
+    'home.newsletter.subtitle': 'Join 1,000+ Smart Singles Getting Bi-Weekly Dating Tips',
     'home.newsletter.placeholder': 'Enter your email',
     'home.newsletter.cta': 'Subscribe',
+    'home.newsletter.disclaimer': 'By subscribing, you agree to receive our newsletter. You can unsubscribe at any time.',
+    
+    // FAQ Section (English)
+    'faq.title': 'Frequently Asked Questions',
+    'faq.q1': 'How much do you charge for this service?',
+    'faq.a1': 'For our efforts, we charge you a one-time fee of Rs 8,000 (inclusive of VAT) only when we have found you your first match.',
+    'faq.q2': 'How many people can I expect to meet during my membership?',
+    'faq.a2': 'While 5 dates is a general guide, we do not guarantee a specific number of introductions. We prioritize quality over quantity and believe it is better to meet fewer exceptional people than to be overwhelmed with unsuitable profiles. The number of dates will depend on several factors, including your own suitability, flexibility in your search criteria, and the feedback we receive.',
+    'faq.q3': 'How do I make payment?',
+    'faq.a3': 'We currently only accept payments via Juice or bank transfer for both local and international clients.',
+    'faq.q4': 'Can I apply on behalf of a sibling, child, or close friend?',
+    'faq.a4': 'If you genuinely want to help someone close to you, you can provide us with their contact details. We will reach out to them promptly. However, that person must complete the questionnaire and attend the interview alone, without accompaniment from friends or family. Our process requires personal commitment, complete honesty, and genuine motivation to be effective.',
+    'faq.q5': 'What do the two people know about each other before the date?',
+    'faq.a5': 'Confidentiality and discretion are at the heart of our service. We do not share last names, photos, or specific affiliations (such as employer or university) before the meeting. However, each person receives the first name, age, location, and a brief description explaining why we think there is compatibility.',
+    'faq.q6': 'What happens if my match is in another country? How do you arrange the meeting?',
+    'faq.a6': 'We know it\'s not always practical to travel the world to meet someone you don\'t know. We only offer international introductions when we believe in strong potential. In such cases, we facilitate virtual video introductions. This typically involves someone considering relocating to Mauritius or a Mauritian expatriate living abroad.',
+    'faq.q7': 'Do you welcome divorced candidates or single parents?',
+    'faq.a7': 'Absolutely! We welcome divorced individuals or single parents, provided the separation is legally recognized and amicable. If you\'re ready to write a new chapter, we\'re here to support you. We inform potential partners of your background so this topic doesn\'t need to be addressed during the date.',
+    'faq.q8': 'How long is my membership valid?',
+    'faq.a8': 'Your membership is valid for one year or until you find your partner through The Date Alchemy, whichever comes first. It is non-transferable.',
+    'faq.q9': 'Can you guarantee success?',
+    'faq.a9': 'In the dating realm, it\'s impossible to guarantee a certain outcome. This is why we apply a no-refund policy. However, your satisfaction and recommendation remain our absolute priority, and rest assured that we will do everything in our power to help you find your other half.',
+    'faq.q10': 'What company is behind The Date Alchemy?',
+    'faq.a10': 'The Date Alchemy is a service offered by the Mauritian company Frolic Ltd (C23201149), which also owns the lifestyle platform Frolic.mu.',
     
     // Footer
     'footer.tagline': 'Redefining the dating experience for global professionals in Mauritius.',
@@ -347,13 +371,14 @@ export const translations = {
     'home.blog.title': 'conseils et astuces de rencontres',
     'home.blog.subtitle': 'conseils d\'experts pour des rencontres intentionnelles',
     
-    'home.newsletter.title': 'Restez Connecté',
-    'home.newsletter.subtitle': 'Recevez des conseils de rencontres et des astuces relationnelles dans votre boîte de réception.',
-    'home.newsletter.placeholder': 'Entrez votre email',
+    'home.newsletter.title': 'Les secrets de l\'alchimie — directement dans votre boîte mail',
+    'home.newsletter.subtitle': 'Rejoignez plus de 1 000 célibataires avisés qui reçoivent tous les 15 jours nos conseils exclusifs pour réussir leurs rencontres.',
+    'home.newsletter.placeholder': 'Entrez votre adresse e-mail',
     'home.newsletter.cta': 'S\'abonner',
+    'home.newsletter.disclaimer': 'En vous abonnant, vous acceptez de recevoir notre newsletter. Vous pouvez vous désabonner à tout moment.',
     
     // Footer
-    'footer.tagline': 'Redéfinir l\'expérience de rencontres pour les professionnels internationaux à Maurice.',
+    'footer.tagline': 'L\'expérience de dating réinventée pour les professionnels connectés au monde à Maurice.',
     'footer.quickLinks': 'Liens Rapides',
     'footer.legal': 'Légal',
     'footer.contact': 'Contact',
@@ -432,8 +457,8 @@ export const translations = {
     'home.testimonials.mainAuthor': '— COO, Industrie Tech, 52 ans',
     'home.testimonials.professional': 'The Date Alchemy favorise des relations saines dans un cadre sûr et confidentiel. Me lancer dans ce voyage m\'a aidé à écouter plus profondément les autres et à mieux me comprendre—me permettant de devenir une meilleure version de moi-même.',
     'home.testimonials.professionalAuthor': '— Scientifique, 37',
-    'home.testimonials.expert': 'Je recommanderais sans réserve The Date Alchemy aux professionnels célibataires qui n\'ont peut-être pas le temps—ou l\'envie—de naviguer dans les méthodes traditionnelles d\'entremettage ou les applications de rencontres.',
-    'home.testimonials.expertAuthor': '— Professionnel IT, 32',
+    'home.testimonials.expert': 'Je recommande sans hésitation The Date Alchemy aux professionnels célibataires qui n\'ont pas le temps — ou l\'envie — de s\'aventurer dans les méthodes traditionnelles de matchmaking ou les applications de rencontres.',
+    'home.testimonials.expertAuthor': '- Professionelle IT, 32 ans',
     
     // Team section (French)
     'home.team.title': 'Vos Alchimistes',
@@ -445,10 +470,10 @@ export const translations = {
     'home.team.story4': 'Une expérience respectueuse, valorisante et pensée pour favoriser de véritables connexions profondes. Nous ne promettons pas l\'amour, mais nous vous promettons notre engagement total : professionnalisme, intégrité, implication sincère dans votre parcours et un processus éprouvé qui a  mené à des histoires durables.',
     
     // Nominate section (French)
-    'home.nominate.title': 'Répandre l\'Amour',
-    'home.nominate.subtitle': 'Nominez un célibataire que vous connaissez',
-    'home.nominate.description': 'Ils pourront vous remercier une fois qu\'on leur aura trouvé la bonne personne !',
-    'home.nominate.cta': 'Nominer Quelqu\'un',
+    'home.nominate.title': 'Répandez l\'amour',
+    'home.nominate.subtitle': 'Connaissez-vous un célibataire prêt à rencontrer la bonne personne ?',
+    'home.nominate.description': 'Nominez-le/la — anonymement ou pas - ils pourraient bien vous remercier bientôt !',
+    'home.nominate.cta': 'Nominer quelqu\'un',
     
     // Blog section (French)
     'home.blog.latestTitle': 'Derniers Conseils',
@@ -512,6 +537,29 @@ export const translations = {
     'home.research.ctaTitle': 'Prêt(e) pour une expérience de rencontres plus saine ?',
     'home.research.ctaSubtitle': 'Oubliez les applis. Évitez l\'épuisement. Trouvez une connexion authentique grâce à notre approche humaine et éprouvée.',
     'home.research.ctaButton': 'Postulez dès maintenant',
+
+    // FAQ Section (French)
+    'faq.title': 'Questions fréquentes',
+    'faq.q1': 'Quels sont vos tarifs ?',
+    'faq.a1': 'Nous facturons un montant unique de 8 000 Rs, TVA incluse, uniquement lorsque nous vous avons trouvé votre premier match.',
+    'faq.q2': 'Combien de personnes puis-je rencontrer pendant mon adhésion ?',
+    'faq.a2': 'Bien que 5 rendez-vous soient une indication générale, nous ne garantissons pas un nombre précis de rencontres. Notre priorité est la qualité plutôt que la quantité. Nous estimons qu\'il vaut mieux rencontrer quelques personnes d\'exception plutôt que d\'être noyé·e sous des profils inadaptés. Le nombre de rendez-vous dépendra de plusieurs facteurs, notamment votre propre adéquation, la souplesse de vos critères de recherche et les retours que nous recevons.',
+    'faq.q3': 'Comment effectuer le paiement ?',
+    'faq.a3': 'Nous acceptons actuellement uniquement les paiements par Juice ou virement bancaire, pour les clients à Maurice comme à l\'étranger.',
+    'faq.q4': 'Puis-je postuler pour un frère, une sœur, un enfant ou un·e ami·e proche ?',
+    'faq.a4': 'Si vous souhaitez réellement aider quelqu\'un de votre entourage, vous pouvez nous transmettre ses coordonnées. Nous le contacterons rapidement. Toutefois, cette personne devra remplir le questionnaire et passer l\'entretien seule, sans accompagnement d\'amis ou de famille. Notre processus exige un engagement personnel, une honnêteté totale et une réelle motivation pour être efficace.',
+    'faq.q5': 'Que savent les deux personnes l\'une de l\'autre avant le rendez-vous ?',
+    'faq.a5': 'La confidentialité et la discrétion sont au cœur de notre service. Nous ne partageons ni nom de famille, ni photo, ni affiliations spécifiques (comme l\'employeur ou l\'université) avant la rencontre. En revanche, chaque personne reçoit le prénom, l\'âge, la localisation, ainsi qu\'une brève description expliquant pourquoi nous pensons qu\'il y a une compatibilité.',
+    'faq.q6': 'Que se passe-t-il si mon match se trouve dans un autre pays ? Comment organisez-vous la rencontre ?',
+    'faq.a6': 'Nous savons qu\'il n\'est pas toujours pratique de traverser le monde pour rencontrer quelqu\'un que l\'on ne connaît pas. Nous proposons des rencontres internationales uniquement lorsque nous croyons à un fort potentiel. Dans ce cas, nous facilitons des présentations virtuelles par vidéo. Cela concerne généralement une personne qui envisage de s\'installer à Maurice ou un expatrié mauricien vivant à l\'étranger.',
+    'faq.q7': 'Accueillez-vous des candidats divorcés ou parents seuls ?',
+    'faq.a7': 'Absolument ! Nous accueillons volontiers les personnes divorcées ou parents seuls, à condition que la séparation soit légalement reconnue et amiable. Si vous êtes prêt·e à écrire un nouveau chapitre, nous sommes là pour vous accompagner. Nous informons les partenaires potentiels de votre passé pour que ce sujet ne soit pas à aborder lors du rendez-vous.',
+    'faq.q8': 'Quelle est la durée de validité de mon adhésion ?',
+    'faq.a8': 'Votre adhésion est valable un an ou jusqu\'à ce que vous trouviez votre partenaire avec The Date Alchemy, selon la première éventualité. Elle n\'est pas transférable.',
+    'faq.q9': 'Pouvez-vous garantir le succès ?',
+    'faq.a9': 'Dans le domaine des rencontres, il est impossible de garantir un résultat certain. C\'est pourquoi nous appliquons une politique de non-remboursement. Cependant, votre satisfaction et votre recommandation restent notre priorité absolue, et soyez assuré·e que nous mettrons tout en œuvre pour vous aider à trouver votre moitié.',
+    'faq.q10': 'Quelle est la société derrière The Date Alchemy ?',
+    'faq.a10': 'The Date Alchemy est un service proposé par la société mauricienne Frolic Ltd (C23201149), également propriétaire de la plateforme lifestyle Frolic.mu.',
 
     // Language switcher
     'language.english': 'English',
