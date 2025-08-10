@@ -36,9 +36,9 @@ export const translations = {
     'common.loading': 'Loading...',
     
     // Home page
-    'home.hero.title': 'Where Global Professionals Find Love in Mauritius',
+    'home.hero.title': 'Redefining the Dating Experience for Global Professionals in Mauritius',
     'home.hero.subtitle': 'Premium matchmaking for intentional relationships. Discreet, personalized, and effective.',
-    'home.hero.cta': 'Start Your Journey',
+    'home.hero.cta': 'Apply Now',
     'home.hero.memberCount': 'Active Members',
     
     'home.help.title': 'How We Help',
