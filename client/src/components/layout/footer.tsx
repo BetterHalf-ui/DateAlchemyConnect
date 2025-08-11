@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>{COMPANY_INFO.parentCompany}</p>
+          <p>{t('footer.parentCompany')}</p>
         </div>
       </div>
     </footer>
