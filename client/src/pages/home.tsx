@@ -683,7 +683,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center mb-16">
             <h2 className="text-4xl font-bold">{t('home.blog.latestTitle')}</h2>
-            <Link href="/blog">
+            <Link href="/blog" onClick={() => window.scrollTo(0, 0)}>
               <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white">
                 {t('home.blog.viewAll')}
               </Button>
