@@ -145,6 +145,56 @@ export const translations = {
     'faq.contact.text': 'Have more questions? Reach out to us directly.',
     'faq.contact.cta': 'Contact Us →',
     
+    // How it works page
+    'howItWorks.hero.title': 'Real Connections Start Here',
+    'howItWorks.hero.ctaTitle': 'Ready to Find Your Match?',
+    'howItWorks.hero.ctaDescription': 'Take the first step towards meaningful connection with our proven matchmaking process.',
+    'howItWorks.hero.ctaButton': 'Start Your Application',
+    'howItWorks.hero.consultationText': 'Professional Consultation Session',
+    
+    'howItWorks.journey.title': 'Your Membership Journey',
+    'howItWorks.journey.subtitle': 'A Proven Process for Real Connection',
+    
+    'howItWorks.step1.title': '01. Apply for Membership',
+    'howItWorks.step1.description1': 'You\'ll begin by completing our initial application: a questionnaire that helps us understand your background, values, and what you\'re truly seeking in a partner.',
+    'howItWorks.step1.description2': 'Within one business day, we\'ll review your submission to let you know if we have a potential match within our member base and share an in-depth assessment to better understand your needs in a relationship, attachment style and dating tendencies.',
+    
+    'howItWorks.step2.title': '02. Private Consultation',
+    'howItWorks.step2.description1': 'Next, you\'ll meet with your personal matchmaker in a one-on-one video consultation. This conversation is designed to have a more in-depth understanding of who you are and what you are looking for.',
+    'howItWorks.step2.description2': 'Following this, we craft a profile summary — which you\'ll review and approve — to be shared selectively only with potential matches who meet your criteria.',
+    
+    'howItWorks.step3.title': '03. Curated Introduction',
+    'howItWorks.step3.description1': 'Once a mutually aligned connection is identified, we share both profiles for review. If there\'s mutual interest, we invite you to activate your annual membership so we can proceed with arranging your first date.',
+    'howItWorks.step3.description2': 'We handle all the coordination with care and discretion, ensuring you meet someone genuinely aligned with your aspirations — in the right place, at the right time.',
+    
+    'howItWorks.step4.title': '04. Follow-up & Refinements',
+    'howItWorks.step4.description1': 'After the introduction, what happens next is up to you — whether that\'s a second date or exploring a new connection.',
+    'howItWorks.step4.description2': 'We always collect feedback after each date to refine our approach and evolve your experience in meaningful ways.',
+    
+    'howItWorks.comparison.title': 'The Date Alchemy vs. Dating Apps',
+    'howItWorks.comparison.subtitle': 'Discover why intentional matchmaking delivers better results',
+    'howItWorks.comparison.timeRequired': 'Time Required',
+    'howItWorks.comparison.userMindset': 'User Mindset',
+    'howItWorks.comparison.memberSafety': 'Member Safety',
+    'howItWorks.comparison.confidentialProfile': 'Confidential Profile',
+    'howItWorks.comparison.dateAlchemyTime': '40 min (form + consultation)',
+    'howItWorks.comparison.datingAppsTime': 'Hours of daily swiping',
+    'howItWorks.comparison.dateAlchemyMindset': 'Ready for serious relationship',
+    'howItWorks.comparison.datingAppsMindset': 'Mixed intentions',
+    'howItWorks.comparison.dateAlchemySafety': '100% — video & ID verification',
+    'howItWorks.comparison.datingAppsSafety': 'Limited verification',
+    'howItWorks.comparison.dateAlchemyProfile': 'Yes',
+    'howItWorks.comparison.datingAppsProfile': 'No',
+    'howItWorks.comparison.disclaimer': 'Dating app success statistics for the US based on Pew Research Center, 2023.',
+    
+    'howItWorks.finalCta.title': 'Ready to Experience the Difference?',
+    'howItWorks.finalCta.subtitle': 'Start Your Journey',
+    'howItWorks.finalCta.readyTitle': 'Ready to Get Started?',
+    'howItWorks.finalCta.readyDescription': 'Join our exclusive membership and take the first step towards meeting your ideal partner.',
+    'howItWorks.finalCta.readyButton': 'Apply for Membership',
+    'howItWorks.finalCta.notReadyTitle': 'Not ready to invest in a membership yet?',
+    'howItWorks.finalCta.notReadyDescription': 'Join our free network to check if you match with one of our exceptional clients.',
+    
     // Footer
     'footer.tagline': 'Redefining the dating experience for global professionals in Mauritius.',
     'footer.quickLinks': 'Quick Links',
@@ -479,6 +529,56 @@ export const translations = {
     'faq.a10': 'The Date Alchemy est un service proposé par la société mauricienne Frolic Ltd (C23201149), également propriétaire de la plateforme lifestyle Frolic.mu.',
     'faq.contact.text': 'Vous avez d\'autres questions ? Contactez-nous directement.',
     'faq.contact.cta': 'Nous contacter →',
+    
+    // How it works page (French)
+    'howItWorks.hero.title': 'De vraies connexions commencent ici',
+    'howItWorks.hero.ctaTitle': 'Prêt(e) à trouver votre moitié ?',
+    'howItWorks.hero.ctaDescription': 'Faites le premier pas vers une rencontre authentique grâce à notre processus de mise en relation éprouvé.',
+    'howItWorks.hero.ctaButton': 'Commencez votre candidature',
+    'howItWorks.hero.consultationText': 'Séance de consultation professionnelle',
+    
+    'howItWorks.journey.title': 'Votre parcours d\'adhésion',
+    'howItWorks.journey.subtitle': 'Un processus éprouvé pour de vraies rencontres',
+    
+    'howItWorks.step1.title': '01. Postulez pour devenir membre',
+    'howItWorks.step1.description1': 'Vous commencerez par remplir notre formulaire de candidature : un questionnaire qui nous aide à comprendre votre parcours, vos valeurs et ce que vous recherchez vraiment chez un partenaire.',
+    'howItWorks.step1.description2': 'Sous un jour ouvrable, nous examinerons votre demande pour vous indiquer si nous avons un profil correspondant parmi nos membres et nous partagerons avec vous une évaluation approfondie de vos besoins en matière de relation, de votre style d\'attachement et de vos habitudes de rencontre.',
+    
+    'howItWorks.step2.title': '02. Consultation privée',
+    'howItWorks.step2.description1': 'Ensuite, vous rencontrerez votre entremetteur attitré lors d\'une consultation individuelle en visioconférence. Cet échange permet d\'obtenir une compréhension plus approfondie de qui vous êtes et de ce que vous recherchez.',
+    'howItWorks.step2.description2': 'À la suite de cet entretien, nous élaborons un résumé de profil — que vous pourrez relire et approuver — et que nous partagerons de manière sélective uniquement avec des profils correspondant à vos critères.',
+    
+    'howItWorks.step3.title': '03. Présentation sur mesure',
+    'howItWorks.step3.description1': 'Lorsqu\'une compatibilité mutuelle est identifiée, nous partageons les deux profils pour examen. S\'il y a un intérêt réciproque, nous vous invitons à activer votre adhésion annuelle afin d\'organiser votre premier rendez-vous.',
+    'howItWorks.step3.description2': 'Nous nous chargeons de toute la coordination avec soin et discrétion, afin que vous rencontriez une personne réellement alignée avec vos aspirations — au bon endroit, au bon moment.',
+    
+    'howItWorks.step4.title': '04. Ajustements et suivi',
+    'howItWorks.step4.description1': 'Après la présentation, la suite vous appartient — que ce soit un deuxième rendez-vous ou la volonté d\'explorer une nouvelle rencontre.',
+    'howItWorks.step4.description2': 'Nous recueillons toujours vos retours après chaque rendez-vous afin d\'affiner notre approche et de faire évoluer votre expérience de manière significative.',
+    
+    'howItWorks.comparison.title': 'The Date Alchemy vs. Applications de rencontres',
+    'howItWorks.comparison.subtitle': 'Découvrez pourquoi la mise en relation intentionnelle donne de meilleurs résultats',
+    'howItWorks.comparison.timeRequired': 'Temps requis',
+    'howItWorks.comparison.userMindset': 'État d\'esprit des utilisateurs',
+    'howItWorks.comparison.memberSafety': 'Sécurité des membres',
+    'howItWorks.comparison.confidentialProfile': 'Profil confidentiel',
+    'howItWorks.comparison.dateAlchemyTime': '40 min (formulaire + consultation)',
+    'howItWorks.comparison.datingAppsTime': 'Heures de swipe quotidien',
+    'howItWorks.comparison.dateAlchemyMindset': 'Prêts pour une relation sérieuse',
+    'howItWorks.comparison.datingAppsMindset': 'Intentions mitigées',
+    'howItWorks.comparison.dateAlchemySafety': '100 % — vérification vidéo et pièce d\'identité',
+    'howItWorks.comparison.datingAppsSafety': 'Vérification limitée',
+    'howItWorks.comparison.dateAlchemyProfile': 'Oui',
+    'howItWorks.comparison.datingAppsProfile': 'Non',
+    'howItWorks.comparison.disclaimer': 'Statistiques de réussite des applications de rencontres aux États-Unis basées sur le Pew Research Center, 2023.',
+    
+    'howItWorks.finalCta.title': 'Prêt(e) à vivre la différence ?',
+    'howItWorks.finalCta.subtitle': 'Commencez votre parcours',
+    'howItWorks.finalCta.readyTitle': 'Prêt(e) à vous lancer ?',
+    'howItWorks.finalCta.readyDescription': 'Rejoignez notre adhésion exclusive et faites le premier pas vers la rencontre de votre partenaire idéal(e).',
+    'howItWorks.finalCta.readyButton': 'Postuler pour devenir membre',
+    'howItWorks.finalCta.notReadyTitle': 'Pas encore prêt(e) à investir dans une adhésion ?',
+    'howItWorks.finalCta.notReadyDescription': 'Rejoignez gratuitement notre réseau pour vérifier si vous correspondez à l\'un(e) de nos client(e)s d\'exception.',
     
     // Footer (French)
     'footer.tagline': 'L\'expérience de dating réinventée pour les professionnels au mindset global à Maurice.',
