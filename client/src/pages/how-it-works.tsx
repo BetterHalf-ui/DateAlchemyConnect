@@ -284,6 +284,11 @@ export default function HowItWorks() {
                     <td className="py-6 px-8 text-center">
                       <div className="bg-red-50 text-red-700 px-4 py-3 rounded-lg font-medium body-text">
                         <div className="font-semibold mb-1">{t('howItWorks.comparison.datingAppsSafety')}</div>
+                        <div className="text-xs leading-relaxed">
+                          56% of women receive unsolicited explicit content<br />
+                          11% receive threats of physical harm<br />
+                          52% encounter scammers
+                        </div>
                       </div>
                     </td>
                   </tr>
