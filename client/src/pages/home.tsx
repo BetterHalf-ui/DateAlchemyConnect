@@ -24,13 +24,13 @@ export default function Home() {
   // SEO setup based on language
   const seoConfig = {
     en: {
-      title: "The Date Alchemy - Premium Matchmaking in Mauritius | Find Your Perfect Match",
-      description: "Join Mauritius' most exclusive dating service for global professionals. Personalized matchmaking, verified members, guaranteed introductions. Rs8,000 for intentional relationships that last.",
+      title: "The Date Alchemy - Premium Matchmaking | A New Dating Experience for Global Professionals in Mauritius",
+      description: "Join Mauritius' most exclusive dating service for global professionals. Personalized matchmaking, verified members, curated introductions.",
       keywords: "matchmaking Mauritius, dating service Mauritius, premium dating, professional singles, relationship coaching, intentional dating, elite matchmaking"
     },
     fr: {
-      title: "The Date Alchemy - Service de Rencontres Premium à Maurice | Trouvez Votre Âme Sœur",
-      description: "Rejoignez le service de rencontres le plus exclusif de Maurice pour professionnels cosmopolites. Matchmaking personnalisé, membres vérifiés, rencontres garanties. Rs8,000 pour des relations durables.",
+      title: "The Date Alchemy - Service de Rencontres Premium pour Professionnels Cosmopolitains à Maurice",
+      description: "Rejoignez le service de rencontres le plus exclusif de Maurice pour professionnels cosmopolites. Matchmaking personnalisé, membres vérifiés, rencontres alignées à vos préférences.",
       keywords: "matchmaking Maurice, service de rencontres Maurice, rencontres premium, célibataires professionnels, coaching relationnel, rencontres intentionnelles, matchmaking élite"
     }
   };
