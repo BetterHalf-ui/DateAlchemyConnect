@@ -5,7 +5,7 @@ import { useApplicationLink } from "@/hooks/use-application-link";
 
 const trustStats = [
   { percentage: "99%", descriptionKey: "home.trust.stat1" },
-  { percentage: "88%", descriptionKey: "home.trust.stat2" },
+  { percentage: "90%", descriptionKey: "home.trust.stat2" },
   { percentage: "32%", descriptionKey: "home.trust.stat3" },
   { percentage: "22%", descriptionKey: "home.trust.stat4" }
 ];
