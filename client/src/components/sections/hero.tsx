@@ -46,7 +46,7 @@ export default function Hero() {
         paddingTop: '96px', // Account for banner (40px) + header (56px)
         backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${coupleImagePath}')`,
         backgroundAttachment: 'fixed',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center 60%',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover'
       }}
