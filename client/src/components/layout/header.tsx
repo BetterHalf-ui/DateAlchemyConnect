@@ -47,7 +47,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" onClick={() => window.scrollTo(0, 0)}>
-            <div className={`font-bold text-2xl hover:text-primary transition-colors cursor-pointer logo ${
+            <div className={`font-bold text-3xl hover:text-primary transition-colors cursor-pointer logo ${
               isScrolled || needsWhiteHeader ? 'text-primary' : 'text-white'
             }`}>
               {COMPANY_INFO.name}
