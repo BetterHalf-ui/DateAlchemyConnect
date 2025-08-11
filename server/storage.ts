@@ -34,7 +34,7 @@ export class MemStorage implements IStorage {
 
   private async initializeDefaultData() {
     // Set default active members count
-    await this.setSetting({ key: "active_members_count", value: "222" });
+    await this.setSetting({ key: "active_members_count", value: "225" });
     
     // Create sample blog posts in the order requested with correct dates
     const samplePosts: InsertBlogPost[] = [
