@@ -553,8 +553,8 @@ export const translations = {
     'howItWorks.step3.description2': 'Nous nous chargeons de toute la coordination avec soin et discrétion, afin que vous rencontriez une personne réellement alignée avec vos aspirations — au bon endroit, au bon moment.',
     
     'howItWorks.step4.title': '04. Ajustements et suivi',
-    'howItWorks.step4.description1': 'Après la présentation, la suite vous appartient — que ce soit un deuxième rendez-vous ou la volonté d\'explorer une nouvelle rencontre.',
-    'howItWorks.step4.description2': 'Nous recueillons toujours vos retours après chaque rendez-vous afin d\'affiner notre approche et de faire évoluer votre expérience de manière significative.',
+    'howItWorks.step4.description1': 'Après la rencontre, la décision de ce qui suit vous appartient — que ce soit un deuxième rendez-vous ou la volonté d\'explorer une nouvelle rencontre.',
+    'howItWorks.step4.description2': 'Nous recueillons toujours vos retours après chaque rendez-vous afin d\'affiner notre approche et d\'assurer une expérience positive.',
     
     'howItWorks.comparison.title': 'The Date Alchemy vs. Applications de rencontres',
     'howItWorks.comparison.subtitle': 'Découvrez pourquoi la mise en relation intentionnelle donne de meilleurs résultats',
