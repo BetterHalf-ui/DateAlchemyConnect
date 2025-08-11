@@ -443,7 +443,7 @@ export const translations = {
     'home.blog.subtitle': 'Conseils d\'experts pour des rencontres intentionnelles',
     
     'home.newsletter.title': 'Les secrets de l\'alchimie — directement dans votre boîte mail',
-    'home.newsletter.subtitle': 'Rejoignez plus de 1 000 célibataires avisés qui reçoivent tous les 15 jours nos conseils exclusifs pour réussir leurs rencontres.',
+    'home.newsletter.subtitle': 'Rejoignez plus de 1 000 célibataires avisés qui reçoivent tous les 15 jours nos conseils exclusifs (en anglais) pour réussir leurs rencontres.',
     'home.newsletter.placeholder': 'Entrez votre adresse e-mail',
     'home.newsletter.cta': 'S\'abonner',
     'home.newsletter.disclaimer': 'En vous abonnant, vous acceptez de recevoir notre newsletter. Vous pouvez vous désabonner à tout moment.',
