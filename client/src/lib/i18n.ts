@@ -575,8 +575,8 @@ export const translations = {
     'howItWorks.finalCta.title': 'Prêt(e) à faire l\'expérience de la différence ?',
     'howItWorks.finalCta.subtitle': 'Commencez votre parcours',
     'howItWorks.finalCta.readyTitle': 'Prêt(e) à vous lancer ?',
-    'howItWorks.finalCta.readyDescription': 'Rejoignez notre adhésion exclusive et faites le premier pas vers la rencontre de votre partenaire idéal(e).',
-    'howItWorks.finalCta.readyButton': 'Postuler pour devenir membre',
+    'howItWorks.finalCta.readyDescription': 'Rejoignez notre adhésion et faites le premier pas vers la rencontre de votre future moitiée.',
+    'howItWorks.finalCta.readyButton': 'Devenir membre',
     'howItWorks.finalCta.notReadyTitle': 'Pas encore prêt(e) à investir dans une adhésion ?',
     'howItWorks.finalCta.notReadyDescription': 'Rejoignez gratuitement notre réseau pour vérifier si vous correspondez à l\'un(e) de nos client(e)s d\'exception.',
     
