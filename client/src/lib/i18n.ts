@@ -289,7 +289,7 @@ export const translations = {
     'home.trust.stat1': 'of setups result in real, face-to-face dates',
     'home.trust.stat2': 'of dates are reported as good experiences',
     'home.trust.stat3': 'lead to a second date',
-    'home.trust.stat4': 'of our paid members are going strong with their better half',
+    'home.trust.stat4': 'of our paid members are already going strong with their match',
     
     // Guarantees section
     'home.guarantees.title': 'Our Guarantees',
@@ -453,7 +453,7 @@ export const translations = {
     'home.trust.stat1': 'de nos mises en relation aboutissent à un vrai rendez-vous en face-à-face',
     'home.trust.stat2': 'des rendez-vous sont jugés comme de bonnes expériences',
     'home.trust.stat3': 'des rencontres donnent lieu à un second rendez-vous',
-    'home.trust.stat4': 'de nos membres payants vivent aujourd\'hui une belle histoire avec leur moitié',
+    'home.trust.stat4': 'de nos membres payants vivent déjà une belle histoire avec leur match',
     
     // Guarantees section (French)
     'home.guarantees.title': 'Nos garanties',
