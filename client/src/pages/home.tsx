@@ -61,7 +61,7 @@ export default function Home() {
   });
 
   const latestPosts = blogPosts?.slice(0, 3) || [];
-  const targetCount = parseInt(activeMembersSetting?.value || "222");
+  const targetCount = parseInt(activeMembersSetting?.value || "225");
   const [displayCount, setDisplayCount] = useState(1);
   const [testimonialVisible, setTestimonialVisible] = useState(false);
   const [testimonialTextVisible, setTestimonialTextVisible] = useState(false);
