@@ -363,7 +363,7 @@ export const translations = {
     'common.loading': 'Chargement...',
     
     // Home page
-    'home.hero.title': 'L\'expérience de dating réinventée pour les professionnels au mindset global à Maurice',
+    'home.hero.title': 'Une expérience de dating réinventée pour les professionnels cosmopolites à Maurice',
     'home.hero.subtitle': 'Service de mise en relation premium pour des relations intentionnelles. Discret, personnalisé et efficace.',
     'home.hero.cta': 'Devenir membre',
     'home.hero.memberCount': 'membres actifs',
@@ -582,7 +582,7 @@ export const translations = {
     'howItWorks.finalCta.notReadyDescription': 'Rejoignez gratuitement notre réseau pour vérifier si vous correspondez à l\'un(e) de nos client(e)s d\'exception.',
     
     // Footer (French)
-    'footer.tagline': 'L\'expérience de dating réinventée pour les professionnels au mindset global à Maurice.',
+    'footer.tagline': 'Une expérience de dating réinventée pour les professionnels cosmopolites à Maurice.',
     'footer.quickLinks': 'Liens Rapides',
     'footer.legal': 'Légal',
     'footer.contact': 'Contact',
@@ -610,21 +610,7 @@ export const translations = {
     'network.cta.button': 'Créer votre profil',
     'network.cta.membership': 'Envie d\'être plus proactif(ve) ?',
     'network.cta.membershipLink': 'Découvrez notre formule d\'adhésion.',
-    'network.benefits.description': 'Le réseau The Date Alchemy est pour les célibataires qui sont émotionnellement prêts pour une relation — mais pas encore prêts à rejoindre comme client complet. C\'est gratuit de rejoindre, et complètement discret.',
-    'network.benefits.analogy': 'Pensez-y comme être sur la touche — assez proche de l\'action, mais pas tout à fait sur le terrain.',
-    'network.step1.title': 'Remplissez votre profil privé',
-    'network.step1.desc': 'Dites-nous qui vous êtes, ce qui compte pour vous, et ce que vous recherchez.',
-    'network.step2.title': 'Vous êtes ajouté à notre pool de célibataires sélectionnés',
-    'network.step2.desc': 'Nous examinons régulièrement ce pool pour nos membres.',
-    'network.step3.title': 'Vous entendrez de nous si nous repérons un match solide',
-    'network.step3.desc': 'Nous ne vous contacterons que si nous croyons qu\'il y a un réel potentiel des deux côtés.',
-    'network.note.title': 'Veuillez noter :',
-    'network.note.description': 'Nous priorisons les matches entre clients. En tant que membre gratuit du réseau Date Alchemy, nous ne cherchons pas en votre nom — et vous pourriez ne pas entendre de nous pendant un moment.',
-    'network.cta.title': 'Vous voulez rejoindre le réseau ?',
-    'network.cta.description': 'Remplissez votre profil ci-dessous — et nous vous contacterons si la bonne personne arrive.',
-    'network.cta.button': 'Créez votre profil',
-    'network.cta.membership': 'Prêt à être proactif à la place ?',
-    'network.cta.membershipLink': 'En savoir plus sur l\'adhésion',
+
     
     // Blog page (French)
     'blog.title': 'Conseils et astuces de rencontres',
