@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { EXTERNAL_LINKS } from '@/lib/constants';
+import { useApplicationLink } from "@/hooks/use-application-link";
 
 export default function Navigation() {
+  const applicationLink = useApplicationLink();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -51,7 +52,7 @@ export default function Navigation() {
 
           {/* Right - CTA */}
           <a 
-            href={EXTERNAL_LINKS.applicationForm} 
+            href={applicationLink} 
             target="_blank" 
             rel="noopener noreferrer"
           >

@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { EXTERNAL_LINKS } from "@/lib/constants";
+import { useApplicationLink } from "@/hooks/use-application-link";
 
 export default function StatsSection() {
+  const applicationLink = useApplicationLink();
   const [displayCount, setDisplayCount] = useState(1);
 
   useEffect(() => {
@@ -56,7 +57,7 @@ export default function StatsSection() {
         </div>
 
         <a 
-          href={EXTERNAL_LINKS.applicationForm} 
+          href={applicationLink} 
           target="_blank" 
           rel="noopener noreferrer"
         >

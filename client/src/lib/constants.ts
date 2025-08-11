@@ -7,6 +7,7 @@ export const BRAND_COLORS = {
 
 export const EXTERNAL_LINKS = {
   applicationForm: 'https://betterhalf.fillout.com/t/9ywPABvKHdus',
+  applicationFormFr: 'https://betterhalf.fillout.com/t/85BTsRpeJYus',
   referralForm: 'https://betterhalf.fillout.com/referral',
   facebook: '#',
   instagram: '#',

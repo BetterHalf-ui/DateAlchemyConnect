@@ -2,12 +2,13 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import RebrandBanner from "@/components/layout/rebrand-banner";
 import { Button } from "@/components/ui/button";
-import { EXTERNAL_LINKS } from "@/lib/constants";
 import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
+import { useApplicationLink } from "@/hooks/use-application-link";
 
 export default function HowItWorks() {
   const { t, language } = useI18n();
+  const applicationLink = useApplicationLink();
   
   return (
     <div className="min-h-screen">
@@ -31,7 +32,7 @@ export default function HowItWorks() {
                   {t('howItWorks.hero.ctaDescription')}
                 </p>
                 <a 
-                  href={EXTERNAL_LINKS.applicationForm} 
+                  href={applicationLink} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="inline-block bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 body-text"
@@ -340,7 +341,7 @@ export default function HowItWorks() {
             {t('howItWorks.finalCta.readyDescription')}
           </p>
           <a 
-            href={EXTERNAL_LINKS.applicationForm} 
+            href={applicationLink} 
             target="_blank" 
             rel="noopener noreferrer"
           >

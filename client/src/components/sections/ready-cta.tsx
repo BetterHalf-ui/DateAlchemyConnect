@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { EXTERNAL_LINKS } from "@/lib/constants";
 import { Link } from "wouter";
+import { useApplicationLink } from "@/hooks/use-application-link";
 
 export default function ReadyCTA() {
+  const applicationLink = useApplicationLink();
+  
   return (
     <section className="section-black py-32 text-center">
       <div className="max-w-4xl mx-auto px-4">
@@ -10,7 +12,7 @@ export default function ReadyCTA() {
           Ready for real connection?
         </h2>
         <a 
-          href={EXTERNAL_LINKS.applicationForm} 
+          href={applicationLink} 
           target="_blank" 
           rel="noopener noreferrer"
         >

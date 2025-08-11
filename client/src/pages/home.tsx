@@ -12,12 +12,13 @@ import Pricing from "@/components/sections/pricing";
 import Journey from "@/components/sections/journey";
 import FAQ from "@/components/sections/faq";
 import Newsletter from "@/components/sections/newsletter";
-import { EXTERNAL_LINKS } from "@/lib/constants";
 import { useI18n } from "@/lib/i18n";
+import { useApplicationLink } from "@/hooks/use-application-link";
 import type { BlogPost, Setting } from "@shared/schema";
 
 export default function Home() {
   const { t, language } = useI18n();
+  const applicationLink = useApplicationLink();
   const { data: blogPosts } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog-posts"],
     queryFn: async () => {
@@ -622,7 +623,7 @@ export default function Home() {
               {t('home.research.ctaSubtitle')}
             </p>
             <a 
-              href={EXTERNAL_LINKS.applicationForm}
+              href={applicationLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
@@ -666,7 +667,7 @@ export default function Home() {
           <h3 className="text-2xl mb-6">{t('home.nominate.subtitle')}</h3>
           <p className="text-lg text-gray-700 mb-8">{t('home.nominate.description')}</p>
           <a 
-            href={EXTERNAL_LINKS.referralForm} 
+            href="https://betterhalf.fillout.com/t/yQJqQCr7wdus" 
             target="_blank" 
             rel="noopener noreferrer"
           >

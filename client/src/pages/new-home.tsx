@@ -12,9 +12,11 @@ import Membership from '@/components/sections/membership';
 import Newsletter from '@/components/sections/newsletter';
 import FAQSection from '@/components/sections/faq-section';
 import { Button } from '@/components/ui/button';
-import { EXTERNAL_LINKS } from '@/lib/constants';
+import { useApplicationLink } from "@/hooks/use-application-link";
 
 export default function NewHome() {
+  const applicationLink = useApplicationLink();
+  
   useEffect(() => {
     // Add smooth scroll behavior
     document.documentElement.classList.add('smooth-scroll');
@@ -150,7 +152,7 @@ export default function NewHome() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl serif-title mb-8">Ready to Begin?</h2>
           <a 
-            href={EXTERNAL_LINKS.applicationForm} 
+            href={applicationLink} 
             target="_blank" 
             rel="noopener noreferrer"
           >

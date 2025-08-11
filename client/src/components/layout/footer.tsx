@@ -2,9 +2,11 @@ import { Link } from "wouter";
 import { Facebook, Instagram } from "lucide-react";
 import { COMPANY_INFO, CONTACT_INFO, EXTERNAL_LINKS } from "@/lib/constants";
 import { useI18n } from "@/lib/i18n";
+import { useApplicationLink } from "@/hooks/use-application-link";
 
 export default function Footer() {
   const { t } = useI18n();
+  const applicationLink = useApplicationLink();
   
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -38,7 +40,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a 
-                  href={EXTERNAL_LINKS.applicationForm} 
+                  href={applicationLink} 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"

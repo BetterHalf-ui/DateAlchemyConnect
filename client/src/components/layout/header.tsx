@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { COMPANY_INFO, EXTERNAL_LINKS } from "@/lib/constants";
+import { COMPANY_INFO } from "@/lib/constants";
 import LanguageSwitcher from "@/components/i18n/language-switcher";
 import { useI18n } from "@/lib/i18n";
+import { useApplicationLink } from "@/hooks/use-application-link";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
@@ -12,6 +13,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
   const { t } = useI18n();
+  const applicationLink = useApplicationLink();
   
   // Check if we're on a page that needs a white background header by default
   const needsWhiteHeader = location.startsWith('/blog') || location.startsWith('/admin') || location.startsWith('/network') || location.startsWith('/privacy-policy') || location.startsWith('/rebrand-announcement') || location.startsWith('/how-it-works');
@@ -93,7 +95,7 @@ export default function Header() {
             </button>
 
             <a 
-              href={EXTERNAL_LINKS.applicationForm} 
+              href={applicationLink} 
               target="_blank" 
               rel="noopener noreferrer"
               className="hidden md:block"
@@ -131,7 +133,7 @@ export default function Header() {
               <LanguageSwitcher className={isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'} />
             </div>
             <a 
-              href={EXTERNAL_LINKS.applicationForm} 
+              href={applicationLink} 
               target="_blank" 
               rel="noopener noreferrer"
               className="block pt-4"

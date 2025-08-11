@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { EXTERNAL_LINKS } from "@/lib/constants";
 import { useI18n } from '@/lib/i18n';
+import { useApplicationLink } from "@/hooks/use-application-link";
 
 const trustStats = [
   { percentage: "99%", descriptionKey: "home.trust.stat1" },
@@ -31,6 +31,7 @@ const guarantees = [
 
 export default function Pricing() {
   const { t } = useI18n();
+  const applicationLink = useApplicationLink();
   
   return (
     <>
@@ -80,7 +81,7 @@ export default function Pricing() {
           </div>
           
           <a 
-            href={EXTERNAL_LINKS.applicationForm} 
+            href={applicationLink} 
             target="_blank" 
             rel="noopener noreferrer"
           >

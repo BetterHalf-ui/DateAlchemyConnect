@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { EXTERNAL_LINKS } from "@/lib/constants";
 import { Link } from "wouter";
+import { useApplicationLink } from "@/hooks/use-application-link";
 
 export default function NewHero() {
+  const applicationLink = useApplicationLink();
   const [textVisible, setTextVisible] = useState(false);
 
   useEffect(() => {
@@ -39,7 +40,7 @@ export default function NewHero() {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
           <a 
-            href={EXTERNAL_LINKS.applicationForm} 
+            href={applicationLink} 
             target="_blank" 
             rel="noopener noreferrer"
           >

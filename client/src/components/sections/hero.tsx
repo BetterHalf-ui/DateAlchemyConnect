@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { EXTERNAL_LINKS } from "@/lib/constants";
 import { useI18n } from "@/lib/i18n";
+import { useApplicationLink } from "@/hooks/use-application-link";
 import coupleImagePath from "@assets/WhatsApp Image 2025-08-11 at 12.07.54 PM_1754899948811.jpeg";
 
 export default function Hero() {
   const { t } = useI18n();
+  const applicationLink = useApplicationLink();
   const [animationTriggered, setAnimationTriggered] = useState(false);
 
   useEffect(() => {
@@ -76,7 +77,7 @@ export default function Hero() {
           transitionDelay: animationTriggered ? `${titleWords.length * 0.1 + 0.2}s` : '0s'
         }}>
           <a 
-            href={EXTERNAL_LINKS.applicationForm} 
+            href={applicationLink} 
             target="_blank" 
             rel="noopener noreferrer"
           >

@@ -2,10 +2,12 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import RebrandBanner from "@/components/layout/rebrand-banner";
 import { Button } from "@/components/ui/button";
-import { EXTERNAL_LINKS } from "@/lib/constants";
 import { CheckCircle } from "lucide-react";
+import { useApplicationLink } from "@/hooks/use-application-link";
 
 export default function RebrandAnnouncement() {
+  const applicationLink = useApplicationLink();
+  
   return (
     <div className="min-h-screen bg-white">
       <RebrandBanner />
@@ -140,7 +142,7 @@ export default function RebrandAnnouncement() {
 
             <div className="text-center">
               <a 
-                href={EXTERNAL_LINKS.applicationForm} 
+                href={applicationLink} 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
