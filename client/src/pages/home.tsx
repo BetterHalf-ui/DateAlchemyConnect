@@ -667,7 +667,7 @@ export default function Home() {
           <h3 className="text-2xl mb-6">{t('home.nominate.subtitle')}</h3>
           <p className="text-lg text-gray-700 mb-8">{t('home.nominate.description')}</p>
           <a 
-            href="https://betterhalf.fillout.com/t/yQJqQCr7wdus" 
+            href="https://betterhalf.fillout.com/referral" 
             target="_blank" 
             rel="noopener noreferrer"
           >
