@@ -4,8 +4,12 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import RebrandBanner from "@/components/layout/rebrand-banner";
 import PictureCoupleImg from "@assets/PictureCouple_1754227660398.jpeg";
+import { useI18n } from '@/lib/i18n';
+import { EXTERNAL_LINKS } from "@/lib/constants";
 
 export default function Network() {
+  const { t } = useI18n();
+
   return (
     <div className="min-h-screen">
       <RebrandBanner />
@@ -16,12 +20,12 @@ export default function Network() {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
             {/* Text Content */}
             <div>
-              <h1 className="text-5xl font-bold mb-6">The Date Alchemy Network</h1>
+              <h1 className="text-5xl font-bold mb-6">{t('network.title')}</h1>
               <p className="text-2xl text-gray-700 mb-8">
-                Where real relationships begin — when the timing (and person) is right.
+                {t('network.subtitle')}
               </p>
               <p className="text-lg text-gray-600">
-                Not quite ready to invest in our membership — but open to love if the right person comes along and ready to wait? You're in the right place.
+                {t('network.description')}
               </p>
             </div>
             
@@ -37,12 +41,15 @@ export default function Network() {
           </div>
           
           <div className="bg-gray-50 p-8 rounded-xl mb-12">
-            <h2 className="text-3xl font-bold text-center mb-8">Complimentary. Confidential. Carefully considered.</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">{t('network.benefits.title')}</h2>
             <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
-              The Date Alchemy Network is for singles who are emotionally ready for a relationship — but not yet ready to join as a full client. It's free to join, and completely discreet. Once you're in the pool, we'll reach out only if we spot a strong mutual match with an active member.
+              {t('network.benefits.description')}
+            </p>
+            <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mt-4">
+              {t('network.benefits.poolDescription')}
             </p>
             <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mt-4 italic">
-              Think of it as being on the sidelines — close enough to the action, but not quite on the field.
+              {t('network.benefits.analogy')}
             </p>
           </div>
           
@@ -51,38 +58,38 @@ export default function Network() {
               <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 1
               </div>
-              <h3 className="text-xl font-bold mb-3">Fill in your private profile</h3>
-              <p className="text-gray-600">Tell us who you are, what matters to you, and what you're looking for.</p>
+              <h3 className="text-xl font-bold mb-3">{t('network.step1.title')}</h3>
+              <p className="text-gray-600">{t('network.step1.desc')}</p>
             </div>
             
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 2
               </div>
-              <h3 className="text-xl font-bold mb-3">You're added to our curated singles pool</h3>
-              <p className="text-gray-600">We regularly review this pool for our members.</p>
+              <h3 className="text-xl font-bold mb-3">{t('network.step2.title')}</h3>
+              <p className="text-gray-600">{t('network.step2.desc')}</p>
             </div>
             
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 3
               </div>
-              <h3 className="text-xl font-bold mb-3">You'll hear from us if we spot a strong match</h3>
-              <p className="text-gray-600">We'll only reach out if we believe there's real potential on both sides.</p>
+              <h3 className="text-xl font-bold mb-3">{t('network.step3.title')}</h3>
+              <p className="text-gray-600">{t('network.step3.desc')}</p>
             </div>
           </div>
           
           <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-xl mb-12">
-            <h3 className="font-bold mb-3">Please note:</h3>
+            <h3 className="font-bold mb-3">{t('network.note.title')}</h3>
             <p className="text-gray-700 mb-3">
-              We prioritize matching our members first, so you might not hear from us right away. But we're so glad you're here — and this is a great first step.
+              {t('network.note.description')}
             </p>
           </div>
           
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-6">Join the network now</h3>
+            <h3 className="text-2xl font-bold mb-6">{t('network.cta.title')}</h3>
             <p className="text-lg text-gray-700 mb-8">
-              Fill in your profile below — and we'll be in touch if the right person comes along.
+              {t('network.cta.description')}
             </p>
             <a 
               href="https://betterhalf.fillout.com/t/45wXDMu31Aus" 
@@ -90,13 +97,13 @@ export default function Network() {
               rel="noopener noreferrer"
             >
               <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold mb-4">
-                Create Your Profile
+                {t('network.cta.button')}
               </Button>
             </a>
             <p className="text-gray-600">
-              Ready to be proactive instead?{" "}
+              {t('network.cta.membership')}{" "}
               <Link href="/" onClick={() => window.scrollTo(0, 0)}>
-                <span className="text-primary hover:underline cursor-pointer">Learn more about membership</span>
+                <span className="text-primary hover:underline cursor-pointer">{t('network.cta.membershipLink')}</span>
               </Link>
             </p>
           </div>
