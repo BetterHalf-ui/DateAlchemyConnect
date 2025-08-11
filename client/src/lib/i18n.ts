@@ -190,7 +190,7 @@ export const translations = {
     'howItWorks.finalCta.title': 'Ready to Experience the Difference?',
     'howItWorks.finalCta.subtitle': 'Start Your Journey',
     'howItWorks.finalCta.readyTitle': 'Ready to Get Started?',
-    'howItWorks.finalCta.readyDescription': 'Join our exclusive membership and take the first step towards meeting your ideal partner.',
+    'howItWorks.finalCta.readyDescription': 'Experience the difference and take the first step towards meeting your better half.',
     'howItWorks.finalCta.readyButton': 'Apply for Membership',
     'howItWorks.finalCta.notReadyTitle': 'Not ready to invest in a membership yet?',
     'howItWorks.finalCta.notReadyDescription': 'Join our free network to check if you match with one of our exceptional clients.',
