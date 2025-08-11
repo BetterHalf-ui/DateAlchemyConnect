@@ -545,8 +545,8 @@ export const translations = {
     'howItWorks.step1.description2': 'Sous un jour ouvrable, nous examinerons votre demande pour vous indiquer si nous avons un profil correspondant parmi nos membres et nous partagerons avec vous une évaluation approfondie de vos besoins en matière de relation, de votre style d\'attachement et de vos habitudes de rencontre.',
     
     'howItWorks.step2.title': '02. Consultation privée',
-    'howItWorks.step2.description1': 'Ensuite, vous rencontrerez votre entremetteur attitré lors d\'une consultation individuelle en visioconférence. Cet échange permet d\'obtenir une compréhension plus approfondie de qui vous êtes et de ce que vous recherchez.',
-    'howItWorks.step2.description2': 'À la suite de cet entretien, nous élaborons un résumé de profil — que vous pourrez relire et approuver — et que nous partagerons de manière sélective uniquement avec des profils correspondant à vos critères.',
+    'howItWorks.step2.description1': 'Ensuite, vous rencontrerez votre matchmaker lors d\'une consultation individuelle en visioconférence. Cet échange permet d\'obtenir une compréhension plus approfondie de qui vous êtes et de ce que vous recherchez.',
+    'howItWorks.step2.description2': 'À la suite de cet entretien, nous créons un résumé de votre profil — que vous pourrez relire et approuver — et que nous partagerons de manière sélective uniquement avec des profils correspondant à vos critères.',
     
     'howItWorks.step3.title': '03. Présentation sur mesure',
     'howItWorks.step3.description1': 'Lorsqu\'une compatibilité mutuelle est identifiée, nous partageons les deux profils pour examen. S\'il y a un intérêt réciproque, nous vous invitons à activer votre adhésion annuelle afin d\'organiser votre premier rendez-vous.',
