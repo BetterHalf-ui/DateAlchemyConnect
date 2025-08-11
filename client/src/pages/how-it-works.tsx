@@ -7,7 +7,7 @@ import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
 
 export default function HowItWorks() {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
   
   return (
     <div className="min-h-screen">
@@ -328,20 +328,7 @@ export default function HowItWorks() {
               </p>
             </div>
           </div>
-          
-          {/* Call to Action after table */}
-          <div className="text-center mt-16">
-            <h3 className="text-2xl font-bold mb-4 subtitle text-gray-900">{t('howItWorks.finalCta.title')}</h3>
-            <a 
-              href={EXTERNAL_LINKS.applicationForm} 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl font-semibold">
-                {t('howItWorks.finalCta.subtitle')}
-              </Button>
-            </a>
-          </div>
+
         </div>
       </section>
 
