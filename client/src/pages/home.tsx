@@ -15,6 +15,7 @@ import Newsletter from "@/components/sections/newsletter";
 import { useI18n } from "@/lib/i18n";
 import { useApplicationLink } from "@/hooks/use-application-link";
 import { useSEO } from "@/hooks/use-seo";
+import { trackApplicationClick, trackBlogNavigation, trackReferralClick } from "@/lib/analytics";
 import type { BlogPost, Setting } from "@shared/schema";
 
 export default function Home() {
@@ -692,6 +693,7 @@ export default function Home() {
             href="https://betterhalf.fillout.com/referral" 
             target="_blank" 
             rel="noopener noreferrer"
+            onClick={trackReferralClick}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold">
               {t('home.nominate.cta')}
@@ -705,7 +707,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center mb-16">
             <h2 className="text-4xl font-bold">{t('home.blog.latestTitle')}</h2>
-            <Link href="/blog" onClick={() => window.scrollTo(0, 0)}>
+            <Link href="/blog" onClick={() => {
+              window.scrollTo(0, 0);
+              trackBlogNavigation('homepage_section');
+            }}>
               <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white">
                 {t('home.blog.viewAll')}
               </Button>

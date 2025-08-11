@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import I18nProvider from "@/components/i18n/i18n-provider";
+import { useAnalytics } from "@/hooks/use-analytics";
 import Home from "@/pages/home";
 import Network from "@/pages/network";
 import HowItWorks from "@/pages/how-it-works";
@@ -16,6 +17,9 @@ import BlogAdmin from "@/components/admin/blog-admin";
 import NotFound from "@/pages/not-found";
 
 function Router() {
+  // Track page views when routes change
+  useAnalytics();
+  
   return (
     <Switch>
       <Route path="/" component={Home} />
