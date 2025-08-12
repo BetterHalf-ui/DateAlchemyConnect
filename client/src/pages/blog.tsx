@@ -34,6 +34,8 @@ export default function Blog() {
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesSearch;
   }) || [];
+  
+  console.log('Blog page - Total posts:', blogPosts?.length, 'Filtered posts:', filteredPosts.length);
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

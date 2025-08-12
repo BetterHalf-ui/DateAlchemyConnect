@@ -64,6 +64,7 @@ export default function Home() {
   });
 
   const latestPosts = blogPosts?.slice(0, 3) || [];
+  console.log('Latest posts for display:', latestPosts.length, latestPosts.map(p => p.title));
   const targetCount = parseInt(activeMembersSetting?.value || "225");
   const [displayCount, setDisplayCount] = useState(1);
   const [testimonialVisible, setTestimonialVisible] = useState(false);
