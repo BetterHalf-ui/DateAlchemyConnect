@@ -1,9 +1,10 @@
 [build]
   publish = "dist/public"
-  command = "npm run build"
+  command = "npm ci --include=dev && npm run build"
 
 [build.environment]
   NODE_VERSION = "20"
+  NODE_ENV = "development"
 
 [functions]
   directory = "netlify/functions"

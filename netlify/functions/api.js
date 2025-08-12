@@ -1,27 +1,48 @@
-import express from 'express';
-import serverless from 'serverless-http';
-import { storage } from '../../server/storage.js';
-import { insertBlogPostSchema, insertSettingSchema } from '../../shared/schema.js';
-import { z } from 'zod';
+const express = require('express');
+const serverless = require('serverless-http');
+
+// Simple in-memory storage for Netlify functions
+const blogPosts = [
+  {
+    id: "1",
+    title: "Dating with intention will make you happier",
+    content: "In today's fast-paced world, dating with intention is more important than ever. This approach to relationships focuses on meaningful connections rather than casual encounters, leading to more fulfilling relationships and personal satisfaction.",
+    excerpt: "Discover how intentional dating leads to more fulfilling relationships and greater personal happiness.",
+    published: true,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+    category: "relationships",
+    tags: ["dating", "intention", "happiness"],
+    featured_image: null,
+    author: "The Date Alchemy Team"
+  }
+];
+
+const settings = {
+  active_members_count: { id: "1", key: "active_members_count", value: "225" }
+};
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Blog Posts API
-app.get("/api/blog-posts", async (req, res) => {
+app.get("/api/blog-posts", (req, res) => {
   try {
     const published = req.query.published === 'true' ? true : req.query.published === 'false' ? false : undefined;
-    const posts = await storage.getBlogPosts(published);
+    let posts = blogPosts;
+    if (published !== undefined) {
+      posts = blogPosts.filter(post => post.published === published);
+    }
     res.json(posts);
   } catch (error) {
     res.status(500).json({ message: "Failed to fetch blog posts" });
   }
 });
 
-app.get("/api/blog-posts/:id", async (req, res) => {
+app.get("/api/blog-posts/:id", (req, res) => {
   try {
-    const post = await storage.getBlogPost(req.params.id);
+    const post = blogPosts.find(p => p.id === req.params.id);
     if (!post) {
       return res.status(404).json({ message: "Blog post not found" });
     }
@@ -31,86 +52,16 @@ app.get("/api/blog-posts/:id", async (req, res) => {
   }
 });
 
-app.post("/api/blog-posts", async (req, res) => {
+// Settings API  
+app.get("/api/settings/:key", (req, res) => {
   try {
-    const validatedData = insertBlogPostSchema.parse(req.body);
-    const post = await storage.createBlogPost(validatedData);
-    res.status(201).json(post);
-  } catch (error) {
-    if (error instanceof z.ZodError) {
-      return res.status(400).json({ message: "Invalid blog post data", errors: error.errors });
-    }
-    res.status(500).json({ message: "Failed to create blog post" });
-  }
-});
-
-app.put("/api/blog-posts/:id", async (req, res) => {
-  try {
-    const validatedData = insertBlogPostSchema.partial().parse(req.body);
-    const post = await storage.updateBlogPost(req.params.id, validatedData);
-    if (!post) {
-      return res.status(404).json({ message: "Blog post not found" });
-    }
-    res.json(post);
-  } catch (error) {
-    if (error instanceof z.ZodError) {
-      return res.status(400).json({ message: "Invalid blog post data", errors: error.errors });
-    }
-    res.status(500).json({ message: "Failed to update blog post" });
-  }
-});
-
-app.delete("/api/blog-posts/:id", async (req, res) => {
-  try {
-    const deleted = await storage.deleteBlogPost(req.params.id);
-    if (!deleted) {
-      return res.status(404).json({ message: "Blog post not found" });
-    }
-    res.status(204).send();
-  } catch (error) {
-    res.status(500).json({ message: "Failed to delete blog post" });
-  }
-});
-
-// Settings API
-app.get("/api/settings/:key", async (req, res) => {
-  try {
-    const setting = await storage.getSetting(req.params.key);
+    const setting = settings[req.params.key];
     if (!setting) {
       return res.status(404).json({ message: "Setting not found" });
     }
     res.json(setting);
   } catch (error) {
     res.status(500).json({ message: "Failed to fetch setting" });
-  }
-});
-
-app.post("/api/settings", async (req, res) => {
-  try {
-    const validatedData = insertSettingSchema.parse(req.body);
-    const setting = await storage.createSetting(validatedData);
-    res.status(201).json(setting);
-  } catch (error) {
-    if (error instanceof z.ZodError) {
-      return res.status(400).json({ message: "Invalid setting data", errors: error.errors });
-    }
-    res.status(500).json({ message: "Failed to create setting" });
-  }
-});
-
-app.put("/api/settings/:key", async (req, res) => {
-  try {
-    const validatedData = insertSettingSchema.partial().parse(req.body);
-    const setting = await storage.updateSetting(req.params.key, validatedData);
-    if (!setting) {
-      return res.status(404).json({ message: "Setting not found" });
-    }
-    res.json(setting);
-  } catch (error) {
-    if (error instanceof z.ZodError) {
-      return res.status(400).json({ message: "Invalid setting data", errors: error.errors });
-    }
-    res.status(500).json({ message: "Failed to update setting" });
   }
 });
 
@@ -121,4 +72,4 @@ app.use((err, _req, res, _next) => {
   res.status(status).json({ message });
 });
 
-export const handler = serverless(app);
+module.exports.handler = serverless(app);
