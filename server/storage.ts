@@ -36,6 +36,8 @@ export class MemStorage implements IStorage {
     // Set default active members count
     await this.setSetting({ key: "active_members_count", value: "225" });
     
+    console.log("Initializing default blog posts...");
+    
     // Create sample blog posts in the order requested with correct dates
     const samplePosts: InsertBlogPost[] = [
       {
@@ -128,9 +130,12 @@ export class MemStorage implements IStorage {
         published: post.published ?? false,
         imageUrl: post.imageUrl ?? null,
         tags: post.tags ?? [],
+        category: post.category ?? null,
       };
       this.blogPosts.set(id, blogPost);
     }
+    
+    console.log(`Initialized ${this.blogPosts.size} blog posts`);
   }
 
   async getUser(id: string): Promise<User | undefined> {
@@ -173,6 +178,7 @@ export class MemStorage implements IStorage {
       published: insertPost.published ?? false,
       imageUrl: insertPost.imageUrl ?? null,
       tags: insertPost.tags ?? [],
+      category: insertPost.category ?? null,
     };
     this.blogPosts.set(id, post);
     return post;
