@@ -9,8 +9,17 @@ export default function Hero() {
   const { t, language } = useI18n();
   const applicationLink = useApplicationLink();
   const [animationTriggered, setAnimationTriggered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if device is mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
       // Trigger animation after slight scroll (20px)
@@ -33,6 +42,7 @@ export default function Hero() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', checkMobile);
     };
   }, [animationTriggered]);
 
@@ -44,14 +54,27 @@ export default function Hero() {
       className="relative h-screen flex items-center justify-center overflow-hidden"
       style={{
         paddingTop: '96px', // Account for banner (40px) + header (56px)
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${coupleImagePath}')`,
-        backgroundAttachment: 'fixed',
-        backgroundPosition: 'center 35%',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
       }}
     >
-      <div className="text-center text-white px-4 max-w-6xl">
+      {/* Background Image - Optimized for mobile */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url('${coupleImagePath}')`,
+          backgroundAttachment: isMobile ? 'scroll' : 'fixed',
+          backgroundPosition: 'center 35%',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          transform: isMobile ? 'translate3d(0, 0, 0)' : 'none', // Force GPU acceleration on mobile
+          minHeight: '100vh', // Ensure full height coverage on mobile
+        }}
+      />
+      
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
+      
+      {/* Content */}
+      <div className="relative z-20 text-center text-white px-4 max-w-6xl">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight subtitle">
           {titleWords.map((word, index) => (
             <span

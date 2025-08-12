@@ -143,6 +143,33 @@
   @apply animate-pulse bg-muted;
 }
 
+/* Mobile-specific optimizations for background images */
+@media (max-width: 768px) {
+  .hero-background {
+    background-attachment: scroll !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for better mobile support */
+    will-change: auto;
+    transform: translate3d(0, 0, 0); /* Force GPU acceleration */
+  }
+  
+  /* Fix iOS Safari background image rendering */
+  .parallax-bg {
+    background-attachment: scroll !important;
+  }
+  
+  /* Ensure hero sections render properly on mobile */
+  .mobile-hero-fix {
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
