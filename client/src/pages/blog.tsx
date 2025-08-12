@@ -17,12 +17,15 @@ export default function Blog() {
   const { toast } = useToast();
 
   const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
-    queryKey: ["/api/blog-posts"],
+    queryKey: ["/api/blog-posts", "published"],
     queryFn: async () => {
       const response = await fetch("/api/blog-posts?published=true");
       if (!response.ok) throw new Error("Failed to fetch blog posts");
-      return response.json();
+      const data = await response.json();
+      console.log('Blog posts loaded on blog page:', data?.length, 'posts');
+      return data;
     },
+    staleTime: 0, // Always fetch fresh data
   });
 
   const filteredPosts = blogPosts?.filter(post => {

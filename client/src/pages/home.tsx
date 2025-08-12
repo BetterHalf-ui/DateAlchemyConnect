@@ -42,13 +42,16 @@ export default function Home() {
     keywords: seoConfig[language].keywords,
     canonical: language === 'fr' ? `${window.location.origin}?lang=fr` : window.location.origin
   });
-  const { data: blogPosts } = useQuery<BlogPost[]>({
-    queryKey: ["/api/blog-posts"],
+  const { data: blogPosts, isLoading: blogPostsLoading } = useQuery<BlogPost[]>({
+    queryKey: ["/api/blog-posts", "published"],
     queryFn: async () => {
       const response = await fetch("/api/blog-posts?published=true");
       if (!response.ok) throw new Error("Failed to fetch blog posts");
-      return response.json();
+      const data = await response.json();
+      console.log('Blog posts loaded:', data?.length, 'posts');
+      return data;
     },
+    staleTime: 0, // Always fetch fresh data
   });
 
   const { data: activeMembersSetting } = useQuery<Setting>({
@@ -717,6 +720,11 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
+            {latestPosts.length === 0 && (
+              <div className="col-span-3 text-center py-8">
+                <p className="text-gray-500">Loading insights...</p>
+              </div>
+            )}
             {latestPosts.map((post) => (
               <Link key={post.id} href={`/blog/${post.id}`}>
                 <article className="bg-gray-50 rounded-xl overflow-hidden hover-lift cursor-pointer transition-transform hover:scale-105">
