@@ -13,7 +13,7 @@ const blogPosts = [
     updatedAt: "2025-08-12T10:00:00.000Z",
     category: "relationships",
     tags: ["dating", "intention", "relationships"],
-    imageUrl: null,
+    imageUrl: "/attached_assets/candice-picard-VDihQhOiOkI-unsplash_1754161962252.jpg",
     author: "The Date Alchemy Team"
   },
   {
@@ -26,7 +26,7 @@ const blogPosts = [
     updatedAt: "2025-08-11T10:00:00.000Z",
     category: "technology",
     tags: ["AI", "technology", "modern dating"],
-    imageUrl: null,
+    imageUrl: "/attached_assets/8b96dfb6-32d9-41c9-9b73-0adfb317d6a4_1754736146100.avif",
     author: "Dr. Sarah Chen"
   },
   {
@@ -39,7 +39,7 @@ const blogPosts = [
     updatedAt: "2025-08-10T10:00:00.000Z",
     category: "dating tips",
     tags: ["dating", "psychology", "relationships"],
-    imageUrl: null,
+    imageUrl: "/attached_assets/MRcyldZioQlMWAEtfToUIypRhEWz6L1LpKFudi8A_1754162893537.png",
     author: "Marcus Rivera"
   },
   {
@@ -52,7 +52,7 @@ const blogPosts = [
     updatedAt: "2025-08-09T10:00:00.000Z",
     category: "psychology",
     tags: ["psychology", "attraction", "relationships"],
-    imageUrl: null,
+    imageUrl: "/attached_assets/deITrAHgKgmgweITEsWuVWtBa8CMBWKhm5pIL4BN_1754163032993.jpg",
     author: "Dr. Elena Rodriguez"
   },
   {
@@ -65,7 +65,7 @@ const blogPosts = [
     updatedAt: "2025-08-08T10:00:00.000Z",
     category: "career and dating",
     tags: ["success", "career", "dating"],
-    imageUrl: null,
+    imageUrl: "/attached_assets/49X4UJTeCDeJiLLuBuAffAnHgFhSJcbHfmmbdsnJ_1754163160026.png",
     author: "James Patterson"
   },
   {
@@ -78,7 +78,7 @@ const blogPosts = [
     updatedAt: "2025-08-07T10:00:00.000Z",
     category: "dating tips",
     tags: ["dating", "conversation", "connection"],
-    imageUrl: null,
+    imageUrl: "/attached_assets/YDpA99H6eiIdIdfiqpQd16Lf4RdbcBlIiT3RoFZg_1754163653837.jpg",
     author: "Lisa Chen"
   },
   {
@@ -91,7 +91,7 @@ const blogPosts = [
     updatedAt: "2025-08-06T10:00:00.000Z",
     category: "lifestyle",
     tags: ["digital detox", "mindfulness", "connection"],
-    imageUrl: null,
+    imageUrl: "/attached_assets/christin-noelle-i1Q838KZPt4-unsplash_1754161962245.jpg",
     author: "David Kim"
   },
   {
@@ -104,7 +104,7 @@ const blogPosts = [
     updatedAt: "2025-08-05T10:00:00.000Z",
     category: "dating tips",
     tags: ["red flags", "compatibility", "relationships"],
-    imageUrl: null,
+    imageUrl: "/attached_assets/blfMatrVNwr5eJM4yhpN8ZacjpZ7cDy97gCW2n7u_1754224420473.jpg",
     author: "Dr. Amanda Foster"
   }
 ];
