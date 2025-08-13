@@ -6,6 +6,7 @@ import RebrandBanner from "@/components/layout/rebrand-banner";
 import PictureCoupleImg from "@assets/PictureCouple_1754227660398.jpeg";
 import { useI18n } from '@/lib/i18n';
 import { EXTERNAL_LINKS } from "@/lib/constants";
+import { trackFreeSignup } from "@/lib/meta-pixel";
 
 export default function Network() {
   const { t } = useI18n();
@@ -95,6 +96,7 @@ export default function Network() {
               href="https://betterhalf.fillout.com/t/45wXDMu31Aus" 
               target="_blank" 
               rel="noopener noreferrer"
+              onClick={() => trackFreeSignup()}
             >
               <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold mb-4">
                 {t('network.cta.button')}

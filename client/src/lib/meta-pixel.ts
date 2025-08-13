@@ -27,6 +27,10 @@ export const trackContactForm = () => {
   trackMetaPixelEvent('Contact');
 };
 
+export const trackFreeSignup = () => {
+  trackMetaPixelEvent('CompleteRegistration');
+};
+
 export const trackBlogRead = (postTitle?: string) => {
   trackMetaPixelEvent('ViewContent', {
     content_type: 'article',
