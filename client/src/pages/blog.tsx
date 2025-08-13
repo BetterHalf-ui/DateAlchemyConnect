@@ -38,7 +38,7 @@ export default function Blog() {
     description: seoConfig[language].description,
     keywords: seoConfig[language].keywords,
     canonical: language === 'fr' ? `${window.location.origin}/blog?lang=fr` : `${window.location.origin}/blog`,
-    ogImage: "/og-image-blog.jpg"
+    ogImage: "/og-image-couple.jpg"
   });
 
   const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
