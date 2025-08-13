@@ -176,9 +176,9 @@ app.post("/api/newsletter", async (req, res) => {
     
     if (MAILERLITE_API_KEY) {
       try {
-        // Use MailerLite v2 API to add subscriber
+        // Use MailerLite v2 API to add subscriber to specific group
         const fetch = require('node-fetch');
-        const response = await fetch('https://api.mailerlite.com/api/v2/subscribers', {
+        const response = await fetch('https://api.mailerlite.com/api/v2/groups/124002209452001138/subscribers', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

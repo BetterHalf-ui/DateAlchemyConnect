@@ -111,8 +111,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       if (MAILERLITE_API_KEY) {
         try {
-          // Use MailerLite v2 API to add subscriber
-          const response = await fetch('https://api.mailerlite.com/api/v2/subscribers', {
+          // Use MailerLite v2 API to add subscriber to specific group  
+          const response = await fetch('https://api.mailerlite.com/api/v2/groups/124002209452001138/subscribers', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
