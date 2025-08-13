@@ -1,0 +1,15 @@
+{
+    "name": "The Date Alchemy",
+    "short_name": "Date Alchemy",
+    "description": "Premium Matchmaking Service for Global Professionals in Mauritius",
+    "icons": [
+        {
+            "src": "/da-logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#f2491b",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
