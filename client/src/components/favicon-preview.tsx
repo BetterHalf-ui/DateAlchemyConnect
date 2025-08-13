@@ -12,7 +12,7 @@ export default function FaviconPreview() {
           <div className="inline-block p-2 bg-gray-100 rounded">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
               <rect width="32" height="32" fill="#f2491b" rx="6"/>
-              <text x="16" y="20" fontFamily="Georgia, serif" fontSize="18" fontWeight="bold" fill="white" textAnchor="middle" dominantBaseline="middle" style={{fontStyle: 'italic', letterSpacing: '1px'}}>DA</text>
+              <text x="16" y="21" fontFamily="'Lobster Two', cursive" fontSize="16" fontWeight="700" fill="white" textAnchor="middle" dominantBaseline="middle" style={{fontStyle: 'italic'}}>DA</text>
             </svg>
           </div>
         </div>
@@ -22,7 +22,7 @@ export default function FaviconPreview() {
           <div className="inline-block p-2 bg-gray-100 rounded">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <rect width="32" height="32" fill="#f2491b" rx="6"/>
-              <text x="16" y="20" fontFamily="Georgia, serif" fontSize="18" fontWeight="bold" fill="white" textAnchor="middle" dominantBaseline="middle" style={{fontStyle: 'italic', letterSpacing: '1px'}}>DA</text>
+              <text x="16" y="21" fontFamily="'Lobster Two', cursive" fontSize="16" fontWeight="700" fill="white" textAnchor="middle" dominantBaseline="middle" style={{fontStyle: 'italic'}}>DA</text>
             </svg>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default function FaviconPreview() {
           <div className="inline-block p-2 bg-gray-100 rounded">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 32 32">
               <rect width="32" height="32" fill="#f2491b" rx="6"/>
-              <text x="16" y="20" fontFamily="Georgia, serif" fontSize="18" fontWeight="bold" fill="white" textAnchor="middle" dominantBaseline="middle" style={{fontStyle: 'italic', letterSpacing: '1px'}}>DA</text>
+              <text x="16" y="21" fontFamily="'Lobster Two', cursive" fontSize="16" fontWeight="700" fill="white" textAnchor="middle" dominantBaseline="middle" style={{fontStyle: 'italic'}}>DA</text>
             </svg>
           </div>
         </div>
@@ -41,7 +41,7 @@ export default function FaviconPreview() {
           <h4 className="font-semibold mb-2">Your Favicon Features:</h4>
           <ul className="space-y-1 text-sm">
             <li>• <strong>Background:</strong> The Date Alchemy orange (#f2491b)</li>
-            <li>• <strong>Text:</strong> White "DA" letters in italic Georgia serif</li>
+            <li>• <strong>Text:</strong> White "DA" letters in italic Lobster Two font</li>
             <li>• <strong>Shape:</strong> Rounded corners for modern look</li>
             <li>• <strong>Format:</strong> SVG for crisp display at all sizes</li>
           </ul>

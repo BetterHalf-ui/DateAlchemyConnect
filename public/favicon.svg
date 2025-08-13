@@ -1,4 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap');
+    </style>
+  </defs>
   <rect width="32" height="32" fill="#f2491b" rx="6"/>
-  <text x="16" y="20" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle" style="font-style: italic; letter-spacing: 1px;">DA</text>
+  <text x="16" y="21" font-family="'Lobster Two', cursive" font-size="16" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="middle" style="font-style: italic;">DA</text>
 </svg>
