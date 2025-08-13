@@ -13,6 +13,11 @@ echo "Ensuring public files are copied..."
 # Copy public files to dist/public if they exist
 if [ -d "public" ]; then
   cp -r public/* dist/public/ 2>/dev/null || true
+  # Ensure social image is copied
+  if [ -f "public/social-image.jpg" ]; then
+    cp public/social-image.jpg dist/public/
+    echo "Social image copied successfully"
+  fi
 fi
 
 echo "Copying attached assets..."
