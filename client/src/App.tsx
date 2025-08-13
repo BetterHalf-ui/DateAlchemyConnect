@@ -14,6 +14,7 @@ import PrivacyPolicy from "@/pages/privacy-policy";
 import RebrandAnnouncement from "@/pages/rebrand-announcement";
 
 import BlogAdmin from "@/components/admin/blog-admin";
+import FaviconPreview from "@/components/favicon-preview";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/rebrand-announcement" component={RebrandAnnouncement} />
       <Route path="/admin/blog" component={BlogAdmin} />
+      <Route path="/favicon-preview" component={FaviconPreview} />
       <Route component={NotFound} />
     </Switch>
   );
