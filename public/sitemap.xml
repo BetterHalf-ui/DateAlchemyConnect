@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://thedatealchemy.netlify.app/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://thedatealchemy.netlify.app/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://thedatealchemy.netlify.app/?lang=fr" />
+    <loc>https://thedatealchemy.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thedatealchemy.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thedatealchemy.com/?lang=fr" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <lastmod>2025-08-12</lastmod>
   </url>
   <url>
-    <loc>https://thedatealchemy.netlify.app/?lang=fr</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://thedatealchemy.netlify.app/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://thedatealchemy.netlify.app/?lang=fr" />
+    <loc>https://thedatealchemy.com/?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thedatealchemy.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thedatealchemy.com/?lang=fr" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <lastmod>2025-08-12</lastmod>
   </url>
   <url>
-    <loc>https://thedatealchemy.netlify.app/blog</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://thedatealchemy.netlify.app/blog" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://thedatealchemy.netlify.app/blog?lang=fr" />
+    <loc>https://thedatealchemy.com/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thedatealchemy.com/blog" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thedatealchemy.com/blog?lang=fr" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <lastmod>2025-08-12</lastmod>
   </url>
   <url>
-    <loc>https://thedatealchemy.netlify.app/blog?lang=fr</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://thedatealchemy.netlify.app/blog" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://thedatealchemy.netlify.app/blog?lang=fr" />
+    <loc>https://thedatealchemy.com/blog?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thedatealchemy.com/blog" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thedatealchemy.com/blog?lang=fr" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <lastmod>2025-08-12</lastmod>
   </url>
   <url>
-    <loc>https://thedatealchemy.netlify.app/network</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://thedatealchemy.netlify.app/network" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://thedatealchemy.netlify.app/network?lang=fr" />
+    <loc>https://thedatealchemy.com/network</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thedatealchemy.com/network" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thedatealchemy.com/network?lang=fr" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2025-08-12</lastmod>
   </url>
   <url>
-    <loc>https://thedatealchemy.netlify.app/network?lang=fr</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://thedatealchemy.netlify.app/network" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://thedatealchemy.netlify.app/network?lang=fr" />
+    <loc>https://thedatealchemy.com/network?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thedatealchemy.com/network" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thedatealchemy.com/network?lang=fr" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2025-08-12</lastmod>
