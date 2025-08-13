@@ -1,6 +1,6 @@
 [build]
   publish = "dist/public"
-  command = "npm install && npm run build && mkdir -p dist/public && cp -r public/* dist/public/ 2>/dev/null || true"
+  command = "npm install && npm run build && mkdir -p dist/public && cp -r public/* dist/public/ 2>/dev/null || true && mkdir -p dist/public/attached_assets && cp -r attached_assets/* dist/public/attached_assets/ 2>/dev/null || true"
 
 [build.environment]
   NODE_VERSION = "20"
