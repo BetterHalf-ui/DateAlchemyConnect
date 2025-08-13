@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { useApplicationLink } from "@/hooks/use-application-link";
 import { trackApplicationClick } from "@/lib/analytics";
-import coupleImagePath from "@assets/WhatsApp Image 2025-08-11 at 12.07.54 PM_1754899948811.jpeg";
+import coupleImagePath from "@assets/WhatsApp Image 2025-08-11 at 12.07.54 PM_1755074867371.jpeg";
 
 export default function Hero() {
   const { t, language } = useI18n();
