@@ -10,11 +10,14 @@ export const trackMetaPixelEvent = (
   parameters?: Record<string, any>
 ) => {
   if (typeof window !== 'undefined' && window.fbq) {
+    console.log('🎯 Meta Pixel Event:', event, parameters || 'no parameters');
     if (parameters) {
       window.fbq('track', event, parameters);
     } else {
       window.fbq('track', event);
     }
+  } else {
+    console.log('⚠️ Meta Pixel not available:', event);
   }
 };
 
