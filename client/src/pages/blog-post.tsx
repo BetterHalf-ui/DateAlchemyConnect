@@ -6,6 +6,8 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import RebrandBanner from "@/components/layout/rebrand-banner";
 import { ArrowLeft, Calendar, Tag } from "lucide-react";
+import { useEffect } from "react";
+import { trackBlogRead } from "@/lib/meta-pixel";
 import type { BlogPost } from "@shared/schema";
 
 export default function BlogPostPage() {
@@ -20,6 +22,13 @@ export default function BlogPostPage() {
     },
     enabled: !!id,
   });
+
+  // Track blog post view with Meta Pixel
+  useEffect(() => {
+    if (post) {
+      trackBlogRead(post.title);
+    }
+  }, [post]);
 
   if (isLoading) {
     return (

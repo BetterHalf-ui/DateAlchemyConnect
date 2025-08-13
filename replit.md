@@ -57,6 +57,12 @@ Preferred communication style: Simple, everyday language.
 - **Admin Panel**: Dedicated interface for content management
 - **SEO Ready**: Structured content with proper metadata support
 
+### Marketing Analytics
+- **Google Analytics**: GA4 tracking (ID: G-P2WKJ5GE9R) for website analytics
+- **Meta Pixel**: Facebook tracking (ID: 709403664238069) for lead generation and remarketing
+- **Event Tracking**: Comprehensive tracking of application clicks, newsletter signups, and blog content views
+- **Lead Generation**: Custom events for tracking user conversions and engagement
+
 ## Data Flow
 
 ### Client-Server Communication

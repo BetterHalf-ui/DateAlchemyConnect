@@ -16,6 +16,7 @@ import { useI18n } from "@/lib/i18n";
 import { useApplicationLink } from "@/hooks/use-application-link";
 import { useSEO } from "@/hooks/use-seo";
 import { trackApplicationClick, trackBlogNavigation, trackReferralClick } from "@/lib/analytics";
+import { trackApplicationSubmit } from "@/lib/meta-pixel";
 import type { BlogPost, Setting } from "@shared/schema";
 
 export default function Home() {
@@ -327,6 +328,10 @@ export default function Home() {
             href="https://betterhalf.fillout.com/t/9ywPABvKHdus" 
             target="_blank" 
             rel="noopener noreferrer"
+            onClick={() => {
+              trackApplicationClick('cta_after_membership');
+              trackApplicationSubmit();
+            }}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl font-semibold mb-6">
               {t('nav.applyNow')}

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { useI18n } from "@/lib/i18n";
+import { trackContactForm } from "@/lib/meta-pixel";
 
 export default function Newsletter() {
   const { t } = useI18n();
@@ -36,6 +37,7 @@ export default function Newsletter() {
       const result = await response.json();
 
       if (response.ok) {
+        trackContactForm(); // Track Meta Pixel Contact event
         toast({
           title: "Successfully subscribed!",
           description: "You'll receive our bi-weekly dating tips straight to your inbox.",

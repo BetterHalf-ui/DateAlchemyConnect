@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { useApplicationLink } from "@/hooks/use-application-link";
 import { trackApplicationClick } from "@/lib/analytics";
+import { trackApplicationSubmit } from "@/lib/meta-pixel";
 import coupleImagePath from "@assets/WhatsApp Image 2025-08-11 at 12.07.54 PM_1755074867371.jpeg";
 
 export default function Hero() {
@@ -104,7 +105,10 @@ export default function Hero() {
             href={applicationLink} 
             target="_blank" 
             rel="noopener noreferrer"
-            onClick={() => trackApplicationClick(language)}
+            onClick={() => {
+              trackApplicationClick(language);
+              trackApplicationSubmit();
+            }}
           >
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg hover-lift">
               {t('home.hero.cta')}
