@@ -8,6 +8,8 @@ import Footer from "@/components/layout/footer";
 import RebrandBanner from "@/components/layout/rebrand-banner";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useI18n } from "@/lib/i18n";
+import { useSEO } from "@/hooks/use-seo";
 import type { BlogPost } from "@shared/schema";
 
 export default function Blog() {
@@ -15,6 +17,29 @@ export default function Blog() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const { t, language } = useI18n();
+
+  // SEO setup for blog page
+  const seoConfig = {
+    en: {
+      title: "Dating & Relationship Blog | The Date Alchemy - Expert Insights for Modern Dating in Mauritius",
+      description: "Discover expert dating advice, relationship insights, and success stories from Mauritius' premier matchmaking service. Tips for intentional dating and finding meaningful connections.",
+      keywords: "dating blog Mauritius, relationship advice, matchmaking insights, dating tips Mauritius, modern dating, relationship coach, intentional dating, dating psychology"
+    },
+    fr: {
+      title: "Blog Rencontres & Relations | The Date Alchemy - Conseils Experts pour les Rencontres Modernes à Maurice",
+      description: "Découvrez des conseils d'experts en rencontres, des insights relationnels et des histoires de succès du premier service de matchmaking de Maurice. Conseils pour rencontres intentionnelles.",
+      keywords: "blog rencontres Maurice, conseils relationnels, insights matchmaking, conseils rencontres Maurice, rencontres modernes, coach relationnel, rencontres intentionnelles, psychologie des rencontres"
+    }
+  };
+
+  useSEO({
+    title: seoConfig[language].title,
+    description: seoConfig[language].description,
+    keywords: seoConfig[language].keywords,
+    canonical: language === 'fr' ? `${window.location.origin}/blog?lang=fr` : `${window.location.origin}/blog`,
+    ogImage: "/og-image-blog.jpg"
+  });
 
   const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog-posts", "published"],

@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Main sitemap
+Sitemap: https://thedatealchemy.netlify.app/sitemap.xml
+
+# Block specific paths (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /

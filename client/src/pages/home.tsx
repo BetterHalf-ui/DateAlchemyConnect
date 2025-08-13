@@ -40,7 +40,8 @@ export default function Home() {
     title: seoConfig[language].title,
     description: seoConfig[language].description,
     keywords: seoConfig[language].keywords,
-    canonical: language === 'fr' ? `${window.location.origin}?lang=fr` : window.location.origin
+    canonical: language === 'fr' ? `${window.location.origin}?lang=fr` : window.location.origin,
+    ogImage: "/og-image-couple.jpg"
   });
   const { data: blogPosts, isLoading: blogPostsLoading } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog-posts", "published"],
