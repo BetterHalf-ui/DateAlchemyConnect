@@ -22,6 +22,10 @@ if [ -d "public" ]; then
     cp public/social-share.jpg dist/public/
     echo "Social share image copied successfully"
   fi
+  if [ -f "public/social-share-v2.jpg" ]; then
+    cp public/social-share-v2.jpg dist/public/
+    echo "Social share v2 image copied successfully"
+  fi
 fi
 
 echo "Copying attached assets..."
