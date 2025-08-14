@@ -48,7 +48,7 @@ export default function RebrandAnnouncement() {
                 <div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">2. A name that's uniquely ours.</h3>
                   <p className="text-lg text-gray-700">
-                    We previously shared the name Betterhalf with a company in India, with whom we have no affiliation. As our reputation and reach grow, we needed a brand that's distinct, memorable, and entirely our own—one that reflects the care and originality behind what we do.
+                    We previously shared the name Betterhalf with a company in India, with whom we have no affiliation. As our reputation and reach grew, we needed a brand that's distinct, memorable, and entirely our own, one that reflects the care and originality behind what we do.
                   </p>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export default function RebrandAnnouncement() {
                 <div>
                   <h3 className="text-2xl font-bold mb-4 text-primary">Insights, now online.</h3>
                   <p className="text-lg text-gray-700">
-                    The advice and reflections we share in our newsletter will now be also available on our website — accessible anytime.
+                    The advice and reflections we share in our newsletter will now also be available on our website — accessible anytime.
                   </p>
                 </div>
 
