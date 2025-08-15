@@ -9,8 +9,8 @@ export const EXTERNAL_LINKS = {
   applicationForm: 'https://betterhalf.fillout.com/t/9ywPABvKHdus',
   applicationFormFr: 'https://betterhalf.fillout.com/t/85BTsRpeJYus',
   referralForm: 'https://betterhalf.fillout.com/referral',
-  facebook: '#',
-  instagram: '#',
+  facebook: 'https://www.facebook.com/TheDateAlchemy',
+  instagram: 'https://www.instagram.com/thedatealchemy/',
   frolicWebsite: 'https://frolic.mu',
 } as const;
 
