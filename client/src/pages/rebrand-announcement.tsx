@@ -4,9 +4,23 @@ import RebrandBanner from "@/components/layout/rebrand-banner";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { useApplicationLink } from "@/hooks/use-application-link";
+import { useEffect } from "react";
 
 export default function RebrandAnnouncement() {
   const applicationLink = useApplicationLink();
+  
+  useEffect(() => {
+    document.title = "Betterhalf Mauritius is now The Date Alchemy - Rebrand Announcement";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Betterhalf Mauritius has rebranded to The Date Alchemy. Same professional matchmaking service for global professionals in Mauritius, new identity. Find out why we changed our name.');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = 'Betterhalf Mauritius has rebranded to The Date Alchemy. Same professional matchmaking service for global professionals in Mauritius, new identity. Find out why we changed our name.';
+      document.head.appendChild(meta);
+    }
+  }, []);
   
   return (
     <div className="min-h-screen bg-white">
@@ -23,7 +37,7 @@ export default function RebrandAnnouncement() {
               A New Name. The Same Purpose.
             </p>
             <p className="text-xl text-gray-600">
-              We've rebranded from Betterhalf to The Date Alchemy — and we'd love to tell you why.
+              We've rebranded from Betterhalf to The Date Alchemy — and we'd love to tell you why. If you're searching for Betterhalf Mauritius, you've found us.
             </p>
           </div>
 
@@ -31,14 +45,14 @@ export default function RebrandAnnouncement() {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Why Did We Change the Name?</h2>
               <p className="text-lg text-gray-700 mb-6">
-                As we grow and expand internationally, we felt it was time for a brand that truly reflects our vision and the quality of service we provide.
+                As we grow and expand internationally, we felt it was time for a brand that truly reflects our vision and the quality of service we provide. Betterhalf Mauritius has evolved into The Date Alchemy — same professional matchmaking service, new identity.
               </p>
               
               <div className="space-y-8">
                 <div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">1. A name that reflects the value we offer.</h3>
-                  <p className="text-lg text-gray-700 mb-4">
-                    We're working with global professionals in Mauritius and abroad—people who value meaningful, high-quality, human-centered matchmaking.
+              <p className="text-lg text-gray-700 mb-4">
+                    We're working with global professionals in Mauritius and abroad—people who value meaningful, high-quality, human-centered matchmaking. What started as Betterhalf in Mauritius continues as The Date Alchemy, serving the same discerning clientele.
                   </p>
                   <p className="text-lg text-gray-700">
                     The Date Alchemy speaks to the way we're redefining dating: more respectful, more intentional, more human. It captures the quiet magic of a well-matched connection—and the life-changing transformation that can come from meeting the right person.
