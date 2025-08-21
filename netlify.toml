@@ -4,15 +4,16 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  NODE_ENV = "development"
+  NODE_ENV = "production"
 
-[functions]
-  directory = "netlify/functions"
+# Functions disabled - using main Express server
+# [functions]
+#   directory = "netlify/functions"
   
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/api/:splat"
-  status = 200
+# [[redirects]]
+#   from = "/api/*"
+#   to = "/.netlify/functions/api/:splat"
+#   status = 200
 
 [[redirects]]
   from = "/*"
