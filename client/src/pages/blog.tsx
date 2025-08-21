@@ -167,11 +167,13 @@ export default function Blog() {
                 <Link key={post.id} href={`/blog/${post.id}`} onClick={() => window.scrollTo(0, 0)}>
                   <article className="bg-gray-50 rounded-xl overflow-hidden hover-lift cursor-pointer transition-transform hover:scale-105">
                     {post.imageUrl && (
-                      <img 
-                        src={post.imageUrl} 
-                        alt={post.title}
-                        className="w-full h-48 object-cover"
-                      />
+                      <div className="relative overflow-hidden">
+                        <img 
+                          src={post.imageUrl} 
+                          alt={post.title}
+                          className="w-full h-48 object-cover object-center transition-transform hover:scale-105"
+                        />
+                      </div>
                     )}
                     <div className="p-6">
                       <div className="flex items-center gap-2 mb-3">

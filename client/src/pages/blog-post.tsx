@@ -90,11 +90,11 @@ export default function BlogPostPage() {
           </div>
           
           {post.imageUrl && (
-            <div className="relative mb-8">
+            <div className="relative mb-8 flex justify-center">
               <img 
                 src={post.imageUrl} 
                 alt={post.title}
-                className="w-full h-96 object-cover object-top rounded-2xl shadow-lg"
+                className="w-full h-96 object-cover object-center rounded-2xl shadow-lg"
               />
             </div>
           )}
