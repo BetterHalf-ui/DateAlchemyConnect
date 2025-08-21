@@ -222,4 +222,21 @@ export class MemStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+import { DatabaseStorage } from './database';
+
+// In development, use memory storage for now due to WebSocket connection issues in Replit
+// In production (Netlify), this will use the DatabaseStorage with Supabase
+const isDevelopment = process.env.NODE_ENV === 'development';
+const shouldUseDatabaseStorage = process.env.DATABASE_URL && !isDevelopment;
+
+export const storage = shouldUseDatabaseStorage ? new DatabaseStorage() : new MemStorage();
+
+// Initialize default data for database storage in production
+if (shouldUseDatabaseStorage && storage instanceof DatabaseStorage) {
+  storage.initializeDefaultData().catch(console.error);
+}
+
+console.log(`Using ${shouldUseDatabaseStorage ? 'DatabaseStorage (Supabase)' : 'MemStorage'} for data persistence`);
+if (isDevelopment && process.env.DATABASE_URL) {
+  console.log('Note: Supabase connection configured but using memory storage in development');
+}
