@@ -84,7 +84,9 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>{t('footer.parentCompany')}</p>
+          <div className="max-w-4xl mx-auto text-sm leading-relaxed">
+            <p className="whitespace-pre-line">{t('footer.parentCompany')}</p>
+          </div>
         </div>
       </div>
     </footer>

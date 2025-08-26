@@ -202,7 +202,7 @@ export const translations = {
     'footer.contact': 'Contact',
     'footer.privacyPolicy': 'Privacy Policy',
     'footer.termsOfUse': 'Terms of Use',
-    'footer.parentCompany': 'The Date Alchemy is part of Frolic Ltd, a Mauritius-registered company recognized for connecting expats and locals to each other and local businesses through our website frolic.mu, regular meetups and events.',
+    'footer.parentCompany': 'The Date Alchemy is a service operated by Frolic Ltd, a company registered in the Republic of Mauritius (BRN: C23201149). All payments, contractual obligations, services, and liabilities are fulfilled by Frolic Ltd under The Date Alchemy brand.\n\n© The Date Alchemy by Frolic Ltd, Mauritius. All rights reserved.',
     
     // Network page
     'network.title': 'The Date Alchemy Network',
@@ -589,7 +589,7 @@ export const translations = {
     'footer.contact': 'Contact',
     'footer.privacyPolicy': 'Politique de Confidentialité',
     'footer.termsOfUse': 'Conditions d\'Utilisation',
-    'footer.parentCompany': 'The Date Alchemy est un service fourni par Frolic Ltd, une société enregistrée à Maurice, reconnue pour mettre en relation expatriés et locaux, ainsi que pour les connecter aux entreprises locales grâce à notre site web frolic.mu, à des meetups régulièrs et à des événements.',
+    'footer.parentCompany': 'The Date Alchemy est un service exploité par Frolic Ltd, une société enregistrée en République de Maurice (BRN : C23201149). Tous les paiements, obligations contractuelles, services et responsabilités sont assumés par Frolic Ltd sous la marque The Date Alchemy.\n\n© The Date Alchemy par Frolic Ltd, Maurice. Tous droits réservés.',
     
     // Network page (French)
     'network.title': 'Le réseau The Date Alchemy',
