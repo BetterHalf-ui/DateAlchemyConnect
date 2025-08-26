@@ -16,10 +16,6 @@ const guarantees = [
     descriptionKey: "home.guarantees.guarantee1Description"
   },
   {
-    titleKey: "home.guarantees.guarantee2Title", 
-    descriptionKey: "home.guarantees.guarantee2Description"
-  },
-  {
     titleKey: "home.guarantees.guarantee3Title",
     descriptionKey: "home.guarantees.guarantee3Description"
   },

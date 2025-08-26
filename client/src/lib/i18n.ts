@@ -295,8 +295,7 @@ export const translations = {
     'home.guarantees.title': 'Our Guarantees',
     'home.guarantees.guarantee1Title': 'First Quality Date Guaranteed Before Payment',
     'home.guarantees.guarantee1Description': 'Your initial consultation and matchmaking search are completely free. We\'ll only ask for payment once you say yes to a match and we\'ve planned the first date.',
-    'home.guarantees.guarantee2Title': 'At least 4 High-Quality Introductions',
-    'home.guarantees.guarantee2Description': 'We guarantee at least 4 high-quality introductions within 12 months — or we\'ll extend your membership at no extra cost. The 12-month period pauses when you start dating someone seriously.',
+
     'home.guarantees.guarantee3Title': 'Flexible Membership',
     'home.guarantees.guarantee3Description': 'Life happens. If you need to take a break for any reason, we\'ll pause your membership—no lost time, no penalties.',
     'home.guarantees.guarantee4Title': 'No Hidden Fees',
@@ -459,8 +458,7 @@ export const translations = {
     'home.guarantees.title': 'Nos garanties',
     'home.guarantees.guarantee1Title': 'Premier rendez-vous de qualité garanti avant paiement',
     'home.guarantees.guarantee1Description': 'Votre consultation initiale et la recherche de votre première rencontre sont entièrement gratuites. Nous ne vous demanderons de payer que lorsque vous aurez accepté une mise en relation et que le premier rendez-vous aura été planifié.',
-    'home.guarantees.guarantee2Title': 'Au moins 4 introductions de qualité',
-    'home.guarantees.guarantee2Description': 'Nous vous garantissons au minimum 4 rencontres de qualité en 12 mois — sinon, nous prolongeons votre adhésion sans frais supplémentaires. La période de 12 mois se suspend dès que vous commencez une relation sérieuse.',
+
     'home.guarantees.guarantee3Title': 'Adhésion flexible',
     'home.guarantees.guarantee3Description': 'La vie est faite d\'imprévus. Si vous devez faire une pause, nous suspendons votre adhésion — aucun temps perdu ni pénalités.',
     'home.guarantees.guarantee4Title': 'Pas de frais cachés',
