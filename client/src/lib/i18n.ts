@@ -36,7 +36,7 @@ export const translations = {
     'common.loading': 'Loading...',
     
     // Home page
-    'home.hero.title': 'Redefining the Dating Experience for Global Professionals in Mauritius',
+    'home.hero.title': 'Redefining the Dating Experience for Busy Professionals in Mauritius',
     'home.hero.subtitle': 'Premium matchmaking for intentional relationships. Discreet, personalized, and effective.',
     'home.hero.cta': 'Apply Now',
     'home.hero.memberCount': 'Active Members',
@@ -364,7 +364,7 @@ export const translations = {
     'common.loading': 'Chargement...',
     
     // Home page
-    'home.hero.title': 'Une expérience de dating réinventée pour les professionnels cosmopolites à Maurice',
+    'home.hero.title': 'Une expérience de dating réinventée pour les professionnels occupés à Maurice',
     'home.hero.subtitle': 'Service de mise en relation premium pour des relations intentionnelles. Discret, personnalisé et efficace.',
     'home.hero.cta': 'Devenir membre',
     'home.hero.memberCount': 'membres actifs',
