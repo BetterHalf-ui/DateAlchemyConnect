@@ -14,7 +14,7 @@ const approaches = [
   {
     icon: Clock,
     title: "Sans pressure",
-    description: "No pressure from parents and friends to deal with. Meet your match for a coffee date, exchange numbers if you like, or date for months, or meet someone else who's a better fit. Every introduction is your choice. You can always say no, and we'll always listen. "
+    description: "Date without pressure. Meet your match for a coffee, exchange numbers if you like, date for months, or meet someone else who's a better fit. It's all on your terms."
   },
   {
     icon: Users,
