@@ -25,7 +25,7 @@ export const translations = {
     'nav.home': 'Home',
     'nav.howItWorks': 'How It Works',
     'nav.insights': 'Insights',
-    'nav.applyNow': 'Apply Now',
+    'nav.applyNow': 'Join Now',
     'nav.network': 'Join the Network',
     'team.yourAlchemists': 'Your Alchemists',
     
@@ -38,7 +38,7 @@ export const translations = {
     // Home page
     'home.hero.title': 'Redefining the Dating Experience for Busy Professionals in Mauritius',
     'home.hero.subtitle': 'Premium matchmaking for intentional relationships. Discreet, personalized, and effective.',
-    'home.hero.cta': 'Apply Now',
+    'home.hero.cta': 'Join Now',
     'home.hero.memberCount': 'Active Members',
     
     'home.help.title': 'How We Help',
@@ -78,7 +78,7 @@ export const translations = {
     'home.membership.feature6': '**Full concierge service**: we book, confirm and prepare the date — you just need to show up looking your best.',
     'home.membership.feature7': '**Post-date follow-up** handled for you — no ghosting, no awkward follow-ups.',
     'home.membership.bonus': '**Bonus**: invitations to private events (Singles Socials) — intimate brunches or dinners with hand-picked guests to foster real connections.',
-    'home.membership.cta': 'Apply for Membership',
+    'home.membership.cta': 'Join Now',
     
     'home.membership.innerWorkTitle': '2. Inner Work and Guidance',
     'home.membership.innerWorkDescription': 'We set you up for successful dates and healthier relationships',
@@ -191,7 +191,7 @@ export const translations = {
     'howItWorks.finalCta.subtitle': 'Start Your Journey',
     'howItWorks.finalCta.readyTitle': 'Ready to Get Started?',
     'howItWorks.finalCta.readyDescription': 'Experience the difference and take the first step towards meeting your better half.',
-    'howItWorks.finalCta.readyButton': 'Apply for Membership',
+    'howItWorks.finalCta.readyButton': 'Join Now',
     'howItWorks.finalCta.notReadyTitle': 'Not ready to invest in a membership yet?',
     'howItWorks.finalCta.notReadyDescription': 'Join our free network to check if you match with one of our exceptional clients.',
     
@@ -248,7 +248,7 @@ export const translations = {
     'home.expectations.support.title': 'Thoughtful, Human Support',
     'home.expectations.support.desc': 'We\'re with you every step of the way—offering thoughtful guidance, logistical support, and post-date follow-ups. No ghosting, no guesswork— just respect and genuine support from people who truly care.',
     
-    'home.cta.applyNow': 'Apply Now',
+    'home.cta.applyNow': 'Join Now',
     'home.cta.notReady': 'Not ready to invest in a membership?',
     'home.cta.joinNetwork': 'Join our network for free to see if you are a match with one of our exceptional clients.',
     'home.cta.createProfile': 'Create your complimentary profile.',
@@ -307,7 +307,7 @@ export const translations = {
     'home.pricing.membershipCompare': '… less than 1 night staycation in Mauritius',
     'home.pricing.urgencyMessage': 'Someone really special could be joining today. And the most sought-after singles tend to not stay single for long. Are you in the pool — or on the sidelines?',
     'home.pricing.priceIncrease': 'Prices are going up! So apply now!',
-    'home.pricing.applyNow': 'Apply Now',
+    'home.pricing.applyNow': 'Join Now',
     'home.pricing.notReady': 'Not ready to invest in a membership?',
     'home.pricing.joinNetwork': 'Join our network for free to see if you are a match with one of our exceptional clients.',
     'home.pricing.createProfile': 'Create your complimentary profile.',
@@ -340,7 +340,7 @@ export const translations = {
     'home.research.readStudy': 'Read study →',
     'home.research.ctaTitle': 'Ready for a Healthier Dating Experience?',
     'home.research.ctaSubtitle': 'Skip the apps. Skip the burnout. Find genuine connection through our proven, human-centered approach.',
-    'home.research.ctaButton': 'Apply for Membership',
+    'home.research.ctaButton': 'Join Now',
     
     // Language switcher
     'language.english': 'English',
@@ -470,7 +470,7 @@ export const translations = {
     'home.pricing.membershipCompare': '… soit moins qu\'une nuitée en staycation à Maurice',
     'home.pricing.urgencyMessage': 'Aujourd\'hui, quelqu\'un d\'exceptionnel pourrait rejoindre nos membres. Et les célibataires les plus recherchés ne restent jamais célibataires longtemps. Êtes-vous prêt à être acteur de votre destin— ou à rester spectateur ?',
     'home.pricing.priceIncrease': 'Les prix vont augmenter ! Devenez membre dès maintenant !',
-    'home.pricing.applyNow': 'Postuler Maintenant',
+    'home.pricing.applyNow': 'Rejoindre Maintenant',
     'home.pricing.notReady': 'Pas prêt à investir dans une adhésion ?',
     'home.pricing.joinNetwork': 'Rejoignez notre réseau gratuitement pour voir si vous correspondez à l\'un de nos clients exceptionnels.',
     'home.pricing.createProfile': 'Créez votre profil gratuit.',
@@ -503,7 +503,7 @@ export const translations = {
     'home.research.readStudy': '[Lire l\'étude →]',
     'home.research.ctaTitle': 'Prêt(e) pour une expérience de rencontres plus saine ?',
     'home.research.ctaSubtitle': 'Oubliez les applis. Évitez l\'épuisement. Trouvez une connexion authentique grâce à notre approche humaine et éprouvée.',
-    'home.research.ctaButton': 'Postulez dès maintenant',
+    'home.research.ctaButton': 'Rejoindre Maintenant',
 
     // FAQ Section (French)
     'faq.title': 'Questions fréquentes',
@@ -534,7 +534,7 @@ export const translations = {
     'howItWorks.hero.title': 'De vraies connexions commencent ici',
     'howItWorks.hero.ctaTitle': 'Prêt(e) à trouver votre moitié ?',
     'howItWorks.hero.ctaDescription': 'Faites le premier pas vers une rencontre authentique grâce à notre processus de mise en relation éprouvé.',
-    'howItWorks.hero.ctaButton': 'Commencez votre candidature',
+    'howItWorks.hero.ctaButton': 'Rejoindre Maintenant',
     'howItWorks.hero.consultationText': 'Séance de consultation professionnelle',
     
     'howItWorks.journey.title': 'Votre parcours d\'adhésion',
@@ -576,7 +576,7 @@ export const translations = {
     'howItWorks.finalCta.subtitle': 'Commencez votre parcours',
     'howItWorks.finalCta.readyTitle': 'Prêt(e) à vous lancer ?',
     'howItWorks.finalCta.readyDescription': 'Rejoignez notre adhésion et faites le premier pas vers la rencontre de votre future moitiée.',
-    'howItWorks.finalCta.readyButton': 'Devenir membre',
+    'howItWorks.finalCta.readyButton': 'Rejoindre Maintenant',
     'howItWorks.finalCta.notReadyTitle': 'Pas encore prêt(e) à investir dans une adhésion ?',
     'howItWorks.finalCta.notReadyDescription': 'Rejoignez gratuitement notre réseau pour vérifier si vous correspondez à l\'un(e) de nos client(e)s d\'exception.',
     
@@ -634,7 +634,7 @@ export const translations = {
     'home.expectations.support.title': 'Un accompagnement humain et précieux',
     'home.expectations.support.desc': 'Nous vous guidons à chaque étape : conseils personnalisés, assistance logistique, suivi attentif après vos rendez-vous. Pas de silence radio, pas d\'incertitudes —uniquement un soutien authentique, porté par des professionnels qui se préoccupent réellement de votre expérience.',
     
-    'home.cta.applyNow': 'Postuler Maintenant',
+    'home.cta.applyNow': 'Rejoindre Maintenant',
     'home.cta.notReady': 'Pas encore prêt(e) à investir dans une adhésion ?',
     'home.cta.joinNetwork': 'Rejoignez gratuitement notre réseau pour découvrir si vous correspondez à l\'un(e) de nos clients exceptionnels.',
     'home.cta.createProfile': 'Créez votre profil gratuit.',

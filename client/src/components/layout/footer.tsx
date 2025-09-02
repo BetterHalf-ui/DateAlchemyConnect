@@ -76,7 +76,6 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">{t('footer.contact')}</h4>
             <div className="text-gray-400 space-y-2">
-              <p>{CONTACT_INFO.phone}</p>
               <p>{CONTACT_INFO.email}</p>
               <p>{CONTACT_INFO.address}</p>
             </div>

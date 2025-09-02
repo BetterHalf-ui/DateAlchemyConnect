@@ -15,7 +15,6 @@ export const EXTERNAL_LINKS = {
 } as const;
 
 export const CONTACT_INFO = {
-  phone: '+230 5459 1975',
   email: 'hello@thedatealchemy.com',
   address: 'Frolic Ltd, Av. Des Jacarandas, Tamarin, Mauritius',
 } as const;
