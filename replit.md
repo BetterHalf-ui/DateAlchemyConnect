@@ -35,9 +35,11 @@ Preferred communication style: Simple, everyday language.
 
 ### Database Layer
 - **Schema Definition**: Centralized in `shared/schema.ts` using Drizzle ORM
+- **Database**: Supabase PostgreSQL with Row Level Security (RLS) policies
 - **Tables**: Users, blog posts, and settings with proper relationships
 - **Validation**: Zod schemas for runtime type validation
-- **Migrations**: Managed through Drizzle Kit
+- **Storage Abstraction**: Supports multiple backends (Memory, Neon, Supabase)
+- **Migration**: Complete migration infrastructure from Neon to Supabase
 
 ### API Layer
 - **Blog Management**: CRUD operations for blog posts with publishing workflow
@@ -91,10 +93,11 @@ Preferred communication style: Simple, everyday language.
 - **Forms**: React Hook Form with Hookform resolvers
 
 ### Backend Dependencies
-- **Database**: Neon PostgreSQL serverless, Drizzle ORM
+- **Database**: Supabase PostgreSQL (migrated from Neon), Drizzle ORM
 - **Server**: Express.js with TypeScript support
 - **Session Management**: Connect-pg-simple for PostgreSQL sessions
 - **Validation**: Zod for schema validation
+- **Migration Tools**: Custom scripts for Neon to Supabase migration
 
 ### Development Tools
 - **Build System**: Vite with React plugin
@@ -110,14 +113,18 @@ Preferred communication style: Simple, everyday language.
 3. **Static Assets**: Frontend assets served by Express in production
 
 ### Environment Configuration
-- **Database**: PostgreSQL connection via `DATABASE_URL` environment variable
-- **Development**: Hot module replacement with Vite middleware
-- **Production**: Optimized static file serving with Express
+- **Database**: Supabase PostgreSQL connection via `DATABASE_URL` environment variable
+- **Storage Selection**: `USE_SUPABASE=true` to enable Supabase storage backend
+- **Development**: Hot module replacement with Vite middleware, memory storage by default
+- **Production**: Optimized static file serving with Express, Supabase database
+- **Migration**: Complete toolset for migrating from Neon to Supabase
 
 ### Database Management
 - **Schema Evolution**: Drizzle migrations track database changes
-- **Data Persistence**: PostgreSQL for reliable data storage
-- **Connection Pooling**: Neon serverless handles connection management
+- **Data Persistence**: Supabase PostgreSQL for reliable data storage with RLS security
+- **Connection Pooling**: Supabase handles connection management and scaling
+- **Row Level Security**: Comprehensive RLS policies for data protection
+- **Migration Tools**: Custom scripts for seamless database migration
 
 ### Hosting Considerations
 - **Monorepo Deployment**: Single deployment contains both frontend and backend

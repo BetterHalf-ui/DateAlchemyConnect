@@ -241,20 +241,36 @@ export class MemStorage implements IStorage {
 }
 
 import { DatabaseStorage } from './database';
+import { SupabaseStorage } from './supabase';
 
-// In development, use memory storage for now due to WebSocket connection issues in Replit
-// In production (Netlify), this will use the DatabaseStorage with Supabase
+// Storage selection logic:
+// 1. If USE_SUPABASE=true, use Supabase storage (for migration)
+// 2. If DATABASE_URL is set and not in development, use database storage
+// 3. Otherwise, use memory storage (development)
 const isDevelopment = process.env.NODE_ENV === 'development';
+const useSupabase = process.env.USE_SUPABASE === 'true';
 const shouldUseDatabaseStorage = process.env.DATABASE_URL && !isDevelopment;
 
-export const storage = shouldUseDatabaseStorage ? new DatabaseStorage() : new MemStorage();
+let storageInstance: IStorage;
 
-// Initialize default data for database storage in production
-if (shouldUseDatabaseStorage && storage instanceof DatabaseStorage) {
-  storage.initializeDefaultData().catch(console.error);
+if (useSupabase) {
+  storageInstance = new SupabaseStorage();
+  console.log('Using SupabaseStorage for data persistence');
+} else if (shouldUseDatabaseStorage) {
+  storageInstance = new DatabaseStorage();
+  console.log('Using DatabaseStorage (Neon) for data persistence');
+} else {
+  storageInstance = new MemStorage();
+  console.log('Using MemStorage for data persistence');
+  if (isDevelopment && process.env.DATABASE_URL) {
+    console.log('Note: Database configured but using memory storage in development');
+  }
 }
 
-console.log(`Using ${shouldUseDatabaseStorage ? 'DatabaseStorage (Supabase)' : 'MemStorage'} for data persistence`);
-if (isDevelopment && process.env.DATABASE_URL) {
-  console.log('Note: Supabase connection configured but using memory storage in development');
+export const storage = storageInstance;
+
+// Initialize default data for database/supabase storage in production
+if ((shouldUseDatabaseStorage && storage instanceof DatabaseStorage) ||
+    (useSupabase && storage instanceof SupabaseStorage)) {
+  storage.initializeDefaultData().catch(console.error);
 }
