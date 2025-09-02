@@ -69,10 +69,7 @@ export default function Pricing() {
           <p className="text-2xl mb-2 body-text text-gray-700">{t('home.pricing.membershipPeriod')}</p>
           <p className="text-gray-500 mb-12 text-lg body-text">{t('home.pricing.membershipCompare')}</p>
           
-          <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-12 rounded-2xl mb-12 premium-shadow">
-            <p className="text-xl mb-6 body-text text-gray-800">
-              {t('home.pricing.urgencyMessage')}
-            </p>
+          <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-12 rounded-2xl mb-12 premium-shadow">
             <p className="text-primary font-bold text-xl body-text">{t('home.pricing.priceIncrease')}</p>
           </div>
           
