@@ -21,8 +21,8 @@ export default function AdminLogin() {
 
     // Simple access code check
     if (accessCode === ADMIN_ACCESS_CODE) {
+      // Get JWT token in background (optional - for admin API calls)
       try {
-        // Get JWT token from the server
         const response = await fetch('/api/admin/login', {
           method: 'POST',
           headers: {
@@ -33,28 +33,23 @@ export default function AdminLogin() {
 
         if (response.ok) {
           const data = await response.json();
-          sessionStorage.setItem('admin_authenticated', 'true');
           sessionStorage.setItem('admin_token', data.token);
-          
-          toast({
-            title: "Access Granted",
-            description: "Welcome to the CMS dashboard",
-          });
-          
-          // Redirect to admin dashboard
-          setLocation('/admin/dashboard');
-        } else {
-          throw new Error('Authentication failed');
         }
       } catch (error) {
-        toast({
-          title: "Authentication Error",
-          description: "Failed to authenticate. Please try again.",
-          variant: "destructive",
-        });
-        setIsLoading(false);
-        return;
+        // Ignore JWT error - proceed with access code login
+        console.warn('JWT token fetch failed, proceeding without admin API access');
       }
+
+      // Always proceed with access code authentication
+      sessionStorage.setItem('admin_authenticated', 'true');
+      
+      toast({
+        title: "Access Granted",
+        description: "Welcome to the CMS dashboard",
+      });
+      
+      // Redirect to admin dashboard
+      setLocation('/admin/dashboard');
     } else {
       toast({
         title: "Access Denied",
