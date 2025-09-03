@@ -36,7 +36,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
       )}
 
       {/* Sidebar */}
-      <div className={`fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0`}>
+      <div className={`fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0 flex flex-col`}>
         <div className="flex items-center justify-between h-16 px-6 border-b">
           <h1 className="text-xl font-bold text-gray-900">CMS Admin</h1>
           <Button
@@ -49,7 +49,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           </Button>
         </div>
 
-        <nav className="mt-6 px-3">
+        <nav className="flex-1 mt-6 px-3 overflow-y-auto">
           <div className="space-y-1">
             {navigation.map((item) => {
               const isActive = location === item.href;
@@ -70,7 +70,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           </div>
         </nav>
 
-        <div className="absolute bottom-6 left-3 right-3">
+        <div className="p-3 mt-auto border-t bg-gray-50">
           <Button
             variant="outline"
             className="w-full justify-start text-red-600 border-red-200 hover:bg-red-50"

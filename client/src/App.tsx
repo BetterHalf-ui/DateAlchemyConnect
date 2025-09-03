@@ -44,15 +44,7 @@ function Router() {
       <Route path="/admin/articles" component={() => <ProtectedRoute><AdminArticles /></ProtectedRoute>} />
       <Route path="/admin" component={() => <ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
       
-      {/* Backup admin routes - Unique URL Access */}
-      <Route path="/admin/secure-access-4122" component={AdminDashboard} />
-      <Route path="/admin/secure-access-4122/add-article" component={AddArticle} />
-      <Route path="/admin/secure-access-4122/articles" component={AdminArticles} />
-      
-      {/* Legacy admin route */}
-      <Route path="/admin/blog" component={AdminDashboard} />
-      <Route path="/admin/blog/add-article" component={AddArticle} />
-      <Route path="/admin/blog/articles" component={AdminArticles} />
+
       
       <Route path="/favicon-preview" component={FaviconPreview} />
       <Route component={NotFound} />
