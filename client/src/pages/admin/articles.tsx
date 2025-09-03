@@ -93,7 +93,7 @@ export default function AdminArticles() {
             <h1 className="text-3xl font-bold text-gray-900">All Articles</h1>
             <p className="text-gray-600">Manage your blog content</p>
           </div>
-          <Link href="/admin/secure-access-4122/add-article">
+          <Link href="/admin/blog/add-article">
             <Button className="flex items-center gap-2" data-testid="button-add-new">
               <Plus className="w-4 h-4" />
               Add New Article
@@ -234,7 +234,7 @@ export default function AdminArticles() {
                   }
                 </p>
                 {!searchTerm && statusFilter === 'all' && (
-                  <Link href="/admin/secure-access-4122/add-article">
+                  <Link href="/admin/blog/add-article">
                     <Button>Create First Article</Button>
                   </Link>
                 )}

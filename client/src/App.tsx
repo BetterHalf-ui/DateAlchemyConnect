@@ -39,7 +39,11 @@ function Router() {
       <Route path="/admin/secure-access-4122" component={AdminDashboard} />
       <Route path="/admin/secure-access-4122/add-article" component={AddArticle} />
       <Route path="/admin/secure-access-4122/articles" component={AdminArticles} />
-      <Route path="/admin/blog" component={BlogAdmin} />
+      
+      {/* Alternative admin route that works immediately */}
+      <Route path="/admin/blog" component={AdminDashboard} />
+      <Route path="/admin/blog/add-article" component={AddArticle} />
+      <Route path="/admin/blog/articles" component={AdminArticles} />
       
       <Route path="/favicon-preview" component={FaviconPreview} />
       <Route component={NotFound} />

@@ -80,7 +80,7 @@ export default function AddArticle() {
         title: "Article created successfully!",
         description: "Your new article has been saved to the database.",
       });
-      setLocation('/admin/secure-access-4122');
+      setLocation('/admin/blog');
     },
     onError: (error: Error) => {
       toast({
@@ -124,7 +124,7 @@ export default function AddArticle() {
           <div className="flex items-center gap-4">
             <Button 
               variant="ghost" 
-              onClick={() => setLocation('/admin/secure-access-4122')}
+              onClick={() => setLocation('/admin/blog')}
               data-testid="button-back"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />

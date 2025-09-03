@@ -118,7 +118,7 @@ export default function AdminDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle>Recent Articles</CardTitle>
-            <Link href="/admin/secure-access-4122/articles">
+            <Link href="/admin/blog/articles">
               <Button variant="outline" size="sm">
                 View All
               </Button>
@@ -161,7 +161,7 @@ export default function AdminDashboard() {
               <div className="text-center py-8">
                 <FileText className="w-12 h-12 text-gray-300 mx-auto mb-4" />
                 <p className="text-gray-500 mb-4">No articles yet</p>
-                <Link href="/admin/secure-access-4122/add-article">
+                <Link href="/admin/blog/add-article">
                   <Button>Create your first article</Button>
                 </Link>
               </div>
@@ -176,13 +176,13 @@ export default function AdminDashboard() {
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Link href="/admin/secure-access-4122/add-article">
+              <Link href="/admin/blog/add-article">
                 <Button variant="outline" className="w-full flex items-center gap-2" data-testid="quick-action-add">
                   <PlusCircle className="w-4 h-4" />
                   Create New Article
                 </Button>
               </Link>
-              <Link href="/admin/secure-access-4122/articles">
+              <Link href="/admin/blog/articles">
                 <Button variant="outline" className="w-full flex items-center gap-2" data-testid="quick-action-manage">
                   <FileText className="w-4 h-4" />
                   Manage Articles
