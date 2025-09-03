@@ -42,15 +42,14 @@ export default function Blog() {
   });
 
   const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
-    queryKey: ["/api/blog-posts", "published"],
+    queryKey: ["build-blog-posts", "published"],
     queryFn: async () => {
-      const response = await fetch("/api/blog-posts?published=true");
-      if (!response.ok) throw new Error("Failed to fetch blog posts");
-      const data = await response.json();
+      const { getBlogPosts } = await import('@/lib/build-data');
+      const data = await getBlogPosts(true);
       console.log('Blog posts loaded on blog page:', data?.length, 'posts');
       return data;
     },
-    staleTime: 0, // Always fetch fresh data
+    staleTime: Infinity, // Build data doesn't change
   });
 
   const filteredPosts = blogPosts?.filter(post => {

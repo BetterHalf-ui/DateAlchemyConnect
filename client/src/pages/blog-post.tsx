@@ -14,11 +14,13 @@ export default function BlogPostPage() {
   const { id } = useParams();
 
   const { data: post, isLoading, error } = useQuery<BlogPost>({
-    queryKey: ["/api/blog-posts", id],
+    queryKey: ["build-blog-post", id],
     queryFn: async () => {
-      const response = await fetch(`/api/blog-posts/${id}`);
-      if (!response.ok) throw new Error("Failed to fetch blog post");
-      return response.json();
+      const { getBlogPosts } = await import('@/lib/build-data');
+      const posts = await getBlogPosts();
+      const foundPost = posts.find(p => p.id === id);
+      if (!foundPost) throw new Error("Blog post not found");
+      return foundPost;
     },
     enabled: !!id,
   });

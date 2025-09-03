@@ -45,23 +45,28 @@ export default function Home() {
     ogImage: "/og-image-couple.jpg"
   });
   const { data: blogPosts, isLoading: blogPostsLoading } = useQuery<BlogPost[]>({
-    queryKey: ["/api/blog-posts", "published"],
+    queryKey: ["build-blog-posts", "published"],
     queryFn: async () => {
-      const response = await fetch("/api/blog-posts?published=true");
-      if (!response.ok) throw new Error("Failed to fetch blog posts");
-      const data = await response.json();
+      const { getBlogPosts } = await import('@/lib/build-data');
+      const data = await getBlogPosts(true);
       console.log('Blog posts loaded:', data?.length, 'posts');
       return data;
     },
-    staleTime: 0, // Always fetch fresh data
+    staleTime: Infinity, // Build data doesn't change
   });
 
   const { data: activeMembersSetting } = useQuery<Setting>({
-    queryKey: ["/api/settings", "active_members_count"],
+    queryKey: ["build-settings", "active_members_count"],
     queryFn: async () => {
-      const response = await fetch("/api/settings/active_members_count");
-      if (!response.ok) throw new Error("Failed to fetch setting");
-      return response.json();
+      const { getSetting } = await import('@/lib/build-data');
+      const value = await getSetting("active_members_count");
+      if (!value) throw new Error("Setting not found");
+      return { 
+        id: "active_members_count", 
+        key: "active_members_count", 
+        value, 
+        updatedAt: new Date() 
+      } as Setting;
     },
   });
 

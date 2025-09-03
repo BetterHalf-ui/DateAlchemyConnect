@@ -6,6 +6,9 @@ set -e
 echo "Installing dependencies..."
 npm ci --include=dev
 
+echo "Fetching build-time data from Supabase..."
+tsx scripts/fetch-build-data.ts
+
 echo "Building the application..."
 npm run build
 
@@ -32,6 +35,13 @@ echo "Copying attached assets..."
 if [ -d "attached_assets" ]; then
   mkdir -p dist/public/attached_assets
   cp -r attached_assets/* dist/public/attached_assets/ 2>/dev/null || true
+fi
+
+echo "Copying build-time data..."
+if [ -d "dist/build-data" ]; then
+  mkdir -p dist/public/build-data
+  cp -r dist/build-data/* dist/public/build-data/ 2>/dev/null || true
+  echo "Build data copied to public directory"
 fi
 
 echo "Setting proper file permissions..."
