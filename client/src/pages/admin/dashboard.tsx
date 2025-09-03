@@ -4,9 +4,21 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { PlusCircle, FileText, Users, Settings, Calendar } from 'lucide-react';
-import { makeAuthenticatedRequest } from '@/hooks/use-admin-auth';
+// Removed auth dependency - using direct API calls
 import AdminLayout from '@/components/admin/admin-layout';
-import type { BlogPost } from '../../../shared/schema';
+// Type definitions moved inline to avoid import issues
+type BlogPost = {
+  id: string;
+  title: string;
+  content: string;
+  excerpt: string;
+  imageUrl?: string;
+  category?: string;
+  tags: string[];
+  published: boolean;
+  createdAt: string;
+  updatedAt: string;
+};
 
 interface DashboardStats {
   totalArticles: number;
@@ -19,7 +31,7 @@ export default function AdminDashboard() {
   const { data: articles, isLoading: articlesLoading } = useQuery<BlogPost[]>({
     queryKey: ['admin-articles'],
     queryFn: async () => {
-      const response = await makeAuthenticatedRequest('/api/blog-posts');
+      const response = await fetch('/api/blog-posts');
       if (!response.ok) throw new Error('Failed to fetch articles');
       return response.json();
     },
@@ -28,9 +40,19 @@ export default function AdminDashboard() {
   const { data: stats, isLoading: statsLoading } = useQuery<DashboardStats>({
     queryKey: ['admin-stats'],
     queryFn: async () => {
-      const response = await makeAuthenticatedRequest('/api/admin/stats');
+      const response = await fetch('/api/admin/stats');
       if (!response.ok) throw new Error('Failed to fetch stats');
       return response.json();
+    },
+  });
+
+  const { data: activeMembersCount, isLoading: membersLoading } = useQuery<number>({
+    queryKey: ['active-members-count'],
+    queryFn: async () => {
+      const response = await fetch('/api/settings/active_members_count');
+      if (!response.ok) throw new Error('Failed to fetch member count');
+      const data = await response.json();
+      return parseInt(data.value) || 225;
     },
   });
 
@@ -106,7 +128,9 @@ export default function AdminDashboard() {
               <Users className="w-4 h-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-blue-600">225</div>
+              <div className="text-2xl font-bold text-blue-600" data-testid="active-members-count">
+                {membersLoading ? '...' : activeMembersCount || 225}
+              </div>
               <p className="text-xs text-muted-foreground">
                 Current members
               </p>
@@ -118,7 +142,7 @@ export default function AdminDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle>Recent Articles</CardTitle>
-            <Link href="/admin/blog/articles">
+            <Link href="/admin/articles">
               <Button variant="outline" size="sm">
                 View All
               </Button>
@@ -161,7 +185,7 @@ export default function AdminDashboard() {
               <div className="text-center py-8">
                 <FileText className="w-12 h-12 text-gray-300 mx-auto mb-4" />
                 <p className="text-gray-500 mb-4">No articles yet</p>
-                <Link href="/admin/blog/add-article">
+                <Link href="/admin/add-article">
                   <Button>Create your first article</Button>
                 </Link>
               </div>
@@ -176,13 +200,13 @@ export default function AdminDashboard() {
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Link href="/admin/blog/add-article">
+              <Link href="/admin/add-article">
                 <Button variant="outline" className="w-full flex items-center gap-2" data-testid="quick-action-add">
                   <PlusCircle className="w-4 h-4" />
                   Create New Article
                 </Button>
               </Link>
-              <Link href="/admin/blog/articles">
+              <Link href="/admin/articles">
                 <Button variant="outline" className="w-full flex items-center gap-2" data-testid="quick-action-manage">
                   <FileText className="w-4 h-4" />
                   Manage Articles
