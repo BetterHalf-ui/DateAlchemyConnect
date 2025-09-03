@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import I18nProvider from "@/components/i18n/i18n-provider";
 import { useAnalytics } from "@/hooks/use-analytics";
-import { AdminAuthProvider } from "@/hooks/use-admin-auth";
+
 import Home from "@/pages/home";
 import Network from "@/pages/network";
 import HowItWorks from "@/pages/how-it-works";
@@ -15,11 +15,9 @@ import PrivacyPolicy from "@/pages/privacy-policy";
 import RebrandAnnouncement from "@/pages/rebrand-announcement";
 
 import BlogAdmin from "@/components/admin/blog-admin";
-import AdminLogin from "@/pages/admin/login";
 import AdminDashboard from "@/pages/admin/dashboard";
 import AddArticle from "@/pages/admin/add-article";
 import AdminArticles from "@/pages/admin/articles";
-import ProtectedAdminRoute from "@/components/admin/protected-admin-route";
 import FaviconPreview from "@/components/favicon-preview";
 import NotFound from "@/pages/not-found";
 
@@ -37,23 +35,10 @@ function Router() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/rebrand-announcement" component={RebrandAnnouncement} />
       
-      {/* Admin Routes */}
-      <Route path="/admin/login" component={AdminLogin} />
-      <Route path="/admin/dashboard">
-        <ProtectedAdminRoute>
-          <AdminDashboard />
-        </ProtectedAdminRoute>
-      </Route>
-      <Route path="/admin/add-article">
-        <ProtectedAdminRoute>
-          <AddArticle />
-        </ProtectedAdminRoute>
-      </Route>
-      <Route path="/admin/articles">
-        <ProtectedAdminRoute>
-          <AdminArticles />
-        </ProtectedAdminRoute>
-      </Route>
+      {/* Admin Routes - Unique URL Access */}
+      <Route path="/admin/secure-access-4122" component={AdminDashboard} />
+      <Route path="/admin/secure-access-4122/add-article" component={AddArticle} />
+      <Route path="/admin/secure-access-4122/articles" component={AdminArticles} />
       <Route path="/admin/blog" component={BlogAdmin} />
       
       <Route path="/favicon-preview" component={FaviconPreview} />
@@ -67,10 +52,8 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <I18nProvider>
-          <AdminAuthProvider>
             <Toaster />
             <Router />
-          </AdminAuthProvider>
         </I18nProvider>
       </TooltipProvider>
     </QueryClientProvider>

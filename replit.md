@@ -77,12 +77,12 @@ Preferred communication style: Simple, everyday language.
 - **Lead Generation**: Custom events for tracking user conversions and engagement
 
 ### CMS Administration
-- **Admin Authentication**: Secure login with password "12345" at `/admin/login`
+- **Admin Access**: Secure URL-based access at `/admin/secure-access-4122` (no password required)
 - **Dashboard Interface**: Complete admin dashboard showing article statistics and management
 - **Article Editor**: Rich text editor with formatting tools and image upload capabilities
 - **Image Storage**: Direct integration with Supabase Storage for blog asset management
 - **Article Management**: Full CRUD operations with search, filter, and bulk management features
-- **Security**: JWT-based authentication with protected routes and secure backend verification
+- **Security**: Unique non-guessable URL access for enhanced security
 
 ## Data Flow
 
