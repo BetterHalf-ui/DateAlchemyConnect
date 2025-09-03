@@ -11,6 +11,11 @@
   directory = "netlify/functions"
   
 [[redirects]]
+  from = "/api/admin/*"
+  to = "/.netlify/functions/admin-api/:splat"
+  status = 200
+
+[[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/api/:splat"
   status = 200
