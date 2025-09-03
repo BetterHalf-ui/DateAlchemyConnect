@@ -1,0 +1,65 @@
+I need you to build a complete Content Management System (CMS) dashboard for my website. The CMS should be a new section of my existing Replit project and must be integrated with the Supabase database we previously set up.
+
+Here is a detailed plan and a list of all required features:
+
+1. Secure Admin Login:
+
+Create a new, password-protected route for the admin dashboard (e.g., /admin).
+
+The login should use a hardcoded password for now: Beachhouse1005!.
+
+Ensure the password is never exposed in the front end and is handled securely on the backend. This is a crucial security step.
+
+2. CMS Dashboard:
+
+Upon successful login, redirect the user to a dashboard page (e.g., /admin/dashboard).
+
+The dashboard should display key statistics. The most important one is a clear count of the Total # of Articles.
+
+Include a button or a link to navigate to the "Add New Article" page.
+
+3. "Add New Article" Interface:
+
+Create a clean, user-friendly form with the following fields:
+
+Title: A text input for the article title.
+
+URL Slug: An auto-generated field that converts the title into a URL-friendly slug (e.g., "My New Article" becomes "my-new-article"). Allow this to be manually edited.
+
+Meta Description/Excerpt: A text area for a short summary of the article.
+
+Image Uploader: A field to upload images. The uploaded images should be stored in Supabase Storage, not directly in the database. The URL of the image should be saved in the database table for the article.
+
+Article Content: A large text box with basic rich text editing buttons (e.g., bold, italics, underline). This is a user experience improvement that will be very helpful for you.
+
+4. Backend Integration with Supabase:
+
+Ensure the form is fully connected to our Supabase database.
+
+When a new article is submitted, the data from the form fields must be correctly inserted into the blog_posts table.
+
+Implement CREATE, READ, UPDATE, and DELETE (CRUD) functionality. This means you should also create interfaces for me to edit existing articles and delete them if needed.
+
+5. Additional Features (Improvisation):
+
+Article List View: On the dashboard, display a paginated list of all existing articles with their titles and publication dates. This will allow for easy navigation and management.
+
+Confirmation Messages: After a successful action (e.g., adding a new article), display a clear "Article added successfully!" message to the user.
+
+Important Note: Do not expose any database or API keys in the front end code. All Supabase interactions must be handled securely on the backend. Please provide a plan of the file structure and database schema changes before you begin writing the code."
+
+
+
+
+
+
+
+
+
+
+
+
+Tools
+
+
+Your Frolic.mu chats aren’t used to improve our models. Gemini can make mistake
