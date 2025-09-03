@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { makeAuthenticatedRequest } from '@/hooks/use-admin-auth';
+// Removed auth dependency - using direct API calls
 import AdminLayout from '@/components/admin/admin-layout';
 import ImageUpload from '@/components/admin/image-upload';
 import RichTextEditor from '@/components/admin/rich-text-editor';
@@ -58,7 +58,7 @@ export default function AddArticle() {
 
   const createArticleMutation = useMutation({
     mutationFn: async (data: InsertBlogPost) => {
-      const response = await makeAuthenticatedRequest('/api/blog-posts', {
+      const response = await fetch('/api/blog-posts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

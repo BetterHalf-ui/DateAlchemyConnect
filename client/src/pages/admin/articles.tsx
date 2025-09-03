@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
-import { makeAuthenticatedRequest } from '@/hooks/use-admin-auth';
+// Removed auth dependency - using direct API calls
 import AdminLayout from '@/components/admin/admin-layout';
 import { 
   Search, 
@@ -34,7 +34,7 @@ export default function AdminArticles() {
   const { data: articles, isLoading } = useQuery<BlogPost[]>({
     queryKey: ['admin-articles'],
     queryFn: async () => {
-      const response = await makeAuthenticatedRequest('/api/blog-posts');
+      const response = await fetch('/api/blog-posts');
       if (!response.ok) throw new Error('Failed to fetch articles');
       return response.json();
     },
@@ -42,7 +42,7 @@ export default function AdminArticles() {
 
   const deleteArticleMutation = useMutation({
     mutationFn: async (id: string) => {
-      const response = await makeAuthenticatedRequest(`/api/blog-posts/${id}`, {
+      const response = await fetch(`/api/blog-posts/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) throw new Error('Failed to delete article');

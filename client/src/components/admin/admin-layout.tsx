@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
-import { useAdminAuth } from '@/hooks/use-admin-auth';
+// Removed admin auth - using URL-based access
 import { 
   LayoutDashboard, 
   FileText, 
@@ -19,19 +19,12 @@ interface AdminLayoutProps {
 export default function AdminLayout({ children }: AdminLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [location] = useLocation();
-  const { logout } = useAdminAuth();
-
   const navigation = [
-    { name: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
-    { name: 'All Articles', href: '/admin/articles', icon: FileText },
-    { name: 'Add Article', href: '/admin/add-article', icon: PlusCircle },
-    { name: 'Settings', href: '/admin/settings', icon: Settings },
+    { name: 'Dashboard', href: '/admin/blog', icon: LayoutDashboard },
+    { name: 'All Articles', href: '/admin/blog/articles', icon: FileText },
+    { name: 'Add Article', href: '/admin/blog/add-article', icon: PlusCircle },
+    { name: 'Settings', href: '/admin/blog/settings', icon: Settings },
   ];
-
-  const handleLogout = () => {
-    logout();
-    window.location.href = '/admin/login';
-  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -80,12 +73,12 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         <div className="absolute bottom-6 left-3 right-3">
           <Button
             variant="outline"
-            className="w-full justify-start text-red-600 border-red-200 hover:bg-red-50"
-            onClick={handleLogout}
-            data-testid="button-logout"
+            className="w-full justify-start text-gray-600 border-gray-200 hover:bg-gray-50"
+            onClick={() => window.location.href = '/'}
+            data-testid="button-home"
           >
             <LogOut className="w-4 h-4 mr-3" />
-            Sign Out
+            Back to Site
           </Button>
         </div>
       </div>
