@@ -44,7 +44,7 @@ function Router() {
       <Route path="/admin/add-article" component={() => <ProtectedRoute><AddArticle /></ProtectedRoute>} />
       <Route path="/admin/articles" component={() => <ProtectedRoute><AdminArticles /></ProtectedRoute>} />
       <Route path="/admin/settings" component={() => <ProtectedRoute><AdminSettings /></ProtectedRoute>} />
-      <Route path="/admin" component={() => <ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+      <Route path="/admin" component={AdminLogin} />
       
 
       

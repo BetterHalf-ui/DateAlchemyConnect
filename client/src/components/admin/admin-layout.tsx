@@ -77,7 +77,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
             onClick={() => {
               sessionStorage.removeItem('admin_authenticated');
           sessionStorage.removeItem('admin_token');
-              window.location.href = '/admin/login';
+              window.location.href = '/admin';
             }}
             data-testid="button-logout"
           >
