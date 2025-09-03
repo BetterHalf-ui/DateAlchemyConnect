@@ -21,16 +21,40 @@ export default function AdminLogin() {
 
     // Simple access code check
     if (accessCode === ADMIN_ACCESS_CODE) {
-      // Store authentication in sessionStorage
-      sessionStorage.setItem('admin_authenticated', 'true');
-      
-      toast({
-        title: "Access Granted",
-        description: "Welcome to the CMS dashboard",
-      });
-      
-      // Redirect to admin dashboard
-      setLocation('/admin/dashboard');
+      try {
+        // Get JWT token from the server
+        const response = await fetch('/api/admin/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ password: '12345' }),
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          sessionStorage.setItem('admin_authenticated', 'true');
+          sessionStorage.setItem('admin_token', data.token);
+          
+          toast({
+            title: "Access Granted",
+            description: "Welcome to the CMS dashboard",
+          });
+          
+          // Redirect to admin dashboard
+          setLocation('/admin/dashboard');
+        } else {
+          throw new Error('Authentication failed');
+        }
+      } catch (error) {
+        toast({
+          title: "Authentication Error",
+          description: "Failed to authenticate. Please try again.",
+          variant: "destructive",
+        });
+        setIsLoading(false);
+        return;
+      }
     } else {
       toast({
         title: "Access Denied",

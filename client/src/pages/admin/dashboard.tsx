@@ -40,7 +40,13 @@ export default function AdminDashboard() {
   const { data: stats, isLoading: statsLoading } = useQuery<DashboardStats>({
     queryKey: ['admin-stats'],
     queryFn: async () => {
-      const response = await fetch('/api/admin/stats');
+      const token = sessionStorage.getItem('admin_token');
+      const response = await fetch('/api/admin/stats', {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      });
       if (!response.ok) throw new Error('Failed to fetch stats');
       return response.json();
     },

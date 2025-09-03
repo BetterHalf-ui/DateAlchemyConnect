@@ -76,6 +76,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
             className="w-full justify-start text-red-600 border-red-200 hover:bg-red-50"
             onClick={() => {
               sessionStorage.removeItem('admin_authenticated');
+          sessionStorage.removeItem('admin_token');
               window.location.href = '/admin/login';
             }}
             data-testid="button-logout"

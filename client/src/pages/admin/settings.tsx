@@ -27,12 +27,12 @@ export default function AdminSettings() {
 
   const updateMembersCountMutation = useMutation({
     mutationFn: async (newCount: string) => {
-      const response = await fetch('/api/settings/active_members_count', {
+      const response = await fetch('/api/settings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ value: newCount }),
+        body: JSON.stringify({ key: 'active_members_count', value: newCount }),
       });
       if (!response.ok) throw new Error('Failed to update member count');
       return response.json();
