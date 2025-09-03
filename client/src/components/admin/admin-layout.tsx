@@ -20,10 +20,10 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [location] = useLocation();
   const navigation = [
-    { name: 'Dashboard', href: '/admin/blog', icon: LayoutDashboard },
-    { name: 'All Articles', href: '/admin/blog/articles', icon: FileText },
-    { name: 'Add Article', href: '/admin/blog/add-article', icon: PlusCircle },
-    { name: 'Settings', href: '/admin/blog/settings', icon: Settings },
+    { name: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
+    { name: 'All Articles', href: '/admin/articles', icon: FileText },
+    { name: 'Add Article', href: '/admin/add-article', icon: PlusCircle },
+    { name: 'Settings', href: '/admin/settings', icon: Settings },
   ];
 
   return (
@@ -73,12 +73,15 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         <div className="absolute bottom-6 left-3 right-3">
           <Button
             variant="outline"
-            className="w-full justify-start text-gray-600 border-gray-200 hover:bg-gray-50"
-            onClick={() => window.location.href = '/'}
-            data-testid="button-home"
+            className="w-full justify-start text-red-600 border-red-200 hover:bg-red-50"
+            onClick={() => {
+              sessionStorage.removeItem('admin_authenticated');
+              window.location.href = '/admin/login';
+            }}
+            data-testid="button-logout"
           >
             <LogOut className="w-4 h-4 mr-3" />
-            Back to Site
+            Sign Out
           </Button>
         </div>
       </div>

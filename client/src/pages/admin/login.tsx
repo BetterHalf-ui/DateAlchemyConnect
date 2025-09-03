@@ -2,103 +2,98 @@ import { useState } from 'react';
 import { useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
-import { useAdminAuth } from '@/hooks/use-admin-auth';
-import { Eye, EyeOff, Lock } from 'lucide-react';
+import { Lock, Shield } from 'lucide-react';
+
+const ADMIN_ACCESS_CODE = 'Beachhouse1005!';
 
 export default function AdminLogin() {
-  const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const [, setLocation] = useLocation();
-  const { login } = useAdminAuth();
+  const [accessCode, setAccessCode] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
-    try {
-      const success = await login(password);
+    // Simple access code check
+    if (accessCode === ADMIN_ACCESS_CODE) {
+      // Store authentication in sessionStorage
+      sessionStorage.setItem('admin_authenticated', 'true');
       
-      if (success) {
-        toast({
-          title: "Login successful",
-          description: "Welcome to the admin dashboard",
-        });
-        setLocation('/admin/dashboard');
-      } else {
-        toast({
-          title: "Login failed",
-          description: "Invalid password. Please try again.",
-          variant: "destructive",
-        });
-        setPassword('');
-      }
-    } catch (error) {
       toast({
-        title: "Login error",
-        description: "An error occurred. Please try again.",
+        title: "Access Granted",
+        description: "Welcome to the CMS dashboard",
+      });
+      
+      // Redirect to admin dashboard
+      setLocation('/admin/dashboard');
+    } else {
+      toast({
+        title: "Access Denied",
+        description: "Invalid access code. Please try again.",
         variant: "destructive",
       });
-    } finally {
-      setIsLoading(false);
     }
+    
+    setIsLoading(false);
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-            <Lock className="w-6 h-6 text-primary" />
+          <div className="mx-auto w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+            <Shield className="w-6 h-6 text-orange-600" />
           </div>
-          <CardTitle className="text-2xl font-bold">Admin Login</CardTitle>
-          <p className="text-gray-600">The Date Alchemy CMS</p>
+          <CardTitle className="text-2xl font-bold text-gray-900">
+            Admin Access
+          </CardTitle>
+          <p className="text-gray-600">
+            Enter your access code to continue
+          </p>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
+            <div>
+              <Label htmlFor="accessCode">Access Code</Label>
               <div className="relative">
+                <Lock className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
                 <Input
-                  id="password"
-                  type={showPassword ? 'text' : 'password'}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter admin password"
+                  id="accessCode"
+                  type="password"
+                  placeholder="Enter access code"
+                  value={accessCode}
+                  onChange={(e) => setAccessCode(e.target.value)}
+                  className="pl-10"
                   required
-                  className="pr-10"
-                  data-testid="input-admin-password"
+                  data-testid="input-access-code"
                 />
-                <Button
-                  type="button"
-                  variant="ghost"
-                  size="sm"
-                  className="absolute right-0 top-0 h-full px-3 py-2"
-                  onClick={() => setShowPassword(!showPassword)}
-                  data-testid="button-toggle-password"
-                >
-                  {showPassword ? (
-                    <EyeOff className="w-4 h-4" />
-                  ) : (
-                    <Eye className="w-4 h-4" />
-                  )}
-                </Button>
               </div>
             </div>
-            
             <Button 
               type="submit" 
-              className="w-full" 
-              disabled={isLoading || !password.trim()}
+              className="w-full bg-orange-600 hover:bg-orange-700"
+              disabled={isLoading}
               data-testid="button-login"
             >
-              {isLoading ? 'Signing in...' : 'Sign In'}
+              {isLoading ? 'Verifying...' : 'Access Dashboard'}
             </Button>
           </form>
+          
+          <div className="mt-6 pt-4 border-t text-center">
+            <Button 
+              variant="ghost" 
+              className="text-sm text-gray-500 hover:text-gray-700"
+              onClick={() => setLocation('/')}
+              data-testid="button-back-home"
+            >
+              ← Back to Website
+            </Button>
+          </div>
         </CardContent>
       </Card>
     </div>

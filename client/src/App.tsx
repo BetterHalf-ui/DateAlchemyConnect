@@ -18,6 +18,8 @@ import BlogAdmin from "@/components/admin/blog-admin";
 import AdminDashboard from "@/pages/admin/dashboard";
 import AddArticle from "@/pages/admin/add-article";
 import AdminArticles from "@/pages/admin/articles";
+import AdminLogin from "@/pages/admin/login";
+import ProtectedRoute from "@/components/admin/protected-route";
 import FaviconPreview from "@/components/favicon-preview";
 import NotFound from "@/pages/not-found";
 
@@ -35,12 +37,19 @@ function Router() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/rebrand-announcement" component={RebrandAnnouncement} />
       
-      {/* Admin Routes - Unique URL Access */}
+      {/* Admin Routes - Password Protected */}
+      <Route path="/admin/login" component={AdminLogin} />
+      <Route path="/admin/dashboard" component={() => <ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+      <Route path="/admin/add-article" component={() => <ProtectedRoute><AddArticle /></ProtectedRoute>} />
+      <Route path="/admin/articles" component={() => <ProtectedRoute><AdminArticles /></ProtectedRoute>} />
+      <Route path="/admin" component={() => <ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+      
+      {/* Backup admin routes - Unique URL Access */}
       <Route path="/admin/secure-access-4122" component={AdminDashboard} />
       <Route path="/admin/secure-access-4122/add-article" component={AddArticle} />
       <Route path="/admin/secure-access-4122/articles" component={AdminArticles} />
       
-      {/* Alternative admin route that works immediately */}
+      {/* Legacy admin route */}
       <Route path="/admin/blog" component={AdminDashboard} />
       <Route path="/admin/blog/add-article" component={AddArticle} />
       <Route path="/admin/blog/articles" component={AdminArticles} />
