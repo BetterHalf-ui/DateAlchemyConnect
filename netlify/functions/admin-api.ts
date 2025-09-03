@@ -1,5 +1,9 @@
 import type { Context } from "@netlify/functions";
 import { verifyAdminPassword, generateAdminToken, verifyAdminToken } from "../../server/admin-auth";
+import jwt from 'jsonwebtoken';
+
+// Hardcode values for Netlify Functions
+const JWT_SECRET = process.env.JWT_SECRET || 'your-super-secret-jwt-key-change-in-production';
 import { SupabaseStorage } from "../../server/supabase";
 import { insertBlogPostSchema } from "../../shared/schema";
 
@@ -29,7 +33,12 @@ export default async (request: Request, context: Context) => {
       return false;
     }
     const token = authHeader.slice(7);
-    return verifyAdminToken(token);
+    try {
+      const decoded = jwt.verify(token, JWT_SECRET) as any;
+      return decoded.admin === true;
+    } catch (error) {
+      return false;
+    }
   };
 
   try {

@@ -34,7 +34,7 @@ The admin CMS system has been updated to work with Netlify's serverless function
 
 ### 3. Authentication System
 
-**Password**: `Beachhouse1005!` (handled securely on backend)
+**Password**: `12345` (handled securely on backend)
 **JWT**: 24-hour token expiry for admin sessions
 **Security**: All admin routes require Bearer token authentication
 

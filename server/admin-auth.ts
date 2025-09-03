@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import type { Request, Response, NextFunction } from 'express';
 
 // Secure admin password - will be verified server-side only
-const ADMIN_PASSWORD = 'Beachhouse1005!';
+const ADMIN_PASSWORD = '12345';
 const JWT_SECRET = process.env.JWT_SECRET || 'your-super-secret-jwt-key-change-in-production';
 
 export interface AdminRequest extends Request {

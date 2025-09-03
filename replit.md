@@ -42,7 +42,7 @@ Preferred communication style: Simple, everyday language.
 - **Migration**: Complete migration infrastructure from Neon to Supabase
 
 ### Admin CMS System
-- **Secure Authentication**: JWT-based admin login with hardcoded password "Beachhouse1005!"
+- **Secure Authentication**: JWT-based admin login with hardcoded password "12345"
 - **Admin Dashboard**: Complete statistics and article management interface
 - **Article Management**: Rich text editor with image upload to Supabase Storage
 - **Image Upload**: Direct integration with Supabase Storage for blog assets
@@ -77,7 +77,7 @@ Preferred communication style: Simple, everyday language.
 - **Lead Generation**: Custom events for tracking user conversions and engagement
 
 ### CMS Administration
-- **Admin Authentication**: Secure login with password "Beachhouse1005!" at `/admin/login`
+- **Admin Authentication**: Secure login with password "12345" at `/admin/login`
 - **Dashboard Interface**: Complete admin dashboard showing article statistics and management
 - **Article Editor**: Rich text editor with formatting tools and image upload capabilities
 - **Image Storage**: Direct integration with Supabase Storage for blog asset management

@@ -1,5 +1,8 @@
 import type { Context } from "@netlify/functions";
 import { verifyAdminPassword, generateAdminToken, requireAdmin } from "../../server/admin-auth";
+
+// Hardcode password for Netlify Functions (since import might not work)
+const ADMIN_PASSWORD = '12345';
 import { SupabaseStorage } from "../../server/supabase";
 
 const storage = new SupabaseStorage();
@@ -33,8 +36,15 @@ export default async (request: Request, context: Context) => {
         );
       }
 
-      if (verifyAdminPassword(body.password)) {
-        const token = generateAdminToken();
+      if (body.password === ADMIN_PASSWORD) {
+        // Generate JWT token directly in function
+        const jwt = await import('jsonwebtoken');
+        const JWT_SECRET = process.env.JWT_SECRET || 'your-super-secret-jwt-key-change-in-production';
+        const token = jwt.default.sign(
+          { admin: true, iat: Date.now() },
+          JWT_SECRET,
+          { expiresIn: '24h' }
+        );
         return new Response(
           JSON.stringify({ token, success: true }), 
           { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
