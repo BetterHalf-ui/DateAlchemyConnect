@@ -22,6 +22,7 @@ import AdminLogin from "@/pages/admin/login";
 import AdminSettings from "@/pages/admin/settings";
 import ProtectedRoute from "@/components/admin/protected-route";
 import FaviconPreview from "@/components/favicon-preview";
+import SinglesSocials from "@/pages/events/singles-socials";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -37,6 +38,9 @@ function Router() {
       <Route path="/blog/:id" component={BlogPost} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/rebrand-announcement" component={RebrandAnnouncement} />
+      
+      {/* Events Routes */}
+      <Route path="/events/singlessocials" component={SinglesSocials} />
       
       {/* Admin Routes - Password Protected */}
       <Route path="/admin/login" component={AdminLogin} />

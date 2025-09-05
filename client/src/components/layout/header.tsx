@@ -5,18 +5,20 @@ import { COMPANY_INFO } from "@/lib/constants";
 import LanguageSwitcher from "@/components/i18n/language-switcher";
 import { useI18n } from "@/lib/i18n";
 import { useApplicationLink } from "@/hooks/use-application-link";
+import { ChevronDownIcon } from "lucide-react";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isEventsDropdownOpen, setIsEventsDropdownOpen] = useState(false);
   const [location] = useLocation();
   const { t } = useI18n();
   const applicationLink = useApplicationLink();
   
   // Check if we're on a page that needs a white background header by default
-  const needsWhiteHeader = location.startsWith('/blog') || location.startsWith('/admin') || location.startsWith('/network') || location.startsWith('/privacy-policy') || location.startsWith('/rebrand-announcement') || location.startsWith('/how-it-works');
+  const needsWhiteHeader = location.startsWith('/blog') || location.startsWith('/admin') || location.startsWith('/network') || location.startsWith('/privacy-policy') || location.startsWith('/rebrand-announcement') || location.startsWith('/how-it-works') || location.startsWith('/events');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,19 +61,46 @@ export default function Header() {
             <div className="hidden md:flex items-center space-x-6">
 
               <Link href="/how-it-works" onClick={() => window.scrollTo(0, 0)}>
-                <span className={`hover:text-primary transition-colors cursor-pointer body-text ${
+                <span className={`font-bold hover:text-primary hover:bg-white hover:px-3 hover:py-2 hover:rounded transition-all cursor-pointer body-text ${
                   isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
                 }`}>
                   {t('nav.howItWorks')}
                 </span>
               </Link>
               <Link href="/blog" onClick={() => window.scrollTo(0, 0)}>
-                <span className={`hover:text-primary transition-colors cursor-pointer body-text ${
+                <span className={`font-bold hover:text-primary hover:bg-white hover:px-3 hover:py-2 hover:rounded transition-all cursor-pointer body-text ${
                   isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
                 }`}>
                   {t('nav.insights')}
                 </span>
               </Link>
+              
+              {/* Events Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setIsEventsDropdownOpen(true)}
+                onMouseLeave={() => setIsEventsDropdownOpen(false)}
+              >
+                <div className={`font-bold hover:text-primary hover:bg-white hover:px-3 hover:py-2 hover:rounded transition-all cursor-pointer body-text flex items-center gap-1 ${
+                  isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
+                }`}>
+                  Events
+                  <ChevronDownIcon className={`w-4 h-4 transition-transform ${
+                    isEventsDropdownOpen ? 'rotate-180' : ''
+                  }`} />
+                </div>
+                
+                {isEventsDropdownOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                    <Link href="/events/singlessocials" onClick={() => window.scrollTo(0, 0)}>
+                      <div className="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary cursor-pointer font-medium">
+                        Singles Socials
+                      </div>
+                    </Link>
+                  </div>
+                )}
+              </div>
+              
               <LanguageSwitcher className={isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'} />
             </div>
 
@@ -116,19 +145,33 @@ export default function Header() {
           <div className="px-4 py-6 space-y-4">
 
             <Link href="/how-it-works" onClick={() => { setIsMobileMenuOpen(false); window.scrollTo(0, 0); }}>
-              <div className={`block py-2 text-lg hover:text-primary transition-colors ${
+              <div className={`block py-2 text-lg font-bold hover:text-primary transition-colors ${
                 isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
               }`}>
                 {t('nav.howItWorks')}
               </div>
             </Link>
             <Link href="/blog" onClick={() => { setIsMobileMenuOpen(false); window.scrollTo(0, 0); }}>
-              <div className={`block py-2 text-lg hover:text-primary transition-colors ${
+              <div className={`block py-2 text-lg font-bold hover:text-primary transition-colors ${
                 isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
               }`}>
                 {t('nav.insights')}
               </div>
             </Link>
+            <div className="py-2">
+              <div className={`text-lg font-bold ${
+                isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
+              }`}>
+                Events
+              </div>
+              <Link href="/events/singlessocials" onClick={() => { setIsMobileMenuOpen(false); window.scrollTo(0, 0); }}>
+                <div className={`block py-2 pl-4 text-base hover:text-primary transition-colors ${
+                  isScrolled || needsWhiteHeader ? 'text-gray-600' : 'text-gray-300'
+                }`}>
+                  Singles Socials
+                </div>
+              </Link>
+            </div>
             <div className="py-2">
               <LanguageSwitcher className={isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'} />
             </div>
