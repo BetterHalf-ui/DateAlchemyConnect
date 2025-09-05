@@ -2,6 +2,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, MapPin, Users, Heart, Coffee, Utensils } from 'lucide-react';
+import Header from '@/components/layout/header';
+import Footer from '@/components/layout/footer';
+import RebrandBanner from '@/components/layout/rebrand-banner';
 
 export default function SinglesSocials() {
   const events = [
@@ -84,17 +87,43 @@ export default function SinglesSocials() {
       answer: "We encourage attendees to come solo to maximize the opportunity for everyone to meet new people and foster connections. However, if you'd like to bring a friend who is like-minded and in the same age group as you, drop us an email at hello@thedatealchemy.com and we'll try to accommodate."
     },
     {
+      question: "I have purchased the ticket but I am not able to go",
+      answer: "Tickets are non-refundable but don't worry, you can still use it for another event if you cancel 1 week before."
+    },
+    {
       question: "How is the restaurant selected?",
       answer: "Restaurants are selected for stylish ambiance, fabulous food and drinks. We select restaurants in the center of Mauritius for maximum convenience to all the guests."
     },
     {
+      question: "Are there always 6 to 8 guests at the table?",
+      answer: "We focus on creating tables of 6 to 8, with equal number of men and women. Occasionally, however, it may be 4 or 6 guests, depending on availability, mix of members and attendance on a particular night (despite our best efforts, some cancellations happen due to illness or emergencies)."
+    },
+    {
+      question: "How and when will I know if I'm confirmed for a dinner or brunch?",
+      answer: "Once our final guest list is ready, our Events Team will send a confirmation email and a Whatsapp text message to let you know you're on the guest list and for you to make the payment. This will happen at least 2 to 4 weeks before the event date."
+    },
+    {
+      question: "How do I locate our table at the restaurant?",
+      answer: "We will let you know the surname that the booking is made under. Please arrive on time, ready for a fun night out!"
+    },
+    {
+      question: "How is the dinner or brunch paid for?",
+      answer: "As with any dinner or brunch with friends you can agree at the end to either split the bill 6 ways, or pay individually (if people have ordered different drinks or dishes). It's up to you!"
+    },
+    {
       question: "How do I request another member's phone number after an event?",
       answer: "After each event, our Events Team will email you, seeking feedback. In this email you can request member phone numbers. We ask that members don't swap numbers in front of others at the table, out of respect. Our phone number swapping service removes any awkwardness and ensures mutual interest."
+    },
+    {
+      question: "How can I contact the event organizers if I have further questions?",
+      answer: "For any additional questions or inquiries, please feel free to reach out to us via email at hello@thedatealchemy.com. We're here to help!"
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
+      <RebrandBanner />
+      <Header />
       {/* Hero Section */}
       <section 
         className="relative h-screen bg-cover bg-center bg-no-repeat"
@@ -366,6 +395,8 @@ export default function SinglesSocials() {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }

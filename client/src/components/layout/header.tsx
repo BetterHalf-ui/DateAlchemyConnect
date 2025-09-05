@@ -91,7 +91,7 @@ export default function Header() {
                 </div>
                 
                 {isEventsDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                  <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50">
                     <Link href="/events/singlessocials" onClick={() => window.scrollTo(0, 0)}>
                       <div className="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary cursor-pointer font-medium">
                         Singles Socials
