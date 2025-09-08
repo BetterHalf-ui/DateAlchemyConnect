@@ -1,13 +1,43 @@
+// Simplified admin API for Netlify - NO COMPLEX DEPENDENCIES
 import type { Context } from "@netlify/functions";
-import { verifyAdminPassword, generateAdminToken, verifyAdminToken } from "../../server/admin-auth";
-import jwt from 'jsonwebtoken';
 
-// Hardcode values for Netlify Functions
+const ADMIN_PASSWORD = 'Beachhouse1005!';
 const JWT_SECRET = process.env.JWT_SECRET || 'your-super-secret-jwt-key-change-in-production';
-import { SupabaseStorage } from "../../server/supabase";
-import { insertBlogPostSchema } from "../../shared/schema";
 
-const storage = new SupabaseStorage();
+// Simple JWT functions without imports
+async function signJWT(payload: any): Promise<string> {
+  const jwt = await import('jsonwebtoken');
+  return jwt.sign(payload, JWT_SECRET, { expiresIn: '24h' });
+}
+
+async function verifyJWT(token: string): Promise<any> {
+  try {
+    const jwt = await import('jsonwebtoken');
+    return jwt.verify(token, JWT_SECRET);
+  } catch {
+    return null;
+  }
+}
+
+// Simple Supabase client setup
+async function createSupabaseClient() {
+  const { createClient } = await import('@supabase/supabase-js');
+  
+  const supabaseUrl = process.env.SUPABASE_URL!;
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+  
+  return createClient(supabaseUrl, supabaseKey);
+}
+
+async function verifyAuth(request: Request): Promise<boolean> {
+  const authHeader = request.headers.get('authorization');
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return false;
+  }
+  const token = authHeader.slice(7);
+  const decoded = await verifyJWT(token);
+  return decoded && decoded.admin === true;
+}
 
 export default async (request: Request, context: Context) => {
   const url = new URL(request.url);
@@ -26,134 +56,132 @@ export default async (request: Request, context: Context) => {
     return new Response(null, { status: 200, headers: corsHeaders });
   }
 
-  // Helper function to verify admin token
-  const verifyAuth = (request: Request) => {
-    const authHeader = request.headers.get('authorization');
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return false;
-    }
-    const token = authHeader.slice(7);
-    try {
-      const decoded = jwt.verify(token, JWT_SECRET) as any;
-      return decoded.admin === true;
-    } catch (error) {
-      return false;
-    }
-  };
-
   try {
-    // Admin Blog Post Creation
-    if (path === '/blog-posts' && method === 'POST') {
-      if (!verifyAuth(request)) {
+    // Admin login
+    if (path === '/login' && method === 'POST') {
+      const body = await request.json();
+      
+      if (body.password === ADMIN_PASSWORD) {
+        const token = await signJWT({ admin: true, iat: Date.now() });
         return new Response(
-          JSON.stringify({ error: 'Authentication required' }), 
-          { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      }
-
-      try {
-        const body = await request.json();
-        const validatedData = insertBlogPostSchema.parse(body);
-        const post = await storage.createBlogPost(validatedData);
-        
-        return new Response(
-          JSON.stringify(post), 
-          { status: 201, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      } catch (error: any) {
-        return new Response(
-          JSON.stringify({ message: "Invalid blog post data", error: error.message }), 
-          { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      }
-    }
-
-    // Admin Blog Post Update
-    if (path.startsWith('/blog-posts/') && method === 'PUT') {
-      if (!verifyAuth(request)) {
-        return new Response(
-          JSON.stringify({ error: 'Authentication required' }), 
-          { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      }
-
-      try {
-        const id = path.split('/')[2];
-        const body = await request.json();
-        const validatedData = insertBlogPostSchema.partial().parse(body);
-        const post = await storage.updateBlogPost(id, validatedData);
-        
-        if (!post) {
-          return new Response(
-            JSON.stringify({ message: "Blog post not found" }), 
-            { status: 404, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-          );
-        }
-        
-        return new Response(
-          JSON.stringify(post), 
+          JSON.stringify({ token }), 
           { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
         );
-      } catch (error: any) {
-        return new Response(
-          JSON.stringify({ message: "Invalid blog post data", error: error.message }), 
-          { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
       }
-    }
-
-    // Admin Blog Post Delete
-    if (path.startsWith('/blog-posts/') && method === 'DELETE') {
-      if (!verifyAuth(request)) {
-        return new Response(
-          JSON.stringify({ error: 'Authentication required' }), 
-          { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      }
-
-      try {
-        const id = path.split('/')[2];
-        const success = await storage.deleteBlogPost(id);
-        
-        return new Response(
-          JSON.stringify({ success }), 
-          { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      } catch (error: any) {
-        return new Response(
-          JSON.stringify({ message: "Failed to delete blog post", error: error.message }), 
-          { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      }
-    }
-
-    // Image upload placeholder (would need multipart handling for full implementation)
-    if (path === '/upload-image' && method === 'POST') {
-      if (!verifyAuth(request)) {
-        return new Response(
-          JSON.stringify({ error: 'Authentication required' }), 
-          { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      }
-
-      // For now, return a placeholder response
-      // Full image upload would require multipart form parsing
+      
       return new Response(
-        JSON.stringify({ 
-          error: "Image upload not yet implemented in Netlify Functions. Please use a direct URL for now." 
-        }), 
-        { status: 501, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        JSON.stringify({ error: 'Invalid password' }), 
+        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
 
-    // Default 404 for unmatched admin routes
+    // All other routes require authentication
+    const isAuthenticated = await verifyAuth(request);
+    if (!isAuthenticated) {
+      return new Response(
+        JSON.stringify({ error: 'Authentication required' }), 
+        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Blog posts management
+    if (path === '/blog-posts' && method === 'GET') {
+      const supabase = await createSupabaseClient();
+      const { data, error } = await supabase
+        .from('blog_posts')
+        .select('*')
+        .order('created_at', { ascending: false });
+      
+      if (error) throw error;
+      
+      const posts = (data || []).map(post => ({
+        id: post.id,
+        title: post.title,
+        content: post.content,
+        excerpt: post.excerpt,
+        imageUrl: post.image_url,
+        category: post.category,
+        tags: post.tags || [],
+        published: post.published,
+        createdAt: new Date(post.created_at),
+        updatedAt: new Date(post.updated_at)
+      }));
+      
+      return new Response(
+        JSON.stringify(posts), 
+        { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (path === '/blog-posts' && method === 'POST') {
+      const supabase = await createSupabaseClient();
+      const body = await request.json();
+      const { randomUUID } = await import('crypto');
+      
+      const id = randomUUID();
+      const now = new Date();
+      
+      const { data, error } = await supabase
+        .from('blog_posts')
+        .insert({
+          id,
+          title: body.title,
+          content: body.content,
+          excerpt: body.excerpt,
+          image_url: body.imageUrl || null,
+          category: body.category || null,
+          tags: body.tags || [],
+          published: body.published ?? false,
+          created_at: now.toISOString(),
+          updated_at: now.toISOString()
+        })
+        .select()
+        .single();
+      
+      if (error) throw error;
+      
+      const post = {
+        id: data.id,
+        title: data.title,
+        content: data.content,
+        excerpt: data.excerpt,
+        imageUrl: data.image_url,
+        category: data.category,
+        tags: data.tags || [],
+        published: data.published,
+        createdAt: new Date(data.created_at),
+        updatedAt: new Date(data.updated_at)
+      };
+      
+      return new Response(
+        JSON.stringify(post), 
+        { status: 201, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Settings
+    if (path === '/settings' && method === 'GET') {
+      const supabase = await createSupabaseClient();
+      const { data, error } = await supabase
+        .from('settings')
+        .select('*');
+      
+      if (error) throw error;
+      
+      return new Response(
+        JSON.stringify(data || []), 
+        { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Default 404 for unmatched routes
     return new Response(
       JSON.stringify({ message: "Admin API route not found" }), 
       { status: 404, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
 
   } catch (error) {
-    console.error('Admin Netlify function error:', error);
+    console.error('Admin API error:', error);
     return new Response(
       JSON.stringify({ message: "Internal server error" }), 
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
