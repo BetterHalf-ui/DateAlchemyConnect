@@ -12,7 +12,7 @@ import AdminLayout from '@/components/admin/admin-layout';
 import ImageUpload from '@/components/admin/image-upload';
 import RichTextEditor from '@/components/admin/rich-text-editor';
 import { ArrowLeft, Save, Eye } from 'lucide-react';
-import type { InsertBlogPost } from '../../../shared/schema';
+import type { InsertBlogPost } from '@shared/schema';
 
 export default function AddArticle() {
   const [, setLocation] = useLocation();
@@ -38,11 +38,11 @@ export default function AddArticle() {
       .replace(/[^a-z0-9\s-]/g, '')
       .replace(/\s+/g, '-')
       .replace(/-+/g, '-')
-      .trim('-');
+      .replace(/^-+|-+$/g, '');
   };
 
   const handleTitleChange = (title: string) => {
-    setFormData(prev => ({ ...prev, title }));
+    setFormData((prev: InsertBlogPost) => ({ ...prev, title }));
     if (!urlSlug || urlSlug === generateSlug(formData.title)) {
       setUrlSlug(generateSlug(title));
     }
@@ -53,7 +53,7 @@ export default function AddArticle() {
       .split(',')
       .map(tag => tag.trim())
       .filter(tag => tag.length > 0);
-    setFormData(prev => ({ ...prev, tags }));
+    setFormData((prev: InsertBlogPost) => ({ ...prev, tags }));
   };
 
   const createArticleMutation = useMutation({
@@ -180,7 +180,7 @@ export default function AddArticle() {
                     <Input
                       id="excerpt"
                       value={formData.excerpt}
-                      onChange={(e) => setFormData(prev => ({ ...prev, excerpt: e.target.value }))}
+                      onChange={(e) => setFormData((prev: InsertBlogPost) => ({ ...prev, excerpt: e.target.value }))}
                       placeholder="Brief summary of the article"
                       required
                       data-testid="input-excerpt"
@@ -195,7 +195,7 @@ export default function AddArticle() {
                     <Label>Article Content *</Label>
                     <RichTextEditor
                       value={formData.content}
-                      onChange={(content) => setFormData(prev => ({ ...prev, content }))}
+                      onChange={(content) => setFormData((prev: InsertBlogPost) => ({ ...prev, content }))}
                       placeholder="Write your article content here..."
                     />
                   </div>
@@ -216,7 +216,7 @@ export default function AddArticle() {
                     <Switch
                       id="published"
                       checked={formData.published}
-                      onCheckedChange={(published) => setFormData(prev => ({ ...prev, published }))}
+                      onCheckedChange={(published) => setFormData((prev: InsertBlogPost) => ({ ...prev, published }))}
                       data-testid="switch-published"
                     />
                   </div>
@@ -236,7 +236,7 @@ export default function AddArticle() {
                 </CardHeader>
                 <CardContent>
                   <ImageUpload
-                    onImageUploaded={(url) => setFormData(prev => ({ ...prev, imageUrl: url || null }))}
+                    onImageUploaded={(url) => setFormData((prev: InsertBlogPost) => ({ ...prev, imageUrl: url || null }))}
                     currentImageUrl={formData.imageUrl || undefined}
                   />
                 </CardContent>
