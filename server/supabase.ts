@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import { type User, type InsertUser, type BlogPost, type InsertBlogPost, type Setting, type InsertSetting } from '@shared/schema';
+import { type User, type InsertUser, type BlogPost, type InsertBlogPost, type Setting, type InsertSetting, type Event, type InsertEvent } from '@shared/schema';
 import { randomUUID } from 'crypto';
 import type { IStorage } from './storage';
 
@@ -273,6 +273,167 @@ export class SupabaseStorage implements IStorage {
     }
   }
 
+  // Events Management
+  async getEvents(published?: boolean): Promise<Event[]> {
+    let query = supabase
+      .from('events')
+      .select('*')
+      .order('date', { ascending: true });
+    
+    if (published !== undefined) {
+      query = query.eq('published', published);
+    }
+    
+    const { data, error } = await query;
+    
+    if (error) throw error;
+    
+    // Convert Supabase format to our Event format
+    return (data || []).map(event => ({
+      id: event.id,
+      title: event.title,
+      date: event.date,
+      time: event.time,
+      price: event.price,
+      type: event.type,
+      description: event.description,
+      location: event.location || 'Central Mauritius',
+      maxGuests: event.max_guests || '6-8',
+      published: event.published,
+      createdAt: new Date(event.created_at),
+      updatedAt: new Date(event.updated_at)
+    }));
+  }
+
+  async getEvent(id: string): Promise<Event | undefined> {
+    const { data, error } = await supabase
+      .from('events')
+      .select('*')
+      .eq('id', id)
+      .single();
+    
+    if (error && error.code !== 'PGRST116') {
+      throw error;
+    }
+    
+    if (!data) return undefined;
+    
+    // Convert Supabase format to our Event format
+    return {
+      id: data.id,
+      title: data.title,
+      date: data.date,
+      time: data.time,
+      price: data.price,
+      type: data.type,
+      description: data.description,
+      location: data.location || 'Central Mauritius',
+      maxGuests: data.max_guests || '6-8',
+      published: data.published,
+      createdAt: new Date(data.created_at),
+      updatedAt: new Date(data.updated_at)
+    };
+  }
+
+  async createEvent(event: InsertEvent): Promise<Event> {
+    const id = randomUUID();
+    const now = new Date();
+    
+    const { data, error } = await supabase
+      .from('events')
+      .insert({
+        id,
+        title: event.title,
+        date: event.date,
+        time: event.time,
+        price: event.price,
+        type: event.type,
+        description: event.description || null,
+        location: event.location || 'Central Mauritius',
+        max_guests: event.maxGuests || '6-8',
+        published: event.published ?? true,
+        created_at: now.toISOString(),
+        updated_at: now.toISOString()
+      })
+      .select()
+      .single();
+    
+    if (error) throw error;
+    
+    // Convert Supabase format to our Event format
+    return {
+      id: data.id,
+      title: data.title,
+      date: data.date,
+      time: data.time,
+      price: data.price,
+      type: data.type,
+      description: data.description,
+      location: data.location,
+      maxGuests: data.max_guests,
+      published: data.published,
+      createdAt: new Date(data.created_at),
+      updatedAt: new Date(data.updated_at)
+    };
+  }
+
+  async updateEvent(id: string, updateData: Partial<InsertEvent>): Promise<Event | undefined> {
+    const now = new Date();
+    
+    const updateObject: any = {
+      updated_at: now.toISOString()
+    };
+    
+    if (updateData.title !== undefined) updateObject.title = updateData.title;
+    if (updateData.date !== undefined) updateObject.date = updateData.date;
+    if (updateData.time !== undefined) updateObject.time = updateData.time;
+    if (updateData.price !== undefined) updateObject.price = updateData.price;
+    if (updateData.type !== undefined) updateObject.type = updateData.type;
+    if (updateData.description !== undefined) updateObject.description = updateData.description;
+    if (updateData.location !== undefined) updateObject.location = updateData.location;
+    if (updateData.maxGuests !== undefined) updateObject.max_guests = updateData.maxGuests;
+    if (updateData.published !== undefined) updateObject.published = updateData.published;
+    
+    const { data, error } = await supabase
+      .from('events')
+      .update(updateObject)
+      .eq('id', id)
+      .select()
+      .single();
+    
+    if (error && error.code !== 'PGRST116') {
+      throw error;
+    }
+    
+    if (!data) return undefined;
+    
+    // Convert Supabase format to our Event format
+    return {
+      id: data.id,
+      title: data.title,
+      date: data.date,
+      time: data.time,
+      price: data.price,
+      type: data.type,
+      description: data.description,
+      location: data.location,
+      maxGuests: data.max_guests,
+      published: data.published,
+      createdAt: new Date(data.created_at),
+      updatedAt: new Date(data.updated_at)
+    };
+  }
+
+  async deleteEvent(id: string): Promise<boolean> {
+    const { error } = await supabase
+      .from('events')
+      .delete()
+      .eq('id', id);
+    
+    if (error) throw error;
+    return true;
+  }
+
   async initializeDefaultData(): Promise<void> {
     try {
       // Set default active members count if not exists
@@ -286,8 +447,61 @@ export class SupabaseStorage implements IStorage {
       const existingPosts = await this.getBlogPosts();
       console.log(`Found ${existingPosts.length} existing blog posts in Supabase`);
       
+      // Check if events already exist
+      const existingEvents = await this.getEvents();
+      console.log(`Found ${existingEvents.length} existing events in Supabase`);
+      
+      if (existingEvents.length === 0) {
+        console.log("Creating sample events...");
+        
+        const sampleEvents: InsertEvent[] = [
+          {
+            title: "Singles Socials #6 - Dinner Experience",
+            date: "September 6",
+            time: "6:30 pm - 9:30 pm",
+            price: "Rs1000",
+            type: "Dinner",
+            description: "An intimate dinner experience with carefully selected singles.",
+            published: true,
+          },
+          {
+            title: "Singles Socials #7 - Brunch Edition!",
+            date: "October 4",
+            time: "11:30 am - 1:30 pm",
+            price: "Rs1000",
+            type: "Brunch",
+            description: "A relaxed brunch experience with like-minded singles.",
+            published: true,
+          },
+          {
+            title: "Singles Socials #8 - Dinner Experience",
+            date: "November 8",
+            time: "6:30 pm - 8:30 pm",
+            price: "Rs1000",
+            type: "Dinner",
+            description: "Another wonderful dinner experience for connections.",
+            published: true,
+          },
+          {
+            title: "Singles Socials #9 - Brunch Edition!",
+            date: "December 6",
+            time: "11:30 am - 1:30 pm",
+            price: "Rs1000",
+            type: "Brunch",
+            description: "End the year with a fantastic brunch experience.",
+            published: true,
+          }
+        ];
+
+        for (const event of sampleEvents) {
+          await this.createEvent(event);
+        }
+        
+        console.log(`Created ${sampleEvents.length} sample events`);
+      }
+      
       if (existingPosts.length > 0) {
-        console.log("Supabase data already populated, skipping initialization");
+        console.log("Supabase data already populated, skipping blog post initialization");
         return;
       }
       
