@@ -45,6 +45,12 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  // Ensure API routes are registered first and take precedence
+  app.use('/api/*', (req, res, next) => {
+    // This middleware ensures API routes are never intercepted by Vite
+    next();
+  });
+  
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
