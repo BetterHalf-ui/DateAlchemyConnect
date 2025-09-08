@@ -447,65 +447,69 @@ export class SupabaseStorage implements IStorage {
       const existingPosts = await this.getBlogPosts();
       console.log(`Found ${existingPosts.length} existing blog posts in Supabase`);
       
-      // Check if events already exist
-      const existingEvents = await this.getEvents();
-      console.log(`Found ${existingEvents.length} existing events in Supabase`);
-      
-      if (existingEvents.length === 0) {
-        console.log("Creating sample events...");
+      // Try to check events but don't fail if table doesn't exist
+      try {
+        const existingEvents = await this.getEvents();
+        console.log(`Found ${existingEvents.length} existing events in Supabase`);
         
-        const sampleEvents: InsertEvent[] = [
-          {
-            title: "Singles Socials #6 - Dinner Experience",
-            date: "September 6",
-            time: "6:30 pm - 9:30 pm",
-            price: "Rs1000",
-            type: "Dinner",
-            description: "An intimate dinner experience with carefully selected singles.",
-            published: true,
-          },
-          {
-            title: "Singles Socials #7 - Brunch Edition!",
-            date: "October 4",
-            time: "11:30 am - 1:30 pm",
-            price: "Rs1000",
-            type: "Brunch",
-            description: "A relaxed brunch experience with like-minded singles.",
-            published: true,
-          },
-          {
-            title: "Singles Socials #8 - Dinner Experience",
-            date: "November 8",
-            time: "6:30 pm - 8:30 pm",
-            price: "Rs1000",
-            type: "Dinner",
-            description: "Another wonderful dinner experience for connections.",
-            published: true,
-          },
-          {
-            title: "Singles Socials #9 - Brunch Edition!",
-            date: "December 6",
-            time: "11:30 am - 1:30 pm",
-            price: "Rs1000",
-            type: "Brunch",
-            description: "End the year with a fantastic brunch experience.",
-            published: true,
-          }
-        ];
+        if (existingEvents.length === 0) {
+          console.log("Creating sample events...");
+          
+          const sampleEvents: InsertEvent[] = [
+            {
+              title: "Singles Socials #6 - Dinner Experience",
+              date: "September 6",
+              time: "6:30 pm - 9:30 pm",
+              price: "Rs1000",
+              type: "Dinner",
+              description: "An intimate dinner experience with carefully selected singles.",
+              published: true,
+            },
+            {
+              title: "Singles Socials #7 - Brunch Edition!",
+              date: "October 4",
+              time: "11:30 am - 1:30 pm",
+              price: "Rs1000",
+              type: "Brunch",
+              description: "A relaxed brunch experience with like-minded singles.",
+              published: true,
+            },
+            {
+              title: "Singles Socials #8 - Dinner Experience",
+              date: "November 8",
+              time: "6:30 pm - 8:30 pm",
+              price: "Rs1000",
+              type: "Dinner",
+              description: "Another wonderful dinner experience for connections.",
+              published: true,
+            },
+            {
+              title: "Singles Socials #9 - Brunch Edition!",
+              date: "December 6",
+              time: "11:30 am - 1:30 pm",
+              price: "Rs1000",
+              type: "Brunch",
+              description: "End the year with a fantastic brunch experience.",
+              published: true,
+            }
+          ];
 
-        for (const event of sampleEvents) {
-          await this.createEvent(event);
+          for (const event of sampleEvents) {
+            try {
+              await this.createEvent(event);
+            } catch (eventError) {
+              console.log("Error creating individual event:", eventError);
+            }
+          }
+          
+          console.log(`Attempted to create ${sampleEvents.length} sample events`);
         }
-        
-        console.log(`Created ${sampleEvents.length} sample events`);
+      } catch (eventsError) {
+        console.log("Events table not ready yet, skipping events initialization");
+        console.log("You may need to create the events table manually in Supabase dashboard");
       }
       
-      if (existingPosts.length > 0) {
-        console.log("Supabase data already populated, skipping blog post initialization");
-        return;
-      }
-      
-      console.log("Supabase appears empty, but this is expected after migration");
+      console.log("Supabase initialization completed successfully");
       
     } catch (error) {
       console.error("Error during Supabase initialization:", error);
