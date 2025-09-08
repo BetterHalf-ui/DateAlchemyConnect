@@ -218,6 +218,12 @@ export default function AdminDashboard() {
                   Manage Articles
                 </Button>
               </Link>
+              <Link href="/admin/events">
+                <Button variant="outline" className="w-full flex items-center gap-2" data-testid="quick-action-events">
+                  <Calendar className="w-4 h-4" />
+                  Manage Events
+                </Button>
+              </Link>
               <Button variant="outline" className="w-full flex items-center gap-2" data-testid="quick-action-settings">
                 <Settings className="w-4 h-4" />
                 Settings

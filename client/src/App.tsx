@@ -20,6 +20,7 @@ import AddArticle from "@/pages/admin/add-article";
 import AdminArticles from "@/pages/admin/articles";
 import AdminLogin from "@/pages/admin/login";
 import AdminSettings from "@/pages/admin/settings";
+import AdminEvents from "@/pages/admin/events";
 import ProtectedRoute from "@/components/admin/protected-route";
 import FaviconPreview from "@/components/favicon-preview";
 import SinglesSocials from "@/pages/events/singles-socials";
@@ -47,6 +48,7 @@ function Router() {
       <Route path="/admin/dashboard" component={() => <ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
       <Route path="/admin/add-article" component={() => <ProtectedRoute><AddArticle /></ProtectedRoute>} />
       <Route path="/admin/articles" component={() => <ProtectedRoute><AdminArticles /></ProtectedRoute>} />
+      <Route path="/admin/events" component={() => <ProtectedRoute><AdminEvents /></ProtectedRoute>} />
       <Route path="/admin/settings" component={() => <ProtectedRoute><AdminSettings /></ProtectedRoute>} />
       <Route path="/admin" component={AdminLogin} />
       
