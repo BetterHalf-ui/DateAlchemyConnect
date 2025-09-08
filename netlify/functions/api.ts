@@ -118,6 +118,32 @@ export default async (request: Request, context: Context) => {
       }
     }
 
+    // Create Blog Post (PUBLIC ENDPOINT)
+    if (path === '/blog-posts' && method === 'POST') {
+      try {
+        const { insertBlogPostSchema } = await import("../../shared/schema");
+        const body = await request.json();
+        const validatedData = insertBlogPostSchema.parse(body);
+        const post = await storage.createBlogPost(validatedData);
+        
+        return new Response(
+          JSON.stringify(post), 
+          { status: 201, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      } catch (error: any) {
+        if (error.name === 'ZodError') {
+          return new Response(
+            JSON.stringify({ message: "Invalid blog post data", errors: error.errors }), 
+            { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+          );
+        }
+        return new Response(
+          JSON.stringify({ message: "Failed to create blog post" }), 
+          { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+    }
+
     // Blog Post by ID
     if (path.startsWith('/blog-posts/') && method === 'GET') {
       try {
