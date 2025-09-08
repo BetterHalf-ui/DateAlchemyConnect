@@ -40,7 +40,7 @@ export default async (request: Request, context: Context) => {
         // Generate JWT token directly in function
         const jwt = await import('jsonwebtoken');
         const JWT_SECRET = process.env.JWT_SECRET || 'your-super-secret-jwt-key-change-in-production';
-        const token = jwt.default.sign(
+        const token = jwt.sign(
           { admin: true, iat: Date.now() },
           JWT_SECRET,
           { expiresIn: '24h' }

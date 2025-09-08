@@ -2,7 +2,7 @@ import { drizzle } from 'drizzle-orm/neon-serverless';
 import { Pool } from '@neondatabase/serverless';
 import * as schema from '@shared/schema';
 import { eq, and } from 'drizzle-orm';
-import { type User, type InsertUser, type BlogPost, type InsertBlogPost, type Setting, type InsertSetting } from '@shared/schema';
+import { type User, type InsertUser, type BlogPost, type InsertBlogPost, type Setting, type InsertSetting, type Event, type InsertEvent } from '@shared/schema';
 import { randomUUID } from 'crypto';
 import type { IStorage } from './storage';
 
@@ -14,6 +14,12 @@ const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 export const db = drizzle(pool, { schema });
 
 export class DatabaseStorage implements IStorage {
+  // Event methods - stub implementations
+  async getEvents(): Promise<Event[]> { return []; }
+  async getEvent(): Promise<Event | undefined> { return undefined; }
+  async createEvent(): Promise<Event> { throw new Error('Not implemented'); }
+  async updateEvent(): Promise<Event | undefined> { return undefined; }
+  async deleteEvent(): Promise<boolean> { return false; }
   async getUser(id: string): Promise<User | undefined> {
     const result = await db.select().from(schema.users).where(eq(schema.users.id, id)).limit(1);
     return result[0];
