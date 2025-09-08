@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type BlogPost, type InsertBlogPost, type Setting, type InsertSetting } from "@shared/schema";
+import { type User, type InsertUser, type BlogPost, type InsertBlogPost, type Setting, type InsertSetting, type Event, type InsertEvent } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
@@ -13,6 +13,13 @@ export interface IStorage {
   updateBlogPost(id: string, post: Partial<InsertBlogPost>): Promise<BlogPost | undefined>;
   deleteBlogPost(id: string): Promise<boolean>;
   
+  // Events
+  getEvents(published?: boolean): Promise<Event[]>;
+  getEvent(id: string): Promise<Event | undefined>;
+  createEvent(event: InsertEvent): Promise<Event>;
+  updateEvent(id: string, event: Partial<InsertEvent>): Promise<Event | undefined>;
+  deleteEvent(id: string): Promise<boolean>;
+  
   // Settings
   getSetting(key: string): Promise<Setting | undefined>;
   setSetting(setting: InsertSetting): Promise<Setting>;
@@ -21,11 +28,13 @@ export interface IStorage {
 export class MemStorage implements IStorage {
   private users: Map<string, User>;
   private blogPosts: Map<string, BlogPost>;
+  private events: Map<string, Event>;
   private settings: Map<string, Setting>;
 
   constructor() {
     this.users = new Map();
     this.blogPosts = new Map();
+    this.events = new Map();
     this.settings = new Map();
     
     // Initialize with default settings
@@ -35,6 +44,50 @@ export class MemStorage implements IStorage {
   private async initializeDefaultData() {
     // Set default active members count
     await this.setSetting({ key: "active_members_count", value: "225" });
+    
+    // Initialize sample events
+    const sampleEvents: InsertEvent[] = [
+      {
+        title: "Singles Socials #6 - Dinner Experience",
+        date: "September 6",
+        time: "6:30 pm - 9:30 pm",
+        price: "Rs1000",
+        type: "Dinner",
+        description: "An intimate dinner experience with carefully selected singles.",
+        published: true,
+      },
+      {
+        title: "Singles Socials #7 - Brunch Edition!",
+        date: "October 4",
+        time: "11:30 am - 1:30 pm",
+        price: "Rs1000",
+        type: "Brunch",
+        description: "A relaxed brunch experience with like-minded singles.",
+        published: true,
+      },
+      {
+        title: "Singles Socials #8 - Dinner Experience",
+        date: "November 8",
+        time: "6:30 pm - 8:30 pm",
+        price: "Rs1000",
+        type: "Dinner",
+        description: "Another wonderful dinner experience for connections.",
+        published: true,
+      },
+      {
+        title: "Singles Socials #9 - Brunch Edition!",
+        date: "December 6",
+        time: "11:30 am - 1:30 pm",
+        price: "Rs1000",
+        type: "Brunch",
+        description: "End the year with a fantastic brunch experience.",
+        published: true,
+      }
+    ];
+
+    for (const event of sampleEvents) {
+      await this.createEvent(event);
+    }
     
     console.log("Initializing default blog posts...");
     
@@ -222,6 +275,57 @@ export class MemStorage implements IStorage {
 
   async deleteBlogPost(id: string): Promise<boolean> {
     return this.blogPosts.delete(id);
+  }
+
+  async getEvents(published?: boolean): Promise<Event[]> {
+    let events = Array.from(this.events.values());
+    
+    if (published !== undefined) {
+      events = events.filter(event => event.published === published);
+    }
+    
+    // Sort by date (earliest first)
+    return events.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  }
+
+  async getEvent(id: string): Promise<Event | undefined> {
+    return this.events.get(id);
+  }
+
+  async createEvent(insertEvent: InsertEvent): Promise<Event> {
+    const id = randomUUID();
+    const now = new Date();
+    const event: Event = {
+      ...insertEvent,
+      id,
+      createdAt: now,
+      updatedAt: now,
+      published: insertEvent.published ?? true,
+      description: insertEvent.description ?? null,
+      location: insertEvent.location ?? "Central Mauritius",
+      maxGuests: insertEvent.maxGuests ?? "6-8",
+    };
+    this.events.set(id, event);
+    return event;
+  }
+
+  async updateEvent(id: string, updateData: Partial<InsertEvent>): Promise<Event | undefined> {
+    const existingEvent = this.events.get(id);
+    if (!existingEvent) {
+      return undefined;
+    }
+
+    const updatedEvent: Event = {
+      ...existingEvent,
+      ...updateData,
+      updatedAt: new Date(),
+    };
+    this.events.set(id, updatedEvent);
+    return updatedEvent;
+  }
+
+  async deleteEvent(id: string): Promise<boolean> {
+    return this.events.delete(id);
   }
 
   async getSetting(key: string): Promise<Setting | undefined> {

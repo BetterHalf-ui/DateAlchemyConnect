@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertBlogPostSchema, insertSettingSchema } from "@shared/schema";
+import { insertBlogPostSchema, insertSettingSchema, insertEventSchema } from "@shared/schema";
 import { z } from "zod";
 import fetch from "node-fetch";
 import { verifyAdminPassword, generateAdminToken, requireAdmin } from "./admin-auth";
@@ -70,6 +70,70 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(204).send();
     } catch (error) {
       res.status(500).json({ message: "Failed to delete blog post" });
+    }
+  });
+
+  // Events API
+  app.get("/api/events", async (req, res) => {
+    try {
+      const published = req.query.published === 'true' ? true : req.query.published === 'false' ? false : undefined;
+      const events = await storage.getEvents(published);
+      res.json(events);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch events" });
+    }
+  });
+
+  app.get("/api/events/:id", async (req, res) => {
+    try {
+      const event = await storage.getEvent(req.params.id);
+      if (!event) {
+        return res.status(404).json({ message: "Event not found" });
+      }
+      res.json(event);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch event" });
+    }
+  });
+
+  app.post("/api/events", requireAdmin, async (req, res) => {
+    try {
+      const validatedData = insertEventSchema.parse(req.body);
+      const event = await storage.createEvent(validatedData);
+      res.status(201).json(event);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ message: "Invalid event data", errors: error.errors });
+      }
+      res.status(500).json({ message: "Failed to create event" });
+    }
+  });
+
+  app.put("/api/events/:id", requireAdmin, async (req, res) => {
+    try {
+      const validatedData = insertEventSchema.partial().parse(req.body);
+      const event = await storage.updateEvent(req.params.id, validatedData);
+      if (!event) {
+        return res.status(404).json({ message: "Event not found" });
+      }
+      res.json(event);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ message: "Invalid event data", errors: error.errors });
+      }
+      res.status(500).json({ message: "Failed to update event" });
+    }
+  });
+
+  app.delete("/api/events/:id", requireAdmin, async (req, res) => {
+    try {
+      const deleted = await storage.deleteEvent(req.params.id);
+      if (!deleted) {
+        return res.status(404).json({ message: "Event not found" });
+      }
+      res.status(204).send();
+    } catch (error) {
+      res.status(500).json({ message: "Failed to delete event" });
     }
   });
 
