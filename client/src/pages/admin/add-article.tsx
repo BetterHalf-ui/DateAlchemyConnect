@@ -58,6 +58,8 @@ export default function AddArticle() {
 
   const createArticleMutation = useMutation({
     mutationFn: async (data: InsertBlogPost) => {
+      console.log('Creating article with data:', data);
+      
       const response = await fetch('/api/blog-posts', {
         method: 'POST',
         headers: {
@@ -66,12 +68,29 @@ export default function AddArticle() {
         body: JSON.stringify(data),
       });
 
+      console.log('Response status:', response.status);
+      console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+
       if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.message || 'Failed to create article');
+        const responseText = await response.text();
+        console.log('Error response text:', responseText);
+        
+        try {
+          const errorData = JSON.parse(responseText);
+          throw new Error(errorData.message || 'Failed to create article');
+        } catch (parseError) {
+          throw new Error(`Server error: ${response.status} - Response was not valid JSON: ${responseText.substring(0, 200)}`);
+        }
       }
 
-      return response.json();
+      const responseText = await response.text();
+      console.log('Success response text:', responseText);
+      
+      try {
+        return JSON.parse(responseText);
+      } catch (parseError) {
+        throw new Error(`Success response was not valid JSON: ${responseText.substring(0, 200)}`);
+      }
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin-articles'] });
@@ -265,7 +284,7 @@ export default function AddArticle() {
                     <Label htmlFor="tags">Tags</Label>
                     <Input
                       id="tags"
-                      value={formData.tags.join(', ')}
+                      value={(formData.tags || []).join(', ')}
                       onChange={(e) => handleTagsChange(e.target.value)}
                       placeholder="dating, relationships, tips (comma-separated)"
                       data-testid="input-tags"
