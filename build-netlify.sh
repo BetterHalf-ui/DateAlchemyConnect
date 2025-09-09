@@ -31,6 +31,15 @@ if [ -d "public" ]; then
   fi
 fi
 
+echo "Copying _redirects file..."
+# Ensure _redirects file is copied to published directory
+if [ -f "public/_redirects" ]; then
+  cp public/_redirects dist/public/_redirects
+  echo "_redirects file copied successfully"
+else
+  echo "Warning: _redirects file not found in public directory"
+fi
+
 echo "Copying attached assets..."
 if [ -d "attached_assets" ]; then
   mkdir -p dist/public/attached_assets
