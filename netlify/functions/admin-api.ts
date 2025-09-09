@@ -75,6 +75,32 @@ export default async (request: Request, context: Context) => {
       );
     }
 
+    // Admin stats endpoint (no auth required for basic stats)
+    if (path === '/stats' && method === 'GET') {
+      const supabase = await createSupabaseClient();
+      
+      // Get blog post counts
+      const { data: allPosts, error: postsError } = await supabase
+        .from('blog_posts')
+        .select('published');
+      
+      if (postsError) throw postsError;
+      
+      const totalArticles = allPosts?.length || 0;
+      const publishedArticles = allPosts?.filter(p => p.published).length || 0;
+      const draftArticles = totalArticles - publishedArticles;
+      
+      return new Response(
+        JSON.stringify({
+          totalArticles,
+          publishedArticles,
+          draftArticles,
+          totalViews: 0 // Placeholder - would need analytics integration
+        }), 
+        { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     // All other routes require authentication
     const isAuthenticated = await verifyAuth(request);
     if (!isAuthenticated) {
@@ -176,7 +202,7 @@ export default async (request: Request, context: Context) => {
 
     // Default 404 for unmatched routes
     return new Response(
-      JSON.stringify({ message: "Admin API route not found" }), 
+      JSON.stringify({ message: `Admin API route not found: ${path}` }), 
       { status: 404, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
 
