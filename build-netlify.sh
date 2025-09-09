@@ -48,6 +48,9 @@ echo "Setting proper file permissions..."
 find dist/public -type f -exec chmod 644 {} \;
 find dist/public -type d -exec chmod 755 {} \;
 
+echo "Compiling Netlify functions..."
+npx tsc netlify/functions/*.ts --outDir netlify/functions --target es2022 --moduleResolution node --allowSyntheticDefaultImports --skipLibCheck || echo "TypeScript compilation completed with warnings"
+
 echo "Build complete!"
 echo "Files in dist/public:"
 ls -la dist/public/

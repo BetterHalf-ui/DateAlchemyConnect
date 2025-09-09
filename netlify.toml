@@ -1,7 +1,7 @@
 # Updated build configuration - August 21, 2025
 [build]
   publish = "dist/public"
-  command = "./build-netlify.sh"
+  command = "./build-netlify.sh && npm run build:functions"
 
 [build.environment]
   NODE_VERSION = "20"

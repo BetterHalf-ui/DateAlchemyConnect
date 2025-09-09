@@ -1,5 +1,5 @@
-// Simplified blog API for Netlify - NO COMPLEX DEPENDENCIES
-import type { Context } from "@netlify/functions";
+// Netlify Function for Blog API - CORRECT EXPORT FORMAT
+import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 
 // Simplified types - avoid complex imports that break compilation
 interface BlogPost {
@@ -105,10 +105,12 @@ async function getBlogPosts(published?: boolean): Promise<BlogPost[]> {
   }));
 }
 
-export default async (request: Request, context: Context) => {
-  const url = new URL(request.url);
-  const path = url.pathname.replace('/.netlify/functions/blog-api', '');
-  const method = request.method;
+// CORRECT NETLIFY HANDLER EXPORT FORMAT
+export const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
+  const { httpMethod: method, path, queryStringParameters } = event;
+  
+  // Parse the path - remove function prefix
+  const apiPath = path.replace('/.netlify/functions/blog-api', '') || '/';
 
   // CORS headers
   const corsHeaders = {
@@ -119,53 +121,70 @@ export default async (request: Request, context: Context) => {
 
   // Handle CORS preflight
   if (method === 'OPTIONS') {
-    return new Response(null, { status: 200, headers: corsHeaders });
+    return {
+      statusCode: 200,
+      headers: corsHeaders,
+      body: ''
+    };
   }
 
   try {
     // Blog Posts GET
-    if (path === '/blog-posts' && method === 'GET') {
-      const publishedParam = url.searchParams.get('published');
+    if (apiPath === '/blog-posts' && method === 'GET') {
+      const publishedParam = queryStringParameters?.published;
       const published = publishedParam === 'true' ? true : publishedParam === 'false' ? false : undefined;
       const posts = await getBlogPosts(published);
       
-      return new Response(
-        JSON.stringify(posts), 
-        { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify(posts)
+      };
     }
 
     // Blog Posts POST (CREATE)
-    if (path === '/blog-posts' && method === 'POST') {
-      const body = await request.json() as CreateBlogPost;
+    if (apiPath === '/blog-posts' && method === 'POST') {
+      if (!event.body) {
+        return {
+          statusCode: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: "Request body is required" })
+        };
+      }
+
+      const body = JSON.parse(event.body) as CreateBlogPost;
       
       // Basic validation
       if (!body.title || !body.content || !body.excerpt) {
-        return new Response(
-          JSON.stringify({ message: "Title, content, and excerpt are required" }), 
-          { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
+        return {
+          statusCode: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: "Title, content, and excerpt are required" })
+        };
       }
       
       const post = await createBlogPost(body);
       
-      return new Response(
-        JSON.stringify(post), 
-        { status: 201, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
+      return {
+        statusCode: 201,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify(post)
+      };
     }
 
     // Default 404 for unmatched routes
-    return new Response(
-      JSON.stringify({ message: "API route not found" }), 
-      { status: 404, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-    );
+    return {
+      statusCode: 404,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: `API route not found: ${apiPath}` })
+    };
 
   } catch (error) {
     console.error('Netlify function error:', error);
-    return new Response(
-      JSON.stringify({ message: "Internal server error" }), 
-      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-    );
+    return {
+      statusCode: 500,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: "Internal server error" })
+    };
   }
 };

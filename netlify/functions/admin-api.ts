@@ -1,5 +1,5 @@
-// Simplified admin API for Netlify - NO COMPLEX DEPENDENCIES
-import type { Context } from "@netlify/functions";
+// Netlify Function for Admin API - CORRECT EXPORT FORMAT
+import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 
 const ADMIN_PASSWORD = 'Beachhouse1005!';
 const JWT_SECRET = process.env.JWT_SECRET || 'your-super-secret-jwt-key-change-in-production';
@@ -29,8 +29,7 @@ async function createSupabaseClient() {
   return createClient(supabaseUrl, supabaseKey);
 }
 
-async function verifyAuth(request: Request): Promise<boolean> {
-  const authHeader = request.headers.get('authorization');
+async function verifyAuth(authHeader: string | null): Promise<boolean> {
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return false;
   }
@@ -39,10 +38,12 @@ async function verifyAuth(request: Request): Promise<boolean> {
   return decoded && decoded.admin === true;
 }
 
-export default async (request: Request, context: Context) => {
-  const url = new URL(request.url);
-  const path = url.pathname.replace('/.netlify/functions/admin-api', '');
-  const method = request.method;
+// CORRECT NETLIFY HANDLER EXPORT FORMAT
+export const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
+  const { httpMethod: method, path, headers } = event;
+  
+  // Parse the path - remove function prefix
+  const apiPath = path.replace('/.netlify/functions/admin-api', '') || '/';
 
   // CORS headers
   const corsHeaders = {
@@ -53,30 +54,44 @@ export default async (request: Request, context: Context) => {
 
   // Handle CORS preflight
   if (method === 'OPTIONS') {
-    return new Response(null, { status: 200, headers: corsHeaders });
+    return {
+      statusCode: 200,
+      headers: corsHeaders,
+      body: ''
+    };
   }
 
   try {
     // Admin login
-    if (path === '/login' && method === 'POST') {
-      const body = await request.json();
+    if (apiPath === '/login' && method === 'POST') {
+      if (!event.body) {
+        return {
+          statusCode: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ error: 'Request body required' })
+        };
+      }
+
+      const body = JSON.parse(event.body);
       
       if (body.password === ADMIN_PASSWORD) {
         const token = await signJWT({ admin: true, iat: Date.now() });
-        return new Response(
-          JSON.stringify({ token }), 
-          { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
+        return {
+          statusCode: 200,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ token })
+        };
       }
       
-      return new Response(
-        JSON.stringify({ error: 'Invalid password' }), 
-        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
+      return {
+        statusCode: 401,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ error: 'Invalid password' })
+      };
     }
 
     // Admin stats endpoint (no auth required for basic stats)
-    if (path === '/stats' && method === 'GET') {
+    if (apiPath === '/stats' && method === 'GET') {
       const supabase = await createSupabaseClient();
       
       // Get blog post counts
@@ -90,28 +105,30 @@ export default async (request: Request, context: Context) => {
       const publishedArticles = allPosts?.filter(p => p.published).length || 0;
       const draftArticles = totalArticles - publishedArticles;
       
-      return new Response(
-        JSON.stringify({
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
           totalArticles,
           publishedArticles,
           draftArticles,
           totalViews: 0 // Placeholder - would need analytics integration
-        }), 
-        { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
+        })
+      };
     }
 
     // All other routes require authentication
-    const isAuthenticated = await verifyAuth(request);
+    const isAuthenticated = await verifyAuth(headers.authorization || null);
     if (!isAuthenticated) {
-      return new Response(
-        JSON.stringify({ error: 'Authentication required' }), 
-        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
+      return {
+        statusCode: 401,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ error: 'Authentication required' })
+      };
     }
 
     // Blog posts management
-    if (path === '/blog-posts' && method === 'GET') {
+    if (apiPath === '/blog-posts' && method === 'GET') {
       const supabase = await createSupabaseClient();
       const { data, error } = await supabase
         .from('blog_posts')
@@ -133,15 +150,25 @@ export default async (request: Request, context: Context) => {
         updatedAt: new Date(post.updated_at)
       }));
       
-      return new Response(
-        JSON.stringify(posts), 
-        { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify(posts)
+      };
     }
 
-    if (path === '/blog-posts' && method === 'POST') {
+    if (apiPath === '/blog-posts' && method === 'POST') {
       const supabase = await createSupabaseClient();
-      const body = await request.json();
+      
+      if (!event.body) {
+        return {
+          statusCode: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ error: 'Request body required' })
+        };
+      }
+
+      const body = JSON.parse(event.body);
       const { randomUUID } = await import('crypto');
       
       const id = randomUUID();
@@ -179,14 +206,15 @@ export default async (request: Request, context: Context) => {
         updatedAt: new Date(data.updated_at)
       };
       
-      return new Response(
-        JSON.stringify(post), 
-        { status: 201, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
+      return {
+        statusCode: 201,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify(post)
+      };
     }
 
     // Settings
-    if (path === '/settings' && method === 'GET') {
+    if (apiPath === '/settings' && method === 'GET') {
       const supabase = await createSupabaseClient();
       const { data, error } = await supabase
         .from('settings')
@@ -194,23 +222,26 @@ export default async (request: Request, context: Context) => {
       
       if (error) throw error;
       
-      return new Response(
-        JSON.stringify(data || []), 
-        { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify(data || [])
+      };
     }
 
     // Default 404 for unmatched routes
-    return new Response(
-      JSON.stringify({ message: `Admin API route not found: ${path}` }), 
-      { status: 404, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-    );
+    return {
+      statusCode: 404,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: `Admin API route not found: ${apiPath}` })
+    };
 
   } catch (error) {
     console.error('Admin API error:', error);
-    return new Response(
-      JSON.stringify({ message: "Internal server error" }), 
-      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-    );
+    return {
+      statusCode: 500,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: "Internal server error" })
+    };
   }
 };
