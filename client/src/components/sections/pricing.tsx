@@ -31,17 +31,140 @@ export default function Pricing() {
   
   return (
     <>
-      {/* Trust Stats */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-16">{t('home.trust.title')}</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {trustStats.map((stat, index) => (
-              <div key={index}>
-                <div className="text-4xl font-bold text-primary mb-2">{stat.percentage}</div>
-                <p className="text-gray-700">{t(stat.descriptionKey)}</p>
-              </div>
-            ))}
+      {/* New Comparison Table Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl serif-title font-bold text-center mb-8 text-gray-900">
+            Why Choose The Date Alchemy Over Dating Apps?
+          </h2>
+          <p className="text-xl text-gray-600 text-center mb-16 sans-body">
+            Based on Pew Research Center findings on dating app experiences
+          </p>
+          
+          {/* Comparison Table */}
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                {/* Header */}
+                <thead>
+                  <tr className="bg-gray-900">
+                    <th className="text-left py-6 px-6 font-bold text-lg text-white sans-body">Issue</th>
+                    <th className="text-center py-6 px-6 font-bold text-lg text-white sans-body">Dating Apps (Pew Research)</th>
+                    <th className="text-center py-6 px-6 font-bold text-lg text-primary bg-white sans-body">The Date Alchemy</th>
+                  </tr>
+                </thead>
+                
+                {/* Body */}
+                <tbody className="divide-y divide-gray-100">
+                  {/* User Mindset */}
+                  <tr className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-6 px-6 font-semibold text-gray-900 sans-body">User Mindset</td>
+                    <td className="py-6 px-6 text-center text-red-700 sans-body">
+                      Not serious: Nearly 50% want "something casual"
+                    </td>
+                    <td className="py-6 px-6 text-center text-green-700 sans-body">
+                      100% of members are intentional and serious about finding a life partner
+                    </td>
+                  </tr>
+                  
+                  {/* Confidentiality */}
+                  <tr className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-6 px-6 font-semibold text-gray-900 sans-body">Confidentiality</td>
+                    <td className="py-6 px-6 text-center text-red-700 sans-body">
+                      0% privacy. Photos and names publicly exposed
+                    </td>
+                    <td className="py-6 px-6 text-center text-green-700 sans-body">
+                      100% privacy. Details only shared with appropriate matches, with agreement from both sides, one at a time
+                    </td>
+                  </tr>
+                  
+                  {/* Time Cost */}
+                  <tr className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-6 px-6 font-semibold text-gray-900 sans-body">Time Cost</td>
+                    <td className="py-6 px-6 text-center text-red-700 sans-body">
+                      40+ hours swiping per month
+                    </td>
+                    <td className="py-6 px-6 text-center text-green-700 sans-body">
+                      ~40 min: form + consultation
+                    </td>
+                  </tr>
+                  
+                  {/* Overall Experience */}
+                  <tr className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-6 px-6 font-semibold text-gray-900 sans-body">Overall Experience</td>
+                    <td className="py-6 px-6 text-center text-red-700 sans-body">
+                      46% say their experience is negative
+                    </td>
+                    <td className="py-6 px-6 text-center text-green-700 sans-body">
+                      88% of dates are reported as good experiences. Tailored introductions ensure satisfaction
+                    </td>
+                  </tr>
+                  
+                  {/* Scams / Fake Profiles */}
+                  <tr className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-6 px-6 font-semibold text-gray-900 sans-body">Scams / Fake Profiles</td>
+                    <td className="py-6 px-6 text-center text-red-700 sans-body">
+                      52% encountered a scammer
+                    </td>
+                    <td className="py-6 px-6 text-center text-green-700 sans-body">
+                      All profiles vetted and verified
+                    </td>
+                  </tr>
+                  
+                  {/* Disrespectful Messages */}
+                  <tr className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-6 px-6 font-semibold text-gray-900 sans-body">Disrespectful Messages</td>
+                    <td className="py-6 px-6 text-center text-red-700 sans-body">
+                      38% received unsolicited sexual messages
+                    </td>
+                    <td className="py-6 px-6 text-center text-green-700 sans-body">
+                      Zero instances of disrespect
+                    </td>
+                  </tr>
+                  
+                  {/* Persistent / Unwanted Contact */}
+                  <tr className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-6 px-6 font-semibold text-gray-900 sans-body">Persistent / Unwanted Contact</td>
+                    <td className="py-6 px-6 text-center text-red-700 sans-body">
+                      30% kept contacting after rejection
+                    </td>
+                    <td className="py-6 px-6 text-center text-green-700 sans-body">
+                      You stay in control — contact details shared only when you want
+                    </td>
+                  </tr>
+                  
+                  {/* Insults / Threats */}
+                  <tr className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-6 px-6 font-semibold text-gray-900 sans-body">Insults / Threats</td>
+                    <td className="py-6 px-6 text-center text-red-700 sans-body">
+                      24% insulted; 6% threatened
+                    </td>
+                    <td className="py-6 px-6 text-center text-green-700 sans-body">
+                      Safe space, zero tolerance for disrespect
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            {/* Footnote */}
+            <div className="bg-gray-50 px-8 py-4 border-t border-gray-100">
+              <p className="text-sm text-gray-600 sans-body italic">
+                Data from Pew Research Center's 2022 study on online dating experiences
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <a 
+              href={applicationLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl serif-title luxury-hover">
+                Experience The Difference
+              </Button>
+            </a>
           </div>
         </div>
       </section>
