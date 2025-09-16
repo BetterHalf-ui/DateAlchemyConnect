@@ -35,10 +35,10 @@ export default function Pricing() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl md:text-5xl serif-title font-bold text-center mb-8 text-gray-900">
-            Why Choose The Date Alchemy Over Dating Apps?
+            {t('home.comparison.title')}
           </h2>
           <p className="text-xl text-gray-600 text-center mb-16 sans-body">
-            Based on Pew Research Center findings on dating app experiences
+            {t('home.comparison.subtitle')}
           </p>
           
           {/* Comparison Table */}
@@ -48,9 +48,9 @@ export default function Pricing() {
                 {/* Header */}
                 <thead>
                   <tr className="bg-primary">
-                    <th className="text-left py-6 px-6 font-bold text-lg text-white sans-body">Issue</th>
-                    <th className="text-center py-6 px-6 font-bold text-lg text-white sans-body">Dating Apps (Pew Research)</th>
-                    <th className="text-center py-6 px-6 font-bold text-lg text-white sans-body">The Date Alchemy</th>
+                    <th className="text-left py-6 px-6 font-bold text-lg text-white sans-body">{t('home.comparison.headerIssue')}</th>
+                    <th className="text-center py-6 px-6 font-bold text-lg text-white sans-body">{t('home.comparison.headerDatingApps')}</th>
+                    <th className="text-center py-6 px-6 font-bold text-lg text-white sans-body">{t('home.comparison.headerDateAlchemy')}</th>
                   </tr>
                 </thead>
                 
@@ -58,89 +58,89 @@ export default function Pricing() {
                 <tbody className="divide-y divide-gray-100">
                   {/* User Mindset */}
                   <tr className="hover:bg-gray-50/50 transition-colors">
-                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">User Mindset</td>
+                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">{t('home.comparison.userMindset.issue')}</td>
                     <td className="py-6 px-6 text-center text-red-700 sans-body font-bold">
-                      Not serious: Nearly 50% want "something casual"
+                      {t('home.comparison.userMindset.datingApps')}
                     </td>
                     <td className="py-6 px-6 text-center text-green-700 sans-body font-bold">
-                      100% of members are intentional and serious about finding a life partner
+                      {t('home.comparison.userMindset.dateAlchemy')}
                     </td>
                   </tr>
                   
                   {/* Confidentiality */}
                   <tr className="hover:bg-gray-50/50 transition-colors">
-                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">Confidentiality</td>
+                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">{t('home.comparison.confidentiality.issue')}</td>
                     <td className="py-6 px-6 text-center text-red-700 sans-body font-bold">
-                      0% privacy. Photos and names publicly exposed
+                      {t('home.comparison.confidentiality.datingApps')}
                     </td>
                     <td className="py-6 px-6 text-center text-green-700 sans-body font-bold">
-                      100% privacy. Details only shared with appropriate matches, with agreement from both sides, one at a time
+                      {t('home.comparison.confidentiality.dateAlchemy')}
                     </td>
                   </tr>
                   
                   {/* Time Cost */}
                   <tr className="hover:bg-gray-50/50 transition-colors">
-                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">Time Cost</td>
+                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">{t('home.comparison.timeCost.issue')}</td>
                     <td className="py-6 px-6 text-center text-red-700 sans-body font-bold">
-                      40+ hours swiping per month
+                      {t('home.comparison.timeCost.datingApps')}
                     </td>
                     <td className="py-6 px-6 text-center text-green-700 sans-body font-bold">
-                      ~40 min: form + consultation
+                      {t('home.comparison.timeCost.dateAlchemy')}
                     </td>
                   </tr>
                   
                   {/* Overall Experience */}
                   <tr className="hover:bg-gray-50/50 transition-colors">
-                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">Overall Experience</td>
+                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">{t('home.comparison.overallExperience.issue')}</td>
                     <td className="py-6 px-6 text-center text-red-700 sans-body font-bold">
-                      46% say their experience is negative
+                      {t('home.comparison.overallExperience.datingApps')}
                     </td>
                     <td className="py-6 px-6 text-center text-green-700 sans-body font-bold">
-                      88% of dates are reported as good experiences. Tailored introductions ensure satisfaction
+                      {t('home.comparison.overallExperience.dateAlchemy')}
                     </td>
                   </tr>
                   
                   {/* Scams / Fake Profiles */}
                   <tr className="hover:bg-gray-50/50 transition-colors">
-                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">Scams / Fake Profiles</td>
+                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">{t('home.comparison.scamsFakeProfiles.issue')}</td>
                     <td className="py-6 px-6 text-center text-red-700 sans-body font-bold">
-                      52% encountered a scammer
+                      {t('home.comparison.scamsFakeProfiles.datingApps')}
                     </td>
                     <td className="py-6 px-6 text-center text-green-700 sans-body font-bold">
-                      All profiles vetted and verified
+                      {t('home.comparison.scamsFakeProfiles.dateAlchemy')}
                     </td>
                   </tr>
                   
                   {/* Disrespectful Messages */}
                   <tr className="hover:bg-gray-50/50 transition-colors">
-                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">Disrespectful Messages</td>
+                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">{t('home.comparison.disrespectfulMessages.issue')}</td>
                     <td className="py-6 px-6 text-center text-red-700 sans-body font-bold">
-                      38% received unsolicited sexual messages
+                      {t('home.comparison.disrespectfulMessages.datingApps')}
                     </td>
                     <td className="py-6 px-6 text-center text-green-700 sans-body font-bold">
-                      Zero instances of disrespect
+                      {t('home.comparison.disrespectfulMessages.dateAlchemy')}
                     </td>
                   </tr>
                   
                   {/* Persistent / Unwanted Contact */}
                   <tr className="hover:bg-gray-50/50 transition-colors">
-                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">Persistent / Unwanted Contact</td>
+                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">{t('home.comparison.persistentContact.issue')}</td>
                     <td className="py-6 px-6 text-center text-red-700 sans-body font-bold">
-                      30% kept contacting after rejection
+                      {t('home.comparison.persistentContact.datingApps')}
                     </td>
                     <td className="py-6 px-6 text-center text-green-700 sans-body font-bold">
-                      You stay in control — contact details shared only when you want
+                      {t('home.comparison.persistentContact.dateAlchemy')}
                     </td>
                   </tr>
                   
                   {/* Insults / Threats */}
                   <tr className="hover:bg-gray-50/50 transition-colors">
-                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">Insults / Threats</td>
+                    <td className="py-6 px-6 font-bold text-gray-900 sans-body">{t('home.comparison.insultsThreats.issue')}</td>
                     <td className="py-6 px-6 text-center text-red-700 sans-body font-bold">
-                      24% insulted; 6% threatened
+                      {t('home.comparison.insultsThreats.datingApps')}
                     </td>
                     <td className="py-6 px-6 text-center text-green-700 sans-body font-bold">
-                      Safe space, zero tolerance for disrespect
+                      {t('home.comparison.insultsThreats.dateAlchemy')}
                     </td>
                   </tr>
                 </tbody>
@@ -150,7 +150,7 @@ export default function Pricing() {
             {/* Footnote */}
             <div className="bg-gray-50 px-8 py-4 border-t border-gray-100">
               <p className="text-sm text-gray-600 sans-body italic">
-                Source: Pew Research Center's study on online dating experiences
+                {t('home.comparison.source')}
               </p>
             </div>
           </div>
@@ -162,7 +162,7 @@ export default function Pricing() {
               rel="noopener noreferrer"
             >
               <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl serif-title luxury-hover">
-                Experience The Difference
+                {t('home.comparison.cta')}
               </Button>
             </a>
           </div>
