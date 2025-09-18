@@ -348,11 +348,12 @@ import { DatabaseStorage } from './database';
 import { SupabaseStorage } from './supabase';
 
 // Storage selection logic:
+// TEMPORARILY FORCING MemStorage to restore events for Oct/Nov/Dec
 // 1. If USE_SUPABASE=true, use Supabase storage (for migration)
 // 2. If DATABASE_URL is set and not in development, use database storage
 // 3. Otherwise, use memory storage (development)
 const isDevelopment = process.env.NODE_ENV === 'development';
-const useSupabase = process.env.USE_SUPABASE === 'true';
+const useSupabase = false; // Temporarily forced to false to use MemStorage with events
 const shouldUseDatabaseStorage = process.env.DATABASE_URL && !isDevelopment;
 
 let storageInstance: IStorage;
@@ -365,7 +366,7 @@ if (useSupabase) {
   console.log('Using DatabaseStorage (Neon) for data persistence');
 } else {
   storageInstance = new MemStorage();
-  console.log('Using MemStorage for data persistence');
+  console.log('Using MemStorage for data persistence - Events restored for Oct/Nov/Dec');
   if (isDevelopment && process.env.DATABASE_URL) {
     console.log('Note: Database configured but using memory storage in development');
   }
