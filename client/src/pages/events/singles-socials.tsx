@@ -5,6 +5,7 @@ import { Calendar, Clock, MapPin, Users, Heart, Coffee, Utensils } from 'lucide-
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import RebrandBanner from '@/components/layout/rebrand-banner';
+import { useI18n } from '@/lib/i18n';
 
 type Event = {
   id: string;
@@ -22,6 +23,8 @@ type Event = {
 };
 
 export default function SinglesSocials() {
+  const { t } = useI18n();
+
   // Hardcoded events for October, November, December
   const events: Event[] = [
     {
@@ -159,18 +162,18 @@ export default function SinglesSocials() {
         <div className="relative z-10 flex items-center justify-center h-full px-4">
           <div className="text-center text-white max-w-4xl">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
-              Singles Socials
+              {t('singles.hero.title')}
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-              Ready to add more fun, friendship and connection to your life? Get invited to an intimate 
-              dinner or brunch with singles carefully selected to match your vibe.
+              {t('singles.hero.subtitle')}
             </p>
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold shadow-lg"
               onClick={() => window.open('https://betterhalf.fillout.com/t/aovhVckkYLus', '_blank')}
+              data-testid="button-signup-hero"
             >
-              Sign Up Now
+              {t('singles.hero.cta')}
             </Button>
           </div>
         </div>
@@ -179,12 +182,9 @@ export default function SinglesSocials() {
       {/* What to Expect Section */}
       <section className="py-20 px-4 max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What to Expect?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{t('singles.expect.title')}</h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            An intimate brunch or dinner at one of Mauritius' best rated restaurants — where you'll join a 
-            handpicked group of 6 to 8 like-minded singles, matched by vibe and age. With an equal number of 
-            men and women, it's the perfect relaxed setting to share stories, exchange ideas, and connect over 
-            great conversation, delicious food and ice-breakers.
+            {t('singles.expect.description')}
           </p>
         </div>
       </section>
@@ -193,7 +193,7 @@ export default function SinglesSocials() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
-            How Does it Work?
+            {t('singles.howItWorks.title')}
           </h2>
           
           <div className="grid md:grid-cols-3 gap-12">
@@ -201,10 +201,9 @@ export default function SinglesSocials() {
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">1</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Apply by filling out the form</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.howItWorks.step1.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                Tell us a bit about yourself by filling out our form. We'll gather insights into your interests, 
-                lifestyle and more. The more we know, the better we can connect you with the right people.
+                {t('singles.howItWorks.step1.description')}
               </p>
             </div>
             
@@ -212,10 +211,9 @@ export default function SinglesSocials() {
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">We curate tables for interesting conversations</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.howItWorks.step2.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                Say goodbye to awkward encounters and hello to stimulating conversations with like-minded individuals. 
-                We select guests within your age group and at a similar stage in their lives and ensure a balanced mix of men and women.
+                {t('singles.howItWorks.step2.description')}
               </p>
             </div>
             
@@ -223,19 +221,16 @@ export default function SinglesSocials() {
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">3</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Receive an invitation when we have the right table for you</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.howItWorks.step3.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                Once we have the right table for you, you'll receive a personalized invitation with more details. 
-                Secure your spot by purchasing your Singles Socials Ticket — and get ready for an unforgettable experience!
+                {t('singles.howItWorks.step3.description')}
               </p>
             </div>
           </div>
           
           <div className="mt-16 p-8 bg-white rounded-lg shadow-sm border">
             <p className="text-gray-600 text-center leading-relaxed">
-              <strong>We care to get the vibe right and hence do not rush into a table.</strong> We only get in touch with you 
-              when we have the right set of dinner mates for you. If not for this event, you'll be considered for the next one 
-              unless you ask us to opt you out.
+              {t('singles.howItWorks.note')}
             </p>
           </div>
         </div>
@@ -271,7 +266,7 @@ export default function SinglesSocials() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
-            Why Attend?
+            {t('singles.whyAttend.title')}
           </h2>
           
           <div className="grid md:grid-cols-3 gap-12">
@@ -279,10 +274,9 @@ export default function SinglesSocials() {
               <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Meet New People</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.whyAttend.meetPeople.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                Break the ice and connect with singles in your age group handpicked for their similar 
-                lifestyle and shared interests.
+                {t('singles.whyAttend.meetPeople.description')}
               </p>
             </div>
             
@@ -290,10 +284,9 @@ export default function SinglesSocials() {
               <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Heart className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Have a Good Time</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.whyAttend.goodTime.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                Enjoy a relaxed moment of laughter, good food, and great company in an environment where 
-                there's no pressure and it's about having fun and making new connections.
+                {t('singles.whyAttend.goodTime.description')}
               </p>
             </div>
             
@@ -301,10 +294,9 @@ export default function SinglesSocials() {
               <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Coffee className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Experience Genuine Connection</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.whyAttend.connection.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                From the moment you sit down, you'll feel the warmth of genuine conversations in a welcoming 
-                and intimate setting, and the joy of building new friendships.
+                {t('singles.whyAttend.connection.description')}
               </p>
             </div>
           </div>
@@ -315,7 +307,7 @@ export default function SinglesSocials() {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
-            Our Next Events
+            {t('singles.events.title')}
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -366,7 +358,7 @@ export default function SinglesSocials() {
                     )}
                     
                     <p className="text-xs text-gray-500">
-                      (Ticket price - food & drinks separate)
+                      {t('singles.events.ticketNote')}
                     </p>
                   </div>
                 </CardContent>
@@ -380,31 +372,30 @@ export default function SinglesSocials() {
       <section className="py-20 px-4 bg-primary/5">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-8">
-            🍷 Ticket: 1000 Rs <span className="text-lg font-normal text-gray-600">(inclusive of VAT)</span>
+            {t('singles.pricing.title')} <span className="text-lg font-normal text-gray-600">{t('singles.pricing.vatNote')}</span>
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            (This price does not include food or drinks. You pay to the restaurant directly for what you order)
+            {t('singles.pricing.description')}
           </p>
           
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold mb-8"
             onClick={() => window.open('https://betterhalf.fillout.com/t/aovhVckkYLus', '_blank')}
+            data-testid="button-signup-pricing"
           >
-            Sign Up Now
+            {t('singles.hero.cta')}
           </Button>
           
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <p className="text-gray-600 leading-relaxed">
-              Your application will be considered for the upcoming event. Should we be unable to include you, 
-              you will be automatically considered for future Singles Socials.
+              {t('singles.pricing.application')}
             </p>
             <p className="text-gray-600 mt-4 font-semibold">
-              We send invitations 4 to 2 weeks before the event, so make sure to apply early.
+              {t('singles.pricing.timing')}
             </p>
             <p className="text-gray-500 text-sm mt-4">
-              Please be aware that if you do not receive an invitation from us, it means we felt we did not 
-              have the right table for you.
+              {t('singles.pricing.disclaimer')}
             </p>
           </div>
         </div>
@@ -413,7 +404,7 @@ export default function SinglesSocials() {
       {/* FAQ Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">FAQ</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">{t('singles.faq.title')}</h2>
           
           <div className="space-y-8">
             {faqs.map((faq, index) => (

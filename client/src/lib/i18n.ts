@@ -284,6 +284,43 @@ export const translations = {
     'home.blog.latestTitle': 'Latest Insights',
     'home.blog.viewAll': 'View All Posts',
     
+    // Singles Socials page
+    'singles.hero.title': 'Singles Socials',
+    'singles.hero.subtitle': 'Ready to add more fun, friendship and connection to your life? Get invited to an intimate dinner or brunch with singles carefully selected to match your vibe.',
+    'singles.hero.cta': 'Sign Up Now',
+    
+    'singles.expect.title': 'What to Expect?',
+    'singles.expect.description': 'An intimate brunch or dinner at one of Mauritius\' best rated restaurants — where you\'ll join a handpicked group of 6 to 8 like-minded singles, matched by vibe and age. With an equal number of men and women, it\'s the perfect relaxed setting to share stories, exchange ideas, and connect over great conversation, delicious food and ice-breakers.',
+    
+    'singles.howItWorks.title': 'How Does it Work?',
+    'singles.howItWorks.step1.title': 'Apply by filling out the form',
+    'singles.howItWorks.step1.description': 'Tell us a bit about yourself by filling out our form. We\'ll gather insights into your interests, lifestyle and more. The more we know, the better we can connect you with the right people.',
+    'singles.howItWorks.step2.title': 'We curate tables for interesting conversations',
+    'singles.howItWorks.step2.description': 'Say goodbye to awkward encounters and hello to stimulating conversations with like-minded individuals. We select guests within your age group and at a similar stage in their lives and ensure a balanced mix of men and women.',
+    'singles.howItWorks.step3.title': 'Receive an invitation when we have the right table for you',
+    'singles.howItWorks.step3.description': 'Once we have the right table for you, you\'ll receive a personalized invitation with more details. Secure your spot by purchasing your Singles Socials Ticket — and get ready for an unforgettable experience!',
+    'singles.howItWorks.note': 'We care to get the vibe right and hence do not rush into a table. We only get in touch with you when we have the right set of dinner mates for you. If not for this event, you\'ll be considered for the next one unless you ask us to opt you out.',
+    
+    'singles.whyAttend.title': 'Why Attend?',
+    'singles.whyAttend.meetPeople.title': 'Meet New People',
+    'singles.whyAttend.meetPeople.description': 'Break the ice and connect with singles in your age group handpicked for their similar lifestyle and shared interests.',
+    'singles.whyAttend.goodTime.title': 'Have a Good Time',
+    'singles.whyAttend.goodTime.description': 'Enjoy a relaxed moment of laughter, good food, and great company in an environment where there\'s no pressure and it\'s about having fun and making new connections.',
+    'singles.whyAttend.connection.title': 'Experience Genuine Connection',
+    'singles.whyAttend.connection.description': 'From the moment you sit down, you\'ll feel the warmth of genuine conversations in a welcoming and intimate setting, and the joy of building new friendships.',
+    
+    'singles.events.title': 'Our Next Events',
+    'singles.events.ticketNote': '(Ticket price - food & drinks separate)',
+    
+    'singles.pricing.title': '🍷 Ticket: 1000 Rs',
+    'singles.pricing.vatNote': '(inclusive of VAT)',
+    'singles.pricing.description': '(This price does not include food or drinks. You pay to the restaurant directly for what you order)',
+    'singles.pricing.application': 'Your application will be considered for the upcoming event. Should we be unable to include you, you will be automatically considered for future Singles Socials.',
+    'singles.pricing.timing': 'We send invitations 4 to 2 weeks before the event, so make sure to apply early.',
+    'singles.pricing.disclaimer': 'Please be aware that if you do not receive an invitation from us, it means we felt we did not have the right table for you.',
+    
+    'singles.faq.title': 'FAQ',
+    
     // Trust section
     'home.trust.title': 'Trust Us - It Really Works',
     'home.trust.stat1': 'of setups result in real, face-to-face dates',
@@ -739,5 +776,42 @@ export const translations = {
     // Language switcher (French)
     'language.english': 'English',
     'language.french': 'Français',
+    
+    // Singles Socials page (French)
+    'singles.hero.title': 'Singles Socials',
+    'singles.hero.subtitle': 'Prêt(e) à ajouter plus de plaisir, d\'amitié et de connexion à votre vie ? Recevez une invitation à un dîner ou brunch intime avec des célibataires soigneusement sélectionnés selon votre énergie.',
+    'singles.hero.cta': 'S\'inscrire Maintenant',
+    
+    'singles.expect.title': 'À quoi s\'attendre ?',
+    'singles.expect.description': 'Un brunch ou dîner intime dans l\'un des restaurants les mieux notés de Maurice — où vous rejoindrez un groupe sélectionné de 6 à 8 célibataires partageant la même énergie, assortis par ambiance et âge. Avec un nombre égal d\'hommes et de femmes, c\'est le cadre détendu parfait pour partager des histoires, échanger des idées et se connecter autour d\'excellentes conversations, de délicieux plats et de brise-glaces.',
+    
+    'singles.howItWorks.title': 'Comment ça fonctionne ?',
+    'singles.howItWorks.step1.title': 'Postulez en remplissant le formulaire',
+    'singles.howItWorks.step1.description': 'Parlez-nous un peu de vous en remplissant notre formulaire. Nous recueillerons des informations sur vos intérêts, votre style de vie et plus encore. Plus nous en savons, mieux nous pouvons vous connecter avec les bonnes personnes.',
+    'singles.howItWorks.step2.title': 'Nous organisons des tables pour des conversations intéressantes',
+    'singles.howItWorks.step2.description': 'Dites adieu aux rencontres gênantes et bonjour aux conversations stimulantes avec des personnes partageant les mêmes idées. Nous sélectionnons des invités de votre groupe d\'âge et à une étape similaire de leur vie et assurons un mélange équilibré d\'hommes et de femmes.',
+    'singles.howItWorks.step3.title': 'Recevez une invitation quand nous avons la bonne table pour vous',
+    'singles.howItWorks.step3.description': 'Une fois que nous avons la bonne table pour vous, vous recevrez une invitation personnalisée avec plus de détails. Sécurisez votre place en achetant votre ticket Singles Socials — et préparez-vous pour une expérience inoubliable !',
+    'singles.howItWorks.note': 'Nous prenons soin d\'avoir la bonne ambiance et ne nous précipitons donc pas pour former une table. Nous ne vous contactons que lorsque nous avons le bon groupe de convives pour vous. Si ce n\'est pas pour cet événement, vous serez considéré(e) pour le prochain à moins que vous ne nous demandiez de vous retirer.',
+    
+    'singles.whyAttend.title': 'Pourquoi participer ?',
+    'singles.whyAttend.meetPeople.title': 'Rencontrer de nouvelles personnes',
+    'singles.whyAttend.meetPeople.description': 'Brisez la glace et connectez-vous avec des célibataires de votre groupe d\'âge triés sur le volet pour leur style de vie similaire et leurs intérêts partagés.',
+    'singles.whyAttend.goodTime.title': 'Passer un bon moment',
+    'singles.whyAttend.goodTime.description': 'Profitez d\'un moment détendu de rires, de bonne nourriture et d\'excellente compagnie dans un environnement où il n\'y a aucune pression et où il s\'agit de s\'amuser et de créer de nouvelles connexions.',
+    'singles.whyAttend.connection.title': 'Vivre une connexion authentique',
+    'singles.whyAttend.connection.description': 'Dès le moment où vous vous asseyez, vous ressentirez la chaleur de conversations authentiques dans un cadre accueillant et intime, et la joie de construire de nouvelles amitiés.',
+    
+    'singles.events.title': 'Nos Prochains Événements',
+    'singles.events.ticketNote': '(Prix du ticket - nourriture et boissons séparées)',
+    
+    'singles.pricing.title': '🍷 Ticket : 1000 Rs',
+    'singles.pricing.vatNote': '(TVA incluse)',
+    'singles.pricing.description': '(Ce prix n\'inclut pas la nourriture ou les boissons. Vous payez directement au restaurant pour ce que vous commandez)',
+    'singles.pricing.application': 'Votre candidature sera considérée pour l\'événement à venir. Si nous ne pouvons pas vous inclure, vous serez automatiquement considéré(e) pour les futurs Singles Socials.',
+    'singles.pricing.timing': 'Nous envoyons les invitations 4 à 2 semaines avant l\'événement, alors assurez-vous de postuler tôt.',
+    'singles.pricing.disclaimer': 'Veuillez noter que si vous ne recevez pas d\'invitation de notre part, cela signifie que nous estimons ne pas avoir eu la bonne table pour vous.',
+    
+    'singles.faq.title': 'FAQ',
   }
 };
