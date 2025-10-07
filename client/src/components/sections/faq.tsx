@@ -4,7 +4,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 const faqs = [
   {
     question: "How much do you charge for this service?",
-    answer: "For our efforts, we charge you a one time fee of Rs 8000, VAT included, when we have found you your first match."
+    answer: "For our services, we charge a membership fee of Rs 8,000 (VAT included), of which 10% is paid to start the initial search and the remaining amount once your first match is found."
   },
   {
     question: "How many people can I meet during my membership?",
