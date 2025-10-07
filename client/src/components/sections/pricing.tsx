@@ -194,6 +194,7 @@ export default function Pricing() {
           
           <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-12 rounded-2xl mb-12 premium-shadow">
             <p className="text-primary font-bold text-xl body-text">{t('home.pricing.priceIncrease')}</p>
+            <p className="text-gray-600 text-sm mt-4 body-text">{t('home.pricing.priceIncreaseDisclaimer')}</p>
           </div>
           
           <a 
