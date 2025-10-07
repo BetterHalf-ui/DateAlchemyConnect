@@ -157,19 +157,21 @@ export const translations = {
     
     'howItWorks.step1.title': '01. Apply for Membership',
     'howItWorks.step1.description1': 'You\'ll begin by completing our initial application: a questionnaire that helps us understand your background, values, and what you\'re truly seeking in a partner.',
-    'howItWorks.step1.description2': 'Within one business day, we\'ll review your submission to let you know if we have a potential match within our member base and share an in-depth assessment to better understand your needs in a relationship, attachment style and dating tendencies.',
+    'howItWorks.step1.description2': 'Within one business day, we\'ll review your submission to let you know if we have a potential match within our member base and schedule a video call with you.',
     
     'howItWorks.step2.title': '02. Private Consultation',
     'howItWorks.step2.description1': 'Next, you\'ll meet with your personal matchmaker in a one-on-one video consultation. This conversation is designed to have a more in-depth understanding of who you are and what you are looking for.',
     'howItWorks.step2.description2': 'Following this, we craft a profile summary — which you\'ll review and approve — to be shared selectively only with potential matches who meet your criteria.',
+    'howItWorks.step2.description3': 'We also share an in-depth assessment to better understand your needs in a relationship, attachment style and dating tendencies.',
     
     'howItWorks.step3.title': '03. Curated Introduction',
-    'howItWorks.step3.description1': 'Once a mutually aligned connection is identified, we share both profiles for review. If there\'s mutual interest, we invite you to activate your annual membership so we can proceed with arranging your first date.',
-    'howItWorks.step3.description2': 'We handle all the coordination with care and discretion, ensuring you meet someone genuinely aligned with your aspirations — in the right place, at the right time.',
+    'howItWorks.step3.description1': 'After your onboarding fee (Rs 800) is paid, we kickstart your search and begin suggesting potential matches.',
+    'howItWorks.step3.description2': 'Once a mutually aligned connection is identified, we share both profiles for review. If there\'s mutual interest, we invite you to activate your annual membership so we can proceed with arranging your first date.',
+    'howItWorks.step3.description3': 'We handle all the coordination with care and discretion, ensuring you meet someone genuinely aligned with your aspirations — in the right place, at the right time.',
     
     'howItWorks.step4.title': '04. Follow-up & Refinements',
     'howItWorks.step4.description1': 'After the introduction, what happens next is up to you — whether that\'s a second date or exploring a new connection.',
-    'howItWorks.step4.description2': 'We always collect feedback after each date to refine our approach and evolve your experience in meaningful ways.',
+    'howItWorks.step4.description2': 'Over the course of your one-year membership, we collect feedback after each date to fine-tune your experience and help you find the right match.',
     
     'howItWorks.comparison.title': 'The Date Alchemy vs. Dating Apps',
     'howItWorks.comparison.subtitle': 'See why intentional matching delivers better results',
@@ -638,19 +640,21 @@ export const translations = {
     
     'howItWorks.step1.title': '01. Postulez pour devenir membre',
     'howItWorks.step1.description1': 'Vous commencerez par remplir notre formulaire de candidature : un questionnaire qui nous aide à comprendre votre parcours, vos valeurs et ce que vous recherchez vraiment chez un partenaire.',
-    'howItWorks.step1.description2': 'Sous un jour ouvrable, nous examinerons votre demande pour vous indiquer si nous avons un profil correspondant parmi nos membres et nous partagerons avec vous une évaluation approfondie de vos besoins en matière de relation, de votre style d\'attachement et de vos habitudes de rencontre.',
+    'howItWorks.step1.description2': 'Sous un jour ouvrable, nous examinerons votre demande pour vous indiquer si nous avons un profil correspondant parmi nos membres et planifierons un appel vidéo avec vous.',
     
     'howItWorks.step2.title': '02. Consultation privée',
     'howItWorks.step2.description1': 'Ensuite, vous rencontrerez votre matchmaker lors d\'une consultation individuelle en visioconférence. Cet échange permet d\'obtenir une compréhension plus approfondie de qui vous êtes et de ce que vous recherchez.',
     'howItWorks.step2.description2': 'À la suite de cet entretien, nous créons un résumé de votre profil — que vous pourrez relire et approuver — et que nous partagerons de manière sélective uniquement avec des profils correspondant à vos critères.',
+    'howItWorks.step2.description3': 'Nous partageons également une évaluation approfondie pour mieux comprendre vos besoins en matière de relation, votre style d\'attachement et vos habitudes de rencontre.',
     
     'howItWorks.step3.title': '03. Présentation sur mesure',
-    'howItWorks.step3.description1': 'Lorsqu\'une compatibilité mutuelle est identifiée, nous partageons les deux profils pour examen. S\'il y a un intérêt réciproque, nous vous invitons à activer votre adhésion annuelle afin d\'organiser votre premier rendez-vous.',
-    'howItWorks.step3.description2': 'Nous nous chargeons de toute la coordination avec soin et discrétion, afin que vous rencontriez une personne réellement alignée avec vos aspirations — au bon endroit, au bon moment.',
+    'howItWorks.step3.description1': 'Après le paiement de vos frais d\'inscription (Rs 800), nous lançons votre recherche et commençons à suggérer des profils correspondants potentiels.',
+    'howItWorks.step3.description2': 'Lorsqu\'une compatibilité mutuelle est identifiée, nous partageons les deux profils pour examen. S\'il y a un intérêt réciproque, nous vous invitons à activer votre adhésion annuelle afin d\'organiser votre premier rendez-vous.',
+    'howItWorks.step3.description3': 'Nous nous chargeons de toute la coordination avec soin et discrétion, afin que vous rencontriez une personne réellement alignée avec vos aspirations — au bon endroit, au bon moment.',
     
     'howItWorks.step4.title': '04. Ajustements et suivi',
     'howItWorks.step4.description1': 'Après la rencontre, la décision de ce qui suit vous appartient — que ce soit un deuxième rendez-vous ou la volonté d\'explorer une nouvelle rencontre.',
-    'howItWorks.step4.description2': 'Nous recueillons toujours vos retours après chaque rendez-vous afin d\'affiner notre approche et d\'assurer une expérience positive.',
+    'howItWorks.step4.description2': 'Au cours de votre adhésion d\'un an, nous recueillons vos retours après chaque rendez-vous pour affiner votre expérience et vous aider à trouver la bonne personne.',
     
     'howItWorks.comparison.title': 'The Date Alchemy vs. Applications de rencontres',
     'howItWorks.comparison.subtitle': 'Découvrez pourquoi la mise en relation intentionnelle donne de meilleurs résultats',

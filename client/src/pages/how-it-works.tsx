@@ -99,8 +99,11 @@ export default function HowItWorks() {
                   <p className="text-gray-700 mb-4 body-text">
                     {t('howItWorks.step2.description1')}
                   </p>
-                  <p className="text-gray-700 body-text">
+                  <p className="text-gray-700 mb-4 body-text">
                     {t('howItWorks.step2.description2')}
+                  </p>
+                  <p className="text-gray-700 body-text">
+                    {t('howItWorks.step2.description3')}
                   </p>
                 </div>
               </div>
@@ -114,8 +117,11 @@ export default function HowItWorks() {
                   <p className="text-gray-700 mb-4 body-text">
                     {t('howItWorks.step3.description1')}
                   </p>
-                  <p className="text-gray-700 body-text">
+                  <p className="text-gray-700 mb-4 body-text">
                     {t('howItWorks.step3.description2')}
+                  </p>
+                  <p className="text-gray-700 body-text">
+                    {t('howItWorks.step3.description3')}
                   </p>
                 </div>
               </div>
@@ -185,8 +191,11 @@ export default function HowItWorks() {
               <p className="text-gray-700 mb-4 body-text">
                 {t('howItWorks.step2.description1')}
               </p>
-              <p className="text-gray-700 body-text">
+              <p className="text-gray-700 mb-4 body-text">
                 {t('howItWorks.step2.description2')}
+              </p>
+              <p className="text-gray-700 body-text">
+                {t('howItWorks.step2.description3')}
               </p>
             </div>
             
@@ -198,8 +207,14 @@ export default function HowItWorks() {
                 </div>
                 <h3 className="text-xl font-bold subtitle text-gray-900">{t('howItWorks.step3.title')}</h3>
               </div>
-              <p className="text-gray-700 body-text">
+              <p className="text-gray-700 mb-4 body-text">
                 {t('howItWorks.step3.description1')}
+              </p>
+              <p className="text-gray-700 mb-4 body-text">
+                {t('howItWorks.step3.description2')}
+              </p>
+              <p className="text-gray-700 body-text">
+                {t('howItWorks.step3.description3')}
               </p>
             </div>
             
