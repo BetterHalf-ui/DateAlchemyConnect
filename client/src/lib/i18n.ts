@@ -252,8 +252,8 @@ export const translations = {
     
     'home.cta.applyNow': 'Join Now',
     'home.cta.notReady': 'Not ready to invest in a membership?',
-    'home.cta.joinNetwork': 'Join our network for free to see if you are a match with one of our exceptional clients.',
-    'home.cta.createProfile': 'Create your complimentary profile.',
+    'home.cta.joinNetwork': 'Join our Network to see if you are a match with one of our exceptional clients.',
+    'home.cta.createProfile': 'Create your profile now.',
     
     'home.stats.activeMembers': 'Active members',
     'home.stats.memberDesc': 'Our members are ambitious, fun, and dynamic—locals and expats alike, from all age groups. All looking for a committed relationship.',
@@ -375,8 +375,8 @@ export const translations = {
     'home.pricing.priceIncreaseDisclaimer': '*An initial 10% payment (Rs 800) covers the start of your personalized search and insights. The remaining balance is payable only after your first successful match.',
     'home.pricing.applyNow': 'Join Now',
     'home.pricing.notReady': 'Not ready to invest in a membership?',
-    'home.pricing.joinNetwork': 'Join our network for free to see if you are a match with one of our exceptional clients.',
-    'home.pricing.createProfile': 'Create your complimentary profile.',
+    'home.pricing.joinNetwork': 'Join our Network to see if you are a match with one of our exceptional clients.',
+    'home.pricing.createProfile': 'Create your profile now.',
     
     // How It Works section
     'home.howItWorks.title': 'How It Works',
@@ -572,8 +572,8 @@ export const translations = {
     'home.pricing.priceIncreaseDisclaimer': '*Un paiement initial de 10% (Rs 800) couvre le début de votre recherche personnalisée et les analyses. Le solde restant n\'est payable qu\'après votre premier match réussi.',
     'home.pricing.applyNow': 'Rejoindre Maintenant',
     'home.pricing.notReady': 'Pas prêt à investir dans une adhésion ?',
-    'home.pricing.joinNetwork': 'Rejoignez notre réseau gratuitement pour voir si vous correspondez à l\'un de nos clients exceptionnels.',
-    'home.pricing.createProfile': 'Créez votre profil gratuit.',
+    'home.pricing.joinNetwork': 'Rejoignez notre Réseau pour voir si vous correspondez à l\'un de nos clients exceptionnels.',
+    'home.pricing.createProfile': 'Créez votre profil maintenant.',
     
     // How It Works section (French)
     'home.howItWorks.title': 'Notre méthode',
@@ -738,8 +738,8 @@ export const translations = {
     
     'home.cta.applyNow': 'Rejoindre Maintenant',
     'home.cta.notReady': 'Pas encore prêt(e) à investir dans une adhésion ?',
-    'home.cta.joinNetwork': 'Rejoignez gratuitement notre réseau pour découvrir si vous correspondez à l\'un(e) de nos clients exceptionnels.',
-    'home.cta.createProfile': 'Créez votre profil gratuit.',
+    'home.cta.joinNetwork': 'Rejoignez notre Réseau pour voir si vous correspondez à l\'un de nos clients exceptionnels.',
+    'home.cta.createProfile': 'Créez votre profil maintenant.',
     
     'home.stats.activeMembers': 'Membres actifs',
     'home.stats.memberDesc': 'Nos membres sont ambitieux, pétillants et dynamiques — qu\'ils soient locaux ou expatriés, et de tous âges. Tous recherchent une relation sérieuse.',

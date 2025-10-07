@@ -26,7 +26,7 @@ export default function ReadyCTA() {
           </p>
           <Link href="/network" onClick={() => window.scrollTo(0, 0)}>
             <Button variant="link" className="text-primary hover:text-primary/80 serif-title">
-              Join our network for free to see if you are a match with one of our exceptional clients.
+              Join our Network to see if you are a match with one of our exceptional clients. Create your profile now.
             </Button>
           </Link>
         </div>
