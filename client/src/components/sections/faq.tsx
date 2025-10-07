@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "How much do the dates know about each other beforehand?",
-    answer: "Confidentiality and discretion are fundamental to our service. We do not share last names, photographs, or specific institutional affiliations (such as academic or employment) before the date. Instead, we provide both sides with each others first name, age, location, and a brief description of why we believe you are a good match."
+    answer: "Confidentiality and discretion are fundamental to our service. We do not share last names before the date, and we share photographs and phone numbers only if you have explicitly agreed. We provide both sides with a complete description into the match's lifestyle, career, interests, age, height, nationality, location, marrital status, long term plans, ideal partner, smoking habits and even diet."
   },
   {
     question: "What if my match is based in another country? How do you set us up?",
