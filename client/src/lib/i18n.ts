@@ -645,7 +645,7 @@ export const translations = {
     'howItWorks.step2.title': '02. Consultation privée',
     'howItWorks.step2.description1': 'Ensuite, vous rencontrerez votre matchmaker lors d\'une consultation individuelle en visioconférence. Cet échange permet d\'obtenir une compréhension plus approfondie de qui vous êtes et de ce que vous recherchez.',
     'howItWorks.step2.description2': 'À la suite de cet entretien, nous créons un résumé de votre profil — que vous pourrez relire et approuver — et que nous partagerons de manière sélective uniquement avec des profils correspondant à vos critères.',
-    'howItWorks.step2.description3': 'Nous partageons également une évaluation approfondie pour mieux comprendre vos besoins en matière de relation, votre style d\'attachement et vos habitudes de rencontre.',
+    'howItWorks.step2.description3': 'Nous vous demandons également de faire une auto-évaluation plus approfondie de vos besoins dans une relation et votre style d\'attachement.',
     
     'howItWorks.step3.title': '03. Présentation sur mesure',
     'howItWorks.step3.description1': 'Après le paiement de vos frais d\'inscription (Rs 800), nous lançons votre recherche et commençons à suggérer des profils correspondants potentiels.',
