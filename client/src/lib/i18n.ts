@@ -358,8 +358,8 @@ export const translations = {
     
     // Guarantees section
     'home.guarantees.title': 'Our Guarantees',
-    'home.guarantees.guarantee1Title': 'First Quality Date Guaranteed Before Payment',
-    'home.guarantees.guarantee1Description': 'Your initial consultation and matchmaking search are completely free. We\'ll only ask for payment once you say yes to a match and we\'ve planned the first date.',
+    'home.guarantees.guarantee1Title': 'Only Pay When We Deliver',
+    'home.guarantees.guarantee1Description': 'An upfront payment of 10% is required to start your dedicated matchmaking search. The remaining 90% is only required once you accept a match we find for you.',
 
     'home.guarantees.guarantee3Title': 'Flexible Membership',
     'home.guarantees.guarantee3Description': 'Life happens. If you need to take a break for any reason, we\'ll pause your membership—no lost time, no penalties.',
@@ -371,8 +371,8 @@ export const translations = {
     'home.pricing.membershipPeriod': 'For 1 year, VAT included',
     'home.pricing.membershipCompare': '… less than 1 night staycation in Mauritius',
     'home.pricing.urgencyMessage': '',
-    'home.pricing.priceIncrease': 'You Only Pay After We Find You A Match!*',
-    'home.pricing.priceIncreaseDisclaimer': '*An initial 10% payment (Rs 800) covers the start of your personalized search and insights. The remaining balance is payable only after your first successful match.',
+    'home.pricing.priceIncrease': 'Only Pay When We Deliver',
+    'home.pricing.priceIncreaseDisclaimer': 'An upfront payment of 10% (Rs 800) is required to start your dedicated matchmaking search. The remaining 90% (Rs 7200) is paid once you accept a match we find you, and covers your full one-year membership.',
     'home.pricing.applyNow': 'Join Now',
     'home.pricing.notReady': 'Not ready to invest in a membership?',
     'home.pricing.joinNetwork': 'Join our Network to see if you are a match with one of our exceptional clients.',
@@ -555,8 +555,8 @@ export const translations = {
     
     // Guarantees section (French)
     'home.guarantees.title': 'Nos garanties',
-    'home.guarantees.guarantee1Title': 'Premier rendez-vous de qualité garanti avant paiement',
-    'home.guarantees.guarantee1Description': 'Votre consultation initiale et la recherche de votre première rencontre sont entièrement gratuites. Nous ne vous demanderons de payer que lorsque vous aurez accepté une mise en relation et que le premier rendez-vous aura été planifié.',
+    'home.guarantees.guarantee1Title': 'Payez uniquement lorsque nous livrons',
+    'home.guarantees.guarantee1Description': 'Un paiement initial de 10% est requis pour démarrer votre recherche de matchmaking personnalisée. Les 90% restants ne sont exigés qu\'une fois que vous acceptez un match que nous trouvons pour vous.',
 
     'home.guarantees.guarantee3Title': 'Adhésion flexible',
     'home.guarantees.guarantee3Description': 'La vie est faite d\'imprévus. Si vous devez faire une pause, nous suspendons votre adhésion — aucun temps perdu ni pénalités.',
@@ -568,8 +568,8 @@ export const translations = {
     'home.pricing.membershipPeriod': 'Pour 1 an, TVA incluse',
     'home.pricing.membershipCompare': '… soit moins qu\'une nuitée en staycation à Maurice',
     'home.pricing.urgencyMessage': '',
-    'home.pricing.priceIncrease': 'Vous ne payez qu\'après avoir trouvé votre match !*',
-    'home.pricing.priceIncreaseDisclaimer': '*Un paiement initial de 10% (Rs 800) couvre le début de votre recherche personnalisée et les analyses. Le solde restant n\'est payable qu\'après votre premier match réussi.',
+    'home.pricing.priceIncrease': 'Payez uniquement lorsque nous livrons',
+    'home.pricing.priceIncreaseDisclaimer': 'Un paiement initial de 10% (Rs 800) est requis pour démarrer votre recherche de matchmaking personnalisée. Les 90% restants (Rs 7200) sont payés une fois que vous acceptez un match que nous trouvons pour vous, et couvrent votre adhésion complète d\'un an.',
     'home.pricing.applyNow': 'Rejoindre Maintenant',
     'home.pricing.notReady': 'Pas prêt à investir dans une adhésion ?',
     'home.pricing.joinNetwork': 'Rejoignez notre Réseau pour voir si vous correspondez à l\'un de nos clients exceptionnels.',
