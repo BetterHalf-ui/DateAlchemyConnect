@@ -1,5 +1,6 @@
 /api/admin/*  /.netlify/functions/admin-api/:splat  200
 /api/events  /.netlify/functions/events-api/events  200
 /api/events/*  /.netlify/functions/events-api/events/:splat  200
+/api/newsletter  /.netlify/functions/newsletter-api  200
 /api/*  /.netlify/functions/blog-api/:splat  200
 /*  /index.html  200
