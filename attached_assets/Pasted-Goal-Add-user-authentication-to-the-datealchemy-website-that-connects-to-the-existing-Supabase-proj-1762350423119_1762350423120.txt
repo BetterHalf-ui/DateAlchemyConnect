@@ -1,0 +1,78 @@
+Goal: Add user authentication to the datealchemy website that connects to the existing Supabase project and user_profiles table.
+
+Supabase Details:
+
+Project URL: https://ucklhbpjxwnvsnwtzhpi.supabase.co
+Project: "TheDateAlchemyConnect"
+Environment variables needed:
+VITE_SUPABASE_URL: https://ucklhbpjxwnvsnwtzhpi.supabase.co
+VITE_SUPABASE_ANON_KEY: (use the same anon key from the PWA project)
+What to Build:
+
+Sign Up/Login Page with email and password fields
+Authentication using direct Supabase API calls (not the SDK - see Technical Notes below)
+Connect to existing user_profiles table which has:
+id (UUID, references auth.users)
+email (text)
+is_approved (boolean, default false)
+created_at (timestamp)
+updated_at (timestamp)
+Important Technical Notes:
+
+Use direct fetch() API calls instead of @supabase/supabase-js SDK for better production reliability
+Field mapping required: Supabase returns snake_case fields (is_approved, created_at, updated_at) but TypeScript expects camelCase (isApproved, createdAt, updatedAt). You must map these when fetching user profiles.
+Authentication Flow:
+
+Sign Up (POST to /auth/v1/signup):
+
+const response = await fetch(`${SUPABASE_URL}/auth/v1/signup`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'apikey': SUPABASE_ANON_KEY
+  },
+  body: JSON.stringify({ email, password })
+});
+
+Login (POST to /auth/v1/token?grant_type=password):
+
+const response = await fetch(`${SUPABASE_URL}/auth/v1/token?grant_type=password`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'apikey': SUPABASE_ANON_KEY
+  },
+  body: JSON.stringify({ email, password })
+});
+
+Fetch User Profile (GET from /rest/v1/user_profiles):
+
+const response = await fetch(
+  `${SUPABASE_URL}/rest/v1/user_profiles?id=eq.${userId}&select=*`,
+  {
+    headers: {
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${accessToken}`
+    }
+  }
+);
+// IMPORTANT: Map snake_case to camelCase
+const profileData = await response.json();
+const profile = {
+  id: profileData[0].id,
+  email: profileData[0].email,
+  isApproved: profileData[0].is_approved,
+  createdAt: profileData[0].created_at,
+  updatedAt: profileData[0].updated_at
+};
+
+Database Trigger (Already Exists in Supabase):
+When a new user signs up, a database trigger automatically creates their profile in user_profiles with is_approved: false.
+
+Approval Workflow:
+
+New users must be manually approved by admin
+Admin logs into Supabase dashboard and sets is_approved = true in the user_profiles table
+Protected content checks isApproved status before granting access
+Reference Files from PWA:
+Check client/src/contexts/AuthContext.tsx in the PWA project to see the complete working implementation with field mapping.
