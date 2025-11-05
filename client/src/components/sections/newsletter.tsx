@@ -14,16 +14,19 @@ export default function Newsletter() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!email || !email.includes('@')) {
+    console.log('[Newsletter] Submit started, email:', email);
+    
+    if (!email) {
       toast({
-        title: "Invalid email",
-        description: "Please enter a valid email address.",
+        title: "Email required",
+        description: "Please enter your email address.",
         variant: "destructive",
       });
       return;
     }
 
     setIsSubmitting(true);
+    console.log('[Newsletter] Sending request to /api/newsletter');
 
     try {
       const response = await fetch('/api/newsletter', {
@@ -34,7 +37,10 @@ export default function Newsletter() {
         body: JSON.stringify({ email }),
       });
 
+      console.log('[Newsletter] Response status:', response.status);
+      
       const result = await response.json();
+      console.log('[Newsletter] Response data:', result);
 
       if (response.ok) {
         trackContactForm(); // Track Meta Pixel Contact event
@@ -44,6 +50,7 @@ export default function Newsletter() {
         });
         setEmail("");
       } else {
+        console.error('[Newsletter] Subscription failed:', result);
         toast({
           title: "Subscription failed",
           description: result.message || "Please try again or contact us directly.",
@@ -51,10 +58,10 @@ export default function Newsletter() {
         });
       }
     } catch (error) {
-      console.error('Subscription error:', error);
+      console.error('[Newsletter] Fetch error:', error);
       toast({
         title: "Subscription failed",
-        description: "Please try again or contact us directly.",
+        description: error instanceof Error ? error.message : "Please try again or contact us directly.",
         variant: "destructive",
       });
     } finally {
