@@ -9,4 +9,9 @@
 
 [functions]
   directory = "netlify/functions"
+
+[[redirects]]
+  from = "/api/newsletter"
+  to = "/.netlify/functions/newsletter-api"
+  status = 200
   
