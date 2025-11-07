@@ -34,12 +34,30 @@ export default function Header() {
       // Check if background should be white (scrolled)
       setIsScrolled(currentScrollY > 50);
       
+      // Close events dropdown when scrolling
+      if (Math.abs(currentScrollY - lastScrollY) > 5) {
+        setIsEventsDropdownOpen(false);
+      }
+      
       setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (isEventsDropdownOpen && !target.closest('.events-dropdown-container')) {
+        setIsEventsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isEventsDropdownOpen]);
 
   return (
     <nav className={`fixed left-0 right-0 z-40 transition-all duration-300 ${
@@ -77,13 +95,15 @@ export default function Header() {
               
               {/* Events Dropdown */}
               <div 
-                className="relative"
-                onMouseEnter={() => setIsEventsDropdownOpen(true)}
-                onMouseLeave={() => setIsEventsDropdownOpen(false)}
+                className="relative events-dropdown-container"
               >
-                <div className={`font-bold hover:text-primary hover:bg-white hover:px-3 hover:py-2 hover:rounded transition-all cursor-pointer body-text flex items-center gap-1 ${
-                  isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
-                }`}>
+                <div 
+                  onClick={() => setIsEventsDropdownOpen(!isEventsDropdownOpen)}
+                  className={`font-bold hover:text-primary hover:bg-white hover:px-3 hover:py-2 hover:rounded transition-all cursor-pointer body-text flex items-center gap-1 ${
+                    isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'
+                  }`}
+                  data-testid="button-events-dropdown"
+                >
                   Events
                   <ChevronDownIcon className={`w-4 h-4 transition-transform ${
                     isEventsDropdownOpen ? 'rotate-180' : ''
@@ -92,8 +112,8 @@ export default function Header() {
                 
                 {isEventsDropdownOpen && (
                   <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50">
-                    <Link href="/events/singlessocials" onClick={() => window.scrollTo(0, 0)}>
-                      <div className="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary cursor-pointer font-medium">
+                    <Link href="/events/singlessocials" onClick={() => { setIsEventsDropdownOpen(false); window.scrollTo(0, 0); }}>
+                      <div className="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary cursor-pointer font-medium" data-testid="link-singles-socials">
                         Singles Socials
                       </div>
                     </Link>
