@@ -86,6 +86,7 @@ const fallbackEvents: Event[] = [
 
 async function getEvents(published?: boolean): Promise<Event[]> {
   try {
+    console.log('[Events API] Fetching events with published filter:', published);
     const supabase = await createSupabaseClient();
     
     let query = supabase
@@ -99,16 +100,23 @@ async function getEvents(published?: boolean): Promise<Event[]> {
     
     const { data, error } = await query;
     
+    console.log('[Events API] Query result:', { 
+      dataCount: data?.length, 
+      hasError: !!error,
+      errorMessage: error?.message 
+    });
+    
     if (error) {
-      console.error('Supabase query error:', error);
+      console.error('[Events API] Supabase query error:', error);
       throw error;
     }
     
     if (!data || data.length === 0) {
-      console.log('No events found in Supabase, using fallback data');
+      console.log('[Events API] No events found in Supabase, using fallback data');
       return published === false ? [] : fallbackEvents;
     }
     
+    console.log('[Events API] Returning', data.length, 'events from Supabase');
     return data.map(event => ({
       id: event.id,
       title: event.title,
@@ -124,7 +132,7 @@ async function getEvents(published?: boolean): Promise<Event[]> {
       updatedAt: new Date(event.updated_at)
     }));
   } catch (error) {
-    console.error('Database connection failed, using fallback events:', error);
+    console.error('[Events API] Database connection failed, using fallback events:', error);
     return published === false ? [] : fallbackEvents;
   }
 }
