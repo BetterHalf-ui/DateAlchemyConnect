@@ -348,13 +348,11 @@ import { DatabaseStorage } from './database';
 import { SupabaseStorage } from './supabase';
 
 // Storage selection logic:
-// TEMPORARILY FORCING MemStorage to restore events for Oct/Nov/Dec
-// 1. If USE_SUPABASE=true, use Supabase storage (for migration)
-// 2. If DATABASE_URL is set and not in development, use database storage
-// 3. Otherwise, use memory storage (development)
+// 1. If DATABASE_URL is set, use Supabase storage
+// 2. Otherwise, use memory storage (development)
 const isDevelopment = process.env.NODE_ENV === 'development';
-const useSupabase = false; // Temporarily forced to false to use MemStorage with events
-const shouldUseDatabaseStorage = process.env.DATABASE_URL && !isDevelopment;
+const useSupabase = !!process.env.DATABASE_URL; // Use Supabase when DATABASE_URL is configured
+const shouldUseDatabaseStorage = false; // Deprecated: migration from Neon to Supabase complete
 
 let storageInstance: IStorage;
 
