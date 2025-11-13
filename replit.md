@@ -137,7 +137,12 @@ Preferred communication style: Simple, everyday language.
 - **Database**: Supabase PostgreSQL connection via `DATABASE_URL` environment variable
 - **Storage Selection**: `USE_SUPABASE=true` to enable Supabase storage backend
 - **Development**: Hot module replacement with Vite middleware, memory storage by default
-- **Production**: Optimized static file serving with Express, Supabase database
+- **Production (Netlify)**: Requires Supabase environment variables in Netlify dashboard:
+  - `SUPABASE_URL`: Supabase project URL
+  - `SUPABASE_SERVICE_ROLE_KEY`: Service role key for full database access
+  - `SUPABASE_ANON_KEY`: Anonymous public key for client access
+  - `DATABASE_URL`: PostgreSQL connection string
+  - All serverless functions in `netlify/functions/` use these credentials
 - **Migration**: Complete toolset for migrating from Neon to Supabase
 
 ### Database Management
