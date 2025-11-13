@@ -339,6 +339,7 @@ export const translations = {
     
     'singles.events.title': 'Our Next Events',
     'singles.events.ticketNote': '(Ticket price - food & drinks separate)',
+    'singles.events.empty': 'No upcoming events at the moment. Check back soon!',
     
     'singles.pricing.title': '🍷 Ticket: 1000 Rs',
     'singles.pricing.vatNote': '(inclusive of VAT)',
@@ -836,6 +837,7 @@ export const translations = {
     
     'singles.events.title': 'Nos Prochains Événements',
     'singles.events.ticketNote': '(Prix du ticket - nourriture et boissons séparées)',
+    'singles.events.empty': 'Aucun événement à venir pour le moment. Revenez bientôt !',
     
     'singles.pricing.title': '🍷 Ticket : 1000 Rs',
     'singles.pricing.vatNote': '(TVA incluse)',
