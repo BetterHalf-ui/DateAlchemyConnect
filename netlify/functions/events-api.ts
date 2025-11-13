@@ -188,8 +188,19 @@ export const handler: Handler = async (event: HandlerEvent, context: HandlerCont
   }
 
   try {
-    const path = event.path.replace("/.netlify/functions/events-api", "");
+    // Parse path - handle both Netlify internal path and custom domain path
+    let path = event.path
+      .replace("/.netlify/functions/events-api", "")
+      .replace("/api", "");
+    
+    // Ensure path starts with / or is empty
+    if (path && !path.startsWith("/")) {
+      path = "/" + path;
+    }
+    
     const method = event.httpMethod;
+    
+    console.log('[Events API] Incoming request - method:', method, 'path:', event.path, 'normalized:', path);
 
     // GET /events - get all events
     if (method === "GET" && (path === "/events" || path === "")) {
@@ -226,6 +237,7 @@ export const handler: Handler = async (event: HandlerEvent, context: HandlerCont
     }
 
     // Route not found
+    console.log('[Events API] No route matched for path:', path);
     return {
       statusCode: 404,
       headers,
