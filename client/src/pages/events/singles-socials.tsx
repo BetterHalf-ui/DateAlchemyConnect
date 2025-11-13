@@ -1,75 +1,22 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Skeleton } from '@/components/ui/skeleton';
 import { Calendar, Clock, MapPin, Users, Heart, Coffee, Utensils } from 'lucide-react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import RebrandBanner from '@/components/layout/rebrand-banner';
 import { useI18n } from '@/lib/i18n';
-
-type Event = {
-  id: string;
-  title: string;
-  date: string;
-  time: string;
-  price: string;
-  type: string;
-  description?: string;
-  location: string;
-  maxGuests: string;
-  published: boolean;
-  createdAt: string;
-  updatedAt: string;
-};
+import { useQuery } from '@tanstack/react-query';
+import type { Event } from '@shared/schema';
 
 export default function SinglesSocials() {
   const { t } = useI18n();
 
-  // Hardcoded events for October, November, December
-  const events: Event[] = [
-    {
-      id: "oct-2024",
-      title: "Singles Socials #7 - Brunch Edition!",
-      date: "October 4",
-      time: "11:30 am - 1:30 pm",
-      price: "Rs1000",
-      type: "Brunch",
-      description: "A relaxed brunch experience with like-minded singles.",
-      location: "Central Mauritius",
-      maxGuests: "6-8",
-      published: true,
-      createdAt: "2024-10-01",
-      updatedAt: "2024-10-01"
-    },
-    {
-      id: "nov-2024",
-      title: "Singles Socials #8 - Dinner Experience",
-      date: "November 8",
-      time: "6:30 pm - 8:30 pm",
-      price: "Rs1000",
-      type: "Dinner", 
-      description: "Another wonderful dinner experience for connections.",
-      location: "Central Mauritius",
-      maxGuests: "6-8",
-      published: true,
-      createdAt: "2024-11-01",
-      updatedAt: "2024-11-01"
-    },
-    {
-      id: "dec-2024",
-      title: "Singles Socials #9 - Brunch Edition!",
-      date: "December 6",
-      time: "11:30 am - 1:30 pm",
-      price: "Rs1000",
-      type: "Brunch",
-      description: "End the year with a fantastic brunch experience.",
-      location: "Central Mauritius", 
-      maxGuests: "6-8",
-      published: true,
-      createdAt: "2024-12-01",
-      updatedAt: "2024-12-01"
-    }
-  ];
+  // Fetch events from database
+  const { data: events = [], isLoading } = useQuery<Event[]>({
+    queryKey: ['/api/events'],
+  });
 
   const testimonials = [
     {
@@ -261,61 +208,85 @@ export default function SinglesSocials() {
             {t('singles.events.title')}
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {events.map((event) => (
-              <Card key={event.id} className="hover-lift border-2 hover:border-primary transition-all duration-300" data-testid={`card-event-${event.id}`}>
-                <CardContent className="p-6">
-                  <div className="text-center">
-                    <Badge 
-                      variant={event.type === 'Dinner' ? 'default' : 'secondary'} 
-                      className="mb-4"
-                    >
-                      {event.type === 'Dinner' ? <Utensils className="w-4 h-4 mr-1" /> : <Coffee className="w-4 h-4 mr-1" />}
-                      {event.type}
-                    </Badge>
-                    
-                    <div className="mb-4">
-                      <div className="text-3xl font-bold text-primary mb-1">
-                        {event.date.split(' ')[1] || event.date}
-                      </div>
-                      <div className="text-sm text-gray-500 uppercase tracking-wide">
-                        {event.date.split(' ')[0] || 'Event'}
-                      </div>
+          {isLoading ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[1, 2, 3].map((i) => (
+                <Card key={i} className="border-2">
+                  <CardContent className="p-6">
+                    <div className="text-center space-y-4">
+                      <Skeleton className="h-6 w-20 mx-auto" />
+                      <Skeleton className="h-12 w-12 mx-auto rounded-full" />
+                      <Skeleton className="h-6 w-full" />
+                      <Skeleton className="h-4 w-3/4 mx-auto" />
+                      <Skeleton className="h-4 w-3/4 mx-auto" />
+                      <Skeleton className="h-8 w-24 mx-auto" />
+                      <Skeleton className="h-16 w-full" />
                     </div>
-                    
-                    <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">
-                      {event.title}
-                    </h3>
-                    
-                    <div className="space-y-2 text-sm text-gray-600 mb-4">
-                      <div className="flex items-center justify-center gap-2">
-                        <Clock className="w-4 h-4" />
-                        {event.time}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : events.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-gray-600 text-lg">No upcoming events at the moment. Check back soon!</p>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {events.map((event) => (
+                <Card key={event.id} className="hover-lift border-2 hover:border-primary transition-all duration-300" data-testid={`card-event-${event.id}`}>
+                  <CardContent className="p-6">
+                    <div className="text-center">
+                      <Badge 
+                        variant={event.type === 'Dinner' ? 'default' : 'secondary'} 
+                        className="mb-4"
+                      >
+                        {event.type === 'Dinner' ? <Utensils className="w-4 h-4 mr-1" /> : <Coffee className="w-4 h-4 mr-1" />}
+                        {event.type}
+                      </Badge>
+                      
+                      <div className="mb-4">
+                        <div className="text-3xl font-bold text-primary mb-1">
+                          {event.date.split(' ')[1] || event.date}
+                        </div>
+                        <div className="text-sm text-gray-500 uppercase tracking-wide">
+                          {event.date.split(' ')[0] || 'Event'}
+                        </div>
                       </div>
-                      <div className="flex items-center justify-center gap-2">
-                        <MapPin className="w-4 h-4" />
-                        {event.location}
+                      
+                      <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">
+                        {event.title}
+                      </h3>
+                      
+                      <div className="space-y-2 text-sm text-gray-600 mb-4">
+                        <div className="flex items-center justify-center gap-2">
+                          <Clock className="w-4 h-4" />
+                          {event.time}
+                        </div>
+                        <div className="flex items-center justify-center gap-2">
+                          <MapPin className="w-4 h-4" />
+                          {event.location}
+                        </div>
                       </div>
-                    </div>
-                    
-                    <div className="text-2xl font-bold text-primary mb-4">
-                      {event.price}
-                    </div>
-                    
-                    {event.description && (
-                      <p className="text-xs text-gray-600 mb-2">
-                        {event.description}
+                      
+                      <div className="text-2xl font-bold text-primary mb-4">
+                        {event.price}
+                      </div>
+                      
+                      {event.description && (
+                        <p className="text-xs text-gray-600 mb-2">
+                          {event.description}
+                        </p>
+                      )}
+                      
+                      <p className="text-xs text-gray-500">
+                        {t('singles.events.ticketNote')}
                       </p>
-                    )}
-                    
-                    <p className="text-xs text-gray-500">
-                      {t('singles.events.ticketNote')}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
