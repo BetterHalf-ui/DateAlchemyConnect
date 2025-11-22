@@ -321,8 +321,12 @@ export default function Home() {
       <Membership />
 
       {/* Call to Action - After Membership */}
-      <section className="py-20 bg-black text-white text-center">
+      <section className="py-24 bg-black text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 subtitle">
+            {t('home.cta.title')}
+          </h2>
+          
           <a 
             href="https://betterhalf.fillout.com/t/9ywPABvKHdus" 
             target="_blank" 
@@ -332,18 +336,25 @@ export default function Home() {
               trackApplicationSubmit();
             }}
           >
-            <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl font-semibold mb-6">
-              {t('nav.applyNow')}
+            <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl font-semibold mb-4" data-testid="button-get-started">
+              {t('home.cta.button')}
             </Button>
           </a>
-          <div className="text-sm text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            <p className="mb-2">{t('home.cta.notReady')}</p>
-            <Link href="/network" className="hover:text-white" onClick={() => {
+          
+          <p className="text-sm text-gray-300 mb-8 body-text">
+            {t('home.cta.subtext')}
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
+            <Link href="/how-it-works" className="text-white hover:text-primary underline" onClick={() => window.scrollTo(0, 0)} data-testid="link-how-it-works">
+              {t('home.cta.howItWorks')}
+            </Link>
+            <span className="hidden sm:inline text-gray-500">|</span>
+            <Link href="/network" className="text-white hover:text-primary underline" onClick={() => {
               window.scrollTo(0, 0);
               trackFreeSignup();
-            }}>
-              <p className="mb-2">{t('home.cta.joinNetwork')}</p>
-              <p className="underline">{t('home.cta.createProfile')}</p>
+            }} data-testid="link-network">
+              {t('home.cta.notReady')}
             </Link>
           </div>
         </div>

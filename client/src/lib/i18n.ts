@@ -250,10 +250,11 @@ export const translations = {
     'home.expectations.support.title': 'Feedback & Support',
     'home.expectations.support.desc': 'As a client, your matchmaker will get your feedback after every date to keep refining your matches. We\'re dedicated to making you succeed in this journey—offering coaching resources, thoughtful support and inviting you to private events.',
     
-    'home.cta.applyNow': 'Join Now',
+    'home.cta.title': 'Ready to step into a more intentional way of dating?',
+    'home.cta.button': 'Get Started Today',
+    'home.cta.subtext': 'We only accept clients when we\'re confident we have good matches for them.',
+    'home.cta.howItWorks': 'Discover how it works',
     'home.cta.notReady': 'Not ready to invest in a membership?',
-    'home.cta.joinNetwork': 'Join our Network to see if you are a match with one of our exceptional clients.',
-    'home.cta.createProfile': 'Create your profile now.',
     
     'home.stats.activeMembers': 'Active members',
     'home.stats.memberDesc': 'Our members are ambitious, fun, and dynamic—locals and expats alike, from all age groups. All looking for a committed relationship.',
@@ -737,10 +738,11 @@ export const translations = {
     'home.expectations.support.title': 'Suivi personnalisé',
     'home.expectations.support.desc': 'Après chaque rendez-vous, votre matchmaker recueille vos impressions pour affiner continuellement vos matchs. Nous vous accompagnons avec du coaching, un soutien attentionné et des invitations à nos événements privés.',
     
-    'home.cta.applyNow': 'Rejoindre Maintenant',
+    'home.cta.title': 'Prêt(e) à adopter une approche plus intentionnelle des rencontres ?',
+    'home.cta.button': 'Commencer aujourd\'hui',
+    'home.cta.subtext': 'Nous n\'acceptons que les clients pour lesquels nous sommes confiants d\'avoir de bons matchs.',
+    'home.cta.howItWorks': 'Découvrir notre méthode',
     'home.cta.notReady': 'Pas encore prêt(e) à investir dans une adhésion ?',
-    'home.cta.joinNetwork': 'Rejoignez notre Réseau pour voir si vous correspondez à l\'un de nos clients exceptionnels.',
-    'home.cta.createProfile': 'Créez votre profil maintenant.',
     
     'home.stats.activeMembers': 'Membres actifs',
     'home.stats.memberDesc': 'Nos membres sont ambitieux, pétillants et dynamiques — qu\'ils soient locaux ou expatriés, et de tous âges. Tous recherchent une relation sérieuse.',
