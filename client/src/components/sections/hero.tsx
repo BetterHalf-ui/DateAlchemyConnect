@@ -113,9 +113,9 @@ export default function Hero() {
         }}>
           <button
             onClick={() => {
-              const membershipSection = document.getElementById('membership');
-              if (membershipSection) {
-                membershipSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              const introSection = document.getElementById('intro');
+              if (introSection) {
+                introSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }
             }}
             data-testid="button-discover-more"
