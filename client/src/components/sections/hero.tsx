@@ -76,7 +76,7 @@ export default function Hero() {
       
       {/* Content */}
       <div className="relative z-20 text-center text-white px-4 max-w-6xl">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight subtitle">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight subtitle">
           {titleWords.map((word, index) => (
             <span
               key={index}
@@ -93,6 +93,16 @@ export default function Hero() {
             </span>
           ))}
         </h1>
+        <p className={`text-xl md:text-2xl mb-8 text-white/90 transition-all duration-700 ease-out ${
+          animationTriggered 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-12'
+        }`}
+        style={{
+          transitionDelay: animationTriggered ? `${titleWords.length * 0.1 + 0.1}s` : '0s'
+        }}>
+          {t('home.hero.subtitle')}
+        </p>
         <div className={`flex justify-center transition-all duration-700 ease-out ${
           animationTriggered 
             ? 'opacity-100 translate-y-0' 
