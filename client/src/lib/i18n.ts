@@ -554,7 +554,7 @@ export const translations = {
     
     // Guarantees section (French)
     'home.guarantees.title': 'Nos garanties',
-    'home.guarantees.guarantee1Title': 'Payez uniquement lorsque nous livrons',
+    'home.guarantees.guarantee1Title': 'Payez uniquement lorsque nous délivrons',
     'home.guarantees.guarantee1Description': 'Un paiement initial de 10% est requis pour démarrer votre recherche de matchmaking personnalisée. Les 90% restants ne sont exigés qu\'une fois que vous acceptez un match que nous trouvons pour vous.',
 
     'home.guarantees.guarantee3Title': 'Adhésion flexible',
@@ -567,7 +567,7 @@ export const translations = {
     'home.pricing.membershipPeriod': 'Pour 1 an, TVA incluse',
     'home.pricing.membershipCompare': '… soit moins qu\'une nuitée en staycation à Maurice',
     'home.pricing.urgencyMessage': '',
-    'home.pricing.priceIncrease': 'Payez uniquement lorsque nous livrons',
+    'home.pricing.priceIncrease': 'Payez uniquement lorsque nous délivrons',
     'home.pricing.priceIncreaseDisclaimer': 'Un paiement initial de 10% (Rs 800) est requis pour démarrer votre recherche de matchmaking personnalisée. Les 90% restants (Rs 7200) sont payés une fois que vous acceptez un match que nous trouvons pour vous, et couvrent votre adhésion complète d\'un an.',
     'home.pricing.applyNow': 'Rejoindre Maintenant',
     'home.pricing.notReady': 'Pas prêt à investir dans une adhésion ?',
