@@ -236,9 +236,9 @@ export const translations = {
     'blog.publishedOn': 'Published on',
     
     // Home page detailed content
-    'home.intro.p1': 'Finding a genuine connection in Mauritius isn\'t easy—especially when you\'re a busy professional with high standards.',
-    'home.intro.p2': 'Dating apps promise endless options but often deliver disappointment: ghosting, mixed signals, and emotional detachment. They\'re designed to keep you swiping, not to help you connect. Most people aren\'t serious, and it takes a toll—over 80% of users report feeling emotionally drained or burnt out by online dating (Singles Report).',
-    'home.intro.p3': 'At The Date Alchemy, we believe real connection is too important to leave to algorithms or chance. That\'s why we invite you to put yourself out there—intentionally, but discreetly and with the respect you deserve. We take care of the search, so you can focus on living your best life while love finds its way to you.',
+    'home.intro.p1': 'We take care of the search, so you can focus on living your best life while we introduce you to matches truly worth your time.',
+    'home.intro.p2': '',
+    'home.intro.p3': '',
     
     'home.expectations.title': 'What To Expect As A Member',
     'home.expectations.curated.title': 'Curated Introductions',
@@ -723,9 +723,9 @@ export const translations = {
     'blog.publishedOn': 'Publié le',
     
     // Home page detailed content (French)
-    'home.intro.p1': 'Trouver une véritable connexion à Maurice n\'est pas chose facile—surtout quand on est un professionnel occupé avec des standards élevés.',
-    'home.intro.p2': 'Les applications de rencontres promettent des options infinies, mais livrent trop souvent déception et frustration : ghosting, signaux contradictoires, détachement émotionnel… Elles sont conçues pour vous faire swiper sans fin, pas pour vous aider à créer du lien. La plupart des utilisateurs ne cherchent rien de sérieux, et cela fait des dégâts—plus de 80 % déclarent se sentir épuisés ou désabusés par les rencontres en ligne (Rapport Singles).',
-    'home.intro.p3': 'Chez The Date Alchemy, nous savons que rencontrer la bonne personne est trop important pour être laissé aux algorithmes ou au hasard. Nous vous invitons à vous lancer—intentionnellement, avec discrétion, et avec le respect que vous méritez. Nous faisons le travail de recherche et de sélection, pour que vous puissiez vous concentrer sur l\'essentiel : vivre pleinement votre vie pendant que l\'amour trouve naturellement son chemin vers vous.',
+    'home.intro.p1': 'Nous nous occupons de la recherche, pour que vous puissiez vous concentrer sur votre vie pendant que nous vous présentons des rencontres qui en valent vraiment la peine.',
+    'home.intro.p2': '',
+    'home.intro.p3': '',
     
     'home.expectations.title': 'À quoi s\'attendre en tant que membre',
     'home.expectations.curated.title': 'Rencontres sélectionnées avec soin',
