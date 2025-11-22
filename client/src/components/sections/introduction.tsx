@@ -24,11 +24,8 @@ export default function Introduction() {
     <section className="section-black py-32">
       <div className="max-w-5xl mx-auto px-4 text-center">
         <div className="fade-in-scroll mb-16">
-          <p className="text-xl md:text-2xl leading-relaxed sans-body text-gray-200 mb-8">
-            Finding a real connection in Mauritius isn't easy — especially when you are a busy professional and hold yourself to high standards.
-          </p>
           <p className="text-xl md:text-2xl leading-relaxed sans-body text-gray-200">
-            At The Date Alchemy, we believe real connections rarely happen by chance. We invite you to put yourself out there, intentionally. And we'll handle the rest — discreetly, with care, and without the confusion. So you can focus on living fully, while love finds its way to you.
+            We take care of the search, so you can focus on living your best life while we introduce you to matches truly worth your time.
           </p>
         </div>
 
