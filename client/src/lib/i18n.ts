@@ -256,9 +256,8 @@ export const translations = {
     'home.cta.howItWorks': 'Discover how it works',
     'home.cta.notReady': 'Not ready to invest in a membership?',
     
-    'home.stats.activeMembers': 'Active members',
-    'home.stats.memberDesc': 'Our members are ambitious, fun, and dynamic—locals and expats alike, from all age groups. All looking for a committed relationship.',
-    'home.stats.reviewNote': 'Our matchmakers review EVERY application',
+    'home.stats.activeMembers': 'Curated Members',
+    'home.stats.memberDesc': 'Sophisticated, dynamic, and serious about finding love—locals and foreigners from all age groups and backgrounds.',
     
     // Testimonials - Additional ones for image sections
     'home.testimonials.main': 'Thank you for a match that goes far beyond just an algorithm. You helped bring two hearts onto the same wavelength.',
@@ -744,9 +743,8 @@ export const translations = {
     'home.cta.howItWorks': 'Découvrir notre méthode',
     'home.cta.notReady': 'Pas encore prêt(e) à investir dans une adhésion ?',
     
-    'home.stats.activeMembers': 'Membres actifs',
-    'home.stats.memberDesc': 'Nos membres sont ambitieux, pétillants et dynamiques — qu\'ils soient locaux ou expatriés, et de tous âges. Tous recherchent une relation sérieuse.',
-    'home.stats.reviewNote': 'Nous examinons CHAQUE candidature.',
+    'home.stats.activeMembers': 'Membres sélectionnés',
+    'home.stats.memberDesc': 'Sophistiqués, dynamiques et sérieux dans leur recherche d\'amour—locaux et étrangers de tous âges et horizons.',
     
     // Testimonials - Additional ones for image sections (French)
     'home.testimonials.main': 'Merci pour un match qui va bien au-delà d\'un simple algorithme. Vous avez aidé à mettre deux cœurs sur la même longueur d\'onde.',

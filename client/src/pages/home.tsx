@@ -270,13 +270,10 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Stats and Text */}
             <div className="text-center lg:text-left">
-              <div className="text-5xl font-bold text-primary mb-3">{displayCount}</div>
+              <div className="text-5xl font-bold text-primary mb-3">400+</div>
               <h3 className="text-xl font-bold mb-4">{t('home.stats.activeMembers')}</h3>
-              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 {t('home.stats.memberDesc')}
-              </p>
-              <p className="text-base font-semibold text-gray-900">
-                {t('home.stats.reviewNote')}
               </p>
             </div>
             
