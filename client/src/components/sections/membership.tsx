@@ -12,7 +12,6 @@ const membershipFeatures = {
       "home.membership.feature4",
       "home.membership.feature5",
       "home.membership.feature6",
-      "home.membership.feature7",
       "home.membership.bonus"
     ]
   },
@@ -86,7 +85,7 @@ export default function Membership() {
               <p className="text-lg text-gray-700 mb-8 body-text leading-relaxed">
                 {t(membershipFeatures.premiumMatchmaking.descriptionKey)}
               </p>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
                 {membershipFeatures.premiumMatchmaking.featureKeys.map((featureKey, index) => {
                   const feature = t(featureKey);
                   const animationKey = `premium-${index}`;
