@@ -742,7 +742,7 @@ export const translations = {
     'home.cta.notReady': 'Pas encore prêt(e) à investir dans une adhésion ?',
     
     'home.stats.activeMembers': 'Membres sélectionnés',
-    'home.stats.memberDesc': 'Sophistiqués, dynamiques et sérieux dans leur recherche d\'amour—locaux et étrangers de tous âges et horizons.',
+    'home.stats.memberDesc': 'Sophistiqués, dynamiques et prêts pour une relation sérieuse—locaux et expatriés de tous âges et horizons.',
     
     // Testimonials - Additional ones for image sections (French)
     'home.testimonials.main': 'Merci pour un match qui va bien au-delà d\'un simple algorithme. Vous avez aidé à mettre deux cœurs sur la même longueur d\'onde.',
