@@ -82,9 +82,9 @@ export default function Membership() {
               <h3 className="text-3xl font-bold mb-6 text-primary subtitle">
                 {t(membershipFeatures.premiumMatchmaking.titleKey)}
               </h3>
-              <p className="text-lg text-gray-700 mb-8 body-text leading-relaxed">
+              <h4 className="text-xl font-semibold mb-6 text-gray-900 subtitle">
                 {t(membershipFeatures.premiumMatchmaking.descriptionKey)}
-              </p>
+              </h4>
               <div className="space-y-4">
                 {membershipFeatures.premiumMatchmaking.featureKeys.map((featureKey, index) => {
                   const feature = t(featureKey);
