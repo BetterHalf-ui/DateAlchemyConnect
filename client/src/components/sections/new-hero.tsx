@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useApplicationLink } from "@/hooks/use-application-link";
+import { useI18n } from "@/lib/i18n";
 
 export default function NewHero() {
   const applicationLink = useApplicationLink();
+  const { t } = useI18n();
   const [textVisible, setTextVisible] = useState(false);
 
   useEffect(() => {
@@ -32,11 +34,16 @@ export default function NewHero() {
       />
       
       <div className="relative z-10 text-center text-white px-4 max-w-6xl">
-        <h1 className={`text-4xl md:text-6xl lg:text-7xl serif-title mb-8 leading-tight hero-text-reveal ${
+        <h1 className={`text-4xl md:text-6xl lg:text-7xl serif-title mb-4 leading-tight hero-text-reveal ${
           textVisible ? 'visible' : ''
         }`}>
-          A Healthy Dating Experience For Global Professionals
+          {t('home.hero.title')}
         </h1>
+        <p className={`text-xl md:text-2xl mb-8 text-white/90 hero-text-reveal ${
+          textVisible ? 'visible' : ''
+        }`}>
+          {t('home.hero.subtitle')}
+        </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
           <a 
