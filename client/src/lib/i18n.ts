@@ -723,7 +723,7 @@ export const translations = {
     'blog.publishedOn': 'Publié le',
     
     // Home page detailed content (French)
-    'home.intro.p1': 'Nous gérons la recherche pour vous. Concentrez-vous sur votre vie pendant que nous trouvons des personnes qui méritent vraiment votre attention.',
+    'home.intro.p1': 'Nous gérons la recherche pour vous. Vivez pleinement votre vie pendant que nous trouvons des personnes qui méritent vraiment votre attention.',
     'home.intro.p2': '',
     'home.intro.p3': '',
     
