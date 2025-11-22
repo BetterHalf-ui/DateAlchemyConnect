@@ -164,7 +164,7 @@ export default function Home() {
       {/* How We Help Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h3 className="text-2xl md:text-3xl text-gray-800 mb-16 body-text max-w-4xl mx-auto leading-relaxed font-medium">
+          <h3 className="text-2xl md:text-3xl text-gray-800 mb-32 body-text max-w-4xl mx-auto leading-relaxed font-medium">
             {t('home.intro.p1')}
           </h3>
           
@@ -328,7 +328,7 @@ export default function Home() {
             target="_blank" 
             rel="noopener noreferrer"
             onClick={() => {
-              trackApplicationClick('cta_after_membership');
+              trackApplicationClick(language);
               trackApplicationSubmit();
             }}
           >
