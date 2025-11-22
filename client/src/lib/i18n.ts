@@ -241,8 +241,8 @@ export const translations = {
     'home.intro.p3': '',
     
     'home.expectations.title': 'What To Expect As A Member',
-    'home.expectations.curated.title': 'Curated Introductions',
-    'home.expectations.curated.desc': 'We introduce you to singles who meet your standards and share your vibe, are carefully interviewed and equally serious about finding a lifetime partner in Mauritius.',
+    'home.expectations.curated.title': 'Curated and Vetted Introductions',
+    'home.expectations.curated.desc': 'Our matchmaking approach goes beyond surface-level checklists. We prioritize compatibility in relationships needs, lifestyles, values and attachment patterns. All potential matches have been interviewed, screened and are equally serious about finding a partner.',
     'home.expectations.privacy.title': 'Your Privacy is Our Priority',
     'home.expectations.privacy.desc': 'We protect your privacy like it\'s our own—your detailed profile, photo and phone number are always confidential, and never shared without your consent. Every introduction is handled with the utmost care and respect for your privacy.',
     'home.expectations.noPressure.title': 'Date Preparation',
@@ -728,8 +728,8 @@ export const translations = {
     'home.intro.p3': '',
     
     'home.expectations.title': 'À quoi s\'attendre en tant que membre',
-    'home.expectations.curated.title': 'Rencontres sélectionnées avec soin',
-    'home.expectations.curated.desc': 'Nous vous présentons des célibataires qui répondent à vos critères, partagent votre énergie et votre vision, ont été soigneusement interviewés, et sont sincèrement engagés dans la recherche d\'un partenaire de vie à Maurice.',
+    'home.expectations.curated.title': 'Rencontres sélectionnées et vérifiées',
+    'home.expectations.curated.desc': 'Notre approche de matchmaking va au-delà des listes de critères superficiels. Nous priorisons la compatibilité en matière de besoins relationnels, styles de vie, valeurs et schémas d\'attachement. Tous les matchs potentiels ont été interviewés, vérifiés et sont tout aussi sérieux dans leur recherche d\'un partenaire.',
     'home.expectations.privacy.title': 'Votre confidentialité, notre engagement absolu',
     'home.expectations.privacy.desc': 'Nous veillons sur votre vie privée comme sur la nôtre : votre profil détaillé, photo et numéro de téléphone restent strictement confidentiels et ne sont jamais partagés sans votre accord explicite. Chaque présentation est organisée avec la plus grande attention et un profond respect de votre vie privée.',
     'home.expectations.noPressure.title': 'Préparation des rencontres',
