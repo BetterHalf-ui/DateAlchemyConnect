@@ -81,16 +81,16 @@ export const translations = {
     
     'home.membership.innerWorkTitle': '2. Inner Work and Guidance',
     'home.membership.innerWorkDescription': 'We set you up for successful dates and healthier relationships',
-    'home.membership.innerWorkSubtitle': 'Included in Your Membership:',
+    'home.membership.innerWorkSubtitle': 'Included in your membership:',
     
-    'home.membership.innerWork1Title': '1) Full Relationship Readiness Self-Audit:',
-    'home.membership.innerWork1Feature1': '**Your Needs Assessment**: Get clear on what you truly need in a relationship — not just what you\'re attracted to.',
-    'home.membership.innerWork1Feature2': '**Attachment Style Assessment**: Understand how your attachment style influences the way you connect, respond, and bond in relationships (based on attachment theory by psychologists John Bowlby and Mary Ainsworth)',
-    'home.membership.innerWork1Feature3': '**Dating Tendencies Assessment**: Identify unconscious dating patterns that may be holding you back (based on relationship scientist Logan Ury\'s work)',
+    'home.membership.innerWork1Title': '1) Full relationship readiness self-audit:',
+    'home.membership.innerWork1Feature1': '**Your needs assessment**: Get clear on what you truly need in a relationship — not just what you\'re attracted to.',
+    'home.membership.innerWork1Feature2': '**Attachment style assessment**: Understand how your attachment style influences the way you connect, respond, and bond in relationships (based on attachment theory by psychologists John Bowlby and Mary Ainsworth)',
+    'home.membership.innerWork1Feature3': '**Dating tendencies assessment**: Identify unconscious dating patterns that may be holding you back (based on relationship scientist Logan Ury\'s work)',
     
-    'home.membership.innerWork2Title': '2) Personalized Guidance to Date Intentionally and Confidently',
-    'home.membership.innerWork2Feature1': '**Direct Access to Our Matchmaking Team** (via Whatsapp & Email): A discreet communication channel to dating experts who know you and your dating journey.',
-    'home.membership.innerWork2Feature2': '**Dating Advice in your Inbox— Exactly When You Need It**: Digestible emails to prepare you before dates.',
+    'home.membership.innerWork2Title': '2) Personalized guidance to date intentionally and confidently',
+    'home.membership.innerWork2Feature1': '**Direct access to our matchmaking team** (via Whatsapp & Email): A discreet communication channel to dating experts who know you and your dating journey.',
+    'home.membership.innerWork2Feature2': '**Dating advice in your inbox— Exactly when you need it**: Digestible emails to prepare you before dates.',
     'home.membership.innerWork2Feature3': '**Reflection rituals after each date**: Dating is also a journey of self-discovery—an opportunity to uncover what truly matters to you along the way.',
     'home.membership.innerWork2Feature4': '**Bi-weekly science-based dating insights** in your inbox: Tips based on our matchmaking experience and backed by scientific journals.',
     
@@ -516,7 +516,7 @@ export const translations = {
     
     'home.membership.innerWork2Title': '2) Accompagnement personnalisé pour dater avec intention et confiance',
     'home.membership.innerWork2Feature1': '**Accès direct à notre équipe** (via WhatsApp & email) : un canal discret vers des experts qui connaissent votre parcours.',
-    'home.membership.innerWork2Feature2': '**Conseils pour vos rencontres— Au bon moment** : Emails courts et pratiques pour vous préparer avant vos rendez-vous.',
+    'home.membership.innerWork2Feature2': '**Conseils pour vos rencontres— Au bon moment** : emails courts et pratiques pour vous préparer avant vos rendez-vous.',
     'home.membership.innerWork2Feature3': '**Rituels de réflexion après chaque rendez-vous** : car chaque rencontre est aussi une occasion de mieux vous connaître.',
     'home.membership.innerWork2Feature4': '**Les secrets de l\'alchimie deux fois par mois** dans votre boîte mail : conseils basés sur notre expérience de matchmaking et validés par la recherche scientifique.',
     
