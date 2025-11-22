@@ -111,19 +111,19 @@ export default function Hero() {
         style={{
           transitionDelay: animationTriggered ? `${titleWords.length * 0.1 + 0.2}s` : '0s'
         }}>
-          <a 
-            href={applicationLink} 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <button
             onClick={() => {
-              trackApplicationClick(language);
-              trackApplicationSubmit();
+              const membershipSection = document.getElementById('membership');
+              if (membershipSection) {
+                membershipSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
             }}
+            data-testid="button-discover-more"
           >
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg hover-lift">
               {t('home.hero.cta')}
             </Button>
-          </a>
+          </button>
         </div>
       </div>
     </section>

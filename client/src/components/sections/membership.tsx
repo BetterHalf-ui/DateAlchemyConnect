@@ -68,7 +68,7 @@ export default function Membership() {
   }, [visibleFeatures]);
 
   return (
-    <section className="py-32 bg-gradient-to-br from-gray-50 to-white">
+    <section id="membership" className="py-32 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-20">
           <h2 className="text-5xl font-bold mb-6 subtitle text-gray-900">{t('home.membership.title')}</h2>

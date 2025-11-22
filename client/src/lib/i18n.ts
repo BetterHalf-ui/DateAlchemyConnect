@@ -38,7 +38,7 @@ export const translations = {
     // Home page
     'home.hero.title': 'Ultra-curated matchmaking for busy singles.',
     'home.hero.subtitle': 'Discreet, modern, and designed for Mauritius.',
-    'home.hero.cta': 'Join Now',
+    'home.hero.cta': 'Discover more',
     'home.hero.memberCount': 'Active Members',
     
     'home.help.title': 'How We Help',
@@ -465,7 +465,7 @@ export const translations = {
     // Home page
     'home.hero.title': 'Matchmaking sur-mesure pour célibataires occupés.',
     'home.hero.subtitle': 'Discret, moderne et pensé pour Maurice.',
-    'home.hero.cta': 'Devenir membre',
+    'home.hero.cta': 'En savoir plus',
     'home.hero.memberCount': 'membres actifs',
     
     'home.help.title': 'Comment nous aidons',
