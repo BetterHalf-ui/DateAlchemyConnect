@@ -400,7 +400,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <img 
-                  src="/attached_assets/Screenshot 2025-07-30 at 21.59.07_1753898366997.png" 
+                  src="/attached_assets/WhatsApp_Image_2025-12-09_at_4.30.15_PM_1765354902374.jpeg" 
                   alt="The Date Alchemy founders" 
                   className="rounded-2xl shadow-lg w-full aspect-square object-cover hover-lift"
                 />
