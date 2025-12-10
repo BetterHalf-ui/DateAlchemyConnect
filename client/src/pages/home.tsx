@@ -266,41 +266,13 @@ export default function Home() {
 
       {/* Member Stats Section */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Stats and Text */}
-            <div className="text-center lg:text-left">
-              <div className="text-5xl font-bold text-primary mb-3">400+</div>
-              <h3 className="text-xl font-bold mb-4">{t('home.stats.activeMembers')}</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                {t('home.stats.memberDesc')}
-              </p>
-            </div>
-            
-            {/* Right: Member Photos */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="relative">
-                <img 
-                  src="/attached_assets/WhatsApp Image 2025-08-04 at 5.00.00 PM_1754475186009.jpeg"
-                  alt="Professional member"
-                  className="w-full h-40 object-cover object-center rounded-xl shadow-md hover-lift"
-                />
-              </div>
-              <div className="relative">
-                <img 
-                  src="/attached_assets/WhatsApp Image 2025-08-04 at 5.01.22 PM_1754475186025.jpeg"
-                  alt="Dynamic member"
-                  className="w-full h-40 object-cover object-center rounded-xl shadow-md hover-lift"
-                />
-              </div>
-              <div className="relative">
-                <img 
-                  src="/attached_assets/WhatsApp Image 2025-08-06 at 2.09.58 PM_1754475186025.jpeg"
-                  alt="Ambitious member"
-                  className="w-full h-40 object-cover object-center rounded-xl shadow-md hover-lift"
-                />
-              </div>
-            </div>
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center">
+            <div className="text-5xl font-bold text-primary mb-3">400+</div>
+            <h3 className="text-xl font-bold mb-4">{t('home.stats.activeMembers')}</h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {t('home.stats.memberDesc')}
+            </p>
           </div>
         </div>
       </section>
