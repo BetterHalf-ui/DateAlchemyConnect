@@ -19,7 +19,7 @@ export function useSEO({
   const { language } = useI18n();
   
   useEffect(() => {
-    const siteUrl = 'https://thedatealchemy.netlify.app';
+    const siteUrl = 'https://thedatealchemy.com';
     
     // Set document title
     if (title) {
@@ -165,37 +165,157 @@ export function useSEO({
       href: '/favicon.ico'
     });
     
-    // Structured data for business
-    const structuredData = {
+    // Comprehensive structured data for LocalBusiness + Service
+    const localBusinessSchema = {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://thedatealchemy.com/#organization",
       "name": "The Date Alchemy",
-      "description": description || "Premium matchmaking service for global professionals in Mauritius",
-      "url": canonical || siteUrl,
-      "logo": `${siteUrl}/logo.png`,
+      "alternateName": ["Date Alchemy", "The Date Alchemy Mauritius", "TDA Matchmaking"],
+      "description": "Premium matchmaking service for global professionals in Mauritius. Ultra-curated introductions with vetted singles, compatibility assessments, and personalized date planning.",
+      "url": "https://thedatealchemy.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/da-logo.png`,
+        "width": 512,
+        "height": 512
+      },
+      "image": `${siteUrl}/social-share-v2.jpg`,
       "address": {
         "@type": "PostalAddress",
+        "addressLocality": "Port Louis",
+        "addressRegion": "Port Louis District",
         "addressCountry": "MU",
-        "addressRegion": "Mauritius"
+        "postalCode": ""
       },
-      "serviceType": "Matchmaking Service",
-      "areaServed": "Mauritius",
-      "priceRange": "$$$$",
-      "telephone": "+230-XXX-XXXX",
-      "email": "hello@thedatealchemy.com"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -20.1609,
+        "longitude": 57.5012
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Mauritius"
+        },
+        {
+          "@type": "City",
+          "name": "Port Louis"
+        },
+        {
+          "@type": "City", 
+          "name": "Grand Baie"
+        },
+        {
+          "@type": "City",
+          "name": "Flic en Flac"
+        }
+      ],
+      "serviceType": [
+        "Matchmaking Service",
+        "Dating Service",
+        "Professional Matchmaking",
+        "Relationship Coaching",
+        "Singles Events"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Matchmaking Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Premium Matchmaking Membership",
+              "description": "1-year matchmaking membership with curated introductions, compatibility assessment, and personalized support"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Singles Socials Events",
+              "description": "Exclusive singles events and intimate brunches for networking and meeting potential matches"
+            }
+          }
+        ]
+      },
+      "priceRange": "Rs 8,000",
+      "currenciesAccepted": "MUR",
+      "paymentAccepted": ["Cash", "Bank Transfer"],
+      "email": "hello@thedatealchemy.com",
+      "sameAs": [
+        "https://www.instagram.com/thedatealchemy",
+        "https://www.facebook.com/thedatealchemy"
+      ],
+      "foundingDate": "2022",
+      "founder": {
+        "@type": "Person",
+        "name": "The Date Alchemy Founders"
+      },
+      "slogan": "Ultra-Curated Matchmaking for Busy Singles",
+      "knowsAbout": [
+        "Matchmaking",
+        "Dating in Mauritius",
+        "Professional Singles",
+        "Relationship Coaching",
+        "Compatibility Assessment",
+        "Attachment Theory",
+        "Singles Events Mauritius"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "50",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
     };
+
+    // Organization schema for brand recognition
+    const organizationSchema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://thedatealchemy.com/#org",
+      "name": "The Date Alchemy",
+      "url": "https://thedatealchemy.com",
+      "logo": `${siteUrl}/da-logo.png`,
+      "description": "Mauritius' premium matchmaking service for sophisticated professionals seeking meaningful relationships",
+      "areaServed": "Mauritius",
+      "sameAs": [
+        "https://www.instagram.com/thedatealchemy",
+        "https://www.facebook.com/thedatealchemy"
+      ]
+    };
+
+    // WebSite schema for sitelinks search
+    const websiteSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://thedatealchemy.com/#website",
+      "url": "https://thedatealchemy.com",
+      "name": "The Date Alchemy",
+      "description": "Premium matchmaking service in Mauritius for global professionals",
+      "publisher": {
+        "@id": "https://thedatealchemy.com/#organization"
+      },
+      "inLanguage": ["en", "fr"]
+    };
+
+    // Combine all schemas
+    const allSchemas = [localBusinessSchema, organizationSchema, websiteSchema];
     
     // Remove existing structured data
-    const existingStructuredData = document.querySelector('script[type="application/ld+json"]');
-    if (existingStructuredData) {
-      existingStructuredData.remove();
-    }
+    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    existingScripts.forEach(script => script.remove());
     
     // Add new structured data
-    const structuredDataScript = document.createElement('script');
-    structuredDataScript.type = 'application/ld+json';
-    structuredDataScript.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(structuredDataScript);
+    allSchemas.forEach(schema => {
+      const structuredDataScript = document.createElement('script');
+      structuredDataScript.type = 'application/ld+json';
+      structuredDataScript.textContent = JSON.stringify(schema);
+      document.head.appendChild(structuredDataScript);
+    });
     
   }, [title, description, keywords, ogImage, canonical, language]);
 }

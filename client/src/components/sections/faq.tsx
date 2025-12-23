@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "How much do the dates know about each other beforehand?",
-    answer: "Confidentiality and discretion are fundamental to our service. We do not share last names before the date, and we share photographs and phone numbers only if you have explicitly agreed. We provide both sides with a complete description into the match's lifestyle, career, interests, age, height, nationality, location, marrital status, long term plans, ideal partner, smoking habits and even diet."
+    answer: "Confidentiality and discretion are fundamental to our service. We do not share last names before the date, and we share photographs and phone numbers only if you have explicitly agreed. We provide both sides with a complete description into the match's lifestyle, career, interests, age, height, nationality, location, marital status, long term plans, ideal partner, smoking habits and even diet."
   },
   {
     question: "What if my match is based in another country? How do you set us up?",
@@ -55,6 +55,39 @@ export default function FAQ() {
         : [...prev, index]
     );
   };
+
+  useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+
+    const existingFaqSchema = document.querySelector('script[data-schema="faq"]');
+    if (existingFaqSchema) {
+      existingFaqSchema.remove();
+    }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-schema', 'faq');
+    script.textContent = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      const schemaScript = document.querySelector('script[data-schema="faq"]');
+      if (schemaScript) {
+        schemaScript.remove();
+      }
+    };
+  }, []);
 
   return (
     <section className="py-20 bg-gray-50">

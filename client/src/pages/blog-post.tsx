@@ -32,6 +32,63 @@ export default function BlogPostPage() {
     }
   }, [post]);
 
+  // Add Article schema for SEO and AI search
+  useEffect(() => {
+    if (!post) return;
+
+    const articleSchema = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": post.title,
+      "description": post.excerpt,
+      "image": post.imageUrl || "https://thedatealchemy.com/social-share-v2.jpg",
+      "datePublished": post.createdAt,
+      "dateModified": post.updatedAt || post.createdAt,
+      "author": {
+        "@type": "Organization",
+        "name": "The Date Alchemy",
+        "url": "https://thedatealchemy.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Date Alchemy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thedatealchemy.com/da-logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://thedatealchemy.com/blog/${post.id}`
+      },
+      "articleSection": post.category,
+      "keywords": post.tags.join(", "),
+      "inLanguage": "en",
+      "about": {
+        "@type": "Thing",
+        "name": "Dating and Relationships in Mauritius"
+      }
+    };
+
+    const existingSchema = document.querySelector('script[data-schema="article"]');
+    if (existingSchema) {
+      existingSchema.remove();
+    }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-schema', 'article');
+    script.textContent = JSON.stringify(articleSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      const schemaScript = document.querySelector('script[data-schema="article"]');
+      if (schemaScript) {
+        schemaScript.remove();
+      }
+    };
+  }, [post]);
+
   if (isLoading) {
     return (
       <div className="min-h-screen">

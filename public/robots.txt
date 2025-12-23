@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Main sitemap
-Sitemap: https://thedatealchemy.netlify.app/sitemap.xml
+Sitemap: https://thedatealchemy.com/sitemap.xml
 
 # Block specific paths (if any)
 Disallow: /api/
@@ -20,4 +20,23 @@ User-agent: Slurp
 Allow: /
 
 User-agent: DuckDuckBot
+Allow: /
+
+# Allow AI search engine crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
