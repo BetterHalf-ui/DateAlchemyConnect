@@ -6,8 +6,8 @@ export const BRAND_COLORS = {
 } as const;
 
 export const EXTERNAL_LINKS = {
-  applicationForm: 'https://betterhalf.fillout.com/t/9ywPABvKHdus',
-  applicationFormFr: 'https://betterhalf.fillout.com/t/85BTsRpeJYus',
+  applicationForm: 'https://betterhalf.fillout.com/t/9ywPABvKHdus?source=Membership',
+  applicationFormFr: 'https://betterhalf.fillout.com/t/85BTsRpeJYus?source=Membership',
   referralForm: 'https://betterhalf.fillout.com/referral',
   facebook: 'https://www.facebook.com/TheDateAlchemy',
   instagram: 'https://www.instagram.com/thedatealchemy/',

@@ -127,7 +127,7 @@ export default function MatchmakingMauritius() {
             Mauritius' premier matchmaking service for professionals seeking meaningful relationships
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://betterhalf.fillout.com/t/9ywPABvKHdus" target="_blank" rel="noopener noreferrer">
+            <a href="https://betterhalf.fillout.com/t/9ywPABvKHdus?source=Membership" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg" data-testid="button-apply-hero">
                 Apply for Membership
               </Button>
@@ -217,7 +217,7 @@ export default function MatchmakingMauritius() {
           <p className="text-xl mb-8 opacity-90">
             Join 400+ professionals who trust The Date Alchemy for their matchmaking journey.
           </p>
-          <a href="https://betterhalf.fillout.com/t/9ywPABvKHdus" target="_blank" rel="noopener noreferrer">
+          <a href="https://betterhalf.fillout.com/t/9ywPABvKHdus?source=Membership" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg" data-testid="button-apply-cta">
               Start Your Journey Today
             </Button>
