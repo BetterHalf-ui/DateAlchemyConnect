@@ -232,7 +232,7 @@ export default function Home() {
           </h2>
           
           <a 
-            href="https://betterhalf.fillout.com/t/9ywPABvKHdus?source=Membership" 
+            href={applicationLink} 
             target="_blank" 
             rel="noopener noreferrer"
             onClick={() => {
@@ -315,7 +315,7 @@ export default function Home() {
           </h2>
           
           <a 
-            href="https://betterhalf.fillout.com/t/9ywPABvKHdus?source=Membership" 
+            href={applicationLink} 
             target="_blank" 
             rel="noopener noreferrer"
             onClick={() => {
