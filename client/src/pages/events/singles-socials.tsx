@@ -268,9 +268,10 @@ export default function SinglesSocials() {
                         </div>
                       </div>
                       
-                      <div className="text-2xl font-bold text-primary mb-4">
+                      <div className="text-2xl font-bold text-primary mb-2">
                         {event.price}
                       </div>
+                      <p className="text-xs text-gray-500 mb-2">(exclusive of VAT)</p>
                       
                       {event.description && (
                         <p className="text-xs text-gray-600 mb-2">

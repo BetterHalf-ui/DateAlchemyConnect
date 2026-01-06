@@ -341,7 +341,7 @@ export const translations = {
     'singles.events.empty': 'No upcoming events at the moment. Check back soon!',
     
     'singles.pricing.title': '🍷 Ticket: 1000 Rs',
-    'singles.pricing.vatNote': '(inclusive of VAT)',
+    'singles.pricing.vatNote': '(exclusive of VAT)',
     'singles.pricing.description': '(This price does not include food or drinks. You pay to the restaurant directly for what you order)',
     'singles.pricing.application': 'Your application will be considered for the upcoming event. Should we be unable to include you, you will be automatically considered for future Singles Socials.',
     'singles.pricing.timing': 'We send invitations 4 to 2 weeks before the event, so make sure to apply early.',
@@ -838,7 +838,7 @@ export const translations = {
     'singles.events.empty': 'Aucun événement à venir pour le moment. Revenez bientôt !',
     
     'singles.pricing.title': '🍷 Ticket : 1000 Rs',
-    'singles.pricing.vatNote': '(TVA incluse)',
+    'singles.pricing.vatNote': '(TVA non incluse)',
     'singles.pricing.description': '(Ce prix n\'inclut pas la nourriture ou les boissons. Vous payez directement au restaurant pour ce que vous commandez)',
     'singles.pricing.application': 'Votre candidature sera considérée pour l\'événement à venir. Si nous ne pouvons pas vous inclure, vous serez automatiquement considéré(e) pour les futurs Singles Socials.',
     'singles.pricing.timing': 'Nous envoyons les invitations 4 à 2 semaines avant l\'événement, alors assurez-vous de postuler tôt.',
