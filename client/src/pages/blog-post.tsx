@@ -8,6 +8,7 @@ import RebrandBanner from "@/components/layout/rebrand-banner";
 import { ArrowLeft, Calendar, Tag } from "lucide-react";
 import { useEffect } from "react";
 import { trackBlogRead } from "@/lib/meta-pixel";
+import LeadMagnetBanner from "@/components/lead-magnet-banner";
 import type { BlogPost } from "@shared/schema";
 
 export default function BlogPostPage() {
@@ -196,7 +197,7 @@ export default function BlogPostPage() {
       </section>
 
       {/* Article Content */}
-      <section className="pb-20">
+      <section className="pb-12">
         <div className="max-w-4xl mx-auto px-4">
           <div className="prose prose-lg max-w-none body-text">
             <div 
@@ -206,6 +207,9 @@ export default function BlogPostPage() {
           </div>
         </div>
       </section>
+
+      {/* Lead Magnet Banner */}
+      <LeadMagnetBanner />
 
       {/* Related Articles CTA */}
       <section className="pb-20 bg-gray-50">
