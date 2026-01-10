@@ -49,11 +49,6 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/network" onClick={() => window.scrollTo(0, 0)}>
-                  <span className="hover:text-primary transition-colors cursor-pointer">{t('nav.network')}</span>
-                </Link>
-              </li>
-              <li>
                 <Link href="/blog" onClick={() => window.scrollTo(0, 0)}>
                   <span className="hover:text-primary transition-colors cursor-pointer">{t('nav.insights')}</span>
                 </Link>

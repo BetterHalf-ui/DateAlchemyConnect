@@ -22,11 +22,11 @@ export default function ReadyCTA() {
         </a>
         <div className="mt-8">
           <p className="text-gray-300 sans-body mb-4">
-            Not ready to invest in a membership?
+            Not ready to invest?
           </p>
-          <Link href="/network" onClick={() => window.scrollTo(0, 0)}>
+          <Link href="/dating-patterns-guide" onClick={() => window.scrollTo(0, 0)}>
             <Button variant="link" className="text-primary hover:text-primary/80 serif-title">
-              Join our Network to see if you are a match with one of our exceptional clients. Create your profile now.
+              Read our free report on the '11 Hidden Patterns' preventing smart singles in Mauritius from finding love.
             </Button>
           </Link>
         </div>

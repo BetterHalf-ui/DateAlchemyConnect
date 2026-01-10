@@ -253,7 +253,7 @@ export default function HowItWorks() {
           </a>
           <div className="text-gray-600">
             <p className="mb-2">{t('howItWorks.finalCta.notReadyTitle')}</p>
-            <Link href="/network" onClick={() => window.scrollTo(0, 0)}>
+            <Link href="/dating-patterns-guide" onClick={() => window.scrollTo(0, 0)}>
               <span className="text-primary hover:underline cursor-pointer">
                 {t('howItWorks.finalCta.notReadyDescription')}
               </span>

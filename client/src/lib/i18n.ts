@@ -193,8 +193,8 @@ export const translations = {
     'howItWorks.finalCta.readyTitle': 'Ready to Get Started?',
     'howItWorks.finalCta.readyDescription': 'Experience the difference and take the first step towards meeting your better half.',
     'howItWorks.finalCta.readyButton': 'Join Now',
-    'howItWorks.finalCta.notReadyTitle': 'Not ready to invest in a membership yet?',
-    'howItWorks.finalCta.notReadyDescription': 'Join our free network to check if you match with one of our exceptional clients.',
+    'howItWorks.finalCta.notReadyTitle': 'Not ready to invest?',
+    'howItWorks.finalCta.notReadyDescription': "Read our free report on the '11 Hidden Patterns' preventing smart singles in Mauritius from finding love.",
     
     // Footer
     'footer.tagline': 'Redefining the dating experience for global professionals in Mauritius.',
@@ -374,8 +374,8 @@ export const translations = {
     'home.pricing.priceIncrease': 'Only Pay When We Deliver',
     'home.pricing.priceIncreaseDisclaimer': 'An upfront payment of 10% (Rs 800) is required to start your dedicated matchmaking search. The remaining 90% (Rs 7200) is paid once you accept a match we find you, and covers your full one-year membership.',
     'home.pricing.applyNow': 'Join Now',
-    'home.pricing.notReady': 'Not ready to invest in a membership?',
-    'home.pricing.joinNetwork': 'Join our Network to see if you are a match with one of our exceptional clients.',
+    'home.pricing.notReady': 'Not ready to invest?',
+    'home.pricing.freeReport': "Read our free report on the '11 Hidden Patterns' preventing smart singles in Mauritius from finding love.",
     'home.pricing.createProfile': 'Create your profile now.',
     
     // How It Works section
@@ -570,8 +570,8 @@ export const translations = {
     'home.pricing.priceIncrease': 'Payez uniquement lorsque nous délivrons',
     'home.pricing.priceIncreaseDisclaimer': 'Un paiement initial de 10% (Rs 800) est requis pour démarrer votre recherche de matchmaking personnalisée. Les 90% restants (Rs 7200) sont payés une fois que vous acceptez un match que nous trouvons pour vous, et couvrent votre adhésion complète d\'un an.',
     'home.pricing.applyNow': 'Rejoindre Maintenant',
-    'home.pricing.notReady': 'Pas prêt à investir dans une adhésion ?',
-    'home.pricing.joinNetwork': 'Rejoignez notre Réseau pour voir si vous correspondez à l\'un de nos clients exceptionnels.',
+    'home.pricing.notReady': 'Pas prêt à investir ?',
+    'home.pricing.freeReport': "Lisez notre rapport gratuit sur les '11 Schémas Cachés' qui empêchent les célibataires intelligents à Maurice de trouver l'amour.",
     'home.pricing.createProfile': 'Créez votre profil maintenant.',
     
     // How It Works section (French)
@@ -678,8 +678,8 @@ export const translations = {
     'howItWorks.finalCta.readyTitle': 'Prêt(e) à vous lancer ?',
     'howItWorks.finalCta.readyDescription': 'Rejoignez notre adhésion et faites le premier pas vers la rencontre de votre future moitiée.',
     'howItWorks.finalCta.readyButton': 'Rejoindre Maintenant',
-    'howItWorks.finalCta.notReadyTitle': 'Pas encore prêt(e) à investir dans une adhésion ?',
-    'howItWorks.finalCta.notReadyDescription': 'Rejoignez gratuitement notre réseau pour vérifier si vous correspondez à l\'un(e) de nos client(e)s d\'exception.',
+    'howItWorks.finalCta.notReadyTitle': 'Pas prêt à investir ?',
+    'howItWorks.finalCta.notReadyDescription': "Lisez notre rapport gratuit sur les '11 Schémas Cachés' qui empêchent les célibataires intelligents à Maurice de trouver l'amour.",
     
     // Footer (French)
     'footer.tagline': 'Une expérience de dating réinventée pour les professionnels cosmopolites à Maurice.',

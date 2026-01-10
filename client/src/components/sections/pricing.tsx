@@ -209,14 +209,10 @@ export default function Pricing() {
           
           <p className="text-gray-500 text-base body-text">
             {t('home.pricing.notReady')}{" "}
-            <Link href="/network" onClick={() => window.scrollTo(0, 0)}>
+            <Link href="/dating-patterns-guide" onClick={() => window.scrollTo(0, 0)}>
               <span className="text-primary hover:underline cursor-pointer">
-                {t('home.pricing.joinNetwork')}
+                {t('home.pricing.freeReport')}
               </span>
-            </Link>
-            <br />
-            <Link href="/network" onClick={() => window.scrollTo(0, 0)}>
-              <span className="text-primary hover:underline cursor-pointer">{t('home.pricing.createProfile')}</span>
             </Link>
           </p>
         </div>
