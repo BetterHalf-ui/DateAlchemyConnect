@@ -26,6 +26,7 @@ import ProtectedRoute from "@/components/admin/protected-route";
 import FaviconPreview from "@/components/favicon-preview";
 import SinglesSocials from "@/pages/events/singles-socials";
 import NotFound from "@/pages/not-found";
+import ExitIntentPopup from "@/components/exit-intent-popup";
 
 function Router() {
   // Track page views when routes change
@@ -70,6 +71,7 @@ function App() {
         <I18nProvider>
             <Toaster />
             <Router />
+            <ExitIntentPopup />
         </I18nProvider>
       </TooltipProvider>
     </QueryClientProvider>
