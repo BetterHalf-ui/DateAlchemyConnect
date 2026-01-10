@@ -7,7 +7,8 @@ export default function ExitIntentPopup() {
   const { showPopup, closePopup } = useExitIntent({
     threshold: 20,
     cookieName: 'butterfly_trap_popup_shown',
-    cookieExpireDays: 7
+    cookieExpireDays: 7,
+    preloadImage: datingResetImage
   });
 
   if (!showPopup) return null;
@@ -32,7 +33,9 @@ export default function ExitIntentPopup() {
           <img
             src={datingResetImage}
             alt="Professional singles contemplating relationships"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-top"
+            loading="eager"
+            decoding="async"
           />
         </div>
 

@@ -1,10 +1,11 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 
 interface UseExitIntentOptions {
   threshold?: number;
   delay?: number;
   cookieName?: string;
   cookieExpireDays?: number;
+  preloadImage?: string;
 }
 
 export function useExitIntent(options: UseExitIntentOptions = {}) {
@@ -12,11 +13,21 @@ export function useExitIntent(options: UseExitIntentOptions = {}) {
     threshold = 20,
     delay = 0,
     cookieName = 'exit_intent_shown',
-    cookieExpireDays = 7
+    cookieExpireDays = 7,
+    preloadImage
   } = options;
 
   const [showPopup, setShowPopup] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
+  const imagePreloaded = useRef(false);
+
+  useEffect(() => {
+    if (preloadImage && !imagePreloaded.current) {
+      const img = new Image();
+      img.src = preloadImage;
+      imagePreloaded.current = true;
+    }
+  }, [preloadImage]);
 
   const hasBeenShown = useCallback(() => {
     try {
