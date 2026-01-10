@@ -11,16 +11,16 @@ export default function LeadMagnetBanner() {
       <div className="max-w-4xl mx-auto px-4">
         <div className="bg-[#f5f5f0] rounded-2xl overflow-hidden shadow-md">
           <div className="flex flex-col md:flex-row">
-            <div className="md:w-2/5">
+            <div className="md:w-1/2 flex-shrink-0">
               <img
                 src={datingResetImage}
                 alt="Is a hidden pattern keeping you single?"
-                className="w-full h-48 md:h-full object-cover object-top"
+                className="w-full h-56 md:h-full object-cover object-center"
                 loading="lazy"
               />
             </div>
             
-            <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+            <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
                 Is a 'Hidden Pattern' keeping you single?
               </h3>
