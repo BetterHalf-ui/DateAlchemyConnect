@@ -26,7 +26,7 @@ export default function DatingPatternsGuide() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Are you falling into the "Butterfly Trap"?
+                Why do smart, successful singles in Mauritius still struggle to find love?
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
