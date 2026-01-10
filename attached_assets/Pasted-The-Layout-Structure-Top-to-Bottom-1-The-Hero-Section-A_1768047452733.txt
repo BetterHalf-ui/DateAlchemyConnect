@@ -1,0 +1,46 @@
+The Layout Structure (Top to Bottom)
+1. The Hero Section (Above the Fold)
+Goal: Confirm they are in the right place and hook their attention immediately.
+
+Headline (Big & Bold): "Why do smart, successful singles in Mauritius still struggle to find love?"
+
+Sub-headline: "It’s not bad luck. It’s not a lack of options. It’s often one of these 11 hidden subconscious patterns."
+
+Visual (Right Side): A high-quality 3D Mockup of the guide (looks like a physical book or tablet). This makes the digital file feel like a tangible, valuable product.
+
+The Call to Action (Left Side):
+
+Don't show the form yet (on mobile).
+
+Button: "Get the Free Diagnosis" (Scrolls them to the form).
+
+2. The "Teaser" Section (The "What's Inside")
+Goal: Create curiosity so they feel they MUST read it.
+
+Section Title: What You'll Discover Inside
+
+Format: Use the teaser bullets we refined earlier, but add icons.
+
+🦋 The Butterfly Trap: Why specific "sparks" are actually a warning sign.
+
+⏳ The "Perfect Timing" Illusion: How waiting for "ready" is keeping you single.
+
+🛑 The Give-to-Get Trap: Why "keeping score" prevents real intimacy.
+
+...plus 8 more specific patterns observed in the Mauritian dating scene.
+
+3. The "Authority" Section (Why listen to you?)
+Goal: Prove this isn't just ChatGPT advice—it's from real matchmakers.
+
+Visual: A warm, professional photo of the founders/matchmakers.
+
+Copy: "We are [Names], certified matchmakers at The Date Alchemy. After working with hundreds of singles in Mauritius, we noticed the same patterns repeating again and again. We wrote this guide to help you identify your blind spots so you can stop searching and start connecting."
+
+4. The Embed Section (The Form)
+Goal: The actual conversion.
+
+Headline: "Where should we send your copy?"
+
+The Embed: Paste your Fillout form code here.
+
+Tip: In Fillout settings, remove the "Download Guide..." header from the form itself since your page already has headlines. Keep the form strictly to inputs (Name, Email) and the Submit button.

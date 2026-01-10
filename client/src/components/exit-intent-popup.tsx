@@ -14,7 +14,7 @@ export default function ExitIntentPopup() {
   if (!showPopup) return null;
 
   const handleCTAClick = () => {
-    window.open('https://betterhalf.fillout.com/t/oy76Ymzo8jus', '_blank');
+    window.location.href = '/dating-patterns-guide';
     closePopup();
   };
 

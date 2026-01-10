@@ -3,7 +3,7 @@ import datingResetImage from '@assets/DatingReset_1768045206756.png';
 
 export default function LeadMagnetBanner() {
   const handleCTAClick = () => {
-    window.open('https://betterhalf.fillout.com/t/oy76Ymzo8jus', '_blank');
+    window.location.href = '/dating-patterns-guide';
   };
 
   return (

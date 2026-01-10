@@ -25,6 +25,7 @@ import AdminEvents from "@/pages/admin/events";
 import ProtectedRoute from "@/components/admin/protected-route";
 import FaviconPreview from "@/components/favicon-preview";
 import SinglesSocials from "@/pages/events/singles-socials";
+import DatingPatternsGuide from "@/pages/dating-patterns-guide";
 import NotFound from "@/pages/not-found";
 import ExitIntentPopup from "@/components/exit-intent-popup";
 
@@ -46,6 +47,9 @@ function Router() {
       
       {/* Events Routes */}
       <Route path="/events/singlessocials" component={SinglesSocials} />
+      
+      {/* Lead Magnet Landing Page */}
+      <Route path="/dating-patterns-guide" component={DatingPatternsGuide} />
       
       {/* Admin Routes - Password Protected */}
       <Route path="/admin/login" component={AdminLogin} />
