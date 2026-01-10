@@ -1,7 +1,13 @@
 import { Button } from '@/components/ui/button';
+import { useEffect } from 'react';
 import datingResetImage from '@assets/DatingReset_1768045206756.png';
 
 export default function LeadMagnetBanner() {
+  useEffect(() => {
+    const img = new Image();
+    img.src = datingResetImage;
+  }, []);
+
   const handleCTAClick = () => {
     window.location.href = '/dating-patterns-guide';
   };
@@ -16,7 +22,8 @@ export default function LeadMagnetBanner() {
                 src={datingResetImage}
                 alt="Is a hidden pattern keeping you single?"
                 className="w-full h-56 md:h-full object-cover object-center"
-                loading="lazy"
+                loading="eager"
+                decoding="async"
               />
             </div>
             
