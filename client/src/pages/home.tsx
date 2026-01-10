@@ -249,16 +249,9 @@ export default function Home() {
             {t('home.cta.subtext')}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
+          <div className="text-center text-sm">
             <Link href="/how-it-works" className="text-white hover:text-primary underline" onClick={() => window.scrollTo(0, 0)} data-testid="link-how-it-works-top">
               {t('home.cta.howItWorks')}
-            </Link>
-            <span className="hidden sm:inline text-gray-500">|</span>
-            <Link href="/network" className="text-white hover:text-primary underline" onClick={() => {
-              window.scrollTo(0, 0);
-              trackFreeSignup();
-            }} data-testid="link-network-top">
-              {t('home.cta.notReady')}
             </Link>
           </div>
         </div>
@@ -332,16 +325,9 @@ export default function Home() {
             {t('home.cta.subtext')}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
+          <div className="text-center text-sm">
             <Link href="/how-it-works" className="text-white hover:text-primary underline" onClick={() => window.scrollTo(0, 0)} data-testid="link-how-it-works">
               {t('home.cta.howItWorks')}
-            </Link>
-            <span className="hidden sm:inline text-gray-500">|</span>
-            <Link href="/network" className="text-white hover:text-primary underline" onClick={() => {
-              window.scrollTo(0, 0);
-              trackFreeSignup();
-            }} data-testid="link-network">
-              {t('home.cta.notReady')}
             </Link>
           </div>
         </div>

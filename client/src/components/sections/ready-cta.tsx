@@ -20,16 +20,6 @@ export default function ReadyCTA() {
             Apply Now
           </Button>
         </a>
-        <div className="mt-8">
-          <p className="text-gray-300 sans-body mb-4">
-            Not ready to invest?
-          </p>
-          <Link href="/dating-patterns-guide" onClick={() => window.scrollTo(0, 0)}>
-            <Button variant="link" className="text-primary hover:text-primary/80 serif-title">
-              Read our free report on the '11 Hidden Patterns' preventing smart singles in Mauritius from finding love.
-            </Button>
-          </Link>
-        </div>
       </div>
     </section>
   );
