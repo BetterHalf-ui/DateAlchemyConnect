@@ -18,7 +18,7 @@ export default function Header() {
   const applicationLink = useApplicationLink();
   
   // Check if we're on a page that needs a white background header by default
-  const needsWhiteHeader = location.startsWith('/blog') || location.startsWith('/admin') || location.startsWith('/network') || location.startsWith('/privacy-policy') || location.startsWith('/rebrand-announcement') || location.startsWith('/how-it-works') || location.startsWith('/events');
+  const needsWhiteHeader = location.startsWith('/blog') || location.startsWith('/admin') || location.startsWith('/network') || location.startsWith('/privacy-policy') || location.startsWith('/rebrand-announcement') || location.startsWith('/how-it-works') || location.startsWith('/events') || location.startsWith('/dating-patterns-guide');
 
   useEffect(() => {
     const handleScroll = () => {
