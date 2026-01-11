@@ -162,6 +162,10 @@ export default function Pricing() {
               href={applicationLink} 
               target="_blank" 
               rel="noopener noreferrer"
+              onClick={() => {
+                trackApplicationClick(language, 'experience_difference');
+                trackApplicationSubmit();
+              }}
             >
               <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl serif-title luxury-hover">
                 {t('home.comparison.cta')}
