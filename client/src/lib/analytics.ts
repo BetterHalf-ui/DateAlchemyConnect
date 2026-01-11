@@ -55,3 +55,8 @@ export const trackReferralClick = () => {
 export const trackLeadMagnetClick = (language: 'en' | 'fr', location: string) => {
   trackEvent('lead_magnet_click', 'engagement', `${location}_${language}`);
 };
+
+// Track newsletter signups with location parameter
+export const trackNewsletterSignup = (language: 'en' | 'fr', location: string) => {
+  trackEvent('newsletter_signup', 'engagement', `${location}_${language}`);
+};

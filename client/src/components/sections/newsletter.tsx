@@ -4,9 +4,10 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { useI18n } from "@/lib/i18n";
 import { trackContactForm } from "@/lib/meta-pixel";
+import { trackNewsletterSignup } from "@/lib/analytics";
 
 export default function Newsletter() {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -44,6 +45,7 @@ export default function Newsletter() {
 
       if (response.ok) {
         trackContactForm(); // Track Meta Pixel Contact event
+        trackNewsletterSignup(language, 'home_section'); // Track GA newsletter signup
         toast({
           title: "Successfully subscribed!",
           description: "You'll receive our bi-weekly dating tips straight to your inbox.",

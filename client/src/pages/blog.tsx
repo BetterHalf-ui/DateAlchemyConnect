@@ -10,6 +10,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useI18n } from "@/lib/i18n";
 import { useSEO } from "@/hooks/use-seo";
+import { trackNewsletterSignup } from "@/lib/analytics";
 import type { BlogPost } from "@shared/schema";
 
 export default function Blog() {
@@ -87,6 +88,7 @@ export default function Blog() {
       const result = await response.json();
 
       if (response.ok) {
+        trackNewsletterSignup(language, 'blog_page'); // Track GA newsletter signup
         toast({
           title: "Successfully subscribed!",
           description: "You'll receive our bi-weekly dating tips straight to your inbox.",
