@@ -5,10 +5,18 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
 import { useApplicationLink } from "@/hooks/use-application-link";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function HowItWorks() {
   const { t, language } = useI18n();
   const applicationLink = useApplicationLink();
+  
+  useSEO({
+    title: "The Date Alchemy - Ultra-curated matchmaking & dating service for busy singles. Discreet, modern, and designed for Mauritius.",
+    description: "Learn how our premium matchmaking process works. From your initial consultation to meeting your perfect match, discover our personalized approach to finding love in Mauritius.",
+    keywords: "how matchmaking works, dating process Mauritius, matchmaking steps, finding love Mauritius, premium dating service",
+    canonical: `${window.location.origin}/how-it-works`
+  });
   
   return (
     <div className="min-h-screen">
