@@ -5,6 +5,8 @@ import { COMPANY_INFO } from "@/lib/constants";
 import LanguageSwitcher from "@/components/i18n/language-switcher";
 import { useI18n } from "@/lib/i18n";
 import { useApplicationLink } from "@/hooks/use-application-link";
+import { trackApplicationClick } from "@/lib/analytics";
+import { trackApplicationSubmit } from "@/lib/meta-pixel";
 import { ChevronDownIcon } from "lucide-react";
 
 export default function Header() {
@@ -14,7 +16,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isEventsDropdownOpen, setIsEventsDropdownOpen] = useState(false);
   const [location] = useLocation();
-  const { t } = useI18n();
+  const { t, language } = useI18n();
   const applicationLink = useApplicationLink();
   
   // Check if we're on a page that needs a white background header by default
@@ -148,6 +150,10 @@ export default function Header() {
               target="_blank" 
               rel="noopener noreferrer"
               className="hidden md:block"
+              onClick={() => {
+                trackApplicationClick(language, 'nav_menu');
+                trackApplicationSubmit();
+              }}
             >
               <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 font-medium">
                 {t('nav.applyNow')}
@@ -200,7 +206,11 @@ export default function Header() {
               target="_blank" 
               rel="noopener noreferrer"
               className="block pt-4"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                trackApplicationClick(language, 'nav_menu_mobile');
+                trackApplicationSubmit();
+                setIsMobileMenuOpen(false);
+              }}
             >
               <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 font-medium w-full">
                 {t('nav.applyNow')}
