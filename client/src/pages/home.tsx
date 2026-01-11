@@ -31,7 +31,7 @@ export default function Home() {
       keywords: "matchmaking Mauritius, dating service Mauritius, premium dating, professional singles, relationship coaching, intentional dating, elite matchmaking, Betterhalf Mauritius, formerly Betterhalf"
     },
     fr: {
-      title: "The Date Alchemy (anciennement Betterhalf) - Service de Rencontres Premium pour Professionnels Cosmopolitains à Maurice",
+      title: "The Date Alchemy - Service de Rencontres et Matchmaking sur mesure pour célibataires occupés. Discret, moderne et pensé pour Maurice.",
       description: "Rejoignez le service de rencontres le plus exclusif de Maurice pour professionnels cosmopolites. The Date Alchemy, anciennement Betterhalf Maurice, offre matchmaking personnalisé, membres vérifiés, rencontres alignées.",
       keywords: "matchmaking Maurice, service de rencontres Maurice, rencontres premium, célibataires professionnels, coaching relationnel, rencontres intentionnelles, matchmaking élite, Betterhalf Maurice, anciennement Betterhalf"
     }
