@@ -236,7 +236,7 @@ export default function Home() {
             target="_blank" 
             rel="noopener noreferrer"
             onClick={() => {
-              trackApplicationClick(language);
+              trackApplicationClick(language, 'home_cta_1');
               trackApplicationSubmit();
             }}
           >
@@ -312,7 +312,7 @@ export default function Home() {
             target="_blank" 
             rel="noopener noreferrer"
             onClick={() => {
-              trackApplicationClick(language);
+              trackApplicationClick(language, 'home_cta_2');
               trackApplicationSubmit();
             }}
           >

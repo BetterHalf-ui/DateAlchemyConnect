@@ -6,6 +6,8 @@ import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
 import { useApplicationLink } from "@/hooks/use-application-link";
 import { useSEO } from "@/hooks/use-seo";
+import { trackApplicationClick } from "@/lib/analytics";
+import { trackApplicationSubmit } from "@/lib/meta-pixel";
 
 export default function HowItWorks() {
   const { t, language } = useI18n();
@@ -44,6 +46,10 @@ export default function HowItWorks() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="inline-block bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 body-text"
+                  onClick={() => {
+                    trackApplicationClick(language, 'how_it_works_hero');
+                    trackApplicationSubmit();
+                  }}
                 >
                   {t('howItWorks.hero.ctaButton')}
                 </a>
@@ -254,6 +260,10 @@ export default function HowItWorks() {
             href={applicationLink} 
             target="_blank" 
             rel="noopener noreferrer"
+            onClick={() => {
+              trackApplicationClick(language, 'how_it_works_final');
+              trackApplicationSubmit();
+            }}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl font-semibold mb-6">
               {t('howItWorks.finalCta.readyButton')}

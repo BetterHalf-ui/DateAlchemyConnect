@@ -31,9 +31,9 @@ export const trackEvent = (
   }
 };
 
-// Track application form clicks
-export const trackApplicationClick = (language: 'en' | 'fr') => {
-  trackEvent('application_click', 'engagement', `application_${language}`);
+// Track application form clicks with location parameter
+export const trackApplicationClick = (language: 'en' | 'fr', location: string) => {
+  trackEvent('application_click', 'engagement', `${location}_${language}`);
 };
 
 // Track blog navigation

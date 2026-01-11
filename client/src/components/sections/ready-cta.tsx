@@ -1,9 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useApplicationLink } from "@/hooks/use-application-link";
+import { useI18n } from "@/lib/i18n";
+import { trackApplicationClick } from "@/lib/analytics";
+import { trackApplicationSubmit } from "@/lib/meta-pixel";
 
 export default function ReadyCTA() {
   const applicationLink = useApplicationLink();
+  const { language } = useI18n();
   
   return (
     <section className="section-black py-32 text-center">
@@ -15,6 +19,10 @@ export default function ReadyCTA() {
           href={applicationLink} 
           target="_blank" 
           rel="noopener noreferrer"
+          onClick={() => {
+            trackApplicationClick(language, 'ready_cta');
+            trackApplicationSubmit();
+          }}
         >
           <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl serif-title luxury-hover">
             Apply Now

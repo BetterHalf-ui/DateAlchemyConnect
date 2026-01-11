@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useI18n } from '@/lib/i18n';
 import { useApplicationLink } from "@/hooks/use-application-link";
+import { trackApplicationClick } from "@/lib/analytics";
+import { trackApplicationSubmit } from "@/lib/meta-pixel";
 
 const trustStats = [
   { percentage: "99%", descriptionKey: "home.trust.stat1" },
@@ -26,7 +28,7 @@ const guarantees = [
 ];
 
 export default function Pricing() {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
   const applicationLink = useApplicationLink();
   
   return (
@@ -201,6 +203,10 @@ export default function Pricing() {
             href={applicationLink} 
             target="_blank" 
             rel="noopener noreferrer"
+            onClick={() => {
+              trackApplicationClick(language, 'pricing_membership');
+              trackApplicationSubmit();
+            }}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl font-semibold mb-8 rounded-full">
               {t('home.pricing.applyNow')}
