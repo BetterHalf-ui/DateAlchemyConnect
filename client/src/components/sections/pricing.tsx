@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useI18n } from '@/lib/i18n';
 import { useApplicationLink } from "@/hooks/use-application-link";
-import { trackApplicationClick } from "@/lib/analytics";
+import { trackApplicationClick, trackLeadMagnetClick } from "@/lib/analytics";
 import { trackApplicationSubmit } from "@/lib/meta-pixel";
 
 const trustStats = [
@@ -215,7 +215,10 @@ export default function Pricing() {
           
           <p className="text-gray-500 text-base body-text">
             {t('home.pricing.notReady')}{" "}
-            <Link href="/dating-patterns-guide" onClick={() => window.scrollTo(0, 0)}>
+            <Link href="/dating-patterns-guide" onClick={() => {
+              trackLeadMagnetClick(language, 'pricing_cta');
+              window.scrollTo(0, 0);
+            }}>
               <span className="text-primary hover:underline cursor-pointer">
                 {t('home.pricing.freeReport')}
               </span>

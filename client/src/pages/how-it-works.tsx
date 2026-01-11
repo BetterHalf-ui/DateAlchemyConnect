@@ -6,7 +6,7 @@ import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
 import { useApplicationLink } from "@/hooks/use-application-link";
 import { useSEO } from "@/hooks/use-seo";
-import { trackApplicationClick } from "@/lib/analytics";
+import { trackApplicationClick, trackLeadMagnetClick } from "@/lib/analytics";
 import { trackApplicationSubmit } from "@/lib/meta-pixel";
 
 export default function HowItWorks() {
@@ -271,7 +271,10 @@ export default function HowItWorks() {
           </a>
           <div className="text-gray-600">
             <p className="mb-2">{t('howItWorks.finalCta.notReadyTitle')}</p>
-            <Link href="/dating-patterns-guide" onClick={() => window.scrollTo(0, 0)}>
+            <Link href="/dating-patterns-guide" onClick={() => {
+              trackLeadMagnetClick(language, 'how_it_works');
+              window.scrollTo(0, 0);
+            }}>
               <span className="text-primary hover:underline cursor-pointer">
                 {t('howItWorks.finalCta.notReadyDescription')}
               </span>

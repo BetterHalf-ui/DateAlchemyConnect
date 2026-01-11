@@ -1,14 +1,19 @@
 import { Button } from '@/components/ui/button';
 import { useEffect } from 'react';
+import { useI18n } from '@/lib/i18n';
+import { trackLeadMagnetClick } from '@/lib/analytics';
 import datingResetImage from '@assets/DatingReset_1768045206756.png';
 
 export default function LeadMagnetBanner() {
+  const { language } = useI18n();
+  
   useEffect(() => {
     const img = new Image();
     img.src = datingResetImage;
   }, []);
 
   const handleCTAClick = () => {
+    trackLeadMagnetClick(language, 'blog_banner');
     window.location.href = '/dating-patterns-guide';
   };
 

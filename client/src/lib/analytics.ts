@@ -50,3 +50,8 @@ export const trackLanguageSwitch = (from: string, to: string) => {
 export const trackReferralClick = () => {
   trackEvent('referral_click', 'engagement', 'nominate_someone');
 };
+
+// Track lead magnet clicks with location parameter
+export const trackLeadMagnetClick = (language: 'en' | 'fr', location: string) => {
+  trackEvent('lead_magnet_click', 'engagement', `${location}_${language}`);
+};

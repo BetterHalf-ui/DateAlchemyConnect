@@ -1,9 +1,12 @@
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useExitIntent } from '@/hooks/use-exit-intent';
+import { useI18n } from '@/lib/i18n';
+import { trackLeadMagnetClick } from '@/lib/analytics';
 import datingResetImage from '@assets/DatingReset_1768045206756.png';
 
 export default function ExitIntentPopup() {
+  const { language } = useI18n();
   const { showPopup, closePopup } = useExitIntent({
     threshold: 20,
     cookieName: 'butterfly_trap_popup_shown',
@@ -14,6 +17,7 @@ export default function ExitIntentPopup() {
   if (!showPopup) return null;
 
   const handleCTAClick = () => {
+    trackLeadMagnetClick(language, 'popup');
     window.location.href = '/dating-patterns-guide';
     closePopup();
   };
