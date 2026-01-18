@@ -3,7 +3,6 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { useI18n } from "@/lib/i18n";
 import { useSEO } from "@/hooks/use-seo";
-import { Shield, Lock, Eye } from "lucide-react";
 import { trackApplicationClick } from "@/lib/analytics";
 
 export default function Apply() {
@@ -44,26 +43,18 @@ export default function Apply() {
 
   const content = {
     en: {
-      title: "Start Your Journey",
-      subtitle: "Complete your application to join our exclusive matchmaking network",
-      confidentialTitle: "Your Privacy is Our Priority",
-      confidentialText: "All information you share is 100% confidential. We never share your personal details with anyone outside our matchmaking team.",
-      features: [
-        { icon: Shield, text: "Secure & encrypted application" },
-        { icon: Lock, text: "Information never shared externally" },
-        { icon: Eye, text: "Only our matchmakers review your profile" }
-      ]
+      eyebrow: "Join 400+ vetted members of The Date Alchemy network in Mauritius.",
+      heading: "Apply to Join Our Exclusive Network",
+      subheadline: "Take the first step toward meeting your match. Fill out the preliminary details below.",
+      trustFooter: "Your Privacy is Our Priority",
+      trustText: "All information you share is 100% confidential. We never share your personal details with anyone outside our matchmaking team."
     },
     fr: {
-      title: "Commencez Votre Parcours",
-      subtitle: "Complétez votre candidature pour rejoindre notre réseau de matchmaking exclusif",
-      confidentialTitle: "Votre Confidentialité est Notre Priorité",
-      confidentialText: "Toutes les informations que vous partagez sont 100% confidentielles. Nous ne partageons jamais vos données personnelles avec quiconque en dehors de notre équipe de matchmaking.",
-      features: [
-        { icon: Shield, text: "Candidature sécurisée et cryptée" },
-        { icon: Lock, text: "Informations jamais partagées à l'extérieur" },
-        { icon: Eye, text: "Seuls nos matchmakers examinent votre profil" }
-      ]
+      eyebrow: "Rejoignez plus de 400 membres vérifiés du réseau The Date Alchemy à Maurice.",
+      heading: "Postulez pour Rejoindre Notre Réseau Exclusif",
+      subheadline: "Faites le premier pas vers votre rencontre. Remplissez les détails préliminaires ci-dessous.",
+      trustFooter: "Votre Confidentialité est Notre Priorité",
+      trustText: "Toutes les informations que vous partagez sont 100% confidentielles. Nous ne partageons jamais vos données personnelles avec quiconque en dehors de notre équipe de matchmaking."
     }
   };
 
@@ -74,29 +65,12 @@ export default function Apply() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      <main className="pt-24 pb-16">
+      <main className="pt-32 pb-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">{c.title}</h1>
-            <p className="text-xl text-gray-600">{c.subtitle}</p>
-          </div>
-
-          <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 mb-8">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                <Lock className="w-5 h-5 text-primary" />
-              </div>
-              <h2 className="text-xl font-semibold">{c.confidentialTitle}</h2>
-            </div>
-            <p className="text-gray-700 mb-4">{c.confidentialText}</p>
-            <div className="grid md:grid-cols-3 gap-4">
-              {c.features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                  <feature.icon className="w-4 h-4 text-primary" />
-                  <span>{feature.text}</span>
-                </div>
-              ))}
-            </div>
+            <p className="text-sm uppercase tracking-wide text-gray-500 mb-4">{c.eyebrow}</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">{c.heading}</h1>
+            <p className="text-xl text-gray-600">{c.subheadline}</p>
           </div>
 
           <div className="bg-white rounded-xl shadow-lg p-4 md:p-8">
@@ -107,6 +81,14 @@ export default function Apply() {
               data-fillout-inherit-parameters 
               data-fillout-dynamic-resize
             />
+          </div>
+
+          <div className="mt-6 bg-gray-100 border border-gray-200 rounded-lg p-4 text-center">
+            <p className="text-sm text-gray-600">
+              <span className="mr-2">🔒</span>
+              <span className="font-semibold">{c.trustFooter}</span>
+              {" "}{c.trustText}
+            </p>
           </div>
         </div>
       </main>
