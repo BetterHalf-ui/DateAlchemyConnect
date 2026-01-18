@@ -231,19 +231,18 @@ export default function Home() {
             {t('home.cta.title')}
           </h2>
           
-          <a 
-            href={applicationLink} 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <Link 
+            href={applicationLink}
             onClick={() => {
               trackApplicationClick(language, 'home_cta_1');
               trackApplicationSubmit();
+              window.scrollTo(0, 0);
             }}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl font-semibold mb-4" data-testid="button-get-started-top">
               {t('home.cta.button')}
             </Button>
-          </a>
+          </Link>
           
           <p className="text-sm text-gray-300 mb-8 body-text">
             {t('home.cta.subtext')}
@@ -307,19 +306,18 @@ export default function Home() {
             {t('home.cta.title')}
           </h2>
           
-          <a 
-            href={applicationLink} 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <Link 
+            href={applicationLink}
             onClick={() => {
               trackApplicationClick(language, 'home_cta_2');
               trackApplicationSubmit();
+              window.scrollTo(0, 0);
             }}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl font-semibold mb-4" data-testid="button-get-started">
               {t('home.cta.button')}
             </Button>
-          </a>
+          </Link>
           
           <p className="text-sm text-gray-300 mb-8 body-text">
             {t('home.cta.subtext')}

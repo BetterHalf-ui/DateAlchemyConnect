@@ -12,6 +12,7 @@ import Membership from '@/components/sections/membership';
 import Newsletter from '@/components/sections/newsletter';
 import FAQSection from '@/components/sections/faq-section';
 import { Button } from '@/components/ui/button';
+import { Link } from 'wouter';
 import { useApplicationLink } from "@/hooks/use-application-link";
 
 export default function NewHome() {
@@ -151,15 +152,14 @@ export default function NewHome() {
       <footer className="section-black py-16 text-center">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl serif-title mb-8">Ready to Begin?</h2>
-          <a 
-            href={applicationLink} 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <Link 
+            href={applicationLink}
+            onClick={() => window.scrollTo(0, 0)}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg serif-title luxury-hover">
               Sign Up
             </Button>
-          </a>
+          </Link>
           <div className="mt-12 text-gray-400 sans-body">
             <p>&copy; 2024 The Date Alchemy. All rights reserved.</p>
           </div>

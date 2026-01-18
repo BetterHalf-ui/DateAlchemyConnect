@@ -41,18 +41,17 @@ export default function HowItWorks() {
                 <p className="text-lg text-gray-700 leading-relaxed body-text mb-6">
                   {t('howItWorks.hero.ctaDescription')}
                 </p>
-                <a 
-                  href={applicationLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <Link 
+                  href={applicationLink}
                   className="inline-block bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 body-text"
                   onClick={() => {
                     trackApplicationClick(language, 'how_it_works_hero');
                     trackApplicationSubmit();
+                    window.scrollTo(0, 0);
                   }}
                 >
                   {t('howItWorks.hero.ctaButton')}
-                </a>
+                </Link>
               </div>
             </div>
             
@@ -256,19 +255,18 @@ export default function HowItWorks() {
           <p className="text-xl text-gray-700 mb-8 body-text">
             {t('howItWorks.finalCta.readyDescription')}
           </p>
-          <a 
-            href={applicationLink} 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <Link 
+            href={applicationLink}
             onClick={() => {
               trackApplicationClick(language, 'how_it_works_final');
               trackApplicationSubmit();
+              window.scrollTo(0, 0);
             }}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl font-semibold mb-6">
               {t('howItWorks.finalCta.readyButton')}
             </Button>
-          </a>
+          </Link>
           <div className="text-gray-600">
             <p className="mb-2">{t('howItWorks.finalCta.notReadyTitle')}</p>
             <Link href="/dating-patterns-guide" onClick={() => {

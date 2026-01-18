@@ -15,19 +15,18 @@ export default function ReadyCTA() {
         <h2 className="text-5xl md:text-6xl serif-title mb-12 text-white">
           Ready for real connection?
         </h2>
-        <a 
-          href={applicationLink} 
-          target="_blank" 
-          rel="noopener noreferrer"
+        <Link 
+          href={applicationLink}
           onClick={() => {
             trackApplicationClick(language, 'ready_cta');
             trackApplicationSubmit();
+            window.scrollTo(0, 0);
           }}
         >
           <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl serif-title luxury-hover">
             Apply Now
           </Button>
-        </a>
+        </Link>
       </div>
     </section>
   );

@@ -39,14 +39,13 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a 
-                  href={applicationLink} 
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link 
+                  href={applicationLink}
                   className="hover:text-primary transition-colors"
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   {t('nav.applyNow')}
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/blog" onClick={() => window.scrollTo(0, 0)}>

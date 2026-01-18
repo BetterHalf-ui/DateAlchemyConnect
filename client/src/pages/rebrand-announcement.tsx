@@ -3,6 +3,7 @@ import Footer from "@/components/layout/footer";
 import RebrandBanner from "@/components/layout/rebrand-banner";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
+import { Link } from "wouter";
 import { useApplicationLink } from "@/hooks/use-application-link";
 import { useEffect } from "react";
 
@@ -155,15 +156,14 @@ export default function RebrandAnnouncement() {
             </section>
 
             <div className="text-center">
-              <a 
-                href={applicationLink} 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Link 
+                href={applicationLink}
+                onClick={() => window.scrollTo(0, 0)}
               >
                 <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold">
                   Start Your Journey with The Date Alchemy
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

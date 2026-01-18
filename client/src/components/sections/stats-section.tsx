@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useApplicationLink } from "@/hooks/use-application-link";
 
@@ -54,15 +55,14 @@ export default function StatsSection() {
             </div>
           </div>
 
-          <a 
-            href={applicationLink} 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <Link 
+            href={applicationLink}
+            onClick={() => window.scrollTo(0, 0)}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg serif-title luxury-hover">
               Sign Up
             </Button>
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -191,15 +191,14 @@ export default function StatsSection() {
           </div>
 
           <div className="text-center mt-12">
-            <a 
-              href={applicationLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <Link 
+              href={applicationLink}
+              onClick={() => window.scrollTo(0, 0)}
             >
               <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl serif-title luxury-hover">
                 Experience The Difference
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -20,7 +20,7 @@ export default function Header() {
   const applicationLink = useApplicationLink();
   
   // Check if we're on a page that needs a white background header by default
-  const needsWhiteHeader = location.startsWith('/blog') || location.startsWith('/admin') || location.startsWith('/network') || location.startsWith('/privacy-policy') || location.startsWith('/rebrand-announcement') || location.startsWith('/how-it-works') || location.startsWith('/events') || location.startsWith('/dating-patterns-guide');
+  const needsWhiteHeader = location.startsWith('/blog') || location.startsWith('/admin') || location.startsWith('/network') || location.startsWith('/privacy-policy') || location.startsWith('/rebrand-announcement') || location.startsWith('/how-it-works') || location.startsWith('/events') || location.startsWith('/dating-patterns-guide') || location.startsWith('/apply');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -145,20 +145,19 @@ export default function Header() {
               </div>
             </button>
 
-            <a 
-              href={applicationLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <Link 
+              href={applicationLink}
               className="hidden md:block"
               onClick={() => {
                 trackApplicationClick(language, 'nav_menu');
                 trackApplicationSubmit();
+                window.scrollTo(0, 0);
               }}
             >
               <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 font-medium">
                 {t('nav.applyNow')}
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -201,21 +200,20 @@ export default function Header() {
             <div className="py-2">
               <LanguageSwitcher className={isScrolled || needsWhiteHeader ? 'text-gray-700' : 'text-white'} />
             </div>
-            <a 
-              href={applicationLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <Link 
+              href={applicationLink}
               className="block pt-4"
               onClick={() => {
                 trackApplicationClick(language, 'nav_menu_mobile');
                 trackApplicationSubmit();
                 setIsMobileMenuOpen(false);
+                window.scrollTo(0, 0);
               }}
             >
               <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 font-medium w-full">
                 {t('nav.applyNow')}
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       )}

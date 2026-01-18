@@ -158,19 +158,18 @@ export default function Pricing() {
           </div>
 
           <div className="text-center mt-12">
-            <a 
-              href={applicationLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <Link 
+              href={applicationLink}
               onClick={() => {
                 trackApplicationClick(language, 'experience_difference');
                 trackApplicationSubmit();
+                window.scrollTo(0, 0);
               }}
             >
               <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-xl serif-title luxury-hover">
                 {t('home.comparison.cta')}
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -203,19 +202,18 @@ export default function Pricing() {
             <p className="text-gray-600 text-sm mt-4 body-text">{t('home.pricing.priceIncreaseDisclaimer')}</p>
           </div>
           
-          <a 
-            href={applicationLink} 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <Link 
+            href={applicationLink}
             onClick={() => {
               trackApplicationClick(language, 'pricing_membership');
               trackApplicationSubmit();
+              window.scrollTo(0, 0);
             }}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl font-semibold mb-8 rounded-full">
               {t('home.pricing.applyNow')}
             </Button>
-          </a>
+          </Link>
           
           <p className="text-gray-500 text-base body-text">
             {t('home.pricing.notReady')}{" "}

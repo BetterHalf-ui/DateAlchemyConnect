@@ -46,15 +46,14 @@ export default function NewHero() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-          <a 
-            href={applicationLink} 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <Link 
+            href={applicationLink}
+            onClick={() => window.scrollTo(0, 0)}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg serif-title luxury-hover">
               Sign Up
             </Button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
