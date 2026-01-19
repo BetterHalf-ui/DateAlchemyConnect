@@ -44,14 +44,14 @@ export default function Apply() {
   const content = {
     en: {
       eyebrow: "Join 400+ vetted members of The Date Alchemy network in Mauritius.",
-      heading: "Apply to Join Our Exclusive Network",
+      heading: "Get Started Today",
       subheadline: "Take the first step toward meeting your match. Fill out the preliminary details below.",
       trustFooter: "Your Privacy is Our Priority",
       trustText: "All information you share is 100% confidential. We never share your personal details with anyone outside our matchmaking team."
     },
     fr: {
       eyebrow: "Rejoignez plus de 400 membres vérifiés du réseau The Date Alchemy à Maurice.",
-      heading: "Postulez pour Rejoindre Notre Réseau Exclusif",
+      heading: "Commencez Aujourd'hui",
       subheadline: "Faites le premier pas vers votre rencontre. Remplissez les détails préliminaires ci-dessous.",
       trustFooter: "Votre Confidentialité est Notre Priorité",
       trustText: "Toutes les informations que vous partagez sont 100% confidentielles. Nous ne partageons jamais vos données personnelles avec quiconque en dehors de notre équipe de matchmaking."
