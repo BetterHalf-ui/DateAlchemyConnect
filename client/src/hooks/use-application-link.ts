@@ -1,3 +1,3 @@
 export function useApplicationLink() {
-  return '/apply';
+  return '/apply?source=membership';
 }
