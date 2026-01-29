@@ -59,7 +59,7 @@ export default function Apply() {
   };
 
   const c = content[language];
-  const formId = language === 'fr' ? '85BTsRpeJYus' : 'cxX2zKbtj9us';
+  const formId = language === 'fr' ? 'iqhXB4tD9Hus' : 'cxX2zKbtj9us';
 
   return (
     <div className="min-h-screen bg-gray-50">
