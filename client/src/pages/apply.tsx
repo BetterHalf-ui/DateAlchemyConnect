@@ -52,7 +52,7 @@ export default function Apply() {
     fr: {
       eyebrow: "Rejoignez plus de 400 membres vérifiés du réseau The Date Alchemy à Maurice.",
       heading: "Commencez Aujourd'hui",
-      subheadline: "Faites le premier pas vers votre rencontre. Remplissez les détails préliminaires ci-dessous.",
+      subheadline: "Faites le premier pas vers une belle rencontre. Remplissez les détails ci-dessous.",
       trustFooter: "Votre Confidentialité est Notre Priorité",
       trustText: "Toutes les informations que vous partagez sont 100% confidentielles. Nous ne partageons jamais vos données personnelles avec quiconque en dehors de notre équipe de matchmaking."
     }
