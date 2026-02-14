@@ -27,6 +27,7 @@ import FaviconPreview from "@/components/favicon-preview";
 import SinglesSocials from "@/pages/events/singles-socials";
 import DatingPatternsGuide from "@/pages/dating-patterns-guide";
 import Apply from "@/pages/apply";
+import DiscoveryOffer from "@/pages/discovery-offer";
 import NotFound from "@/pages/not-found";
 import ExitIntentPopup from "@/components/exit-intent-popup";
 
@@ -54,6 +55,9 @@ function Router() {
       
       {/* Application Form Page */}
       <Route path="/apply" component={Apply} />
+      
+      {/* Discovery Offer Landing Page */}
+      <Route path="/discovery-offer" component={DiscoveryOffer} />
       
       {/* Admin Routes - Password Protected */}
       <Route path="/admin/login" component={AdminLogin} />
