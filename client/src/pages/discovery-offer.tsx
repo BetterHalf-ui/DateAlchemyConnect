@@ -62,7 +62,7 @@ const content = {
       },
       membership: {
         badge: "Best Value / Recommended",
-        name: "THE INNER CIRCLE",
+        name: "UNLIMITED MEMBERSHIP",
         tagline: "Your full year of curated introductions.",
         price: "Rs 8,000",
         period: "/ per year",
@@ -167,7 +167,7 @@ const content = {
       },
       membership: {
         badge: "Meilleur Rapport Qualité / Recommandé",
-        name: "LE CERCLE INTÉRIEUR",
+        name: "ADHÉSION ILLIMITÉE",
         tagline: "Votre année complète d'introductions curées.",
         price: "Rs 8 000",
         period: "/ par an",
