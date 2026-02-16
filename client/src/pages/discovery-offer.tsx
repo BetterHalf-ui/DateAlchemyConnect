@@ -8,6 +8,7 @@ import { COMPANY_INFO, CONTACT_INFO } from "@/lib/constants";
 import LanguageSwitcher from "@/components/i18n/language-switcher";
 import { ChevronDown, ChevronUp, Star, Check, Users, ShieldCheck, Heart, MessageCircle } from "lucide-react";
 import teamPhoto from "@assets/team_(1)_1753896165937_1771060680133.png";
+import heroImage from "@assets/Screenshot_2026-02-16_at_3.51.43_PM_1771237368788.png";
 
 const content = {
   en: {
@@ -283,23 +284,34 @@ export default function DiscoveryOffer() {
 
       {/* 1. HERO SECTION */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            {c.hero.headline}<br />{c.hero.headlineLine2}
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6 leading-relaxed">
-            {c.hero.subheadline}
-          </p>
-          <div className="inline-block bg-red-50 border border-red-200 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-8">
-            {c.hero.urgency}
-          </div>
-          <div>
-            <button
-              onClick={scrollToOffers}
-              className="inline-block bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              {c.hero.cta}
-            </button>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                {c.hero.headline}<br />{c.hero.headlineLine2}
+              </h1>
+              <p className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
+                {c.hero.subheadline}
+              </p>
+              <div className="inline-block bg-red-50 border border-red-200 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-8">
+                {c.hero.urgency}
+              </div>
+              <div>
+                <button
+                  onClick={scrollToOffers}
+                  className="inline-block bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  {c.hero.cta}
+                </button>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <img
+                src={heroImage}
+                alt="Happy couple laughing together"
+                className="rounded-2xl shadow-xl w-full max-w-md object-cover"
+              />
+            </div>
           </div>
 
           <div className="mt-16 bg-white rounded-2xl shadow-md border border-gray-100 p-8 max-w-2xl mx-auto">
