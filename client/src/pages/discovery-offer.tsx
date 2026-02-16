@@ -288,7 +288,7 @@ export default function DiscoveryOffer() {
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: '35% center',
         }}
       >
         <div className="absolute inset-0 bg-black/60" />
