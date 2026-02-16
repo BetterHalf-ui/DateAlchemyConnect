@@ -152,7 +152,7 @@ const content = {
     },
     offers: {
       title: "Les Offres",
-      pricingNote: "Payez Uniquement Quand Nous Délivrons",
+      pricingNote: "Payez uniquement lorsque nous délivrons",
       pricingDesc: "Nous croyons aux résultats. Pour démarrer votre recherche dédiée (Interview + Création de Profil), un paiement initial de Rs 800 est requis. Le solde restant (Rs 2 200 ou Rs 7 200) est payé uniquement une fois que vous acceptez un match que nous trouvons pour vous.",
       discovery: {
         badge: "Offre Limitée",
@@ -168,7 +168,7 @@ const content = {
       membership: {
         badge: "Recommandé",
         name: "ADHÉSION ILLIMITÉE",
-        tagline: "Votre année complète d'introductions curées.",
+        tagline: "Votre année complète d'introductions ultra-sélectionnées.",
         price: "Rs 8 000",
         period: "/ par an",
         cta: "Postuler pour l'Adhésion",
