@@ -118,13 +118,13 @@ const content = {
   },
   fr: {
     hero: {
-      headline: "Vivez le Matchmaking Ultra-Curé.",
-      headlineLine2: "Sans l'Engagement Annuel.",
-      subheadline: "Nous ouvrons brièvement les portes à une offre 'Découverte'. Découvrez la discrétion et la précision du service de matchmaking ultra-curé de Maurice sans les frais d'adhésion complets. Moderne, privé et conçu pour les célibataires occupés comme vous.",
+      headline: "Le matchmaking sur mesure.",
+      headlineLine2: "Libre de tout engagement annuel.",
+      subheadline: "Nous ouvrons exceptionnellement les portes d'une offre « Découverte ». Profitez de la discrétion et de la précision du service de matchmaking le plus sélectif de l'île Maurice, sans les frais d'adhésion annuels. Moderne, privé et conçu pour les célibataires exigeants comme vous.",
       urgency: "Disponibilité limitée jusqu'au 31 mars.",
       cta: "Voir les Options d'Accès",
-      memberCount: "Rejoignez plus de 400 Membres Curés",
-      memberDesc: "Sophistiqués, dynamiques et sérieux dans leur quête d'amour — locaux et étrangers de tous âges et horizons."
+      memberCount: "Rejoignez plus de 400 Membres sélectionnés",
+      memberDesc: "Sophistiqués, dynamiques et prêts pour une relation sérieuse—locaux et expatriés de tous âges et horizons."
     },
     testimonials: [
       { text: "Grâce à The Date Alchemy, j'ai trouvé l'amour. L'équipe a toujours été là, offrant un soutien discret et des conseils experts sans jamais devenir trop intrusifs.", profession: "Vétérinaire, 30" },
@@ -135,9 +135,9 @@ const content = {
     approach: {
       title: "Notre Approche",
       items: [
-        { title: "Matchs Curés et Vérifiés", desc: "Notre matchmaking va au-delà des listes. Nous priorisons la compatibilité dans les besoins relationnels, les modes de vie, les valeurs et les schémas d'attachement. Tous les matchs sont interviewés, vérifiés et sérieux dans leur recherche de partenaire." },
-        { title: "Votre Vie Privée est Prioritaire", desc: "Nous protégeons votre vie privée comme la nôtre. Votre profil détaillé, photo et numéro de téléphone ne sont jamais partagés sans votre consentement." },
-        { title: "Préparation du Rendez-vous", desc: "Une fois jumelé, votre rendez-vous est planifié sur mesure selon vos préférences. Vous recevrez des conseils et des outils pour faciliter la conversation. Présentez-vous et profitez." },
+        { title: "Rencontres sélectionnées et vérifiées", desc: "Notre approche va au-delà des critères superficiels. Nous priorisons la compatibilité en matière de besoins relationnels, styles de vie, valeurs et types d'attachement. Chaque match potentiel a été interviewé et vérifié—tous sont aussi sérieux que vous dans leur recherche." },
+        { title: "Votre confidentialité, notre priorité absolue", desc: "Nous protégeons votre vie privée comme la nôtre. Votre profil, photos et coordonnées restent strictement confidentiels et ne sont jamais partagés sans votre consentement explicite. Chaque introduction est orchestrée avec discrétion et respect." },
+        { title: "Préparation des rencontres", desc: "Une fois le match établi, nous organisons votre rendez-vous selon vos préférences. Vous recevez également des conseils et outils pratiques pour que la rencontre se déroule naturellement. Il ne vous reste qu'à vous présenter et profiter du moment." },
         { title: "Retour et Soutien", desc: "Votre matchmaker recueille vos retours après le rendez-vous. Nous offrons des ressources de coaching et un soutien attentionné pour vous aider à réussir." }
       ]
     },
@@ -152,8 +152,8 @@ const content = {
     },
     offers: {
       title: "Les Offres",
-      pricingNote: "Payez Uniquement Quand Nous Livrons",
-      pricingDesc: "Nous croyons aux résultats. Pour démarrer votre recherche dédiée (Interview + Création de Profil), des frais d'intégration de Rs 800 sont requis. Le solde restant (Rs 2 200 ou Rs 7 200) est payé uniquement une fois que vous acceptez un match que nous trouvons pour vous.",
+      pricingNote: "Payez Uniquement Quand Nous Délivrons",
+      pricingDesc: "Nous croyons aux résultats. Pour démarrer votre recherche dédiée (Interview + Création de Profil), un paiement initial de Rs 800 est requis. Le solde restant (Rs 2 200 ou Rs 7 200) est payé uniquement une fois que vous acceptez un match que nous trouvons pour vous.",
       discovery: {
         badge: "Offre Limitée",
         name: "LE PASS DÉCOUVERTE",
@@ -163,26 +163,26 @@ const content = {
         cta: "Obtenir le Pass Découverte",
         footer: "Disponibilité limitée jusqu'au 31 mars",
         footer2: "Offre limitée aux 50 premières personnes.",
-        mainFeature: "1 Rendez-vous Curé",
+        mainFeature: "1 Rencontre Ultra-sélectionnée",
       },
       membership: {
-        badge: "Meilleur Rapport Qualité / Recommandé",
+        badge: "Recommandé",
         name: "ADHÉSION ILLIMITÉE",
         tagline: "Votre année complète d'introductions curées.",
         price: "Rs 8 000",
         period: "/ par an",
         cta: "Postuler pour l'Adhésion",
         footer: "Valable 12 Mois",
-        mainFeature: "Rendez-vous Curés Illimités pour 1 An",
+        mainFeature: "Rencontres Ultra-sélectionnées pour 1 an",
       },
       sharedFeatures: [
-        "Modèle basé sur le succès*",
+        "Payez uniquement lorsque nous délivrons*",
         "Création de Profil avec Matchmaker",
-        "Coordination des Rendez-vous",
+        "Coordination du Rendez-vous",
         "Auto-évaluation des besoins relationnels",
         "Analyse du Style d'Attachement",
         "Analyse des Tendances de Dating",
-        "100% de Confidentialité",
+        "100% Confidentiel",
         "Conseils pré-rendez-vous dans votre boîte mail",
         "Suivi post-rendez-vous",
         "Accès direct à notre équipe de matchmaking (via Whatsapp & Email)"
@@ -199,17 +199,17 @@ const content = {
       desc: "Nous sommes un service de matchmaking centré sur l'humain, conçu pour Maurice. Nous servons discrètement les professionnels et expatriés qui valorisent la confidentialité et la qualité plutôt que la quantité.",
       points: [
         "100% de Profils Vérifiés : Pas de faux, pas de catfishing.",
-        "Privé et Discret : Votre profil n'est jamais public. Seul votre match potentiel vous voit.",
-        "Personnalisé : Les matchs sont sélectionnés à la main par nos fondateurs."
+        "Privé et Discret : Votre profil n'est jamais public. Seul votre match potentiel le verra.",
+        "Personnalisé : Les matchs sont sélectionnés personnellement par nos fondateurs."
       ]
     },
     faq: {
       title: "FAQ",
       items: [
-        { q: "Que se passe-t-il si j'achète le Pass Découverte et que je veux passer à l'adhésion ?", a: "Si vous souhaitez continuer l'expérience, vous pouvez passer à l'Adhésion Annuelle dans les 30 jours, et nous créditerons vos Rs 3 000 vers l'adhésion complète." },
-        { q: "Quand cette offre prend-elle fin ?", a: "C'est une offre disponible pour une fenêtre strictement limitée en mars. Une fois les places remplies, nous fermerons le niveau Découverte." },
+        { q: "Que se passe-t-il si j'achète le Pass Découverte et que je veux passer à l'adhésion ?", a: "Si vous souhaitez continuer l'expérience, vous pouvez passer à l'Adhésion Illimitée dans les 30 jours, et nous créditerons vos Rs 3 000 vers l'adhésion complète." },
+        { q: "Quand cette offre prend-elle fin ?", a: "Cette offre est exclusivement réservée pour une durée strictement limitée en mars. Une fois les places comblées, nous clôturerons notre offre « Découverte »." },
         { q: "Comment effectuer le paiement ?", a: "Actuellement, nous n'acceptons que les paiements par Juice/Virement bancaire pour les clients à Maurice et à l'étranger." },
-        { q: "Combien les rendez-vous savent-ils l'un de l'autre à l'avance ?", a: "La confidentialité et la discrétion sont fondamentales à notre service. Nous ne partageons pas les noms de famille avant le rendez-vous, et nous partageons les photos et numéros de téléphone uniquement si vous avez explicitement accepté. Nous fournissons aux deux parties une description complète du mode de vie, de la carrière, des intérêts, de l'âge, de la taille, de la nationalité, de la localisation, du statut matrimonial, des plans à long terme, du partenaire idéal, des habitudes de tabagisme et même du régime alimentaire du match." },
+        { q: "Que savent les partenaires l'un de l'autre avant la rencontre ?", a: "La confidentialité et la discrétion sont les piliers de notre service. Nous ne communiquons jamais les noms de famille avant le rendez-vous, et nous ne partageons les photos et numéros de téléphone qu'avec votre accord explicite. Nous fournissons aux deux parties un profil complet incluant le mode de vie, la carrière, les centres d'intérêt, l'âge, la taille, la nationalité, le lieu de résidence, le statut matrimonial, les projets à long terme, le partenaire idéal, ainsi que les habitudes en matière de tabac et même le régime alimentaire." },
         { q: "Accueillez-vous les candidats divorcés ou parents célibataires ?", a: "Absolument ! Nous accueillons les personnes divorcées ou parents célibataires, à condition que la séparation soit légalement documentée et à l'amiable. Si vous êtes prêt à commencer le prochain chapitre de votre vie, nous sommes là pour vous aider. Nous sommes transparents sur votre passé avec les matchs potentiels, donc ce n'est pas un sujet qui doit être discuté lors de votre rendez-vous." },
         { q: "Quelle est l'entreprise derrière The Date Alchemy ?", a: "The Date Alchemy est un service offert par l'entité mauricienne enregistrée Frolic Ltd (C23201149), également propriétaire de la plateforme lifestyle Frolic.mu." }
       ]
