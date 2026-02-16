@@ -283,43 +283,40 @@ export default function DiscoveryOffer() {
       </header>
 
       {/* 1. HERO SECTION */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                {c.hero.headline}<br />{c.hero.headlineLine2}
-              </h1>
-              <p className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
-                {c.hero.subheadline}
-              </p>
-              <div className="inline-block bg-red-50 border border-red-200 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-8">
-                {c.hero.urgency}
-              </div>
-              <div>
-                <button
-                  onClick={scrollToOffers}
-                  className="inline-block bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                >
-                  {c.hero.cta}
-                </button>
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <img
-                src={heroImage}
-                alt="Happy couple laughing together"
-                className="rounded-2xl shadow-xl w-full max-w-md object-cover"
-              />
-            </div>
+      <section
+        className="relative pt-32 pb-16 md:pt-40 md:pb-24 min-h-[90vh] flex items-center"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            {c.hero.headline}<br />{c.hero.headlineLine2}
+          </h1>
+          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed">
+            {c.hero.subheadline}
+          </p>
+          <div className="inline-block bg-white/15 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-full text-sm font-semibold mb-8">
+            {c.hero.urgency}
+          </div>
+          <div>
+            <button
+              onClick={scrollToOffers}
+              className="inline-block bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              {c.hero.cta}
+            </button>
           </div>
 
-          <div className="mt-16 bg-white rounded-2xl shadow-md border border-gray-100 p-8 max-w-2xl mx-auto">
+          <div className="mt-16 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 max-w-2xl mx-auto">
             <div className="flex items-center justify-center gap-2 mb-3">
               <Users className="w-5 h-5 text-primary" />
-              <h3 className="text-xl font-bold text-gray-900">{c.hero.memberCount}</h3>
+              <h3 className="text-xl font-bold text-white">{c.hero.memberCount}</h3>
             </div>
-            <p className="text-gray-600">{c.hero.memberDesc}</p>
+            <p className="text-gray-200">{c.hero.memberDesc}</p>
           </div>
         </div>
       </section>
