@@ -57,7 +57,7 @@ const content = {
         period: "/ one-time",
         cta: "Get Discovery Pass",
         footer: "Limited availability until 31st of March",
-        footer2: "Offer capped to the first 50 people.",
+        footer2: "Offer capped to the first 20 people.",
         mainFeature: "1 Curated Date",
       },
       membership: {
@@ -162,7 +162,7 @@ const content = {
         period: "/ unique",
         cta: "Obtenir le Pass Découverte",
         footer: "Disponibilité limitée jusqu'au 31 mars",
-        footer2: "Offre limitée aux 50 premières personnes.",
+        footer2: "Offre limitée aux 20 premières personnes.",
         mainFeature: "1 Rencontre Ultra-sélectionnée",
       },
       membership: {
