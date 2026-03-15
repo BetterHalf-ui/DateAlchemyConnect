@@ -51,7 +51,7 @@ const content = {
       pricingDesc: "We believe in results. To start your dedicated search (Interview + Profile Creation), a Rs 800 onboarding fee is required. The remaining balance (Rs 2,200 or Rs 7,200) is paid only once you accept a match we find you.",
       discovery: {
         badge: "Limited Time Offer",
-        name: "THE DISCOVERY PASS",
+        name: "THE DISCOVERY OFFER",
         tagline: "Experience the magic of alchemy once.",
         price: "Rs 3,000",
         period: "/ one-time",
@@ -157,7 +157,7 @@ const content = {
       pricingDesc: "Nous croyons aux résultats. Pour démarrer votre recherche dédiée (Interview + Création de Profil), un paiement initial de Rs 800 est requis. Le solde restant (Rs 2 200 ou Rs 7 200) est payé uniquement une fois que vous acceptez un match que nous trouvons pour vous.",
       discovery: {
         badge: "Offre Limitée",
-        name: "LE PASS DÉCOUVERTE",
+        name: "L'OFFRE DÉCOUVERTE",
         tagline: "Vivez la magie de l'alchimie une fois.",
         price: "Rs 3 000",
         period: "/ unique",
