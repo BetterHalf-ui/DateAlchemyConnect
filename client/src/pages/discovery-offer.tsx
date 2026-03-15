@@ -102,7 +102,7 @@ const content = {
     faq: {
       title: "FAQ",
       items: [
-        { q: "What happens if I buy the Discovery Pass and want to upgrade?", a: "If you'd like to continue the experience, you can upgrade to the Annual Membership within 30 days, and we'll credit your Rs 3,000 toward the full membership." },
+        { q: "What happens if I buy the Discovery Offer and want to upgrade?", a: "If you'd like to continue the experience, you can upgrade to the Annual Membership within 30 days, and we'll credit your Rs 3,000 toward the full membership." },
         { q: "When does this offer end?", a: "This is an offer available for a strictly limited window until 31st March. Once the spots are filled, we will close the Discovery tier." },
         { q: "How do I make the payment?", a: "Presently we only accept payment via Juice/Bank Transfer for both clients within and outside Mauritius." },
         { q: "How much do the dates know about each other beforehand?", a: "Confidentiality and discretion are fundamental to our service. We do not share last names before the date, and we share photographs and phone numbers only if you have explicitly agreed. We provide both sides with a complete description into the match's lifestyle, career, interests, age, height, nationality, location, marital status, long term plans, ideal partner, smoking habits and even diet." },
@@ -208,7 +208,7 @@ const content = {
     faq: {
       title: "FAQ",
       items: [
-        { q: "Que se passe-t-il si j'achète le Pass Découverte et que je veux passer à l'adhésion ?", a: "Si vous souhaitez continuer l'expérience, vous pouvez passer à l'Adhésion Illimitée dans les 30 jours, et nous créditerons vos Rs 3 000 vers l'adhésion complète." },
+        { q: "Que se passe-t-il si j'achète l'Offre Découverte et que je veux passer à l'adhésion ?", a: "Si vous souhaitez continuer l'expérience, vous pouvez passer à l'Adhésion Illimitée dans les 30 jours, et nous créditerons vos Rs 3 000 vers l'adhésion complète." },
         { q: "Quand cette offre prend-elle fin ?", a: "Cette offre est exclusivement réservée pour une durée strictement limitée jusqu'au 31 mars. Une fois les places comblées, nous clôturerons notre offre « Découverte »." },
         { q: "Comment effectuer le paiement ?", a: "Actuellement, nous n'acceptons que les paiements par Juice/Virement bancaire pour les clients à Maurice et à l'étranger." },
         { q: "Que savent les partenaires l'un de l'autre avant la rencontre ?", a: "La confidentialité et la discrétion sont les piliers de notre service. Nous ne communiquons jamais les noms de famille avant le rendez-vous, et nous ne partageons les photos et numéros de téléphone qu'avec votre accord explicite. Nous fournissons aux deux parties un profil complet incluant le mode de vie, la carrière, les centres d'intérêt, l'âge, la taille, la nationalité, le lieu de résidence, le statut matrimonial, les projets à long terme, le partenaire idéal, ainsi que les habitudes en matière de tabac et même le régime alimentaire." },
@@ -263,8 +263,8 @@ export default function DiscoveryOffer() {
       ? "Discovery Offer | The Date Alchemy - Premium Matchmaking Mauritius"
       : "Offre Découverte | The Date Alchemy - Matchmaking Premium Maurice",
     description: language === 'en'
-      ? "Experience ultra-curated matchmaking without the annual commitment. Try our Discovery Pass — limited availability through March 31st."
-      : "Vivez le matchmaking ultra-curé sans l'engagement annuel. Essayez notre Pass Découverte — disponibilité limitée jusqu'au 31 mars.",
+      ? "Experience ultra-curated matchmaking without the annual commitment. Try our Discovery Offer — limited availability through March 31st."
+      : "Vivez le matchmaking ultra-curé sans l'engagement annuel. Essayez notre Offre Découverte — disponibilité limitée jusqu'au 31 mars.",
     canonical: `${window.location.origin}/discovery-offer`
   });
 
