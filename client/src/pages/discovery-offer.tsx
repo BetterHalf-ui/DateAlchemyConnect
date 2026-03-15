@@ -464,6 +464,13 @@ export default function DiscoveryOffer() {
               {c.offers.pricingDesc}
             </p>
           </div>
+
+          {/* Returning applicants note */}
+          <p className="text-sm text-gray-500 text-center max-w-2xl mx-auto mt-4">
+            <span className="font-semibold">Note:</span> If you have previously submitted your details, you may simply email us at{" "}
+            <a href="mailto:hello@thedatealchemy.com" className="underline hover:text-gray-700">hello@thedatealchemy.com</a>{" "}
+            with <span className="italic">"activate discovery"</span> in the subject line.
+          </p>
         </div>
       </section>
 
