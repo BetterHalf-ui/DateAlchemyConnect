@@ -102,7 +102,7 @@ const content = {
       title: "FAQ",
       items: [
         { q: "What happens if I buy the Discovery Pass and want to upgrade?", a: "If you'd like to continue the experience, you can upgrade to the Annual Membership within 30 days, and we'll credit your Rs 3,000 toward the full membership." },
-        { q: "When does this offer end?", a: "This is an offer available for a strictly limited window in March. Once the spots are filled, we will close the Discovery tier." },
+        { q: "When does this offer end?", a: "This is an offer available for a strictly limited window until 31st March. Once the spots are filled, we will close the Discovery tier." },
         { q: "How do I make the payment?", a: "Presently we only accept payment via Juice/Bank Transfer for both clients within and outside Mauritius." },
         { q: "How much do the dates know about each other beforehand?", a: "Confidentiality and discretion are fundamental to our service. We do not share last names before the date, and we share photographs and phone numbers only if you have explicitly agreed. We provide both sides with a complete description into the match's lifestyle, career, interests, age, height, nationality, location, marital status, long term plans, ideal partner, smoking habits and even diet." },
         { q: "Do you cater to applicants who are divorced or single parents?", a: "Absolutely! We welcome individuals who are divorced or single parents, as long as the separation is legally documented and amicable. If you're ready to begin the next chapter of your life, we're here to assist you. We're upfront about your past with potential matches, so it's not a topic that needs to be discussed during your date." },
