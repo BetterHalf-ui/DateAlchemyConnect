@@ -419,6 +419,11 @@ export default function DiscoveryOffer() {
                 </div>
                 <p className="text-sm text-red-600 font-semibold mt-4 italic">{c.offers.discovery.footer}</p>
                 <p className="text-sm text-red-600 italic">{c.offers.discovery.footer2}</p>
+                <p className="text-xs text-gray-500 mt-4">
+                  <span className="font-semibold">Note:</span> If you have previously submitted your details, you may simply email us at{" "}
+                  <a href="mailto:hello@thedatealchemy.com" className="underline hover:text-gray-700">hello@thedatealchemy.com</a>{" "}
+                  with <span className="italic">"activate discovery"</span> in the subject line.
+                </p>
               </div>
             </div>
 
@@ -456,13 +461,6 @@ export default function DiscoveryOffer() {
               </div>
             </div>
           </div>
-
-          {/* Returning applicants note */}
-          <p className="text-sm text-gray-500 text-center max-w-2xl mx-auto mb-8">
-            <span className="font-semibold">Note:</span> If you have previously submitted your details, you may simply email us at{" "}
-            <a href="mailto:hello@thedatealchemy.com" className="underline hover:text-gray-700">hello@thedatealchemy.com</a>{" "}
-            with <span className="italic">"activate discovery"</span> in the subject line.
-          </p>
 
           {/* Pricing Note */}
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 max-w-3xl mx-auto text-center">
