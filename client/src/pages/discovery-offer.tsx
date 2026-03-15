@@ -58,6 +58,7 @@ const content = {
         cta: "Get Discovery Pass",
         footer: "Limited availability until 31st of March",
         footer2: "Offer capped to the first 20 people.",
+        note: `Note: If you have previously submitted your details, you may simply email us at hello@thedatealchemy.com with "activate discovery" in the subject line.`,
         mainFeature: "1 Curated Date",
       },
       membership: {
@@ -163,6 +164,7 @@ const content = {
         cta: "Obtenir le Pass Découverte",
         footer: "Disponibilité limitée jusqu'au 31 mars",
         footer2: "Offre limitée aux 20 premières personnes.",
+        note: `Note: Si vous nous avez déjà soumis vos détails, vous pouvez simplement nous envoyer un email à hello@thedatealchemy.com avec "Activer l'offre découverte" en objet.`,
         mainFeature: "1 Rencontre Ultra-sélectionnée",
       },
       membership: {
@@ -207,7 +209,7 @@ const content = {
       title: "FAQ",
       items: [
         { q: "Que se passe-t-il si j'achète le Pass Découverte et que je veux passer à l'adhésion ?", a: "Si vous souhaitez continuer l'expérience, vous pouvez passer à l'Adhésion Illimitée dans les 30 jours, et nous créditerons vos Rs 3 000 vers l'adhésion complète." },
-        { q: "Quand cette offre prend-elle fin ?", a: "Cette offre est exclusivement réservée pour une durée strictement limitée en mars. Une fois les places comblées, nous clôturerons notre offre « Découverte »." },
+        { q: "Quand cette offre prend-elle fin ?", a: "Cette offre est exclusivement réservée pour une durée strictement limitée jusqu'au 31 mars. Une fois les places comblées, nous clôturerons notre offre « Découverte »." },
         { q: "Comment effectuer le paiement ?", a: "Actuellement, nous n'acceptons que les paiements par Juice/Virement bancaire pour les clients à Maurice et à l'étranger." },
         { q: "Que savent les partenaires l'un de l'autre avant la rencontre ?", a: "La confidentialité et la discrétion sont les piliers de notre service. Nous ne communiquons jamais les noms de famille avant le rendez-vous, et nous ne partageons les photos et numéros de téléphone qu'avec votre accord explicite. Nous fournissons aux deux parties un profil complet incluant le mode de vie, la carrière, les centres d'intérêt, l'âge, la taille, la nationalité, le lieu de résidence, le statut matrimonial, les projets à long terme, le partenaire idéal, ainsi que les habitudes en matière de tabac et même le régime alimentaire." },
         { q: "Accueillez-vous les candidats divorcés ou parents célibataires ?", a: "Absolument ! Nous accueillons les personnes divorcées ou parents célibataires, à condition que la séparation soit légalement documentée et à l'amiable. Si vous êtes prêt à commencer le prochain chapitre de votre vie, nous sommes là pour vous aider. Nous sommes transparents sur votre passé avec les matchs potentiels, donc ce n'est pas un sujet qui doit être discuté lors de votre rendez-vous." },
@@ -419,11 +421,7 @@ export default function DiscoveryOffer() {
                 </div>
                 <p className="text-sm text-red-600 font-semibold mt-4 italic">{c.offers.discovery.footer}</p>
                 <p className="text-sm text-red-600 italic">{c.offers.discovery.footer2}</p>
-                <p className="text-xs text-gray-500 mt-4">
-                  <span className="font-semibold">Note:</span> If you have previously submitted your details, you may simply email us at{" "}
-                  <a href="mailto:hello@thedatealchemy.com" className="underline hover:text-gray-700">hello@thedatealchemy.com</a>{" "}
-                  with <span className="italic">"activate discovery"</span> in the subject line.
-                </p>
+                <p className="text-xs text-gray-500 mt-4">{c.offers.discovery.note}</p>
               </div>
             </div>
 
