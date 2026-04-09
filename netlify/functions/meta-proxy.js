@@ -12,6 +12,7 @@ export const handler = async (event) => {
   try {
     const META_PIXEL_ID = process.env.META_PIXEL_ID;
     const META_ACCESS_TOKEN = process.env.META_ACCESS_TOKEN;
+    const META_TEST_CODE = process.env.META_TEST_CODE;
 
     if (!META_PIXEL_ID || !META_ACCESS_TOKEN) {
       console.log('[meta-proxy] result', { metaStatus: null, reason: 'missing credentials' });
@@ -54,6 +55,8 @@ export const handler = async (event) => {
     if (fbp) userData.fbp = fbp;
     if (fbc) userData.fbc = fbc;
 
+    console.log('Sending with Test Code: ' + META_TEST_CODE);
+
     const payload = {
       data: [
         {
@@ -65,6 +68,7 @@ export const handler = async (event) => {
           user_data: userData,
         },
       ],
+      test_event_code: META_TEST_CODE || undefined,
     };
 
     const controller = new AbortController();
