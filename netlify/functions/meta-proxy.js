@@ -79,17 +79,21 @@ export const handler = async (event) => {
     );
 
     return {
-      statusCode: 200,
+      statusCode: response.status,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       body: JSON.stringify({ success: true, result: response.data }),
     };
   } catch (error) {
-    const errData = error?.response?.data || error.message;
-    console.error('Meta CAPI error:', errData);
+    const metaStatus = error?.response?.status;
+    const metaData = error?.response?.data;
+    console.error('Meta CAPI error:', metaData || error.message);
     return {
-      statusCode: 500,
+      statusCode: metaStatus || 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ error: 'Failed to send event to Meta CAPI' }),
+      body: JSON.stringify({
+        error: 'Failed to send event to Meta CAPI',
+        ...(metaData && { detail: metaData }),
+      }),
     };
   }
 };
