@@ -1,0 +1,79 @@
+The Netlify deploy errored, with the following guidance provided:
+
+Diagnosis — relevant log lines
+- [line 16](#L16) shows: The environment variable NODE_ENV is set to production (so devDependencies will not be installed).
+- [line 23](#L23) shows Vite was detected (Vite is required to build).
+- [line 26](#L26) shows the build failed with exit code 2.
+
+Error type and cause
+- The build is failing because Netlify is running with NODE_ENV=production so devDependencies are not being installed. Your build depends on a tool (Vite or other build tool) that lives in devDependencies, so it is missing at build time and the build script exits non‑zero.
+
+Specific checks to run (before changing Netlify settings)
+1. Verify the build tool is listed in package.json and that package.json is committed:
+   - Open package.json in your repo and confirm there is a build script and that Vite (or whatever tool your build uses) is present. Example file path:
+     https://github.com/BetterHalf-ui/DateAlchemyConnect/blob/main/package.json
+2. If the build tool (vite) is in devDependencies, that explains the warning in [line 16](#L16).
+
+Solutions (pick one)
+
+A — Prefered: install devDependencies on Netlify (so dev tools like vite are available)
+- In Netlify UI (Site settings → Build & deploy → Environment → Environment variables), add:
+  - Key: NPM_FLAGS
+  - Value: --include=dev
+- Or in your site settings set:
+  - Key: NODE_ENV
+  - Value: development
+  Note: Setting NODE_ENV=development will cause devDependencies to be installed, but using NPM_FLAGS is safer if you want NODE_ENV to remain production.
+- After adding NPM_FLAGS, trigger a new deploy.
+
+B — Alternative: move required build tools to regular dependencies
+- If you prefer to keep NODE_ENV=production, move the build tool(s) from devDependencies → dependencies so they are installed even when NODE_ENV=production.
+- Example command (run locally, commit the change):
+```bash
+# move vite from devDependencies to dependencies
+npm install vite@5.4.19 --save
+# or if using pnpm/yarn adapt accordingly
+```
+- Commit package.json and package-lock.json and push, then redeploy.
+
+C — Ensure a valid build script exists
+- Confirm package.json contains a build script that Netlify runs (example):
+```json
+{
+  "scripts": {
+    "build": "vite build"
+  }
+}
+```
+- If your build script uses a locally installed CLI (e.g., vite), and that CLI is in devDependencies, combine this with solution A or B.
+
+Extra verification
+- After making changes, run the build locally:
+```bash
+# simulate Netlify production install (without dev deps) - to verify you need to install dev deps
+NODE_ENV=production npm ci
+npm run build
+# or to simulate with dev deps:
+npm ci
+npm run build
+```
+This will prove whether the build needs devDependencies.
+
+Why this fixes it
+- [line 16](#L16) is the root cause: devDependencies were skipped. Ensuring devDependencies are installed on Netlify (NPM_FLAGS=--include=dev) or moving the build tools into dependencies guarantees the tooling (vite) exists at build time so the build script won't fail with exit code 2.
+
+If you run into a Node version error afterwards, update the Node version used by Netlify — see Netlify docs for changing Node versions: https://docs.netlify.com/configure-builds/manage-dependencies/#node-js-and-javascript
+
+The relevant error logs are:
+
+Line 16: WARNING: The environment variable 'NODE_ENV' is set to 'production'. Any 'devDependencies' in package.json will not be installed
+Line 17: No npm workspaces detected
+Line 18: Installing npm packages using npm version 10.8.2
+Line 19: up to date in 1s
+Line 20: npm packages installed
+Line 21: Successfully installed dependencies
+Line 22: Detected 1 framework(s)
+Line 23: "vite" at version "5.4.19"
+Line 24: Starting build script
+Line 25: Section completed: initializing
+Line 26: Failed during stage 'building site': Build script returned non-zero exit code: 2
