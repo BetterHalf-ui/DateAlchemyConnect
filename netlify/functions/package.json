@@ -6,6 +6,7 @@
     "@netlify/functions": "^2.8.1",
     "@supabase/supabase-js": "^2.45.4",
     "jsonwebtoken": "^9.0.2",
-    "@types/jsonwebtoken": "^9.0.7"
+    "@types/jsonwebtoken": "^9.0.7",
+    "axios": "^1.7.0"
   }
 }

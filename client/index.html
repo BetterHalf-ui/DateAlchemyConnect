@@ -68,9 +68,41 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '709403664238069');
-    fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel Code -->
+
+    <!-- Meta CAPI Bridge -->
+    <script>
+    function sendToMetaCAPI(eventName) {
+      var eventId = Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
+
+      function getCookie(name) {
+        var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? decodeURIComponent(match[2]) : '';
+      }
+
+      if (typeof fbq === 'function') {
+        fbq('track', eventName, {}, { eventID: eventId });
+      }
+
+      fetch('/.netlify/functions/meta-proxy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          eventName: eventName,
+          eventId: eventId,
+          url: window.location.href,
+          fbp: getCookie('_fbp'),
+          fbc: getCookie('_fbc')
+        })
+      }).catch(function(err) {
+        console.warn('Meta CAPI call failed:', err);
+      });
+    }
+
+    sendToMetaCAPI('PageView');
+    </script>
+    <!-- End Meta CAPI Bridge -->
     
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
