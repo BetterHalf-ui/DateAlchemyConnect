@@ -11,35 +11,26 @@ export const handler = async (event) => {
     return { statusCode: 200, headers: corsHeaders, body: '' };
   }
 
-  if (event.httpMethod !== 'POST') {
-    return {
-      statusCode: 405,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ error: 'Method not allowed' }),
-    };
-  }
-
-  const META_PIXEL_ID = process.env.META_PIXEL_ID;
-  const META_ACCESS_TOKEN = process.env.META_ACCESS_TOKEN;
-
-  if (!META_PIXEL_ID || !META_ACCESS_TOKEN) {
-    console.error('Missing META_PIXEL_ID or META_ACCESS_TOKEN environment variables');
-    return {
-      statusCode: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ error: 'Missing Meta credentials' }),
-    };
-  }
-
   try {
+    const META_PIXEL_ID = process.env.META_PIXEL_ID;
+    const META_ACCESS_TOKEN = process.env.META_ACCESS_TOKEN;
+
+    if (!META_PIXEL_ID || !META_ACCESS_TOKEN) {
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ok: false }),
+      };
+    }
+
     const body = event.body ? JSON.parse(event.body) : {};
     const { eventName, eventId, url, fbp, fbc } = body;
 
     if (!eventName) {
       return {
-        statusCode: 400,
+        statusCode: 200,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ error: 'eventName is required' }),
+        body: JSON.stringify({ ok: false }),
       };
     }
 
@@ -69,31 +60,26 @@ export const handler = async (event) => {
       ],
     };
 
-    const response = await axios.post(
+    await axios.post(
       `https://graph.facebook.com/v19.0/${META_PIXEL_ID}/events`,
       payload,
       {
         params: { access_token: META_ACCESS_TOKEN },
         headers: { 'Content-Type': 'application/json' },
+        timeout: 5000,
       }
     );
 
     return {
-      statusCode: response.status,
+      statusCode: 200,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ success: true, result: response.data }),
+      body: JSON.stringify({ ok: true }),
     };
-  } catch (error) {
-    const metaStatus = error?.response?.status;
-    const metaData = error?.response?.data;
-    console.error('Meta CAPI error:', metaData || error.message);
+  } catch (_) {
     return {
-      statusCode: metaStatus || 500,
+      statusCode: 200,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        error: 'Failed to send event to Meta CAPI',
-        ...(metaData && { detail: metaData }),
-      }),
+      body: JSON.stringify({ ok: false }),
     };
   }
 };

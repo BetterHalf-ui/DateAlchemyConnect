@@ -2,6 +2,7 @@
 [build]
   publish = "dist/public"
   command = "./build-netlify.sh"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -9,6 +10,7 @@
 
 [functions]
   directory = "netlify/functions"
+  node_bundler = "esbuild"
 
 [[redirects]]
   from = "/api/newsletter"
