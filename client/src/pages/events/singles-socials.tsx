@@ -5,7 +5,6 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { Calendar, Clock, MapPin, Users, Heart, Coffee, Utensils } from 'lucide-react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import RebrandBanner from '@/components/layout/rebrand-banner';
 import { useI18n } from '@/lib/i18n';
 import { useQuery } from '@tanstack/react-query';
 import type { Event } from '@shared/schema';
@@ -49,7 +48,6 @@ export default function SinglesSocials() {
 
   return (
     <div className="min-h-screen bg-white">
-      <RebrandBanner />
       <Header />
       {/* Hero Section */}
       <section 

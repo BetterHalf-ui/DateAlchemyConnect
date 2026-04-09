@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import RebrandBanner from "@/components/layout/rebrand-banner";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useI18n } from "@/lib/i18n";
@@ -116,7 +115,6 @@ export default function Blog() {
   if (isLoading) {
     return (
       <div className="min-h-screen">
-        <RebrandBanner />
         <Header />
         <div className="pb-20" style={{ paddingTop: '120px' }}>
           <div className="max-w-6xl mx-auto px-4">
@@ -134,7 +132,6 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen">
-      <RebrandBanner />
       <Header />
       
       <section className="py-20 bg-white" style={{ paddingTop: '120px' }}>

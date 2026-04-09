@@ -1,6 +1,5 @@
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import RebrandBanner from '@/components/layout/rebrand-banner';
 import { useEffect } from 'react';
 import datingResetImage from '@assets/DatingReset_1768045206756.png';
 
@@ -18,7 +17,6 @@ export default function DatingPatternsGuide() {
 
   return (
     <div className="min-h-screen bg-white">
-      <RebrandBanner />
       <Header />
 
       <section className="pt-32 pb-16 px-4">

@@ -3,7 +3,6 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import RebrandBanner from "@/components/layout/rebrand-banner";
 import { useSEO } from "@/hooks/use-seo";
 import { Check, Heart, Users, Shield, Calendar, Star, MessageCircle } from "lucide-react";
 
@@ -115,7 +114,6 @@ export default function MatchmakingMauritius() {
 
   return (
     <div className="min-h-screen bg-white">
-      <RebrandBanner />
       <Header />
 
       <section className="pt-32 pb-20 bg-gradient-to-br from-primary/5 to-white">
