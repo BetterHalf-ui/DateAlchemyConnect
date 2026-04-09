@@ -1,0 +1,32 @@
+Privacy Policy
+Last Updated: April 9, 2026
+The Date Alchemy ("we," "our," or "us") provides bespoke matchmaking services. We are committed to the highest standards of data privacy across our operations in Mauritius, Singapore, and Luxembourg. 
+1. Data Controller & Contact Information
+The Date Alchemy acts as the "Data Controller" for your information.
+* Email: hello@thedatealchemy.com
+* Data Protection Officer (DPO): Celine Delacharlerie 
+* Phone/WhatsApp: +230 5459 1975 
+2. Legal Basis for Processing
+Under GDPR (EU) and PDPA (Singapore), we must have a legal reason to use your data:
+* Contractual Necessity: To provide the matchmaking service you signed up for.
+* Explicit Consent: For processing "Special Category Data" (religion, ethnicity, relationship preferences) and for sending marketing materials.
+* Legal Obligation: To verify identities and prevent fraud/safety risks. 
+3. What We Collect & Why
+* Identity & Contact: Name, ID for verification, WhatsApp number, and email.
+* Special Category Data: Because we are a matchmaking service, we collect data regarding your values, beliefs, and preferences. By providing this, you explicitly consent to us using it for matching.
+* Multimedia: Photos and video consultation notes used solely for internal assessment. 
+4. International Data Transfers
+Your data may be transferred between Mauritius, Singapore, and Luxembourg. When we transfer data outside the European Economic Area (EEA) to Mauritius or Singapore, we ensure "Standard Contractual Clauses" are in place or that the destination country provides "Adequate Protection" as defined by the European Commission. 
+5. Your Rights (The Global Standard)
+Regardless of where you live, we offer the following rights to all members:
+* Right to Access/Portability: Get a copy of your data.
+* Right to Rectification: Correct any errors in your profile.
+* Right to Erasure ("Right to be Forgotten"): We will delete your data within 30 days of a request, unless legally required to keep it.
+* Right to Withdraw Consent: You may stop our processing of your data at any time (this will end your membership).
+* Right to Lodge a Complaint: You may contact the CNPD (Luxembourg), the PDPC (Singapore), or the Data Protection Office (Mauritius). 
+6. Third-Party Processors
+We use a "Privacy by Design" approach. Our primary processors are:
+* Fillout: For secure data intake (GDPR & SOC2 compliant).
+* Airtable: For secure database management (Data encrypted at rest and in transit). 
+7. Data Retention
+We retain your personal data only as long as you are an active member. Once you terminate your membership, we delete your personal data within 30 days, keeping only anonymized transaction records for financial auditing.

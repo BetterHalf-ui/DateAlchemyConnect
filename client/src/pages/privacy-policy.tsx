@@ -10,113 +10,76 @@ export default function PrivacyPolicy() {
       
       <section className="py-20 bg-white" style={{ paddingTop: '120px' }}>
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
-          <p className="text-gray-600 mb-8">Last updated: January 2025</p>
+          <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
+          <p className="text-gray-500 mb-10">Last Updated: April 9, 2026</p>
           
           <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 mb-6">
-              The Date Alchemy ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our matchmaking services.
+            <p className="text-lg text-gray-700 mb-8">
+              The Date Alchemy ("we," "our," or "us") provides bespoke matchmaking services. We are committed to the highest standards of data privacy across our operations in Mauritius, Singapore, and Luxembourg.
             </p>
 
-            <h2 className="text-2xl font-bold mt-8 mb-4">Information We Collect</h2>
-            
-            <h3 className="text-xl font-semibold mt-6 mb-3">Personal Information</h3>
-            <p className="text-gray-700 mb-4">
-              We collect personal information that you voluntarily provide to us when you:
-            </p>
-            <ul className="list-disc pl-6 mb-4 text-gray-700">
-              <li>Complete our membership application</li>
-              <li>Participate in video consultations</li>
-              <li>Communicate with our matchmakers</li>
-            </ul>
-            
-            <p className="text-gray-700 mb-4">This may include:</p>
-            <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li>Contact information (name, email, phone number)</li>
-              <li>Demographic information (age, gender, occupation, education)</li>
-              <li>Personal preferences and relationship goals</li>
-              <li>Photos and profile information</li>
+            {/* Section 1 */}
+            <h2 className="text-2xl font-bold mt-10 mb-4">1. Data Controller &amp; Contact Information</h2>
+            <p className="text-gray-700 mb-4">The Date Alchemy acts as the "Data Controller" for your information.</p>
+            <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-1">
+              <li><strong>Email:</strong> hello@thedatealchemy.com</li>
+              <li><strong>Data Protection Officer (DPO):</strong> Celine Delacharlerie</li>
+              <li><strong>Phone/WhatsApp:</strong> +230 5459 1975</li>
             </ul>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3">Automatically Collected Information</h3>
-            <p className="text-gray-700 mb-6">
-              We may automatically collect certain information about your device and usage patterns, including IP address, browser type, pages visited, and time spent on our website.
-            </p>
-
-            <h2 className="text-2xl font-bold mt-8 mb-4">How We Use Your Information</h2>
-            <p className="text-gray-700 mb-4">We use your information to:</p>
-            <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li>Provide personalized matchmaking services</li>
-              <li>Verify your identity and conduct background checks</li>
-              <li>Facilitate introductions between compatible members</li>
-              <li>Communicate about your matches and service updates</li>
-              <li>Improve our services and develop new features</li>
-              <li>Comply with legal obligations</li>
+            {/* Section 2 */}
+            <h2 className="text-2xl font-bold mt-10 mb-4">2. Legal Basis for Processing</h2>
+            <p className="text-gray-700 mb-4">Under GDPR (EU) and PDPA (Singapore), we must have a legal reason to use your data:</p>
+            <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Contractual Necessity:</strong> To provide the matchmaking service you signed up for.</li>
+              <li><strong>Explicit Consent:</strong> For processing "Special Category Data" (religion, ethnicity, relationship preferences) and for sending marketing materials.</li>
+              <li><strong>Legal Obligation:</strong> To verify identities and prevent fraud/safety risks.</li>
             </ul>
 
-            <h2 className="text-2xl font-bold mt-8 mb-4">Information Sharing and Disclosure</h2>
-            
-            <h3 className="text-xl font-semibold mt-6 mb-3">With Other Members</h3>
-            <p className="text-gray-700 mb-4">
-              We only share your profile information with pre-screened, compatible members. We only share your profile picture and WhatsApp number after obtaining your explicit consent for each introduction. We never share full names or other contact details.
-            </p>
-
-            <h3 className="text-xl font-semibold mt-6 mb-3">Service Providers</h3>
-            <p className="text-gray-700 mb-4">
-              We use trusted third-party service providers to help us deliver our services:
-            </p>
-            <ul className="list-disc pl-6 mb-4 text-gray-700">
-              <li><strong>Fillout:</strong> We use Fillout to collect your membership application information through secure forms.</li>
-              <li><strong>Airtable:</strong> We store and manage your profile information in Airtable's secure database platform.</li>
-            </ul>
-            <p className="text-gray-700 mb-6">
-              These providers are bound by strict confidentiality agreements and are only permitted to use your information to provide services to us. They cannot use your information for their own purposes.
-            </p>
-
-            <h3 className="text-xl font-semibold mt-6 mb-3">Legal Requirements</h3>
-            <p className="text-gray-700 mb-6">
-              We may disclose your information if required by law, court order, or government regulation, or to protect our rights, property, or safety.
-            </p>
-
-            <h2 className="text-2xl font-bold mt-8 mb-4">Data Security</h2>
-            <p className="text-gray-700 mb-6">
-              We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.
-            </p>
-
-            <h2 className="text-2xl font-bold mt-8 mb-4">Data Retention</h2>
-            <p className="text-gray-700 mb-6">
-              We retain your personal information for as long as necessary to provide our services, comply with legal obligations, resolve disputes, and enforce our agreements. You may request deletion of your account and associated data at any time.
-            </p>
-
-            <h2 className="text-2xl font-bold mt-8 mb-4">Your Rights</h2>
-            <p className="text-gray-700 mb-4">You have the right to:</p>
-            <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li>Access your personal information</li>
-              <li>Correct inaccurate information</li>
-              <li>Delete your personal information</li>
-              <li>Object to processing of your information</li>
-              <li>Data portability</li>
-              <li>Withdraw consent</li>
+            {/* Section 3 */}
+            <h2 className="text-2xl font-bold mt-10 mb-4">3. What We Collect &amp; Why</h2>
+            <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Identity &amp; Contact:</strong> Name, ID for verification, WhatsApp number, and email.</li>
+              <li><strong>Special Category Data:</strong> Because we are a matchmaking service, we collect data regarding your values, beliefs, and preferences. By providing this, you explicitly consent to us using it for matching.</li>
+              <li><strong>Multimedia:</strong> Photos and video consultation notes used solely for internal assessment.</li>
             </ul>
 
-            <h2 className="text-2xl font-bold mt-8 mb-4">International Transfers</h2>
+            {/* Section 4 */}
+            <h2 className="text-2xl font-bold mt-10 mb-4">4. International Data Transfers</h2>
             <p className="text-gray-700 mb-6">
-              Your information may be transferred to and processed in countries other than Mauritius. We ensure appropriate safeguards are in place to protect your information in accordance with this Privacy Policy.
+              Your data may be transferred between Mauritius, Singapore, and Luxembourg. When we transfer data outside the European Economic Area (EEA) to Mauritius or Singapore, we ensure "Standard Contractual Clauses" are in place or that the destination country provides "Adequate Protection" as defined by the European Commission.
             </p>
 
-            <h2 className="text-2xl font-bold mt-8 mb-4">Changes to This Privacy Policy</h2>
+            {/* Section 5 */}
+            <h2 className="text-2xl font-bold mt-10 mb-4">5. Your Rights (The Global Standard)</h2>
+            <p className="text-gray-700 mb-4">Regardless of where you live, we offer the following rights to all members:</p>
+            <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Right to Access/Portability:</strong> Get a copy of your data.</li>
+              <li><strong>Right to Rectification:</strong> Correct any errors in your profile.</li>
+              <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> We will delete your data within 30 days of a request, unless legally required to keep it.</li>
+              <li><strong>Right to Withdraw Consent:</strong> You may stop our processing of your data at any time (this will end your membership).</li>
+              <li><strong>Right to Lodge a Complaint:</strong> You may contact the CNPD (Luxembourg), the PDPC (Singapore), or the Data Protection Office (Mauritius).</li>
+            </ul>
+
+            {/* Section 6 */}
+            <h2 className="text-2xl font-bold mt-10 mb-4">6. Third-Party Processors</h2>
+            <p className="text-gray-700 mb-4">We use a "Privacy by Design" approach. Our primary processors are:</p>
+            <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+              <li><strong>Fillout:</strong> For secure data intake (GDPR &amp; SOC2 compliant).</li>
+              <li><strong>Airtable:</strong> For secure database management (Data encrypted at rest and in transit).</li>
+            </ul>
+
+            {/* Section 7 */}
+            <h2 className="text-2xl font-bold mt-10 mb-4">7. Data Retention</h2>
             <p className="text-gray-700 mb-6">
-              We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on our website and updating the "Last updated" date.
+              We retain your personal data only as long as you are an active member. Once you terminate your membership, we delete your personal data within 30 days, keeping only anonymized transaction records for financial auditing.
             </p>
 
-            <h2 className="text-2xl font-bold mt-8 mb-4">Contact Us</h2>
-            <p className="text-gray-700 mb-4">
-              If you have questions about this Privacy Policy or our privacy practices, please contact us at:
-            </p>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="text-gray-700 mb-2"><strong>The Date Alchemy</strong></p>
-              <p className="text-gray-700 mb-2">Email: hello@thedatealchemy.com</p>
-              <p className="text-gray-700">Phone: +230 5459 1975</p>
+            {/* Contact box */}
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mt-10">
+              <p className="font-bold text-gray-900 mb-2">The Date Alchemy</p>
+              <p className="text-gray-700 mb-1">Email: <a href="mailto:hello@thedatealchemy.com" className="underline">hello@thedatealchemy.com</a></p>
+              <p className="text-gray-700">Phone/WhatsApp: +230 5459 1975</p>
             </div>
           </div>
         </div>
