@@ -166,50 +166,74 @@ export class SupabaseStorage implements IStorage {
     const now = new Date();
     const generatedSlug = slugify(post.title);
 
-    // Try inserting with slug first; fall back without it if the column doesn't exist yet
-    const withSlug = await supabase
-      .from('blog_posts')
-      .insert({
-        id,
-        title: post.title,
-        slug: generatedSlug,
-        content: post.content,
-        excerpt: post.excerpt,
-        image_url: post.imageUrl,
-        category: post.category,
-        tags: post.tags || [],
-        published: post.published ?? false,
-        created_at: now.toISOString(),
-        updated_at: now.toISOString()
-      })
-      .select()
-      .returns<SupabaseBlogRow[]>()
-      .single();
+    const UNDEFINED_COLUMN = '42703'; // Postgres: column does not exist
+    const UNIQUE_VIOLATION  = '23505'; // Postgres: unique constraint violation
 
-    let row: SupabaseBlogRow;
-    if (withSlug.error) {
-      // Column may not exist yet — retry without slug
-      const withoutSlug = await supabase
+    const basePayload = {
+      id,
+      title: post.title,
+      content: post.content,
+      excerpt: post.excerpt,
+      image_url: post.imageUrl,
+      category: post.category,
+      tags: post.tags || [],
+      published: post.published ?? false,
+      created_at: now.toISOString(),
+      updated_at: now.toISOString()
+    };
+
+    // Try inserting with a unique slug; retry with suffix on uniqueness collision
+    const tryInsert = async (slug: string): Promise<SupabaseBlogRow> => {
+      const result = await supabase
         .from('blog_posts')
-        .insert({
-          id,
-          title: post.title,
-          content: post.content,
-          excerpt: post.excerpt,
-          image_url: post.imageUrl,
-          category: post.category,
-          tags: post.tags || [],
-          published: post.published ?? false,
-          created_at: now.toISOString(),
-          updated_at: now.toISOString()
-        })
+        .insert({ ...basePayload, slug })
         .select()
         .returns<SupabaseBlogRow[]>()
         .single();
-      if (withoutSlug.error) throw withoutSlug.error;
-      row = withoutSlug.data;
-    } else {
-      row = withSlug.data;
+      if (!result.error) return result.data;
+      if (result.error.code === UNIQUE_VIOLATION) {
+        // Slug collision: caller will retry with a new suffix
+        throw Object.assign(new Error('slug_collision'), { code: UNIQUE_VIOLATION });
+      }
+      throw result.error;
+    };
+
+    let row: SupabaseBlogRow;
+    let slugInserted = false;
+
+    // Try with slug (may fail if column does not exist yet)
+    try {
+      let slug = generatedSlug;
+      for (let attempt = 1; attempt <= 99; attempt++) {
+        try {
+          row = await tryInsert(slug);
+          slugInserted = true;
+          break;
+        } catch (err: unknown) {
+          const e = err as { code?: string };
+          if (e.code === UNIQUE_VIOLATION) {
+            slug = `${generatedSlug}-${attempt + 1}`;
+          } else {
+            throw err;
+          }
+        }
+      }
+      if (!slugInserted) throw new Error('Could not generate unique slug after 99 attempts');
+    } catch (err: unknown) {
+      const e = err as { code?: string };
+      if (e.code === UNDEFINED_COLUMN) {
+        // Slug column not yet migrated — insert without slug (graceful pre-migration mode)
+        const fallback = await supabase
+          .from('blog_posts')
+          .insert(basePayload)
+          .select()
+          .returns<SupabaseBlogRow[]>()
+          .single();
+        if (fallback.error) throw fallback.error;
+        row = fallback.data;
+      } else {
+        throw err;
+      }
     }
     
     // Convert Supabase format to our BlogPost format

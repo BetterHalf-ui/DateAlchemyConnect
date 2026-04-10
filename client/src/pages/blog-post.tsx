@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { useParams, Link } from "wouter";
+import { useParams, Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/header";
@@ -10,40 +10,45 @@ import { trackBlogRead } from "@/lib/meta-pixel";
 import LeadMagnetBanner from "@/components/lead-magnet-banner";
 import type { BlogPost } from "@shared/schema";
 
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
 export default function BlogPostPage() {
   const { slug } = useParams();
+  const [, navigate] = useLocation();
 
-  const isUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(slug ?? "");
+  const isUuid = UUID_RE.test(slug ?? "");
 
   const { data: post, isLoading, error } = useQuery<BlogPost>({
     queryKey: ["blog-post", slug],
     queryFn: async () => {
-      // Legacy UUID links: fall back to build-data list lookup
-      if (isUuid) {
-        const { getBlogPosts } = await import('@/lib/build-data');
-        const posts = await getBlogPosts();
-        const found = posts.find(p => p.id === slug);
-        if (!found) throw new Error("Blog post not found");
-        return found;
-      }
-
       // Try slug API endpoint first (works in dev and when server is available)
-      try {
-        const res = await fetch(`/api/blog/slug/${encodeURIComponent(slug ?? "")}`);
-        if (res.ok) return res.json() as Promise<BlogPost>;
-      } catch {
-        // network error or server not available (static deployment)
+      if (!isUuid) {
+        try {
+          const res = await fetch(`/api/blog/slug/${encodeURIComponent(slug ?? "")}`);
+          if (res.ok) return res.json() as Promise<BlogPost>;
+        } catch {
+          // network error or server not available (static deployment)
+        }
       }
 
-      // Fall back to build-data JSON (used in static Netlify deployment)
+      // Fall back to build-data JSON (used in static Netlify deployment or UUID lookup)
       const { getBlogPosts } = await import('@/lib/build-data');
       const posts = await getBlogPosts();
-      const found = posts.find(p => p.slug === slug);
+      const found = isUuid
+        ? posts.find(p => p.id === slug)
+        : posts.find(p => p.slug === slug);
       if (!found) throw new Error("Blog post not found");
       return found;
     },
     enabled: !!slug,
   });
+
+  // Redirect legacy UUID URLs to canonical slug URLs
+  useEffect(() => {
+    if (post && isUuid && post.slug) {
+      navigate(`/blog/${post.slug}`, { replace: true });
+    }
+  }, [post, isUuid, navigate]);
 
   // Track blog post view with Meta Pixel
   useEffect(() => {
