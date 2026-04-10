@@ -13,15 +13,34 @@ import type { BlogPost } from "@shared/schema";
 export default function BlogPostPage() {
   const { slug } = useParams();
 
+  const isUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(slug ?? "");
+
   const { data: post, isLoading, error } = useQuery<BlogPost>({
-    queryKey: ["build-blog-post", slug],
+    queryKey: ["blog-post", slug],
     queryFn: async () => {
+      // Legacy UUID links: fall back to build-data list lookup
+      if (isUuid) {
+        const { getBlogPosts } = await import('@/lib/build-data');
+        const posts = await getBlogPosts();
+        const found = posts.find(p => p.id === slug);
+        if (!found) throw new Error("Blog post not found");
+        return found;
+      }
+
+      // Try slug API endpoint first (works in dev and when server is available)
+      try {
+        const res = await fetch(`/api/blog/slug/${encodeURIComponent(slug ?? "")}`);
+        if (res.ok) return res.json() as Promise<BlogPost>;
+      } catch {
+        // network error or server not available (static deployment)
+      }
+
+      // Fall back to build-data JSON (used in static Netlify deployment)
       const { getBlogPosts } = await import('@/lib/build-data');
       const posts = await getBlogPosts();
-      // Look up by slug first, fall back to ID for backward compatibility
-      const foundPost = posts.find(p => p.slug === slug) || posts.find(p => p.id === slug);
-      if (!foundPost) throw new Error("Blog post not found");
-      return foundPost;
+      const found = posts.find(p => p.slug === slug);
+      if (!found) throw new Error("Blog post not found");
+      return found;
     },
     enabled: !!slug,
   });

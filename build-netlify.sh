@@ -12,9 +12,6 @@ tsx scripts/fetch-build-data.ts
 echo "Building the application..."
 npm run build
 
-echo "Generating sitemap..."
-tsx scripts/generate-sitemap.ts
-
 echo "Ensuring public files are copied..."
 # Copy public files to dist/public if they exist
 if [ -d "public" ]; then
@@ -55,6 +52,9 @@ if [ -d "dist/build-data" ]; then
   cp -r dist/build-data/* dist/public/build-data/ 2>/dev/null || true
   echo "Build data copied to public directory"
 fi
+
+echo "Generating sitemap..."
+tsx scripts/generate-sitemap.ts
 
 echo "Setting proper file permissions..."
 find dist/public -type f -exec chmod 644 {} \;

@@ -13,6 +13,20 @@ const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 export const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
+interface SupabaseBlogRow {
+  id: string;
+  title: string;
+  slug?: string | null;
+  content: string;
+  excerpt: string | null;
+  image_url: string | null;
+  category: string | null;
+  tags: string[];
+  published: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
 export class SupabaseStorage implements IStorage {
   async getUser(id: string): Promise<User | undefined> {
     const { data, error } = await supabase
@@ -153,7 +167,6 @@ export class SupabaseStorage implements IStorage {
     const generatedSlug = slugify(post.title);
 
     // Try inserting with slug first; fall back without it if the column doesn't exist yet
-    let data: any;
     const withSlug = await supabase
       .from('blog_posts')
       .insert({
@@ -170,8 +183,10 @@ export class SupabaseStorage implements IStorage {
         updated_at: now.toISOString()
       })
       .select()
+      .returns<SupabaseBlogRow[]>()
       .single();
 
+    let row: SupabaseBlogRow;
     if (withSlug.error) {
       // Column may not exist yet — retry without slug
       const withoutSlug = await supabase
@@ -189,26 +204,27 @@ export class SupabaseStorage implements IStorage {
           updated_at: now.toISOString()
         })
         .select()
+        .returns<SupabaseBlogRow[]>()
         .single();
       if (withoutSlug.error) throw withoutSlug.error;
-      data = withoutSlug.data;
+      row = withoutSlug.data;
     } else {
-      data = withSlug.data;
+      row = withSlug.data;
     }
     
     // Convert Supabase format to our BlogPost format
     return {
-      id: data.id,
-      title: data.title,
-      slug: data.slug || slugify(data.title),
-      content: data.content,
-      excerpt: data.excerpt,
-      imageUrl: data.image_url,
-      category: data.category,
-      tags: data.tags || [],
-      published: data.published,
-      createdAt: new Date(data.created_at),
-      updatedAt: new Date(data.updated_at)
+      id: row.id,
+      title: row.title,
+      slug: row.slug || slugify(row.title),
+      content: row.content,
+      excerpt: row.excerpt,
+      imageUrl: row.image_url,
+      category: row.category,
+      tags: row.tags || [],
+      published: row.published,
+      createdAt: new Date(row.created_at),
+      updatedAt: new Date(row.updated_at)
     };
   }
 
