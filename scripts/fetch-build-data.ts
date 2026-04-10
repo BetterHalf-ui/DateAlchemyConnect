@@ -147,6 +147,71 @@ async function fetchBuildData() {
     await writeFile(settingsPath, JSON.stringify(transformedSettings, null, 2));
     console.log(`✅ Settings written to: ${settingsPath}`);
 
+    // Build the meta map (static routes + dynamic blog posts)
+    type MetaEntry = { title: string; description: string };
+    const metaMap: Record<string, MetaEntry> = {
+      '/': {
+        title: 'Premium Matchmaking in Mauritius | The Date Alchemy',
+        description: "Mauritius' premier matchmaking service for professionals seeking meaningful, lasting relationships. We curate high-quality introductions so you can focus on connection.",
+      },
+      '/how-it-works': {
+        title: 'How Our Matchmaking Works | The Date Alchemy',
+        description: 'Discover our curated 3-step matchmaking process: a confidential profile review, hand-picked introductions, and dedicated coaching to help you find your ideal partner.',
+      },
+      '/network': {
+        title: 'Our Member Network | The Date Alchemy',
+        description: 'Meet our growing community of accomplished, relationship-ready singles across Mauritius. Quality introductions, real connections.',
+      },
+      '/blog': {
+        title: 'Dating & Relationship Insights | The Date Alchemy',
+        description: 'Expert articles on modern dating, attachment styles, relationship psychology, and the Mauritian singles scene — from The Date Alchemy team.',
+      },
+      '/apply': {
+        title: 'Apply to Join | The Date Alchemy',
+        description: 'Take the first step toward finding your ideal partner. Apply to join The Date Alchemy and let our matchmakers work for you.',
+      },
+      '/discovery-offer': {
+        title: 'The Discovery Offer | The Date Alchemy',
+        description: 'Start your matchmaking journey with our Discovery Pass — a curated introduction experience for Rs 3,000. Meet compatible singles with no long-term commitment.',
+      },
+      '/matchmaking-mauritius': {
+        title: 'Matchmaking in Mauritius | The Date Alchemy',
+        description: 'Professional matchmaking tailored to Mauritius. We connect ambitious, relationship-ready singles with compatible partners through a personalised, human-led process.',
+      },
+      '/dating-mauritius': {
+        title: 'Dating in Mauritius | The Date Alchemy',
+        description: "Navigate Mauritius' unique dating landscape with expert guidance. The Date Alchemy helps you skip the apps and meet quality singles in real life.",
+      },
+      '/events/singlessocials': {
+        title: 'Singles Social Events | The Date Alchemy',
+        description: 'Join our exclusive singles social events in Mauritius — relaxed, curated gatherings designed to spark genuine connections in beautiful settings.',
+      },
+      '/dating-patterns-guide': {
+        title: 'The Dating Patterns Guide | The Date Alchemy',
+        description: 'Identify the unconscious patterns keeping you stuck in the wrong relationships. Our free guide reveals the five most common dating traps and how to break free.',
+      },
+      '/privacy-policy': {
+        title: 'Privacy Policy | The Date Alchemy',
+        description: 'Read our privacy policy to understand how The Date Alchemy collects, uses, and protects your personal information.',
+      },
+    };
+
+    // Add one entry per published blog post
+    for (const post of publishedPosts) {
+      const path = `/blog/${post.slug}`;
+      const rawDescription = post.excerpt || post.content.slice(0, 155);
+      // Strip any HTML tags and truncate to 160 chars
+      const description = rawDescription.replace(/<[^>]+>/g, '').slice(0, 160);
+      metaMap[path] = {
+        title: `${post.title} | The Date Alchemy`,
+        description,
+      };
+    }
+
+    const metaMapPath = join(buildDataDir, 'meta-map.json');
+    await writeFile(metaMapPath, JSON.stringify(metaMap, null, 2));
+    console.log(`✅ Meta map written to: ${metaMapPath} (${Object.keys(metaMap).length} entries)`);
+
     // Create a build manifest
     const manifest = {
       buildTime: new Date().toISOString(),

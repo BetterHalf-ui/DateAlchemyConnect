@@ -13,8 +13,12 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+[[edge_functions]]
+  path = "/*"
+  function = "inject-meta"
+
 [[redirects]]
   from = "/api/newsletter"
   to = "/.netlify/functions/newsletter-api"
   status = 200
-  
+
