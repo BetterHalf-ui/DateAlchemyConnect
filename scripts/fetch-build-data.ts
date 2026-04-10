@@ -12,6 +12,7 @@ import { join } from 'path';
 interface BlogPost {
   id: string;
   title: string;
+  slug: string;
   content: string;
   excerpt: string;
   imageUrl: string | null;
@@ -20,6 +21,17 @@ interface BlogPost {
   published: boolean;
   createdAt: string;
   updatedAt: string;
+}
+
+function slugify(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/['']/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .trim()
+    .replace(/^-+|-+$/g, '');
 }
 
 interface Setting {
@@ -80,6 +92,7 @@ async function fetchBuildData() {
     const transformedPosts: BlogPost[] = (blogPosts || []).map(post => ({
       id: post.id,
       title: post.title,
+      slug: post.slug || slugify(post.title),
       content: post.content,
       excerpt: post.excerpt,
       imageUrl: post.image_url,

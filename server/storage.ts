@@ -1,6 +1,17 @@
 import { type User, type InsertUser, type BlogPost, type InsertBlogPost, type Setting, type InsertSetting, type Event, type InsertEvent } from "@shared/schema";
 import { randomUUID } from "crypto";
 
+export function slugify(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/['']/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .trim()
+    .replace(/^-+|-+$/g, '');
+}
+
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
@@ -9,6 +20,7 @@ export interface IStorage {
   // Blog Posts
   getBlogPosts(published?: boolean): Promise<BlogPost[]>;
   getBlogPost(id: string): Promise<BlogPost | undefined>;
+  getBlogPostBySlug(slug: string): Promise<BlogPost | undefined>;
   createBlogPost(post: InsertBlogPost): Promise<BlogPost>;
   updateBlogPost(id: string, post: Partial<InsertBlogPost>): Promise<BlogPost | undefined>;
   deleteBlogPost(id: string): Promise<boolean>;
@@ -193,9 +205,16 @@ export class MemStorage implements IStorage {
       const post = samplePosts[i];
       const id = randomUUID();
       const publishDate = postDates[i];
+      const baseSlug = slugify(post.title);
+      let slug = baseSlug;
+      let counter = 1;
+      while (Array.from(this.blogPosts.values()).some(p => p.slug === slug)) {
+        slug = `${baseSlug}-${counter++}`;
+      }
       const blogPost: BlogPost = {
         ...post,
         id,
+        slug,
         createdAt: publishDate,
         updatedAt: publishDate,
         published: post.published ?? false,
@@ -241,12 +260,23 @@ export class MemStorage implements IStorage {
     return this.blogPosts.get(id);
   }
 
+  async getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
+    return Array.from(this.blogPosts.values()).find(p => p.slug === slug);
+  }
+
   async createBlogPost(insertPost: InsertBlogPost): Promise<BlogPost> {
     const id = randomUUID();
     const now = new Date();
+    const baseSlug = slugify(insertPost.title);
+    let slug = baseSlug;
+    let counter = 1;
+    while (Array.from(this.blogPosts.values()).some(p => p.slug === slug)) {
+      slug = `${baseSlug}-${counter++}`;
+    }
     const post: BlogPost = {
       ...insertPost,
       id,
+      slug,
       createdAt: now,
       updatedAt: now,
       published: insertPost.published ?? false,

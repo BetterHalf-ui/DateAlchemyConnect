@@ -12,6 +12,9 @@ tsx scripts/fetch-build-data.ts
 echo "Building the application..."
 npm run build
 
+echo "Generating sitemap..."
+tsx scripts/generate-sitemap.ts
+
 echo "Ensuring public files are copied..."
 # Copy public files to dist/public if they exist
 if [ -d "public" ]; then

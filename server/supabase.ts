@@ -2,6 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import { type User, type InsertUser, type BlogPost, type InsertBlogPost, type Setting, type InsertSetting, type Event, type InsertEvent } from '@shared/schema';
 import { randomUUID } from 'crypto';
 import type { IStorage } from './storage';
+import { slugify } from './storage';
 
 if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
   throw new Error('SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are required');
@@ -76,6 +77,7 @@ export class SupabaseStorage implements IStorage {
     return (data || []).map(post => ({
       id: post.id,
       title: post.title,
+      slug: post.slug || slugify(post.title),
       content: post.content,
       excerpt: post.excerpt,
       imageUrl: post.image_url,
@@ -104,6 +106,7 @@ export class SupabaseStorage implements IStorage {
     return {
       id: data.id,
       title: data.title,
+      slug: data.slug || slugify(data.title),
       content: data.content,
       excerpt: data.excerpt,
       imageUrl: data.image_url,
@@ -115,15 +118,48 @@ export class SupabaseStorage implements IStorage {
     };
   }
 
+  async getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
+    // Try querying by slug column first
+    const { data, error } = await supabase
+      .from('blog_posts')
+      .select('*')
+      .eq('slug', slug)
+      .single();
+    
+    if (!error && data) {
+      return {
+        id: data.id,
+        title: data.title,
+        slug: data.slug || slugify(data.title),
+        content: data.content,
+        excerpt: data.excerpt,
+        imageUrl: data.image_url,
+        category: data.category,
+        tags: data.tags || [],
+        published: data.published,
+        createdAt: new Date(data.created_at),
+        updatedAt: new Date(data.updated_at)
+      };
+    }
+
+    // Slug column may not exist yet — fall back to computing from title
+    const all = await this.getBlogPosts();
+    return all.find(p => (p.slug || slugify(p.title)) === slug);
+  }
+
   async createBlogPost(post: InsertBlogPost): Promise<BlogPost> {
     const id = randomUUID();
     const now = new Date();
-    
-    const { data, error } = await supabase
+    const generatedSlug = slugify(post.title);
+
+    // Try inserting with slug first; fall back without it if the column doesn't exist yet
+    let data: any;
+    const withSlug = await supabase
       .from('blog_posts')
       .insert({
         id,
         title: post.title,
+        slug: generatedSlug,
         content: post.content,
         excerpt: post.excerpt,
         image_url: post.imageUrl,
@@ -135,13 +171,36 @@ export class SupabaseStorage implements IStorage {
       })
       .select()
       .single();
-    
-    if (error) throw error;
+
+    if (withSlug.error) {
+      // Column may not exist yet — retry without slug
+      const withoutSlug = await supabase
+        .from('blog_posts')
+        .insert({
+          id,
+          title: post.title,
+          content: post.content,
+          excerpt: post.excerpt,
+          image_url: post.imageUrl,
+          category: post.category,
+          tags: post.tags || [],
+          published: post.published ?? false,
+          created_at: now.toISOString(),
+          updated_at: now.toISOString()
+        })
+        .select()
+        .single();
+      if (withoutSlug.error) throw withoutSlug.error;
+      data = withoutSlug.data;
+    } else {
+      data = withSlug.data;
+    }
     
     // Convert Supabase format to our BlogPost format
     return {
       id: data.id,
       title: data.title,
+      slug: data.slug || slugify(data.title),
       content: data.content,
       excerpt: data.excerpt,
       imageUrl: data.image_url,
@@ -182,6 +241,7 @@ export class SupabaseStorage implements IStorage {
     return {
       id: data.id,
       title: data.title,
+      slug: data.slug || slugify(data.title),
       content: data.content,
       excerpt: data.excerpt,
       imageUrl: data.image_url,

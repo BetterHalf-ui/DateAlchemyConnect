@@ -40,7 +40,7 @@ function Router() {
       <Route path="/network" component={Network} />
       <Route path="/how-it-works" component={HowItWorks} />
       <Route path="/blog" component={Blog} />
-      <Route path="/blog/:id" component={BlogPost} />
+      <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/matchmaking-mauritius" component={MatchmakingMauritius} />
       <Route path="/dating-mauritius" component={MatchmakingMauritius} />

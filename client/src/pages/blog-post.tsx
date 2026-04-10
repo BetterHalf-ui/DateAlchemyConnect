@@ -11,18 +11,19 @@ import LeadMagnetBanner from "@/components/lead-magnet-banner";
 import type { BlogPost } from "@shared/schema";
 
 export default function BlogPostPage() {
-  const { id } = useParams();
+  const { slug } = useParams();
 
   const { data: post, isLoading, error } = useQuery<BlogPost>({
-    queryKey: ["build-blog-post", id],
+    queryKey: ["build-blog-post", slug],
     queryFn: async () => {
       const { getBlogPosts } = await import('@/lib/build-data');
       const posts = await getBlogPosts();
-      const foundPost = posts.find(p => p.id === id);
+      // Look up by slug first, fall back to ID for backward compatibility
+      const foundPost = posts.find(p => p.slug === slug) || posts.find(p => p.id === slug);
       if (!foundPost) throw new Error("Blog post not found");
       return foundPost;
     },
-    enabled: !!id,
+    enabled: !!slug,
   });
 
   // Track blog post view with Meta Pixel
@@ -59,7 +60,7 @@ export default function BlogPostPage() {
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://thedatealchemy.com/blog/${post.id}`
+        "@id": `https://thedatealchemy.com/blog/${post.slug || post.id}`
       },
       "articleSection": post.category,
       "keywords": post.tags.join(", "),

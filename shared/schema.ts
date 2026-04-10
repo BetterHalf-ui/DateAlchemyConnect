@@ -12,6 +12,7 @@ export const users = pgTable("users", {
 export const blogPosts = pgTable("blog_posts", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   title: text("title").notNull(),
+  slug: text("slug").unique(),
   content: text("content").notNull(),
   excerpt: text("excerpt").notNull(),
   imageUrl: text("image_url"),
@@ -51,6 +52,7 @@ export const insertUserSchema = createInsertSchema(users).pick({
 
 export const insertBlogPostSchema = createInsertSchema(blogPosts).omit({
   id: true,
+  slug: true,
   createdAt: true,
   updatedAt: true,
 });
