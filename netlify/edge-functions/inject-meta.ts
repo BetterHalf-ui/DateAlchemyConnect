@@ -20,12 +20,15 @@ export default async (request: Request, context: { next: () => Promise<Response>
     // If the map is unavailable, serve unmodified HTML
   }
 
-  const meta = metaMap[url.pathname] ?? metaMap['/'];
+  // Normalize pathname: strip trailing slash except for root
+  const pathname = url.pathname.length > 1 ? url.pathname.replace(/\/$/, '') : '/';
+
+  const meta = metaMap[pathname] ?? metaMap['/'];
   if (!meta) return response;
 
   const title = escapeAttr(meta.title);
   const description = escapeAttr(meta.description);
-  const canonicalUrl = `https://thedatealchemy.com${url.pathname}`;
+  const canonicalUrl = `https://thedatealchemy.com${pathname}`;
 
   let html = await response.text();
 
@@ -61,9 +64,17 @@ export default async (request: Request, context: { next: () => Promise<Response>
     `$1${canonicalUrl}$2`
   );
 
+  // Rebuild headers: drop stale content-* and etag headers that are
+  // invalidated by the body rewrite
+  const headers = new Headers(response.headers);
+  headers.delete('content-length');
+  headers.delete('content-encoding');
+  headers.delete('etag');
+  headers.set('content-type', 'text/html; charset=utf-8');
+
   return new Response(html, {
     status: response.status,
-    headers: response.headers,
+    headers,
   });
 };
 
