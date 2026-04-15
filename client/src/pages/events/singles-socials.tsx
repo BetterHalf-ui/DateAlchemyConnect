@@ -3,13 +3,22 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
-import { Clock, MapPin, Users, Heart, Coffee, Utensils, Menu, X, ExternalLink } from 'lucide-react';
-import { Link } from 'wouter';
+import { Clock, MapPin, Users, Heart, Coffee, Utensils, Menu, X } from 'lucide-react';
+import { useLocation } from 'wouter';
 import Footer from '@/components/layout/footer';
 import { useI18n } from '@/lib/i18n';
 import LanguageSwitcher from '@/components/i18n/language-switcher';
 import { useQuery } from '@tanstack/react-query';
 import type { Event } from '@shared/schema';
+
+function parseEventDate(dateStr: string): number {
+  const parsed = new Date(dateStr);
+  if (!isNaN(parsed.getTime())) return parsed.getTime();
+  // Try "15 April 2026" or "April 15, 2026" style strings
+  const cleaned = dateStr.replace(/(\d+)(st|nd|rd|th)/, '$1');
+  const fallback = new Date(cleaned);
+  return isNaN(fallback.getTime()) ? 0 : fallback.getTime();
+}
 
 const SIGNUP_URL = 'https://betterhalf.fillout.com/t/aovhVckkYLus';
 
@@ -21,9 +30,15 @@ function scrollToSection(id: string) {
 function SinglesSocialsNav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { t } = useI18n();
+  const [, navigate] = useLocation();
+
+  const goHome = () => {
+    navigate('/');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
 
   const navLinks = [
-    { label: t('singles.nav.howItWorks'),    target: 'how-it-works'    },
+    { label: t('singles.nav.howItWorks'),     target: 'how-it-works'    },
     { label: t('singles.nav.eventsSchedule'), target: 'events-schedule' },
     { label: t('singles.nav.faqs'),           target: 'faqs'            },
   ];
@@ -32,10 +47,10 @@ function SinglesSocialsNav() {
     <nav className="fixed top-0 left-0 right-0 z-40 bg-black shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <span className="font-bold text-2xl text-primary logo cursor-default select-none">
-            Singles Socials
-          </span>
+          {/* Logo → links to home, always scrolls to top */}
+          <button onClick={goHome} className="flex items-center cursor-pointer">
+            <img src="/da-logo.png" alt="The Date Alchemy" className="h-10 w-auto" />
+          </button>
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-6">
@@ -49,12 +64,12 @@ function SinglesSocialsNav() {
               </button>
             ))}
 
-            <Link href="/">
-              <span className="inline-flex items-center gap-1 border border-primary text-primary font-semibold px-3 py-1.5 rounded hover:bg-primary/10 transition-colors text-sm cursor-pointer">
-                {t('singles.nav.matchmaking')}
-                <ExternalLink className="w-3.5 h-3.5" />
-              </span>
-            </Link>
+            <button
+              onClick={goHome}
+              className="inline-flex items-center gap-1 border border-primary text-primary font-semibold px-3 py-1.5 rounded hover:bg-primary/10 transition-colors text-sm"
+            >
+              {t('singles.nav.matchmaking')}
+            </button>
 
             <LanguageSwitcher className="text-primary" />
 
@@ -91,12 +106,12 @@ function SinglesSocialsNav() {
               </button>
             ))}
 
-            <Link href="/" onClick={() => setMobileOpen(false)}>
-              <span className="inline-flex items-center gap-1 border border-primary text-primary font-semibold px-3 py-2 rounded hover:bg-primary/10 transition-colors text-base">
-                {t('singles.nav.matchmaking')}
-                <ExternalLink className="w-4 h-4" />
-              </span>
-            </Link>
+            <button
+              onClick={() => { goHome(); setMobileOpen(false); }}
+              className="text-left inline-flex items-center gap-1 border border-primary text-primary font-semibold px-3 py-2 rounded hover:bg-primary/10 transition-colors text-base"
+            >
+              {t('singles.nav.matchmaking')}
+            </button>
 
             <div>
               <LanguageSwitcher className="text-primary" />
@@ -118,9 +133,13 @@ function SinglesSocialsNav() {
 export default function SinglesSocials() {
   const { t } = useI18n();
 
-  const { data: events = [], isLoading } = useQuery<Event[]>({
+  const { data: rawEvents = [], isLoading } = useQuery<Event[]>({
     queryKey: ['/api/events'],
   });
+
+  const events = [...rawEvents].sort(
+    (a, b) => parseEventDate(a.date) - parseEventDate(b.date)
+  );
 
   const testimonials = [
     {
