@@ -316,6 +316,11 @@ export const translations = {
     'singles.hero.subtitle': 'Ready to add more fun, friendship and connection to your life? Get invited to an intimate dinner or brunch with singles carefully selected to match your vibe.',
     'singles.hero.cta': 'Sign Up Now',
     
+    'singles.nav.howItWorks': 'How It Works',
+    'singles.nav.eventsSchedule': 'Events Schedule',
+    'singles.nav.faqs': 'FAQs',
+    'singles.nav.matchmaking': '1-on-1 Matchmaking',
+    'singles.nav.signUp': 'Sign Up',
     'singles.expect.title': 'What to Expect?',
     'singles.expect.description': 'An intimate brunch or dinner at one of Mauritius\' best rated restaurants — where you\'ll join a handpicked group of 6 to 8 like-minded singles, matched by vibe and age. With an equal number of men and women, it\'s the perfect relaxed setting to share stories, exchange ideas, and connect over great conversation, delicious food and ice-breakers.',
     
@@ -813,6 +818,11 @@ export const translations = {
     'singles.hero.subtitle': 'Prêt(e) à ajouter plus de plaisir, d\'amitié et de connexion à votre vie ? Recevez une invitation à un dîner ou brunch intime avec des célibataires soigneusement sélectionnés selon votre énergie.',
     'singles.hero.cta': 'S\'inscrire Maintenant',
     
+    'singles.nav.howItWorks': 'Comment ça fonctionne',
+    'singles.nav.eventsSchedule': 'Calendrier des événements',
+    'singles.nav.faqs': 'FAQ',
+    'singles.nav.matchmaking': 'Matchmaking 1-sur-1',
+    'singles.nav.signUp': 'S\'inscrire',
     'singles.expect.title': 'À quoi s\'attendre ?',
     'singles.expect.description': 'Un brunch ou dîner intime dans l\'un des restaurants les mieux notés de Maurice — où vous rejoindrez un groupe sélectionné de 6 à 8 célibataires partageant la même énergie, assortis par ambiance et âge. Avec un nombre égal d\'hommes et de femmes, c\'est le cadre détendu parfait pour partager des histoires, échanger des idées et se connecter autour d\'excellentes conversations, de délicieux plats et de brise-glaces.',
     

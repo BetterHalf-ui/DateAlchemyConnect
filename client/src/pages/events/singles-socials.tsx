@@ -20,11 +20,12 @@ function scrollToSection(id: string) {
 
 function SinglesSocialsNav() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { t } = useI18n();
 
   const navLinks = [
-    { label: 'How It Works',    target: 'how-it-works'    },
-    { label: 'Events Schedule', target: 'events-schedule' },
-    { label: 'FAQs',            target: 'faqs'            },
+    { label: t('singles.nav.howItWorks'),    target: 'how-it-works'    },
+    { label: t('singles.nav.eventsSchedule'), target: 'events-schedule' },
+    { label: t('singles.nav.faqs'),           target: 'faqs'            },
   ];
 
   return (
@@ -50,7 +51,7 @@ function SinglesSocialsNav() {
 
             <Link href="/">
               <span className="inline-flex items-center gap-1 border border-primary text-primary font-semibold px-3 py-1.5 rounded hover:bg-primary/10 transition-colors text-sm cursor-pointer">
-                1-on-1 Matchmaking
+                {t('singles.nav.matchmaking')}
                 <ExternalLink className="w-3.5 h-3.5" />
               </span>
             </Link>
@@ -61,7 +62,7 @@ function SinglesSocialsNav() {
               className="bg-primary hover:bg-primary/90 text-white font-semibold px-5 py-2"
               onClick={() => window.open(SIGNUP_URL, '_blank')}
             >
-              Sign Up
+              {t('singles.nav.signUp')}
             </Button>
           </div>
 
@@ -92,7 +93,7 @@ function SinglesSocialsNav() {
 
             <Link href="/" onClick={() => setMobileOpen(false)}>
               <span className="inline-flex items-center gap-1 border border-primary text-primary font-semibold px-3 py-2 rounded hover:bg-primary/10 transition-colors text-base">
-                1-on-1 Matchmaking
+                {t('singles.nav.matchmaking')}
                 <ExternalLink className="w-4 h-4" />
               </span>
             </Link>
@@ -105,7 +106,7 @@ function SinglesSocialsNav() {
               className="bg-primary hover:bg-primary/90 text-white font-semibold w-full"
               onClick={() => { window.open(SIGNUP_URL, '_blank'); setMobileOpen(false); }}
             >
-              Sign Up
+              {t('singles.nav.signUp')}
             </Button>
           </div>
         </div>
