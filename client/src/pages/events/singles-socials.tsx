@@ -48,8 +48,8 @@ function SinglesSocialsNav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo → links to home, always scrolls to top */}
-          <button onClick={goHome} className="flex items-center cursor-pointer">
-            <img src="/da-logo.png" alt="The Date Alchemy" className="h-10 w-auto" />
+          <button onClick={goHome} className="font-bold text-3xl text-primary logo cursor-pointer hover:text-primary/80 transition-colors">
+            The Date Alchemy
           </button>
 
           {/* Desktop links */}
