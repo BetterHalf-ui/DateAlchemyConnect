@@ -1,18 +1,122 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
-import { Calendar, Clock, MapPin, Users, Heart, Coffee, Utensils } from 'lucide-react';
-import Header from '@/components/layout/header';
+import { Clock, MapPin, Users, Heart, Coffee, Utensils, Menu, X, ExternalLink } from 'lucide-react';
+import { Link } from 'wouter';
 import Footer from '@/components/layout/footer';
 import { useI18n } from '@/lib/i18n';
+import LanguageSwitcher from '@/components/i18n/language-switcher';
 import { useQuery } from '@tanstack/react-query';
 import type { Event } from '@shared/schema';
+
+const SIGNUP_URL = 'https://betterhalf.fillout.com/t/aovhVckkYLus';
+
+function scrollToSection(id: string) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function SinglesSocialsNav() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navLinks = [
+    { label: 'How It Works',    target: 'how-it-works'    },
+    { label: 'Events Schedule', target: 'events-schedule' },
+    { label: 'FAQs',            target: 'faqs'            },
+  ];
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-black shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <span className="font-bold text-2xl text-primary logo cursor-default select-none">
+            Singles Socials
+          </span>
+
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center gap-6">
+            {navLinks.map(link => (
+              <button
+                key={link.target}
+                onClick={() => scrollToSection(link.target)}
+                className="text-primary font-semibold hover:text-primary/80 transition-colors body-text"
+              >
+                {link.label}
+              </button>
+            ))}
+
+            <Link href="/">
+              <span className="inline-flex items-center gap-1 border border-primary text-primary font-semibold px-3 py-1.5 rounded hover:bg-primary/10 transition-colors text-sm cursor-pointer">
+                1-on-1 Matchmaking
+                <ExternalLink className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+
+            <LanguageSwitcher className="text-primary" />
+
+            <Button
+              className="bg-primary hover:bg-primary/90 text-white font-semibold px-5 py-2"
+              onClick={() => window.open(SIGNUP_URL, '_blank')}
+            >
+              Sign Up
+            </Button>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden text-primary"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="md:hidden bg-black border-t border-primary/30">
+          <div className="px-4 py-5 flex flex-col gap-4">
+            {navLinks.map(link => (
+              <button
+                key={link.target}
+                onClick={() => { scrollToSection(link.target); setMobileOpen(false); }}
+                className="text-left text-primary font-semibold text-lg hover:text-primary/80 transition-colors"
+              >
+                {link.label}
+              </button>
+            ))}
+
+            <Link href="/" onClick={() => setMobileOpen(false)}>
+              <span className="inline-flex items-center gap-1 border border-primary text-primary font-semibold px-3 py-2 rounded hover:bg-primary/10 transition-colors text-base">
+                1-on-1 Matchmaking
+                <ExternalLink className="w-4 h-4" />
+              </span>
+            </Link>
+
+            <div>
+              <LanguageSwitcher className="text-primary" />
+            </div>
+
+            <Button
+              className="bg-primary hover:bg-primary/90 text-white font-semibold w-full"
+              onClick={() => { window.open(SIGNUP_URL, '_blank'); setMobileOpen(false); }}
+            >
+              Sign Up
+            </Button>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+}
 
 export default function SinglesSocials() {
   const { t } = useI18n();
 
-  // Fetch events from database
   const { data: events = [], isLoading } = useQuery<Event[]>({
     queryKey: ['/api/events'],
   });
@@ -48,13 +152,14 @@ export default function SinglesSocials() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      <SinglesSocialsNav />
+
       {/* Hero Section */}
-      <section 
+      <section
         className="relative h-screen bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: 'url(/singles-socials-hero.png)' }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 flex items-center justify-center h-full px-4">
           <div className="text-center text-white max-w-4xl">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
@@ -63,10 +168,10 @@ export default function SinglesSocials() {
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
               {t('singles.hero.subtitle')}
             </p>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold shadow-lg"
-              onClick={() => window.open('https://betterhalf.fillout.com/t/aovhVckkYLus', '_blank')}
+              onClick={() => window.open(SIGNUP_URL, '_blank')}
               data-testid="button-signup-hero"
             >
               {t('singles.hero.cta')}
@@ -75,9 +180,9 @@ export default function SinglesSocials() {
         </div>
       </section>
 
-      {/* What to Expect Section */}
-      <section className="py-20 px-4 max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+      {/* What to Expect Section — white */}
+      <section id="what-to-expect" className="py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{t('singles.expect.title')}</h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             {t('singles.expect.description')}
@@ -85,55 +190,78 @@ export default function SinglesSocials() {
         </div>
       </section>
 
-      {/* How it Works Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      {/* Why Attend Section — gray-50 (moved up from below Testimonials) */}
+      <section id="why-attend" className="py-20 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
+            {t('singles.whyAttend.title')}
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-10 h-10 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.whyAttend.meetPeople.title')}</h3>
+              <p className="text-gray-600 leading-relaxed">{t('singles.whyAttend.meetPeople.description')}</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Heart className="w-10 h-10 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.whyAttend.goodTime.title')}</h3>
+              <p className="text-gray-600 leading-relaxed">{t('singles.whyAttend.goodTime.description')}</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Coffee className="w-10 h-10 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.whyAttend.connection.title')}</h3>
+              <p className="text-gray-600 leading-relaxed">{t('singles.whyAttend.connection.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section — white */}
+      <section id="how-it-works" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
             {t('singles.howItWorks.title')}
           </h2>
-          
+
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">1</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.howItWorks.step1.title')}</h3>
-              <p className="text-gray-600 leading-relaxed">
-                {t('singles.howItWorks.step1.description')}
-              </p>
+              <p className="text-gray-600 leading-relaxed">{t('singles.howItWorks.step1.description')}</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.howItWorks.step2.title')}</h3>
-              <p className="text-gray-600 leading-relaxed">
-                {t('singles.howItWorks.step2.description')}
-              </p>
+              <p className="text-gray-600 leading-relaxed">{t('singles.howItWorks.step2.description')}</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">3</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.howItWorks.step3.title')}</h3>
-              <p className="text-gray-600 leading-relaxed">
-                {t('singles.howItWorks.step3.description')}
-              </p>
+              <p className="text-gray-600 leading-relaxed">{t('singles.howItWorks.step3.description')}</p>
             </div>
-          </div>
-          
-          <div className="mt-16 p-8 bg-white rounded-lg shadow-sm border">
-            <p className="text-gray-600 text-center leading-relaxed">
-              {t('singles.howItWorks.note')}
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4">
+      {/* Testimonials Section — gray-50 */}
+      <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -158,54 +286,13 @@ export default function SinglesSocials() {
         </div>
       </section>
 
-      {/* Why Attend Section */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
-            {t('singles.whyAttend.title')}
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-10 h-10 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.whyAttend.meetPeople.title')}</h3>
-              <p className="text-gray-600 leading-relaxed">
-                {t('singles.whyAttend.meetPeople.description')}
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-10 h-10 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.whyAttend.goodTime.title')}</h3>
-              <p className="text-gray-600 leading-relaxed">
-                {t('singles.whyAttend.goodTime.description')}
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Coffee className="w-10 h-10 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('singles.whyAttend.connection.title')}</h3>
-              <p className="text-gray-600 leading-relaxed">
-                {t('singles.whyAttend.connection.description')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Next Events - Calendar Style */}
-      <section className="py-20 px-4">
+      {/* Events Schedule Section — white */}
+      <section id="events-schedule" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
             {t('singles.events.title')}
           </h2>
-          
+
           {isLoading ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[1, 2, 3].map((i) => (
@@ -234,14 +321,14 @@ export default function SinglesSocials() {
                 <Card key={event.id} className="hover-lift border-2 hover:border-primary transition-all duration-300" data-testid={`card-event-${event.id}`}>
                   <CardContent className="p-6">
                     <div className="text-center">
-                      <Badge 
-                        variant={event.type === 'Dinner' ? 'default' : 'secondary'} 
+                      <Badge
+                        variant={event.type === 'Dinner' ? 'default' : 'secondary'}
                         className="mb-4"
                       >
                         {event.type === 'Dinner' ? <Utensils className="w-4 h-4 mr-1" /> : <Coffee className="w-4 h-4 mr-1" />}
                         {event.type}
                       </Badge>
-                      
+
                       <div className="mb-4">
                         <div className="text-3xl font-bold text-primary mb-1">
                           {event.date.split(' ')[1] || event.date}
@@ -250,11 +337,11 @@ export default function SinglesSocials() {
                           {event.date.split(' ')[0] || 'Event'}
                         </div>
                       </div>
-                      
+
                       <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">
                         {event.title}
                       </h3>
-                      
+
                       <div className="space-y-2 text-sm text-gray-600 mb-4">
                         <div className="flex items-center justify-center gap-2">
                           <Clock className="w-4 h-4" />
@@ -265,18 +352,18 @@ export default function SinglesSocials() {
                           {event.location}
                         </div>
                       </div>
-                      
+
                       <div className="text-2xl font-bold text-primary mb-2">
                         {event.price}
                       </div>
                       <p className="text-xs text-gray-500 mb-2">(exclusive of VAT)</p>
-                      
+
                       {event.description && (
                         <p className="text-xs text-gray-600 mb-2">
                           {event.description}
                         </p>
                       )}
-                      
+
                       <p className="text-xs text-gray-500">
                         {t('singles.events.ticketNote')}
                       </p>
@@ -289,7 +376,7 @@ export default function SinglesSocials() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Pricing Section — primary/5 */}
       <section className="py-20 px-4 bg-primary/5">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-8">
@@ -298,22 +385,19 @@ export default function SinglesSocials() {
           <p className="text-lg text-gray-600 mb-8">
             {t('singles.pricing.description')}
           </p>
-          
-          <Button 
-            size="lg" 
+
+          <Button
+            size="lg"
             className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold mb-8"
-            onClick={() => window.open('https://betterhalf.fillout.com/t/aovhVckkYLus', '_blank')}
+            onClick={() => window.open(SIGNUP_URL, '_blank')}
             data-testid="button-signup-pricing"
           >
             {t('singles.hero.cta')}
           </Button>
-          
+
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <p className="text-gray-600 leading-relaxed">
               {t('singles.pricing.application')}
-            </p>
-            <p className="text-gray-600 mt-4 font-semibold">
-              {t('singles.pricing.timing')}
             </p>
             <p className="text-gray-500 text-sm mt-4">
               {t('singles.pricing.disclaimer')}
@@ -322,11 +406,11 @@ export default function SinglesSocials() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 px-4">
+      {/* FAQ Section — white */}
+      <section id="faqs" className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">{t('singles.faq.title')}</h2>
-          
+
           <div className="space-y-8">
             {faqKeys.map((faqKey, index) => (
               <Card key={index}>
@@ -339,7 +423,7 @@ export default function SinglesSocials() {
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );
